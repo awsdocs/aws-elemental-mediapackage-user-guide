@@ -59,6 +59,8 @@ Amazon's trademarks and trade dress may not be used in
 + [Rendition Groups Reference in AWS Elemental MediaPackage](rendition-groups.md)
 + [Monitoring AWS Elemental MediaPackage](monitoring.md)
    + [Monitoring AWS Elemental MediaPackage with Amazon CloudWatch](monitoring-cloudwatch.md)
+   + [Monitoring AWS Elemental MediaPackage with Amazon CloudWatch Events](monitoring-cloudwatch-events.md)
+      + [AWS Elemental MediaPackage Events](cloudwatch-events-example.md)
 + [Limits in AWS Elemental MediaPackage](limits.md)
 + [AWS Elemental MediaPackage Resources](resources.md)
 + [Document History for User Guide](doc-history.md)

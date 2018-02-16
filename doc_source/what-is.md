@@ -11,6 +11,7 @@ AWS Elemental MediaPackage offers a broadcast\-grade viewing experience for view
 + [Features of AWS Elemental MediaPackage](what-is-features.md)
 + [Related Services](#related-services)
 + [Accessing AWS Elemental MediaPackage](#accessing-emp)
++ [Pricing for AWS Elemental MediaPackage](#pricing-for-emp)
 + [Regions for AWS Elemental MediaPackage](#regions-and-endpoints)
 
 ## Are You a First\-Time User of AWS Elemental MediaPackage?<a name="first-time-user"></a>
@@ -54,21 +55,21 @@ You can access AWS Elemental MediaPackage through the console, AWS Command Line 
 + AWS Elemental MediaPackage REST API endpoint: 
 
   ```
-  https://config.mediapackage.<region>.amazonaws.com
+  https://config.mediapackage.<region>.amazonaws.com 
   ```
+
+## Pricing for AWS Elemental MediaPackage<a name="pricing-for-emp"></a>
+
+As with other AWS products, there are no contracts or minimum commitments for using AWS Elemental MediaPackage\. You are charged only for AWS resources that your account uses\. Pricing is pay\-as\-you\-go and consists of the following:
+
++ A per GB charge for ingested content
+
++ A per GB charge for content that is streamed out of AWS Elemental MediaPackage
+
+  Content that is cached and served from a content distribution network \(CDN\) does not incur this per GB charge\.
+
+For detailed pricing information, see [AWS Elemental MediaPackage Pricing](https://aws.amazon.com/mediapackage/pricing/)\.
 
 ## Regions for AWS Elemental MediaPackage<a name="regions-and-endpoints"></a>
 
-AWS Elemental MediaPackage is available in the following regions:
-
-+ US East \(N\. Virginia\)
-
-+ US West \(Oregon\)
-
-+ Asia Pacific \(Singapore\)
-
-+ Asia Pacific \(Sydney\)
-
-+ Asia Pacific \(Tokyo\)
-
-+ EU \(Ireland\)
+To reduce latency in your applications, AWS Elemental MediaPackage offers a regional endpoint for your requests\. To view the list of regions where AWS Elemental MediaPackage is available, see [AWS Elemental MediaPackage Regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#mediapackage_region)\.
