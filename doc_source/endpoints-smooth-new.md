@@ -6,7 +6,7 @@
 
 1. For **Manifest name**, type a short string that will be appended to the end of the endpoint URL\. The manifest name helps to create a unique path to this endpoint\.
 
-1. \(Optional\) To create a window of the live stream that's available for on\-demand viewing, select **Startover window** and type the size of the window \(in seconds\)\. Viewers can start\-over or catch\-up on content that falls within the window\. For more information about implementing start\-over and catch\-up TV, see [[ERROR] BAD/MISSING LINK TEXT](time-shifted.md)\.
+1. \(Optional\) To create a window of the live stream that's available for on\-demand viewing, select **Startover window** and type the size of the window \(in seconds\)\. Viewers can start\-over or catch\-up on content that falls within the window\. For more information about implementing start\-over and catch\-up TV, see [Time\-shifted Viewing Reference in AWS Elemental MediaPackage](time-shifted.md)\.
 
 1. \(Optional\) To delay when content is available to players, type the duration \(in seconds\) for the delay in **Time delay**\. The minimum time is five seconds\. The maximum time is 86,400 seconds \(24 hours\)\.
 

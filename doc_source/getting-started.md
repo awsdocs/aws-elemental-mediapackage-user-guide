@@ -12,7 +12,7 @@ This Getting Started tutorial shows you how to use the AWS Elemental MediaPackag
 
 ## Prerequisites<a name="create-iam"></a>
 
-Before you can use AWS Elemental MediaPackage, you need an AWS account and the appropriate permissions to access, view, and edit AWS Elemental MediaPackage components\. Complete the steps in [[ERROR] BAD/MISSING LINK TEXT](setting-up.md), and then return to this tutorial\.
+Before you can use AWS Elemental MediaPackage, you need an AWS account and the appropriate permissions to access, view, and edit AWS Elemental MediaPackage components\. Complete the steps in [Setting Up AWS Elemental MediaPackage](setting-up.md), and then return to this tutorial\.
 
 ## Step 1: Access AWS Elemental MediaPackage<a name="access-emp"></a>
 

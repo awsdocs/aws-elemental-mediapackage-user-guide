@@ -9,8 +9,8 @@ The following table describes limits in AWS Elemental MediaPackage that can be i
 
 | Resource | Default Limit | 
 | --- | --- | 
-| Maximum Channels | 10 | 
-| Maximum Endpoints per Channel | 10 | 
+| Maximum Channels | 10 Increasing your channel limit doesn't always mean that you also need to increase your endpoints\. For example, if you need 14 channels and want to serve HLS, HLS encrypted, and DASH content from each channel, you need only three endpoints for each channel \(one for each output type\)\. The default endpoint limit is 10 so, although you do need a channel limit increase, you don't need to increase your endpoint limit\. You won't exceed the limit of 10 endpoints *per channel*\.  | 
+| Maximum Endpoints per Channel | 10This is a *per channel* limit\. Each endpoint represents the output package that you use\. If one channel serves HLS, HLS encrypted, DASH, DASH encrypted, Microsoft Smooth, and Microsoft Smooth encrypted content, then that channel has six endpoints and falls within the 10 endpoints limit\. If you have 10 channels set up this same way, then you still haven't exceeded the limit because each channel uses only 6 endpoints\. | 
 
 ## Hard Limits<a name="hard-limits"></a>
 

@@ -34,7 +34,7 @@ If you are a first\-time user of AWS Elemental MediaPackage, we recommend that y
 
 + **AWS Elemental MediaLive** is a live video processing service that encodes high\-quality live video streams for broadcast television and multi\-screen devices\. Use AWS Elemental MediaLive to encode content streams and send them to AWS Elemental MediaPackage for packaging\. For more information about how encoders \(such as AWS Elemental MediaLive\) work with AWS Elemental MediaPackage, see [How AWS Elemental MediaPackage Works](what-is-flow.md)\.
 
-+ **AWS Identity and Access Management \(IAM\)** is a web service that helps you securely control access to AWS resources for your users\. Use IAM to control who can use your AWS resources \(authentication\) and what resources users can use in which ways \(authorization\)\. For more information, see [[ERROR] BAD/MISSING LINK TEXT](setting-up.md)\.
++ **AWS Identity and Access Management \(IAM\)** is a web service that helps you securely control access to AWS resources for your users\. Use IAM to control who can use your AWS resources \(authentication\) and what resources users can use in which ways \(authorization\)\. For more information, see [Setting Up AWS Elemental MediaPackage](setting-up.md)\.
 
 ## Accessing AWS Elemental MediaPackage<a name="accessing-emp"></a>
 
@@ -68,8 +68,8 @@ As with other AWS products, there are no contracts or minimum commitments for us
 
   Content that is cached and served from a content distribution network \(CDN\) does not incur this per GB charge\.
 
-For detailed pricing information, see [AWS Elemental MediaPackage Pricing](https://aws.amazon.com/mediapackage/pricing/)\.
+For detailed pricing information, see [AWS Elemental MediaPackage Pricing](https://aws.amazon.com//mediapackage/pricing/)\.
 
 ## Regions for AWS Elemental MediaPackage<a name="regions-and-endpoints"></a>
 
-To reduce latency in your applications, AWS Elemental MediaPackage offers a regional endpoint for your requests\. To view the list of regions where AWS Elemental MediaPackage is available, see [AWS Elemental MediaPackage Regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#mediapackage_region)\.
+To reduce latency in your applications, AWS Elemental MediaPackage offers a regional endpoint for your requests\. To view the list of regions where AWS Elemental MediaPackage is available, see [AWS Elemental MediaPackage Regions](http://docs.aws.amazon.com//general/latest/gr/rande.html#mediapackage_region)\.

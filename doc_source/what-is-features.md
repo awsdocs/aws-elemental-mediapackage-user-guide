@@ -26,7 +26,7 @@ AWS Elemental MediaPackage supports input WebVTT text\-based subtitles\. AWS Ele
 + For Microsoft Smooth Streaming: subtitles are translated to DFXP
 
 Time\-shift Viewing  
-AWS Elemental MediaPackage allows playback of a stream at a time earlier than the current time\. Start\-over, catch\-up TV, and time delay are all supported\. For more information about setting up time\-shift capabilities, see [[ERROR] BAD/MISSING LINK TEXT](time-shifted.md)\.
+AWS Elemental MediaPackage allows playback of a stream at a time earlier than the current time\. Start\-over, catch\-up TV, and time delay are all supported\. For more information about setting up time\-shift capabilities, see [Time\-shifted Viewing Reference in AWS Elemental MediaPackage](time-shifted.md)\.
 
 Video  
 AWS Elemental MediaPackage supports the input H\.264 video codec and passes it through to the output stream\. H\.265/HEVC is also supported with restricted playback devices\. 
