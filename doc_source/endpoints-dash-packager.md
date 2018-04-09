@@ -9,9 +9,7 @@
 1. \(Optional\) In **Profile**, specify a DASH profile, like HbbTV\.
 
    Choose from the following:
-
    + **None** – the output doesn't use a DASH profile
-
    + **Hbbtv 1\.5** – the output is HbbTV\-compliant
 
 1. \(Optional\) For **Min update period**, type the minimum amount of time \(in seconds\) that the player should wait before requesting manifest updates\. A lower value means that manifests are updated more frequently, but a lower value also contributes to request and response network traffic\.

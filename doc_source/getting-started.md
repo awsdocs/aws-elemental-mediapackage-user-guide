@@ -2,7 +2,7 @@
 
 This Getting Started tutorial shows you how to use the AWS Elemental MediaPackage console to create a channel and endpoints for streaming live videos\.
 
-
+**Topics**
 + [Prerequisites](#create-iam)
 + [Step 1: Access AWS Elemental MediaPackage](#access-emp)
 + [Step 2: Create a Channel](#create-channel)
@@ -90,9 +90,7 @@ To avoid extraneous charges, be sure to delete all unnecessary channels and endp
 **To delete a channel**
 
 1. On the **Channels** page, choose the channel using one the following methods: 
-
    + Choose the channel name
-
    + Select the check box next to the channel name
 
 1. Choose **Delete selected** or **Delete channel**\.

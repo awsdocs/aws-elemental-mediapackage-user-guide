@@ -11,9 +11,7 @@ For information about editing an endpoint through the AWS CLI or AWS Elemental M
 1. Access the channel that the endpoint is associated with, as described in [Viewing Channel Details](channels-view.md)\.
 
 1. On the channel's details page, do one of the following:
-
    + Choose **Add and edit endpoints** and on the **Edit** page, choose the endpoint to edit\.
-
    + Choose the name of the endpoint to edit, and then choose **Edit endpoint**\.
 
 1. Edit the endpoint options that you want to change\.

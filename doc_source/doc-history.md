@@ -1,10 +1,8 @@
 # Document History for User Guide<a name="doc-history"></a>
 
 The following table describes the documentation for this release of AWS Elemental MediaPackage\.
-
 + **API version:** 1\.0
-
-+ **Latest documentation update:** February 14, 2018
++ **Latest documentation update:** April 6, 2018
 
 
 ****  
@@ -17,6 +15,7 @@ The following table describes the documentation for this release of AWS Elementa
 | Added hard limit information\. | In [Limits in AWS Elemental MediaPackage](limits.md), added information about limits that can't be changed \(hard limits\)\. | December 20, 2017 | 
 | Updated IAM policy information\. | In [Setting Up AWS Elemental MediaPackage](setting-up.md), added information about policies specific to AWS Elemental MediaPackage\. | January 5, 2018 | 
 | Added Amazon CloudWatch Events information\. | Added [Monitoring AWS Elemental MediaPackage with Amazon CloudWatch Events](monitoring-cloudwatch-events.md) section about the CloudWatch Events that AWS Elemental MediaPackage supports\. | February 14, 2018 | 
+| Added CMAF endpoint information\. | Added [Creating a Common Media Application Format \(CMAF\) Endpoint](endpoints-cmaf.md) section for new output type\. | April 6, 2018 | 
 
 **Note**  
 The AWS Media Services are not designed or intended for use with applications or in situations requiring fail‐safe performance, such as life safety operations, navigation or communication systems, air traffic control, or life support machines in which the unavailability, interruption or failure of the services could lead to death, personal injury, property damage or environmental damage\.

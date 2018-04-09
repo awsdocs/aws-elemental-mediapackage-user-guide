@@ -13,9 +13,7 @@ For information about deleting a channel using the AWS CLI or AWS Elemental Medi
 1. If the **Channels** page doesn't appear, on the AWS Elemental MediaPackage home page, choose **Skip and go to console**\. 
 
 1. On the **Channels** page, choose the channel using one the following methods: 
-
    + Choose the channel name
-
    + Select the check box next to the channel name
 
 1. Choose **Delete selected** or **Delete channel**\.

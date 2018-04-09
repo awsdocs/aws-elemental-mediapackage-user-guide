@@ -6,7 +6,7 @@ Here is the general processing flow:
 
 1. An upstream encoder \(such as AWS Elemental MediaLive\) sends an HLS live stream over WebDAV to the AWS Elemental MediaPackage channel ingest URL, and includes the channel's access credentials \(as supplied in AWS Elemental MediaPackage\)\. AWS scales resources up and down to handle the incoming traffic\. 
 
-1. A downstream device requests content from AWS Elemental MediaPackage through the endpoint egress URL\. A downstream device is either a video player or a content distribution network \(CDN\)\. The egress URL is associated with an endpoint for a specific streaming format \(either Apple HLS, DASH\-ISO, or Microsoft Smooth Streaming\)\.
+1. A downstream device requests content from AWS Elemental MediaPackage through the endpoint egress URL\. A downstream device is either a video player or a content distribution network \(CDN\)\. The egress URL is associated with an endpoint for a specific streaming format \(either Apple HLS, DASH\-ISO, CMAF, or Microsoft Smooth Streaming\)\.
 
 1. When AWS Elemental MediaPackage receives the playback request from the downstream device, it dynamically packages the stream according to the settings that you specified on the endpoint\. Packaging can include adding encryption and configuring audio, video, and subtitles or captions track outputs\.
 

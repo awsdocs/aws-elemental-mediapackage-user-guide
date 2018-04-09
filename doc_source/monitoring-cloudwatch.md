@@ -8,11 +8,8 @@ AWS Elemental MediaPackage displays metrics throughout the console\.
 1. Open the AWS Elemental MediaPackage console at [https://console\.aws\.amazon\.com/mediapackage/](https://console.aws.amazon.com/mediapackage/)\.
 
 1. Navigate to the appropriate page to view metrics:
-
    + For metrics on all channels and endpoints in the region, go to the **Channels** page\.
-
    + For metrics on a specific channel and all of its endpoints, go to the channel's details page\.
-
    + For metrics on a specific endpoint and its channel, go to the endpoint's details page\.
 
 1. \(Optional\) To refine the metrics view, choose **Open in CloudWatch**\.

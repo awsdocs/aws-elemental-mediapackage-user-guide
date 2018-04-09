@@ -17,9 +17,6 @@
 1. \(Optional\) In **Ad markers**, choose how ad markers are included in the packaged content\. 
 
    Choose from the following:
-
    + **None** – Omit all SCTE\-35 ad markers from the output\.
-
    + **SCTE\-35 enhanced** – Generate ad markers and blackout tags based on the SCTE\-35 input messages from the input source\.
-
    + **Passthrough** – Copy the SCTE\-35 ad markers directly from the input HLS input manifest to the output manifest\.

@@ -11,7 +11,5 @@ You can use the AWS Elemental MediaPackage console to preview playback from the 
 1. On the channel's details page, locate the endpoint name\.
 
 1. To preview playback, do one of the following:
-
    + Choose **Play** to play content with the embedded player\.
-
    + Choose **QR code** to view and scan the QR code for playback on a compatible device\. 

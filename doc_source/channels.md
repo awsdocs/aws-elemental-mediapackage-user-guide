@@ -4,7 +4,7 @@ A channel holds all the information that AWS Elemental MediaPackage needs to ing
 
 After you create a channel, AWS Elemental MediaPackage provides an ingest URL that is fixed for the lifetime of the channel, regardless of any failures or upgrades that might happen over time\. The output of the upstream encoder points to the URL for stream delivery to AWS Elemental MediaPackage\.
 
-
+**Topics**
 + [Creating a Channel](channels-create.md)
 + [Viewing Channel Details](channels-view.md)
 + [Editing a Channel](channels-edit.md)

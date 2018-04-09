@@ -1,19 +1,20 @@
-# Creating an HLS Endpoint<a name="endpoints-hls"></a>
+# Creating a Common Media Application Format \(CMAF\) Endpoint<a name="endpoints-cmaf"></a>
 
-Create an endpoint that formats content for devices that support Apple HLS\.
+Create an endpoint that formats HEVC content for devices that support Apple HLS fragmented MP4 \(fMP4\)\.
 
-**To create an Apple HLS endpoint \(console\)**
+**To create a CMAF endpoint \(console\)**
 
 1. Access the channel that the endpoint will be associated with, as described in [Viewing Channel Details](channels-view.md)\.
 
 1. On the details page for the channel, choose either **Add and edit endpoint** or **Add endpoints** if there are no existing endpoints\.
 
 1. Complete the fields as described in the following topics:
-   + [New Endpoint Fields](endpoints-hls-new.md)
-   + [Packager Settings Fields](endpoints-hls-packager.md)
-   + [Encryption Fields](endpoints-hls-encryption.md)
-   + [Access Control Fields](endpoints-hls-access-control.md)
-   + [Streams to Include Fields](endpoints-hls-include-streams.md)
+   + [New Endpoint Fields](endpoints-cmaf-new.md)
+   + [Packager Settings Fields](endpoints-cmaf-packager.md)
+   + [HLS Manifest Fields](endpoints-cmaf-manifest.md)
+   + [Encryption Fields](endpoints-cmaf-encryption.md)
+   + [Access Control Fields ](endpoints-cmaf-access-control.md)
+   + [Streams to Include Fields](endpoints-cmaf-include-streams.md)
 
 1. Choose **Save endpoints**\.
 

@@ -6,7 +6,7 @@ For more information about using CloudWatch Events with other kinds of events, s
 
 The following topics describe the CloudWatch Events that AWS Elemental MediaPackage creates\.
 
-
+**Topics**
 + [Input State Events](#input-state-events)
 + [Key Provider State Events](#key-provider-state-events)
 
