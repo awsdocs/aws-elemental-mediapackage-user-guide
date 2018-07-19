@@ -64,6 +64,7 @@ Amazon's trademarks and trade dress may not be used in
    + [Previewing an Endpoint](endpoints-preview.md)
 + [Time-shifted Viewing Reference in AWS Elemental MediaPackage](time-shifted.md)
 + [Rendition Groups Reference in AWS Elemental MediaPackage](rendition-groups.md)
++ [Multi-period DASH in AWS Elemental MediaPackage](multi-period.md)
 + [Monitoring AWS Elemental MediaPackage](monitoring.md)
    + [Monitoring AWS Elemental MediaPackage with Amazon CloudWatch](monitoring-cloudwatch.md)
    + [Monitoring AWS Elemental MediaPackage with Amazon CloudWatch Events](monitoring-cloudwatch-events.md)
