@@ -22,4 +22,26 @@ Users in the Administrators group for an account have access to all AWS services
    + Use **ReadOnlyAccess** to allow AWS Elemental MediaPackage to communicate with CloudWatch, and also provide the user read\-only access to all AWS services on your account\.
    + Use **CloudWatchReadOnlyAccess**, **CloudWatchEventsReadOnlyAccess**, and **CloudWatchLogsReadOnlyAccess** to allow AWS Elemental MediaPackage to communicate with CloudWatch, and limit the user's read\-only access to CloudWatch\.
 
+1. \(Optional\) If this user will create Amazon CloudFront distributions from the AWS Elemental MediaPackage console, create and attach a policy that provides required permissions for the user\. The policy looks like this:
+
+   ```
+   {
+       "Version": "2012-10-17",
+       "Statement": [
+           {
+               "Effect": "Allow",
+               "Action": [
+                   "cloudfront:GetDistribution",
+                   "cloudfront:CreateDistributionWithTags",
+                   "cloudfront:UpdateDistribution",
+                   "tag:GetResources"
+               ],
+               "Resource": "*"
+           }
+       ]
+   }
+   ```
+
+   For help creating the policy, see [Creating a Policy for Amazon CloudFront](setting-up-create-non-admin-iam-cf.md)\.
+
 1. Choose **Next: Review** to see the list of policies to be added to the new user\. When you are ready to proceed, choose **Create user**\.

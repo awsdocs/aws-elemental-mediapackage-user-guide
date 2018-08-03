@@ -18,7 +18,9 @@ When you're creating a channel, do not put sensitive identifying information lik
 
 1. For **Input type**, choose **Apple HLS**\.
 
-1. Choose **Create channel**\.
+1. To create an Amazon CloudFront distribution from the AWS Elemental MediaPackage console, choose **Create a CloudFront distribution**\. MediaPackage works with CloudFront to create a distribution when you save the channel\.
+
+1. Choose **Create**\.
 
    AWS Elemental MediaPackage displays the new channel's details page\.
 

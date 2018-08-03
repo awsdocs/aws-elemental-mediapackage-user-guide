@@ -17,6 +17,6 @@ Create an endpoint that formats content for devices that support Apple HLS\.
 
 1. Choose **Save endpoints**\.
 
-   The new endpoint is displayed in the endpoints section of the channel's details page\.
+   If you enabled Amazon CloudFront distribution creation from the AWS Elemental MediaPackage console and this is your first endpoint on the channel, MediaPackage adds an origin to the distribution\. You can view the CloudFront CDN URL and endpoint information in the endpoints section of the channel's details page\.
 
    The endpoint is active and can deliver content as soon as requests are sent to its URL endpoints\. AWS Elemental MediaPackage scales resources up and down to allow the right amount of capacity for your traffic\.

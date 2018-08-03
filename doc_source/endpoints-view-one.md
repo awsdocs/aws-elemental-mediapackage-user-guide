@@ -8,4 +8,4 @@ You can use the AWS Elemental MediaPackage console, the AWS CLI, or the MediaPac
 
 1. Access the channel that the endpoint is associated with, as described in [Viewing Channel Details](channels-view.md)\.
 
-1. On the channel's details page, choose the endpoint name to view details such as package information and playback preview\. For downstream device requests, you must provide the endpoint URL from the **Endpoint URL** field\.
+1. On the channel's details page, choose the endpoint name to view details such as package information and playback preview\. For downstream device requests, you must provide the endpoint URL from the **Endpoint URL** field or the CloudFront CDN URL\.

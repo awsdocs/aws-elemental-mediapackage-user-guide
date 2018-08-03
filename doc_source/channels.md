@@ -1,6 +1,6 @@
 # Working with Channels in AWS Elemental MediaPackage<a name="channels"></a>
 
-A channel holds all the information that AWS Elemental MediaPackage needs to ingest a live content stream from a source such as AWS Elemental MediaLive or another encoder\. The channel receives content, and after packaging it, outputs it through an endpoint to downstream devices \(such as video players or CDNs\) that request the content\. 
+A channel holds all the information that AWS Elemental MediaPackage requires to ingest a live content stream from a source such as AWS Elemental MediaLive or another encoder\. The channel receives content, and after packaging it, outputs it through an endpoint to downstream devices \(such as video players or CDNs\) that request the content\. 
 
 After you create a channel, AWS Elemental MediaPackage provides an ingest URL that is fixed for the lifetime of the channel, regardless of any failures or upgrades that might happen over time\. The output of the upstream encoder points to the URL for stream delivery to MediaPackage\.
 

@@ -16,4 +16,6 @@ You can use the AWS Elemental MediaPackage console, the AWS CLI, or the MediaPac
 
 1. Choose **Delete selected** or **Delete channel**\.
 
-1. In the confirmation dialog box, choose **Delete** to proceed with the deletion\.
+1. If there is an Amazon CloudFront distribution associated with the channel, select the CloudFront link in the confirmation dialog box to go to the CloudFront console to delete the distribution\. AWS Elemental MediaPackage will not delete the distribution when the channel is deleted\. For help deleting in CloudFront, see [Deleting a Distribution](http://http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/HowToDeleteDistribution.html) in the *Amazon CloudFront Developer Guide*\.
+
+1. In the confirmation dialog box in AWS Elemental MediaPackage, choose **Delete** to proceed with the channel deletion\.

@@ -2,10 +2,11 @@
 
 The following table describes important changes in each release of the *AWS Elemental MediaPackage User Guide* after May 2018\. For notification about updates to this documentation, you can subscribe to an RSS feed\.
 + **API version:** 1\.0
-+ **Latest documentation update:** July 18, 2018
++ **Latest documentation update:** August 3, 2018
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Added Amazon CloudFront console integration information\.](https://docs.aws.amazon.com/mediapackage/latest/ug/cdns.html) | Added sections about working with distributions in CloudFront, including how to create a distribution from the AWS Elemental MediaPackage console\. | August 3, 2018 | 
 | [Added information about multi\-period DASH\.](https://docs.aws.amazon.com/mediapackage/latest/ug/multi-period.html) | Added *Multi\-period DASH in AWS Elemental MediaPackage* topic to discuss the purpose and functionality of multiple periods in DASH manifests\. | July 18, 2018 | 
 | [Added content delivery network \(CDN\) information\.](https://docs.aws.amazon.com/mediapackage/latest/ug/cdns.html) | Added *Working with CDNs* topic to discuss how AWS Elemental MediaPackage works with CDNs such as Amazon CloudFront\. | May 31, 2018 | 
 
