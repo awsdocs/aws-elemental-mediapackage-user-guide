@@ -4,7 +4,9 @@ AWS Elemental MediaPackage uses just\-in\-time format conversion to deliver over
 
 Here is the general processing flow:
 
-1. An upstream encoder \(such as AWS Elemental MediaLive\) sends an HLS live stream over WebDAV to the AWS Elemental MediaPackage channel ingest URL, and includes the channel's access credentials \(as supplied in MediaPackage\)\. AWS scales resources up and down to handle the incoming traffic\. 
+1. An upstream encoder \(such as AWS Elemental MediaLive\) sends an HLS live stream over WebDAV to the AWS Elemental MediaPackage channel ingest URL, and includes the channel's access credentials \(as supplied in MediaPackage\)\. If you're using input redundancy, the encoder sends two identical HLS live streams to MediaPackage, one to each ingest URL on the channel\. MediaPackage uses the stream from one ingest URL as the source content\. If MediaPackage stops receiving content on the active ingest URL, it automatically switches to the other ingest URL for source content\. Additionally, AWS scales resources up and down to handle the incoming traffic\.
+
+   For more information, see [How Input Redundancy Works](what-is-flow-ir.md)\.
 
 1. A downstream device requests content from AWS Elemental MediaPackage through the endpoint egress URL\. A downstream device is either a video player or a content distribution network \(CDN\)\. The egress URL is associated with an endpoint for a specific streaming format \(either Apple HLS, DASH\-ISO, CMAF, or Microsoft Smooth Streaming\)\.
 

@@ -15,3 +15,5 @@ When you're creating an endpoint, do not put sensitive identifying information l
    Use time delay to redefine the live point and make content available at a time that equals "now" minus the delay specified\. With a 60\-second time delay, content that AWS Elemental MediaPackage receives at 12:20 isn't available until 12:21\. Requests for playback at 12:20 will be served with content from 12:19\. Likewise, if you're serving content across time zones, you can set a time delay equal to the time zone difference to make content available at, for example, 8:00 local time\.
 
    When you use time delay in conjunction with a startover window, the time delay duration must be less than the startover window duration\.
+**Tip**  
+Use a time delay to help reduce buffering during input switching when you're using input redundancy with short output segements\. Note that the delay can increase latency in content playback\.

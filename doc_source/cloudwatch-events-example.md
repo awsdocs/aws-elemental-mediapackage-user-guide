@@ -12,7 +12,15 @@ The following topics describe the CloudWatch Events that AWS Elemental MediaPack
 
 ## Input Notification Events<a name="input-state-events"></a>
 
-A channel in AWS Elemental MediaPackage has exceeded the limit for the number of input streams\. For information about limits, see [Limits in AWS Elemental MediaPackage](limits.md)\.
+You get input notification events if one of these actions occurs:
++ A channel in AWS Elemental MediaPackage exceeds the limit for the number of input streams\. For information about limits, see [Limits in AWS Elemental MediaPackage](limits.md)\.
++ AWS Elemental MediaPackage switches inputs for one of your endpoints\. 
+
+  One event is sent in a five\-minute period\. If the input switches multiple times in five minutes \(for example, if MediaPackage switches to one input, then back to the other\), you receive only one event\.
+
+  For information about input redundancy and what causes inputs to switch, see [How Input Redundancy Works](what-is-flow-ir.md)\.
+
+**Example Maximum Input Streams Exceeded Event**  
 
 ```
 {
@@ -28,6 +36,26 @@ A channel in AWS Elemental MediaPackage has exceeded the limit for the number of
    "detail":{
       "event": "MaxIngestStreamsError",
       "message": "Parent Manifest [%s] has [23] streams, more than [20] allowed: (index_1.m3u8,index_2.m3u8,index_3.m3u8,index_4.m3u8,index_5.m3u8,index_6.m3u8,index_7.m3u8,index_8.m3u8,index_9.m3u8,index_10.m3u8,index_11.m3u8,index_12.m3u8,index_13.m3u8,index_14.m3u8,index_15.m3u8,index_16.m3u8,index_17.m3u8,index_18.m3u8,index_19.m3u8,index_20.m3u8,index_21.m3u8,index_22.m3u8,index_23.m3u8)"
+   }
+}
+```
+
+**Example Input Switch Event**  
+
+```
+{
+   "id": "8f9b8e72-0b31-e883-f19c-aec84742f3ce",
+   "detail-type": "MediaPackage Input Notification",
+   "source": "aws.mediapackage",
+   "account": "aws_account_id",
+   "time": "2018-07-16T17:29:36Z",
+   "region": "us-east-1",
+   "resources":[
+      "arn:aws:mediapackage:us-east-1:aws_account_id:origin_endpoints/82d6b9bc04cb4612b487963d6c8d0f1a"
+   ],
+   "detail":{
+      "event": "InputSwitchEvent",
+      "message": "Origin endpoint experienced an Input Switch Event"
    }
 }
 ```

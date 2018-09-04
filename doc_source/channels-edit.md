@@ -9,7 +9,7 @@ You can use the AWS Elemental MediaPackage console, the AWS CLI, or the MediaPac
 
 When you're editing a channel, do not put sensitive identifying information like customer account numbers into free\-form fields such as the **Name** field\. This includes when you work with AWS Elemental MediaPackage using the console, REST API, AWS CLI, or AWS SDKs\. Any data that you enter into MediaPackage might get picked up for inclusion in diagnostic logs or Amazon CloudWatch Events\.
 
-**To edit a channel \(console\)** 
+**To edit a channel \(console\)**
 
 1. Open the AWS Elemental MediaPackage console at [https://console\.aws\.amazon\.com/mediapackage/](https://console.aws.amazon.com/mediapackage/)\.
 
@@ -19,6 +19,6 @@ When you're editing a channel, do not put sensitive identifying information like
 
 1. On the channel's details page, choose **Edit channel**\.
 
-1. Make the changes that you want\.
+1. Make the changes that you want\.\.
 
 1. Choose **Save changes**\.

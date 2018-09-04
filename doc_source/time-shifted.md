@@ -15,6 +15,8 @@ You might notice that the manifest lags behind real time when you initially crea
    For packager\-specific rules about how you can notate the parameters, see [Rules for Start and End Parameters](#start-and-end-parameters-rules)\.
 
    The start and end parameters determine the time boundaries of the manifest\. Expected behaviors are as follows:
+**Note**  
+In all cases, the maximum manifest length is six hours\.
    + If both start and end parameters are used in the URL, the resulting manifest has a fixed start and end point that correspond to the specified start and end parameters\.
    + If a start parameter is specified but not an end, the resulting manifest has a fixed start point that corresponds to the specified start parameter, and the end of the manifest grows as the live content progresses\. You can use a start time that’s up to 6 hours in the past\.
    + If an end parameter is specified but no start, the resulting manifest starts "now" and has a fixed endpoint that corresponds to the specified end parameter\.

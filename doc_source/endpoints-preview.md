@@ -4,7 +4,7 @@ Preview an endpoint's playback to ensure that AWS Elemental MediaPackage is rece
 
 You can use the AWS Elemental MediaPackage console to preview playback from the endpoint\.
 
-**To preview an endpoint's playback \(console\)** 
+**To preview an endpoint's playback \(console\)**
 
 1. Access the channel that the endpoint is associated with, as described in [Viewing Channel Details](channels-view.md)\.
 

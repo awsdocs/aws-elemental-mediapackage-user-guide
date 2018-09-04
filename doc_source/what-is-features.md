@@ -14,6 +14,9 @@ AWS Elemental MediaPackage supports input 608/708 captions and passes them throu
 DRM  
 AWS Elemental MediaPackage supports content protection through digital rights management \(DRM\)\.
 
+Input Redundancy  
+AWS Elemental MediaPackage creates two ingest URLs on every channel so that you can create input redundancy by sending two identical streams to the same channel\. For information about how input redundancy works, see [How Input Redundancy Works](what-is-flow-ir.md)\.
+
 Subtitles  
 AWS Elemental MediaPackage supports input WebVTT text\-based subtitles\. MediaPackage translates the subtitles to the appropriate format based on the packager that is used on the endpoint:  
 + For HLS and CMAF: WebVTT is passed through

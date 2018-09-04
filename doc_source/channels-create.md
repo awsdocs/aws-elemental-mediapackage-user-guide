@@ -18,10 +18,8 @@ When you're creating a channel, do not put sensitive identifying information lik
 
 1. For **Input type**, choose **Apple HLS**\.
 
-1. To create an Amazon CloudFront distribution from the AWS Elemental MediaPackage console, choose **Create a CloudFront distribution**\. MediaPackage works with CloudFront to create a distribution when you save the channel\.
-
-1. Choose **Create**\.
+1. Choose **Create channel**\.
 
    AWS Elemental MediaPackage displays the new channel's details page\.
 
-   The channel is active and can start receiving content as soon as it's created\. AWS Elemental MediaPackage scales resources up and down to allow the right amount of capacity for your traffic\.
+   The channel is active and can start receiving content as soon as it's created\. AWS Elemental MediaPackage scales resources up and down to allow the right amount of capacity for your traffic\. If you're using input redundancy and one of the inputs stops sending content, then MediaPackage automatically switches to the other input for the source content\. For more information about how input redundancy works, see [How Input Redundancy Works](what-is-flow-ir.md)\.

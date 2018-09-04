@@ -17,6 +17,7 @@ Amazon's trademarks and trade dress may not be used in
 + [What Is AWS Elemental MediaPackage?](what-is.md)
    + [Concepts and Terminology](what-is-terms.md)
    + [How AWS Elemental MediaPackage Works](what-is-flow.md)
+      + [How Input Redundancy Works](what-is-flow-ir.md)
    + [Features of AWS Elemental MediaPackage](what-is-features.md)
 + [Setting Up AWS Elemental MediaPackage](setting-up.md)
    + [Signing Up for AWS](setting-up-aws-sign-up.md)

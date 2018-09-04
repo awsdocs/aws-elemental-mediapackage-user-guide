@@ -1,6 +1,6 @@
 # What Is AWS Elemental MediaPackage?<a name="what-is"></a>
 
-AWS Elemental MediaPackage is a just\-in\-time video packaging and origination service that runs in the AWS Cloud\. With MediaPackage, you can deliver highly secure, scalable, and reliable video streams to a wide variety of playback devices and content distribution networks \(CDNs\)\. 
+AWS Elemental MediaPackage is a just\-in\-time video packaging and origination service that runs in the AWS Cloud\. With MediaPackage, you can deliver highly secure, scalable, and reliable video streams to a wide variety of playback devices and content delivery networks \(CDNs\)\. 
 
 AWS Elemental MediaPackage offers a broadcast\-grade viewing experience for viewers, while allowing you the flexibility to control and protect your content\. Additionally, the built\-in resiliency and scalability of MediaPackage means that you have the right amount of resources at the right time, with no manual intervention required\.
 
@@ -53,7 +53,7 @@ As with other AWS products, there are no contracts or minimum commitments for us
 + A per GB charge for ingested content
 + A per GB charge for content that is streamed out of AWS Elemental MediaPackage
 
-  Content that is cached and served from a content distribution network \(CDN\) does not incur this per GB charge\.
+  Content that is cached and served from a content delivery network \(CDN\) does not incur this per GB charge\.
 
 For detailed pricing information, see [AWS Elemental MediaPackage Pricing](https://aws.amazon.com//mediapackage/pricing/)\.
 
