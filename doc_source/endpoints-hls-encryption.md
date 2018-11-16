@@ -1,9 +1,9 @@
 # Encryption Fields<a name="endpoints-hls-encryption"></a>
 
-Protect your content from unauthorized use through encryption\. Digital rights management \(DRM\) systems provide keys to MediaPackage for content encryption, and licenses to supported players for decryption\.
+Protect your content from unauthorized use through encryption\. Digital rights management \(DRM\) systems provide keys to AWS Elemental MediaPackage for content encryption, and licenses to supported players for decryption\.
 
 **Note**  
-To encrypt content, you must have a DRM solution provider\. To get set up, see [http://docs\.aws\.amazon\.com/speke/latest/documentation/customer\-onboarding\.html](http://docs.aws.amazon.com/speke/latest/documentation/customer-onboarding.html)\.
+To encrypt content, you must have a DRM solution provider, and be set up to use encryption\. For information, see [Using Encryption in AWS Elemental MediaPackage](using-encryption.md)\. 
 
 1. To serve content without copyright protection, keep **No encryption** selected\.
 
@@ -17,7 +17,7 @@ To encrypt content, you must have a DRM solution provider\. To get set up, see [
       MovieNight20171126093045
       ```
 
-   1. **System IDs** – Unique identifiers for your streaming protocol and DRM system\. Provide up to two IDs for DASH and exactly one for the other streaming protocols\. If you provide more than one system ID, enter them on separate lines, and do not separate them with commas or any other punctuation\. For a list of common system IDs, see [DASH\-IF System IDs](http://www.dashif.org/identifiers/protection/)\. If you do not know your IDs, ask your DRM solution provider\.
+   1. **System IDs** – Unique identifiers for your streaming protocol and DRM system\. Provide up to two IDs for DASH and exactly one for the other streaming protocols\. If you provide more than one system ID, enter them on separate lines, and do not separate them with commas or any other punctuation\. For a list of common system IDs, see [DASH\-IF System IDs](https://dashif.org/identifiers/content_protection/)\. If you do not know your IDs, ask your DRM solution provider\.
 
    1. **URL** – The URL from the API Gateway proxy that you set up to talk to your key server\. 
 
@@ -32,8 +32,12 @@ To encrypt content, you must have a DRM solution provider\. To get set up, see [
       The following example shows a role ARN: 
 
       ```
-      arn:aws:iam::012345678901:role/SpekeAccess
+      arn:aws:iam::444455556666:role/SpekeAccess
       ```
+
+   1. **Certificate ARN** – \(Optional\) Enter a 2048 RSA certificate ARN to use for content key encryption\. Use this option only if your DRM key provider supports content key encryption\. If you use this and your key provider doesn't support it, the event fails\.
+
+      To enter a certificate ARN here, you must have already imported the corresponding certificate into AWS Certificate Manager\. Then enter the certificate ARN from ACM here\. 
 
    1. **Encryption method** – Choose **Sample\-AES** for Apple HLS Fairplay or **AES\-128** for Apple HLS AES\-128\. 
 

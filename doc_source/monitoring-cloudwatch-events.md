@@ -8,6 +8,6 @@ Amazon CloudWatch Events enable you to automate your AWS services and respond au
 
 An example of using CloudWatch Events with AWS Elemental MediaPackage is notifying an Amazon SNS topic if you reach the maximum stream ingest\.
 
-For more information about creating rules in CloudWatch Events, see the [Amazon CloudWatch Events User Guide](http://docs.aws.amazon.com/AmazonCloudWatch/latest/events/)\.
+For more information about creating rules in CloudWatch Events, see the [Amazon CloudWatch Events User Guide](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/)\.
 
 For a list of events that AWS Elemental MediaPackage emits, see [AWS Elemental MediaPackage Events](cloudwatch-events-example.md)\.

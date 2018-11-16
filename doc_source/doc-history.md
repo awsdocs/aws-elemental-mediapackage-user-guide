@@ -2,10 +2,12 @@
 
 The following table describes important changes in each release of the *AWS Elemental MediaPackage User Guide* after May 2018\. For notification about updates to this documentation, you can subscribe to an RSS feed\.
 + **API version:** 1\.0
-+ **Latest documentation update:** August 28, 2018
++ **Latest documentation update:** November 14, 2018
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated content retention window limit\.](limits.md#hard-limits) | AWS Elemental MediaPackage now retains content for 336 hours \(14 days\)\. | November 13, 2018 | 
+| [Added content key encryption to DRM encryption](using-encryption.md#drm-content-key-encryption) | Added the option to encrypt content keys\. Prior to this, AWS Elemental MediaPackage supported clear key delivery only\. To use content key encryption, your DRM key provider must support encrypted content keys\. If you enable this feature for a key provider that doesn't handle content key encryption, the operation fails\. | November 8, 2018 | 
 | [Added input redundancy information\.](what-is-flow-ir.md) | Added *How Input Redundancy Works* topic to discuss how you can ingress two identical streams with AWS Elemental MediaPackage\. | August 28, 2018 | 
 | [Added Amazon CloudFront console integration information\.](cdns.md) | Added sections about working with distributions in CloudFront, including how to create a distribution from the AWS Elemental MediaPackage console\. | August 3, 2018 | 
 | [Added information about multi\-period DASH\.](multi-period.md) | Added *Multi\-period DASH in AWS Elemental MediaPackage* topic to discuss the purpose and functionality of multiple periods in DASH manifests\. | July 18, 2018 | 

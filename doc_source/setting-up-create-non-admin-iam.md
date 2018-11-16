@@ -6,9 +6,9 @@ Users in the Administrators group for an account have access to all AWS services
 
 1. In the navigation pane of the IAM console, choose **Users**, and then choose **Add user**\.
 
-1. For **User name**, type the name that the user will use to sign in to AWS Elemental MediaPackage\.
+1. For **User name**, enter the name that the user will use to sign in to AWS Elemental MediaPackage\.
 
-1. Select the check box next to **AWS Management Console access**, select **Custom password**, and then type the new user's password in the box\. You can optionally select **Require password reset** to force the user to create a password the next time the user signs in\.
+1. Select the check box next to **AWS Management Console access**, select **Custom password**, and then enter the new user's password in the box\. You can optionally select **Require password reset** to force the user to create a password the next time the user signs in\.
 
 1. Choose **Next: Permissions**\.
 

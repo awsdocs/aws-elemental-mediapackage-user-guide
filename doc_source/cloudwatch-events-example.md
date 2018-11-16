@@ -2,7 +2,7 @@
 
 AWS Elemental MediaPackage integrates with Amazon CloudWatch Events to notify you of certain events that affect your channels and endpoints\. Each event is represented in [JSON \(JavaScript Object Notation\)](http://json.org) and contains the event name, the date and time when the event occurred, the channel or endpoint affected, and more\. You can use CloudWatch Events to collect these events and set up rules that route them to one or more *targets* such as AWS Lambda functions, Amazon SNS topics, Amazon SQS queues, streams in Amazon Kinesis Data Streams, or built\-in targets\.
 
-For more information about using CloudWatch Events with other kinds of events, see the [Amazon CloudWatch Events User Guide](http://docs.aws.amazon.com/AmazonCloudWatch/latest/events/)\.
+For more information about using CloudWatch Events with other kinds of events, see the [Amazon CloudWatch Events User Guide](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/)\.
 
 The following topics describe the CloudWatch Events that AWS Elemental MediaPackage creates\.
 
@@ -62,7 +62,7 @@ You get input notification events if one of these actions occurs:
 
 ## Key Provider Notification Events<a name="key-provider-state-events"></a>
 
-When you're using content encryption on an endpoint, AWS Elemental MediaPackage can't reach the key provider\. For information about DRM and encryption, see [http://docs.aws.amazon.com/speke/latest/documentation/](http://docs.aws.amazon.com/speke/latest/documentation/)\.
+When you're using content encryption on an endpoint, AWS Elemental MediaPackage can't reach the key provider\. For information about DRM and encryption, see [https://docs.aws.amazon.com/speke/latest/documentation/](https://docs.aws.amazon.com/speke/latest/documentation/)\.
 
 ```
 {

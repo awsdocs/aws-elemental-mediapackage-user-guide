@@ -17,7 +17,7 @@ You need additional permissions to create distributions in CloudFront\. Have an 
 
    Note that when the distribution is first created, it isn't fully functional until it has an origin, which AWS Elemental MediaPackage creates in the next step \(when you create an endpoint in MediaPackage\)\.
 
-1. Create an endpoint on the channel, as described in [Creating an Endpoint](endpoints-create.md)\. AWS Elemental MediaPackage updates the origin and cache behaviors with information from the endpoint, and configures the distribution with settings that optimize live video streaming, as described in [Serving Live Video Formatted with AWS Elemental MediaPackage](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/live-streaming.html#live-streaming-with-mediapackage) of the *Amazon CloudFront Developer Guide*\.
+1. Create an endpoint on the channel, as described in [Creating an Endpoint](endpoints-create.md)\. AWS Elemental MediaPackage updates the origin and cache behaviors with information from the endpoint, and configures the distribution with settings that optimize live video streaming, as described in [Serving Live Video Formatted with AWS Elemental MediaPackage](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/live-streaming.html#live-streaming-with-mediapackage) of the *Amazon CloudFront Developer Guide*\.
 
    If you're adding a distribution to an existing channel with endpoints, AWS Elemental MediaPackage automatically adds the origin for you\.
 

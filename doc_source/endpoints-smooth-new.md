@@ -16,4 +16,4 @@ When you're creating an endpoint, do not put sensitive identifying information l
 
    When you use time delay in conjunction with a startover window, the time delay duration must be less than the startover window duration\.
 **Tip**  
-Use a time delay to help reduce buffering during input switching when you're using input redundancy with short output segements\. Note that the delay can increase latency in content playback\.
+Use a time delay to help reduce buffering during input switching when you're using input redundancy with short output segments\. Note that the delay can increase latency in content playback\.

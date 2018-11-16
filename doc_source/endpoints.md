@@ -6,7 +6,7 @@ An endpoint defines a single delivery point of a channel\. The endpoint holds al
 + CMAF – packages content to devices that support Apple HLS fragmented MP4 \(fMP4\)
 + DASH\-ISO – packages content for the DASH\-ISO ABR streaming protocol
 
-Additionally, the endpoint holds information about digital rights management \(DRM\) and encryption integration, stream bit rate presentation order, and more\.
+Additionally, the endpoint holds information about digital rights management \(DRM\) and encryption integration, stream bitrate presentation order, and more\.
 
 **Topics**
 + [Creating an Endpoint](endpoints-create.md)
