@@ -1,7 +1,7 @@
 # AWS Elemental MediaPackage User Guide
 
 -----
-*****Copyright &copy; 2018 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; 2019 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -67,11 +67,17 @@ Amazon's trademarks and trade dress may not be used in
 + [Time-shifted Viewing Reference in AWS Elemental MediaPackage](time-shifted.md)
 + [Using Encryption in AWS Elemental MediaPackage](using-encryption.md)
 + [Rendition Groups Reference in AWS Elemental MediaPackage](rendition-groups.md)
-+ [Multi-period DASH in AWS Elemental MediaPackage](multi-period.md)
++ [DASH Manifest Options in AWS Elemental MediaPackage](dash-trtmts.md)
+   + [Multi-period DASH in AWS Elemental MediaPackage](multi-period.md)
+   + [Compacted DASH Manifests](compacted.md)
+   + [DASH Manifest Segment Template Format](segtemp-format.md)
 + [Monitoring AWS Elemental MediaPackage](monitoring.md)
-   + [Monitoring AWS Elemental MediaPackage with Amazon CloudWatch](monitoring-cloudwatch.md)
+   + [Monitoring AWS Elemental MediaPackage with Amazon CloudWatch Metrics](monitoring-cloudwatch.md)
+      + [AWS Elemental MediaPackage Metrics](metrics.md)
    + [Monitoring AWS Elemental MediaPackage with Amazon CloudWatch Events](monitoring-cloudwatch-events.md)
       + [AWS Elemental MediaPackage Events](cloudwatch-events-example.md)
+      + [Creating Event Notifications](cloudwatch-events-notification.md)
+   + [Logging AWS Elemental MediaPackage API Calls with AWS CloudTrail](logging-using-cloudtrail.md)
 + [Working with Content Delivery Networks (CDNs)](cdns.md)
    + [Creating a Distribution](cdns-create.md)
       + [Creating a Distribution from AWS Elemental MediaPackage](cdns-create-mp.md)
@@ -80,6 +86,6 @@ Amazon's trademarks and trade dress may not be used in
    + [Editing a Distribution](cdns-edit.md)
    + [Deleting a Distribution](cdns-delete.md)
 + [Limits in AWS Elemental MediaPackage](limits.md)
-+ [AWS Elemental MediaPackage Resources](resources.md)
++ [AWS Elemental MediaPackage Related Information](resources.md)
 + [Document History for User Guide](doc-history.md)
 + [AWS Glossary](glossary.md)

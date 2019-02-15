@@ -40,7 +40,7 @@ AWS Elemental MediaPackage does not require that you supply any customer data\. 
 
 1. On the channel's details page, note the values for **Input URL**, **Username**, and **Password**\. If you're using input redundancy, you need this information for both input URLs\. If you're sending only one stream to the channel, you can note the information for either input URL\. 
 
-   AWS Elemental MediaPackage securely generates the user names and passwords when it creates the channel\. If you need to change these credentials, see [Rotating Credentials on an Ingest URL](channels.md#channels-rotate-creds)\.
+   AWS Elemental MediaPackage securely generates the user names and passwords when it creates the channel\. If you need to change these credentials, see [Rotating Credentials on an Input URL](channels.md#channels-rotate-creds)\.
 
    Provide the information from these fields to the person in charge of the upstream encoder\. In the stream configuration in the encoder, this person must type the destination as the input URL, and the WebDAV credentials as the channel's user name and password\. The upstream encoder must push WebDAV over HTTPS to AWS Elemental MediaPackage, and include these credentials\. If you're using input redundancy, the input streams to this channel must have identical encoder settings\. For more information about setting up source streams for input redundancy, see [How Input Redundancy Works](what-is-flow-ir.md)\.
 
@@ -66,7 +66,7 @@ AWS Elemental MediaPackage does not require that you supply any customer data\. 
 
 ## \(Optional\) Step 4: Monitor AWS Elemental MediaPackage Activity<a name="monitor-emp"></a>
 
-Use Amazon CloudWatch to track AWS Elemental MediaPackage activity, such as the counts of ingest and egress bytes, response times, and request counts\.
+Use Amazon CloudWatch to track AWS Elemental MediaPackage activity, such as the counts of bytes that MediaPackage has received and sent, response times, and request counts\.
 
 **To view metrics using the CloudWatch console**  
 Metrics are grouped first by the service namespace, and then by the various dimension combinations within each namespace\.
@@ -77,7 +77,7 @@ Metrics are grouped first by the service namespace, and then by the various dime
 
 1. Under **All metrics**, choose the **AWS/MediaPackage** namespace\.
 
-1. Select the metric dimension to view the metrics \(for example, choose `channel` to view metrics per channel\)\. For a list of AWS Elemental MediaPackage metrics, see [AWS Elemental MediaPackage CloudWatch Metrics](monitoring-cloudwatch.md#metrics)\.
+1. Select the metric dimension to view the metrics \(for example, choose `channel` to view metrics per channel\)\. For a list of AWS Elemental MediaPackage metrics, see [AWS Elemental MediaPackage Metrics](metrics.md)\.
 
 ## Step 5: Clean Up<a name="clean-up"></a>
 

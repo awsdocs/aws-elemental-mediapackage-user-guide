@@ -19,7 +19,7 @@ To encrypt content, you must have a DRM solution provider and be set up to use e
 
    1. **System IDs** – Unique identifiers for your streaming protocol and DRM system\. Provide up to two IDs for DASH and exactly one for the other streaming protocols\. If you provide more than one system ID, enter them on separate lines, and do not separate them with commas or any other punctuation\. For a list of common system IDs, see [DASH\-IF System IDs](https://dashif.org/identifiers/content_protection/)\. If you do not know your IDs, ask your DRM solution provider\.
 
-   1. **URL** – The URL from the API Gateway proxy that you set up to talk to your key server\. 
+   1. **URL** – The URL from the API Gateway proxy that you set up to talk to your key server\. The API Gateway must reside in the same AWS Region as MediaPackage\.
 
       The following example shows a URL: 
 

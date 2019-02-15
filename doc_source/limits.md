@@ -6,6 +6,8 @@ The following sections provide information about the limits in AWS Elemental Med
 
 The following table describes limits in AWS Elemental MediaPackage that can be increased\. For information about changing limits, see [AWS Service Limits](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html)\. 
 
+For some customers, your account limit might be below these advertised limits\. If you believe that you encountered a Resource limit exceeded error wrongfully, [create a Service Limit Increase](https://console.aws.amazon.com/support/v1#/case/create) case and provide details such as how many channels or endpoints you have and what you were trying to do\.
+
 
 | Resource | Default Limit | 
 | --- | --- | 
@@ -19,7 +21,7 @@ The following table describes limits within AWS Elemental MediaPackage that can'
 
 | Resource or Operation | Limit | 
 | --- | --- | 
-| Ingest Stream Limits | 20 streams per channel, and 10 tracks per stream | 
+| Input Stream Limits | 20 streams per channel, and 10 tracks per stream | 
 | Maximum Content Retention | 336 hours \(14 days\) | 
 | Maximum Live Manifest Length | 5 minutes | 
 | Maximum Time\-shifted Manifest Length | 6 hours | 

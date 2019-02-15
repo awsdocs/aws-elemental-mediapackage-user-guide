@@ -24,7 +24,7 @@ If you are a first\-time user of AWS Elemental MediaPackage, we recommend that y
 
 ## Related Services<a name="related-services"></a>
 + **Amazon CloudFront** is a global content delivery network \(CDN\) service that securely delivers data and videos to your viewers\. Use CloudFront to deliver content with the best possible performance\. For more information, see [Amazon CloudFront](https://aws.amazon.com/cloudfront/)\.
-+ **Amazon CloudWatch** is a monitoring service for AWS Cloud resources and the applications that you run on AWS\. Use CloudWatch to track metrics such as ingress and egress request counts\. For more information, see [Amazon CloudWatch](https://aws.amazon.com/cloudwatch/)\.
++ **Amazon CloudWatch** is a monitoring service for AWS Cloud resources and the applications that you run on AWS\. Use CloudWatch to track metrics such as content input and output request counts\. For more information, see [Amazon CloudWatch](https://aws.amazon.com/cloudwatch/)\.
 + **AWS Elemental MediaLive** is a live video processing service that encodes high\-quality live video streams for broadcast television and multi\-screen devices\. Use MediaLive to encode content streams and send them to AWS Elemental MediaPackage for packaging\. For more information about how encoders \(such as MediaLive\) work with MediaPackage, see [How AWS Elemental MediaPackage Works](what-is-flow.md)\.
 + **AWS Identity and Access Management \(IAM\)** is a web service that helps you securely control access to AWS resources for your users\. Use IAM to control who can use your AWS resources \(authentication\) and what resources users can use in which ways \(authorization\)\. For more information, see [Setting Up AWS Elemental MediaPackage](setting-up.md)\.
 
@@ -50,7 +50,7 @@ You can access AWS Elemental MediaPackage through the console, AWS Command Line 
 ## Pricing for AWS Elemental MediaPackage<a name="pricing-for-emp"></a>
 
 As with other AWS products, there are no contracts or minimum commitments for using AWS Elemental MediaPackage\. You are charged only for AWS resources that your account uses\. Pricing is pay\-as\-you\-go and consists of the following:
-+ A per GB charge for ingested content
++ A per GB charge for received content
 + A per GB charge for content that is streamed out of AWS Elemental MediaPackage
 
   Content that is cached and served from a content delivery network \(CDN\) does not incur this per GB charge\.
