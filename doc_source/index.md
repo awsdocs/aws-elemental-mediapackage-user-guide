@@ -78,6 +78,7 @@ Amazon's trademarks and trade dress may not be used in
       + [AWS Elemental MediaPackage Events](cloudwatch-events-example.md)
       + [Creating Event Notifications](cloudwatch-events-notification.md)
    + [Logging AWS Elemental MediaPackage API Calls with AWS CloudTrail](logging-using-cloudtrail.md)
++ [Tagging AWS Elemental MediaPackage Resources](tagging.md)
 + [Working with Content Delivery Networks (CDNs)](cdns.md)
    + [Creating a Distribution](cdns-create.md)
       + [Creating a Distribution from AWS Elemental MediaPackage](cdns-create-mp.md)
