@@ -4,7 +4,7 @@ AWS Elemental MediaPackage uses just\-in\-time format conversion to deliver over
 
 Here is the general processing flow:
 
-1. An upstream encoder \(such as AWS Elemental MediaLive\) sends an HLS live stream over WebDAV to the AWS Elemental MediaPackage channel input URL, and includes the channel's access credentials \(as supplied in MediaPackage\)\. If you're using input redundancy, the encoder sends two identical HLS live streams to MediaPackage, one to each input URL on the channel\. MediaPackage uses the stream from one input URL as the source content\. If MediaPackage stops receiving content on the active input URL, it automatically switches to the other input URL for source content\. Additionally, AWS scales resources up and down to handle the incoming traffic\.
+1. An upstream encoder \(such as AWS Elemental MediaLive\) sends an HLS live stream with digest authentication over WebDAV to the AWS Elemental MediaPackage channel input URL, and includes the channel's access credentials \(as supplied in MediaPackage\)\. If you're using input redundancy, the encoder sends two identical HLS live streams to MediaPackage, one to each input URL on the channel\. MediaPackage uses the stream from one input URL as the source content\. If MediaPackage stops receiving content on the active input URL, it automatically switches to the other input URL for source content\. Additionally, AWS scales resources up and down to handle the incoming traffic\.
 
    For more information, see [How Input Redundancy Works](what-is-flow-ir.md)\.
 

@@ -30,6 +30,7 @@ Amazon's trademarks and trade dress may not be used in
    + [Creating a Channel](channels-create.md)
    + [Viewing Channel Details](channels-view.md)
    + [Editing a Channel](channels-edit.md)
+   + [Rotating Credentials on an Input URL](channels-rotate-creds.md)
    + [Deleting a Channel](channels-delete.md)
    + [Adding an Endpoint to a Channel](channels-add-endpoint.md)
 + [Working with Endpoints in AWS Elemental MediaPackage](endpoints.md)

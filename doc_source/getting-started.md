@@ -40,9 +40,9 @@ AWS Elemental MediaPackage does not require that you supply any customer data\. 
 
 1. On the channel's details page, note the values for **Input URL**, **Username**, and **Password**\. If you're using input redundancy, you need this information for both input URLs\. If you're sending only one stream to the channel, you can note the information for either input URL\. 
 
-   AWS Elemental MediaPackage securely generates the user names and passwords when it creates the channel\. If you need to change these credentials, see [Rotating Credentials on an Input URL](channels.md#channels-rotate-creds)\.
+   AWS Elemental MediaPackage securely generates the user names and passwords when it creates the channel\. If you need to change these credentials, see [Rotating Credentials on an Input URL](channels-rotate-creds.md)\.
 
-   Provide the information from these fields to the person in charge of the upstream encoder\. In the stream configuration in the encoder, this person must type the destination as the input URL, and the WebDAV credentials as the channel's user name and password\. The upstream encoder must push WebDAV over HTTPS to AWS Elemental MediaPackage, and include these credentials\. If you're using input redundancy, the input streams to this channel must have identical encoder settings\. For more information about setting up source streams for input redundancy, see [How Input Redundancy Works](what-is-flow-ir.md)\.
+   Provide the information from these fields to the person in charge of the upstream encoder\. In the stream configuration in the encoder, this person must type the destination as the input URL, and the WebDAV credentials as the channel's user name and password\. The upstream encoder must use digest authentication and push WebDAV over HTTPS to AWS Elemental MediaPackage, and include these credentials\. If you're using input redundancy, the input streams to this channel must have identical encoder settings\. For more information about setting up source streams for input redundancy, see [How Input Redundancy Works](what-is-flow-ir.md)\.
 
 ## Step 3: Create Endpoints<a name="create-endpoint"></a>
 

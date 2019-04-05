@@ -11,7 +11,7 @@ To use the multi\-period DASH feature, the input to AWS Elemental MediaPackage m
 
 1. AWS Elemental MediaPackage detects the SCTE\-35 messages from the input source\. 
 
-1. Using the attributes of the SCTE\-35 messages, AWS Elemental MediaPackage calculates where the boundaries are between the end of the main content and the ads\. This calculation is \(scte35 `ptsAdjustement` \+ scte35 `ptsTime`\) / \(EventStream `timescale`\)\.  
+1. Using the attributes of the SCTE\-35 messages, AWS Elemental MediaPackage calculates where the boundaries are between the end of the main content and the ads\. This calculation is \(scte35 `ptsAdjustment` \+ scte35 `ptsTime`\) / \(EventStream `timescale`\)\.  
 **Example**  
 
    In the following example, the period starts at 44\.075 seconds because \(183003 \+ 3783780\) / 90000 = 44\.075:

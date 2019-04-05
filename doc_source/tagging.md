@@ -28,8 +28,6 @@ The following basic restrictions apply to tags on AWS Elemental MediaPackage res
 + Keys and values are case sensitive
 + Don't use `aws:` as a prefix for keys; it's reserved for AWS use
 
-Additionally, AWS Elemental MediaPackage doesn't support the tag\-based access control feature of AWS Identity and Access Management \(IAM\)\. 
-
 ## Managing Tags<a name="tagging-add-edit-delete"></a>
 
 Tags are made up of the `Key` and `Value` properties on a resource\. You can use the AWS Elemental MediaPackage API or the AWS CLI to add, edit, or delete the values for these properties\. For more information, see the [Resources](https://docs.aws.amazon.com/mediapackage/latest/apireference/resources.html) topic in the *AWS Elemental MediaPackage API Reference*\.
