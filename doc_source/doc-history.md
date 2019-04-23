@@ -2,10 +2,11 @@
 
 The following table describes important changes in each release of the *AWS Elemental MediaPackage User Guide* after May 2018\. For notification about updates to this documentation, you can subscribe to an RSS feed\.
 + **API version:** 1\.0
-+ **Latest documentation update:** March 4, 2019
++ **Latest documentation update:** April 16, 2019
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Added information about live and VOD manifests\.](what-is-manifest.md) | Added the *Live and VOD Manifest Reference* topic that explains when AWS Elemental MediaPackage serves a live or VOD manifest\. | April 16, 2019 | 
 | [Added tagging information\.](tagging.md) | Added *Tagging Resources* topic to discuss how tagging channels and endpoints works in AWS Elemental MediaPackage\. | March 4, 2019 | 
 | [Added DASH manifest treatment information\.](dash-trtmts.md) | Added *DASH Manifest Options* topic to discuss the ways that you can modify output DASH manifests\. | February 6, 2019 | 
 | [Added AWS CloudTrail logging information\.](logging-using-cloudtrail.md) | Added *Logging AWS Elemental MediaPackage API Calls with AWS CloudTrail* topic to discuss using CloudTrail to log actions in the AWS Elemental MediaPackage API\. | December 21, 2018 | 

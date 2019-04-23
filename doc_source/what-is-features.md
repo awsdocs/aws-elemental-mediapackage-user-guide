@@ -15,7 +15,7 @@ DRM
 AWS Elemental MediaPackage supports content protection through digital rights management \(DRM\)\.
 
 Input Redundancy  
-AWS Elemental MediaPackage creates two input URLs on every channel so that you can create input redundancy by sending two identical streams to the same channel\. For information about how input redundancy works, see [How Input Redundancy Works](what-is-flow-ir.md)\.
+AWS Elemental MediaPackage creates two input URLs on every channel so that you can create input redundancy by sending two identical streams to the same channel\. For information about how input redundancy works, see [Input Redundancy AWS Elemental MediaPackage Processing Flow](what-is-flow-ir.md)\.
 
 Subtitles  
 AWS Elemental MediaPackage supports input WebVTT text\-based subtitles\. MediaPackage translates the subtitles to the appropriate format based on the packager that is used on the endpoint:  

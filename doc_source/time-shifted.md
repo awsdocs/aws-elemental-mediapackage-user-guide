@@ -19,7 +19,7 @@ You might notice that the manifest lags behind real time when you initially crea
 In all cases, the maximum manifest length is six hours\.
    + If both start and end parameters are used in the URL, the resulting manifest has a fixed start and end time that correspond to the specified start and end parameters\.
 
-     If the end time is in the future, the tags in the manifest are consistent with a live manifest\. For example, there is no `EXT-X-ENDLIST` tag on HLS manifests\. Otherwise, if the end time is in the past, the tags in the manifest are consistent with a video on demand \(VOD\) manifest\.
+     If the end time is in the future, the tags in the manifest are consistent with a live manifest\. Otherwise, if the end time is in the past, the tags in the manifest are consistent with a video on demand \(VOD\) manifest\. For information about the manifest differences, see [Live and VOD Manifest Reference](what-is-manifest.md)\.
    + If a start parameter is specified but not an end, the resulting manifest has a fixed start time that corresponds to the specified start parameter, and the end of the manifest grows as the live content progresses\. You can use a start time that’s up to 6 hours in the past\.
    + If no parameters are specified, a standard manifest is generated starting "now" with no end time\.
    + If an end parameter is specified but no start, the manifest is generated in the same way as when no parameters are specified\. The manifest starts "now" and has no end time\.

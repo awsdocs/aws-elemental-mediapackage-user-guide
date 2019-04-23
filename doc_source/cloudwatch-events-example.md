@@ -18,7 +18,7 @@ You get input notification events if one of these actions occurs:
 
   One event is sent in a five\-minute period\. If the input switches multiple times in five minutes \(for example, if MediaPackage switches to one input, then back to the other\), you receive only one event\.
 
-  For information about input redundancy and what causes inputs to switch, see [How Input Redundancy Works](what-is-flow-ir.md)\.
+  For information about input redundancy and what causes inputs to switch, see [Input Redundancy AWS Elemental MediaPackage Processing Flow](what-is-flow-ir.md)\.
 
 **Example Maximum Input Streams Exceeded Event**  
 

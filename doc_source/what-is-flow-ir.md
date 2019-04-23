@@ -1,4 +1,4 @@
-# How Input Redundancy Works<a name="what-is-flow-ir"></a>
+# Input Redundancy AWS Elemental MediaPackage Processing Flow<a name="what-is-flow-ir"></a>
 
 Achieve input redundancy in AWS Elemental MediaPackage by sending two streams to separate input URLs on a channel in MediaPackage\. One of the streams becomes the primary, active source of content for the endpoints, while the other continues to passively receive content\. If MediaPackage stops receiving content from the active stream, it switches over to the other input stream so that content playback isn't interrupted\.
 
@@ -12,9 +12,9 @@ When input redundancy became available, AWS Elemental MediaPackage added a secon
 **Important**  
 If you use short output segments, depending on your playback device, you might see buffering when AWS Elemental MediaPackage switches inputs\. You can reduce buffering by using the time delay feature on the endpoint\. Be aware that using a time delay introduces latency to end\-to\-end delivery of the content\. For help enabling time delay, see [Creating an Endpoint](endpoints-create.md)\.
 
-1. You create an input and channel in AWS Elemental MediaLive, and you add an HLS output group to the channel in MediaLive, as described in [Getting Started](https://docs.aws.amazon.com/medialive/latest/ug/getting-started.html) in the *AWS Elemental MediaLive User Guide*\. 
+1. You create an input and channel in AWS Elemental MediaLive, and you add a MediaPackage output group to the channel in MediaLive\. For help, see [Creating a Channel from Scratch](https://docs.aws.amazon.com/medialive/latest/ug/creating-channel-scratch.html) in the *AWS Elemental MediaLive User Guide*\. 
 
-   When you're setting up AWS Elemental MediaLive, the input loss action on the HLS group's settings must be set to pause the output if the service doesn't receive input\. If MediaLive sends a black frame or some other filler frame when it’s missing input, then AWS Elemental MediaPackage can't tell when segments are missing, and subsequently can't perform failover\. For more information about setting the input loss action in MediaLive, see [Fields for the HLS Group](https://docs.aws.amazon.com/medialive/latest/ug/hls-group-fields.html) in the *AWS Elemental MediaLive User Guide*\. 
+   If you're using an HLS output group in AWS Elemental MediaLive, the input loss action on the HLS group's settings must be set to pause the output if the service doesn't receive input\. If MediaLive sends a black frame or some other filler frame when it’s missing input, then AWS Elemental MediaPackage can't tell when segments are missing, and subsequently can't perform failover\. For more information about setting the input loss action in MediaLive, see [Fields for the HLS Group](https://docs.aws.amazon.com/medialive/latest/ug/hls-group-fields.html) in the *AWS Elemental MediaLive User Guide*\. 
 **Important**  
 If you're using a different encoder \(not AWS Elemental MediaLive\) and you're sending two separate streams to the same channel in AWS Elemental MediaPackage, the streams must have identical encoder settings\. Otherwise, input redundancy might not work correctly and playback could be interrupted if the inputs switch\.
 

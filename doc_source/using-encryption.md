@@ -1,6 +1,6 @@
 # Using Encryption in AWS Elemental MediaPackage<a name="using-encryption"></a>
 
-Protect your content from unauthorized use through encryption\. Digital rights management \(DRM\) systems provide keys to AWS Elemental MediaPackage for content encryption, and licenses to supported players for decryption\.
+Protect your content from unauthorized use through encryption\. Digital rights management \(DRM\) systems provide keys to AWS Elemental MediaPackage for content encryption, and licenses to supported players and other consumers for decryption\.
 
 **Note**  
 To encrypt content, you must have a DRM solution provider\.   
