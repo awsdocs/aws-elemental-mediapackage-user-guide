@@ -5,7 +5,7 @@ A period is a chunk of content in the DASH manifest, defined by a start time and
 + For information about DASH\-ISO endpoints in AWS Elemental MediaPackage, see [Creating a DASH Endpoint](endpoints-dash.md)\.
 + For more information about how multi\-period DASH works in AWS Elemental MediaPackage, see the following *How it Works* section\.
 
-## How it Works<a name="how-mp-works"></a>
+## How Multi\-period DASH Works<a name="how-mp-works"></a>
 
 To use the multi\-period DASH feature, the input to AWS Elemental MediaPackage must have SCTE\-35 ad marker messages\. These messages inform MediaPackage of where to create period boundaries\. This is how MediaPackage processes those messages:
 

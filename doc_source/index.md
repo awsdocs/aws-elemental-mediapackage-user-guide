@@ -74,6 +74,8 @@ Amazon's trademarks and trade dress may not be used in
    + [Multi-period DASH in AWS Elemental MediaPackage](multi-period.md)
    + [Compacted DASH Manifests](compacted.md)
    + [DASH Manifest Segment Template Format](segtemp-format.md)
+      + [media Attribute in SegmentTemplate](segtemp-format-media.md)
+      + [duration Attribute in the SegmentTemplate](segtemp-format-duration.md)
 + [Monitoring AWS Elemental MediaPackage](monitoring.md)
    + [Monitoring AWS Elemental MediaPackage with Amazon CloudWatch Metrics](monitoring-cloudwatch.md)
       + [AWS Elemental MediaPackage Metrics](metrics.md)

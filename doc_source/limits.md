@@ -24,6 +24,6 @@ The following table describes limits within AWS Elemental MediaPackage that can'
 | Input Stream Limits | 20 streams per channel, and 10 tracks per stream | 
 | Maximum Content Retention | 336 hours \(14 days\) | 
 | Maximum Live Manifest Length | 5 minutes | 
-| Maximum Time\-shifted Manifest Length | 6 hours | 
+| Maximum Time\-shifted Manifest Length | 9 hours | 
 | Request Rates per Channel |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/limits.html)  | 
 | REST API Requests |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/limits.html)  | 

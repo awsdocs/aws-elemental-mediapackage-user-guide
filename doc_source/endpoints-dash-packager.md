@@ -3,6 +3,8 @@
 1. For **Type**, choose **DASH\-ISO**\.
 
 1. \(Optional\) For **Segment duration**, type the duration \(in seconds\) of each segment\. If the value that you type here is different from the input segment size, AWS Elemental MediaPackage rounds segments to the nearest multiple of the input segment duration\.
+**Important**  
+If you enable **Number with duration** in **Segment template format**, you can't change the segment duration after you've created the endpoint\.
 
 1. \(Optional\) For **Manifest window duration**, type the total duration \(in seconds\) of the manifest\.
 
@@ -25,10 +27,11 @@
 1. \(Optional\) For **Suggested presentation delay**, enter the amount of time \(in seconds\) that the player should be from the end of the manifest\. This sets the content start point back x seconds from the end of the manifest \(the point where content is live\)\. For example, with a 35\-second presentation delay, requests at 5:30 receive content from 5:29:25\. When used with time delay, AWS Elemental MediaPackage adds the suggested presentation delay to the time delay duration\.
 
 1. \(Optional\) In **Segment template format**, choose how AWS Elemental MediaPackage and playback requests refer to each segment\.
-   + If you choose **Number**, MediaPackage uses the $Number$ variable to refer to the segment in the `media` attribute of the `SegmentTemplate` tag\. The value of the variable is the sequential number of the segment\.
-   + If you choose **Time**, MediaPackage uses the $Time$ variable to refer to the segment\. The value of the variable is the timestamp of when on the manifest timeline the segment starts\.
+   + If you choose **Number with timeline**, MediaPackage uses the `$Number$` variable to refer to the segment in the `media` attribute of the `SegmentTemplate` tag\. The value of the variable is the sequential number of the segment\. `SegmentTimeline` is included in each segment template\.
+   + If you choose **Number with duration**, MediaPackage uses the `$Number$` variable and replaces the `SegmentTimeline` objects with a `duration` attribute in the segment template\.
+   + If you choose **Time with timeline**, MediaPackage uses the `$Time$` variable to refer to the segment\. The value of the variable is the timestamp of when on the manifest timeline the segment starts\. `SegmentTimeline` is included in each segment template\.
 
-   For more information about the variables used in the `SegmentTemplate` tag, see [DASH Manifest Segment Template Format](segtemp-format.md)\.
+   For more information about the formatting options of the `SegmentTemplate` tag, see [DASH Manifest Segment Template Format](segtemp-format.md)\.
 
 1. For **Period triggers**, choose how AWS Elemental MediaPackage creates media presentation description \(MPD\) periods in the DASH output manifest\. Choose from the following:
    + **None** – MediaPackage doesn't create additional periods\. It formats the manifest as a single period and doesn't include SCTE\-35 markers in the segments\.

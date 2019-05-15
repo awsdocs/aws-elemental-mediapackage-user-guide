@@ -19,7 +19,7 @@ To encrypt content, you must have a DRM solution provider, and be set up to use 
 
    1. For **System IDs**, enter unique identifiers for your streaming protocol and DRM system\. Provide up to two IDs for DASH and exactly one for the other streaming protocols\. If you provide more than one system ID, enter them on separate lines, and do not separate them with commas or any other punctuation\. For a list of common system IDs, see [DASH\-IF System IDs](https://dashif.org/identifiers/content_protection/)\. If you do not know your IDs, ask your DRM solution provider\.
 
-   1. For **URL**, enter the URL from the API Gateway proxy that you set up to talk to your key server\. The API Gateway proxy must reside in the same AWS Region as MediaPackage\.
+   1. For **URL**, enter the URL of the API Gateway proxy that you set up to talk to your key server\. The API Gateway proxy must reside in the same AWS Region as MediaPackage\.
 
       The following example shows a URL: 
 
@@ -39,7 +39,7 @@ To encrypt content, you must have a DRM solution provider, and be set up to use 
 
       To enter a certificate ARN here, you must have already imported the corresponding certificate into AWS Certificate Manager\. Then enter the certificate ARN from ACM here\. 
 
-   1. For **Encryption method**, choose **Sample\-AES** for Apple HLS Fairplay or choose **AES\-128** for Apple HLS AES\-128\. 
+   1. For **Encryption method**, choose **Sample\-AES** for Apple HLS FairPlay or choose **AES\-128** for Apple HLS AES\-128\. 
 
    1. \(Optional\) For **Constant initialization vector** enter a 128\-bit, 16\-byte hex value represented by a 32\-character string, to be used with the key for encrypting content\.
 
