@@ -1,6 +1,6 @@
 # Using Encryption in AWS Elemental MediaPackage<a name="using-encryption"></a>
 
-Protect your content from unauthorized use through encryption\. Digital rights management \(DRM\) systems provide keys to AWS Elemental MediaPackage for content encryption, and licenses to supported players and other consumers for decryption\.
+Protect your content from unauthorized use through encryption\. Digital rights management \(DRM\) systems provide keys to AWS Elemental MediaPackage for content encryption, and licenses to supported players for decryption\.
 
 **Note**  
 To encrypt content, you must have a DRM solution provider\.   
@@ -10,6 +10,8 @@ To get set up, see [https://docs\.aws\.amazon\.com/speke/latest/documentation/cu
 Your DRM solution provider can help you get set up to use DRM encryption in AWS Elemental MediaPackage\. 
 
 ## Using Encrypted Content Keys with DRM<a name="drm-content-key-encryption"></a>
+
+Encrypted content keys are available with only live workflows in AWS Elemental MediaPackage\.
 
 For the most secure DRM encryption solution, use encrypted content keys in addition to encrypted content\. To use encrypted content keys, you must import suitable certificates into the AWS Certificate Manager\. For information about ACM, see the [AWS Certificate Manager User Guide](https://docs.aws.amazon.com/acm/latest/userguide/)\. 
 

@@ -2,25 +2,26 @@
 
 The following table describes important changes in each release of the *AWS Elemental MediaPackage User Guide* after May 2018\. For notification about updates to this documentation, you can subscribe to an RSS feed\.
 + **API version:** 1\.0
-+ **Latest documentation update:** May 10, 2019
++ **Latest documentation update:** May 17, 2019
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Added video on demand \(VOD\) topics\.](what-is.md) | Throughout guide, added topics about working with VOD content: *VOD Content Processing*, *Allowing AWS Elemental MediaPackage to Access Amazon Simple Storage Service*, *VOD Content Delivery*, *Delivering VOD Content*, *VOD Content Metrics*, and *VOD Content Limits*\. | May 17, 2019 | 
 | [Added further information about DASH manifest SegmentTemplate format options\.](segtemp-format.md) | Added the *Duration Attribute* topic to discuss how to include duration information in `SegmentTemplate` instead of using `SegmentTimeline`\. | May 10, 2019 | 
-| [Updated time\-shifted manifest length limit\.](limits.md#hard-limits) | AWS Elemental MediaPackage can now produce time\-shifted manifests up to 9 hours\. | May 1, 2019 | 
+| [Updated time\-shifted manifest length limit\.](limits-live.md#hard-limits) | AWS Elemental MediaPackage can now produce time\-shifted manifests up to 9 hours\. | May 1, 2019 | 
 | [Added information about live and VOD manifests\.](what-is-manifest.md) | Added the *Live and VOD Manifest Reference* topic that explains when AWS Elemental MediaPackage serves a live or VOD manifest\. | April 16, 2019 | 
 | [Added tagging information\.](tagging.md) | Added *Tagging Resources* topic to discuss how tagging channels and endpoints works in AWS Elemental MediaPackage\. | March 4, 2019 | 
 | [Added information about DASH manifest SegmentTemplate format options\.](segtemp-format.md) | Added the *DASH Manifest Segment Template Format* topic to discuss how to change variables in the media URL in the SegmentTemplate object of the DASH manifest\. | February 6, 2019 | 
 | [Added DASH manifest treatment information\.](dash-trtmts.md) | Added *DASH Manifest Options* topic to discuss the ways that you can modify output DASH manifests\. | February 6, 2019 | 
 | [Added AWS CloudTrail logging information\.](logging-using-cloudtrail.md) | Added *Logging AWS Elemental MediaPackage API Calls with AWS CloudTrail* topic to discuss using CloudTrail to log actions in the AWS Elemental MediaPackage API\. | December 21, 2018 | 
 | [Added information about compact DASH manifests\.](compacted.md) | Added a *Compacted DASH Manifests* topic to discuss how compacting DASH output manifests works in AWS Elemental MediaPackage\. | December 18, 2018 | 
-| [Updated content retention window limit\.](limits.md#hard-limits) | AWS Elemental MediaPackage now retains content for 336 hours \(14 days\)\. | November 13, 2018 | 
+| [Updated content retention window limit\.](limits-live.md#hard-limits) | AWS Elemental MediaPackage now retains content for 336 hours \(14 days\)\. | November 13, 2018 | 
 | [Added content key encryption to DRM encryption](using-encryption.md#drm-content-key-encryption) | Added the option to encrypt content keys\. Prior to this, AWS Elemental MediaPackage supported clear key delivery only\. To use content key encryption, your DRM key provider must support encrypted content keys\. If you enable this feature for a key provider that doesn't handle content key encryption, the operation fails\. | November 8, 2018 | 
 | [Added input redundancy information\.](what-is-flow-ir.md) | Added *How Input Redundancy Works* topic to discuss how AWS Elemental MediaPackage can receive two identical streams for back\-up purposes\.  | August 28, 2018 | 
 | [Added Amazon CloudFront console integration information\.](cdns.md) | Added sections about working with distributions in CloudFront, including how to create a distribution from the AWS Elemental MediaPackage console\. | August 3, 2018 | 
 | [Added information about multi\-period DASH\.](multi-period.md) | Added *Multi\-period DASH in AWS Elemental MediaPackage* topic to discuss the purpose and functionality of multiple periods in DASH manifests\. | July 18, 2018 | 
 | [Added content delivery network \(CDN\) information\.](cdns.md) | Added *Working with CDNs* topic to discuss how AWS Elemental MediaPackage works with CDNs such as Amazon CloudFront\. | May 31, 2018 | 
-| [Added information about creating event notifications\.](monitoring-cloudwatch-events.md) | Added *Creating Event Notifications* topic to discuss using Amazon CloudWatch Events and Amazon Simple Notification Service to notify you of new events\. | January 22, 2018 | 
+| [Added information about creating event notifications](monitoring-cloudwatch-events.md) | Added the *Creating Event Notifications* topic that describes how to use Amazon CloudWatch Events and Amazon Simple Notification Service to notify you of new events\. | January 22, 2018 | 
 
 ## Earlier Updates<a name="earlier-updates"></a>
 

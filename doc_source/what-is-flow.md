@@ -5,6 +5,6 @@ AWS Elemental MediaPackage uses just\-in\-time format conversion to deliver over
 The following sections describe how AWS Elemental MediaPackage works\.
 
 **Topics**
-+ [General AWS Elemental MediaPackage Processing Flow](what-is-flow-gen.md)
-+ [Input Redundancy AWS Elemental MediaPackage Processing Flow](what-is-flow-ir.md)
++ [Live Content Processing](what-is-flow-live.md)
++ [VOD Content Processing](what-is-flow-vod.md)
 + [Live and VOD Manifest Reference](what-is-manifest.md)

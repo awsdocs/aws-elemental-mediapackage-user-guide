@@ -24,6 +24,7 @@ The value that replaces the variable must be an exact `t` value of a segment\. I
 
    ```
    <SegmentTemplate timescale="30000" media="155_video_1_2_$Time$.mp4?m=1545421124" initialization="155_video_1_2_init.mp4?m=1545421124" startNumber="710">
+   >>>>>>> mainline
      <SegmentTimeline>
           <S t="255197799" d="360360" r="8"/>
           <S t="258441039" d="334334"/>

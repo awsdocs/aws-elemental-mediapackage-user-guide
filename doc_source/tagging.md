@@ -1,5 +1,7 @@
 # Tagging AWS Elemental MediaPackage Resources<a name="tagging"></a>
 
+Tagging is available with only live workflows in AWS Elemental MediaPackage\.
+
 A *tag* is a metadata label that you assign or that AWS assigns to an AWS resource\. Each tag consists of a *key* and a *value*\. For tags that you assign, you define the key and value\. For example, you might define the key as `stage` and the value for one resource as `test`\.
 
 Tags help you do the following:
@@ -16,11 +18,14 @@ The following resources in AWS Elemental MediaPackage support tagging:
 + Channels
 + Endpoints
 
+Video on demand \(VOD\) resources don't support tagging\. This includes assets, packaging groups, and packaging configurations\.
+
 For information about adding and managing tags, see [Managing Tags](#tagging-add-edit-delete)\.
 
 ## Tag Restrictions<a name="tagging-restrictions"></a>
 
 The following basic restrictions apply to tags on AWS Elemental MediaPackage resources:
++ Only live content workflows are supported in MediaPackage
 + Maximum number of tags that you can assign to a resource – 50 
 + Maximum key length – 128 Unicode characters 
 + Maximum value length – 256 Unicode characters 

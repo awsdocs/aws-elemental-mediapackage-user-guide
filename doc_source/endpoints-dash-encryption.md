@@ -1,6 +1,6 @@
 # Encryption Fields<a name="endpoints-dash-encryption"></a>
 
-Protect your content from unauthorized use through encryption\. Digital rights management \(DRM\) systems provide keys to AWS Elemental MediaPackage for content encryption, and licenses to supported players and other consumers for decryption\.
+Protect your content from unauthorized use through encryption\. Digital rights management \(DRM\) systems provide keys to AWS Elemental MediaPackage for content encryption, and licenses to supported players for decryption\.
 
 **Note**  
 To encrypt content, you must have a DRM solution provider and be set up to use encryption\. For information, see [Using Encryption in AWS Elemental MediaPackage](using-encryption.md)\. 
@@ -35,7 +35,9 @@ To encrypt content, you must have a DRM solution provider and be set up to use e
       arn:aws:iam::444455556666:role/SpekeAccess
       ```
 
-   1. \(Optional\) For **Certificate ARN**, enter a 2048 RSA certificate ARN to use for content key encryption\. Use this option only if your DRM key provider supports content key encryption\. If you use this and your key provider doesn't support it, the request fails\.
+   1. **Certificate ARN** – \(Optional\) Enter a 2048 RSA certificate ARN to use for content key encryption\. Use this option only if your DRM key provider supports content key encryption\. If you use this and your key provider doesn't support it, the event fails\.
+
+      To enter a certificate ARN here, you must have already imported the corresponding certificate into AWS Certificate Manager\. Then enter the certificate ARN from ACM here\. 
 
       To enter a certificate ARN here, you must have already imported the corresponding certificate into AWS Certificate Manager\. Then enter the certificate ARN from ACM here\. 
 

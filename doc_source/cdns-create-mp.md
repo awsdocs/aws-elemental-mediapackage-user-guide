@@ -1,5 +1,7 @@
 # Creating a Distribution from AWS Elemental MediaPackage<a name="cdns-create-mp"></a>
 
+You can create a CloudFront distribution from the AWS Elemental MediaPackage console when you're working with live content only\.
+
 AWS Elemental MediaPackage communicates with Amazon CloudFront on your behalf to create a distribution for a channel and its endpoints\. When you enable the feature, MediaPackage creates a distribution in CloudFront when you save the channel, and then adds an origin and updates cache behaviors when you save an endpoint\. Because the creation process is automated and initiated from your actions in MediaPackage, there is no additional action required from you\. 
 
 **Important**  

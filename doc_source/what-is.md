@@ -27,6 +27,7 @@ If you are a first\-time user of AWS Elemental MediaPackage, we recommend that y
 + **Amazon CloudWatch** is a monitoring service for AWS Cloud resources and the applications that you run on AWS\. Use CloudWatch to track metrics such as content input and output request counts\. For more information, see [Amazon CloudWatch](https://aws.amazon.com/cloudwatch/)\.
 + **AWS Elemental MediaLive** is a live video processing service that encodes high\-quality live video streams for broadcast television and multi\-screen devices\. Use MediaLive to encode content streams and send them to AWS Elemental MediaPackage for packaging\. For more information about how encoders \(such as MediaLive\) work with MediaPackage, see [How AWS Elemental MediaPackage Works](what-is-flow.md)\.
 + **AWS Identity and Access Management \(IAM\)** is a web service that helps you securely control access to AWS resources for your users\. Use IAM to control who can use your AWS resources \(authentication\) and what resources users can use in which ways \(authorization\)\. For more information, see [Setting Up AWS Elemental MediaPackage](setting-up.md)\.
++ **AWS Elemental MediaTailor** is a scalable ad insertion service that runs in the AWS Cloud\. Use MediaTailor to serve targeted ads to viewers\. For more information, see [AWS Elemental MediaTailor](https://aws.amazon.com/mediatailor/)\.
 
 ## Accessing AWS Elemental MediaPackage<a name="accessing-emp"></a>
 
@@ -59,4 +60,4 @@ For detailed pricing information, see [AWS Elemental MediaPackage Pricing](https
 
 ## Regions for AWS Elemental MediaPackage<a name="regions-and-endpoints"></a>
 
-To reduce latency in your applications, AWS Elemental MediaPackage offers a regional endpoint for your requests\. To view the list of regions where MediaPackage is available, see [AWS Elemental MediaPackage Regions](https://docs.aws.amazon.com//general/latest/gr/rande.html#mediapackage_region)\.
+To reduce latency in your applications, AWS Elemental MediaPackage offers a regional endpoint for your requests\. To view the list of AWS Regions where MediaPackage is available, see [AWS Elemental MediaPackage Regions](https://docs.aws.amazon.com//general/latest/gr/rande.html#mediapackage_region)\.

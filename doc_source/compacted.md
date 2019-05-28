@@ -1,5 +1,7 @@
 # Compacted DASH Manifests<a name="compacted"></a>
 
+The ability to compact DASH manifests is available with only live workflows in AWS Elemental MediaPackage\.
+
 The default DASH manifest from AWS Elemental MediaPackage includes duplicate data about each representation \(track\)\. For some players, processing a manifest with all this data is difficult and slow\. To reduce some of the burden, MediaPackage can compact the manifest by moving some attributes from the `Representation` object to the `AdaptationSet` object\. This way, rather than having the attributes defined for each representation in the manifest, they're defined once at a higher level\. The representations then inherit these attributes from the adaptation set\.
 
 **Example Default DASH manifest**  

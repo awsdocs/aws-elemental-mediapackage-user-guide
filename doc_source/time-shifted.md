@@ -1,5 +1,7 @@
 # Time\-shifted Viewing Reference in AWS Elemental MediaPackage<a name="time-shifted"></a>
 
+Time\-shifted viewing is available with only live workflows in AWS Elemental MediaPackage\.
+
 *Time\-shifted viewing* means that viewers can start watching a live stream at a time earlier than "now," allowing them to join from the beginning a show that's already in progress or to watch a show that's already completed\. AWS Elemental MediaPackage allows a content retention window of up to 336 hours \(14 days\) for time\-shifted viewing\. Time\-shifted functionality is controlled by the MediaPackage endpoint and by the start and end parameters provided in the content request URL\. 
 
 **To enable time\-shifted viewing**

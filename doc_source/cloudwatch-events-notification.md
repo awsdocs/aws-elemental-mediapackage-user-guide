@@ -27,4 +27,4 @@ You can use Amazon CloudWatch Events and Amazon Simple Notification Service \(Am
 
 1. Add a target to the rule that you just created\. Choose **SNS topic**, and then choose the topic that you created in step 1\. 
 
-1. Configure the details of the rule and give it a descriptive name\. To start using the rule, make sure it's enabled and save it\.
+1. Configure the details of the rule, and give it a descriptive name\. To start using the rule, make sure it's enabled, and then save it\.

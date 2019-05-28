@@ -2,7 +2,7 @@
 
 *Rendition groups* are used in HLS and CMAF outputs\. A rendition group collects all subtitle or audio tracks and makes them available for all video renditions in the stream\. When you enable rendition groups, AWS Elemental MediaPackage pulls together all audio variants \(such as different languages or codecs\) and groups them for use with any video rendition\. MediaPackage automatically puts subtitles into a rendition group\. 
 
-Audio and subtitles tracks are required to be in their own rendition groups on CMAF endpoints\.
+Audio and subtitles tracks are required to be in their own rendition groups for CMAF outputs\.
 
 The following sections further describe when you can use rendition groups\.
 
@@ -16,7 +16,7 @@ DASH and Microsoft Smooth do not use rendition groups\. This is because all audi
 ## When to Use Rendition Groups<a name="when-use-rend-group"></a>
 
 Rendition groups are used only in HLS and CMAF outputs\. Rendition groups are most beneficial when you have multiple languages or multiple audio codecs in your streams\. Rendition groups should be used in the following use cases:
-+ On CMAF endpoints, if there are any audio or subtitle tracks
++ With CMAF outputs, if there are any audio or subtitle tracks
 
   CMAF requires all audio tracks in one rendition group, and all subtitles in another\. Audio or subtitles can't be muxed with video tracks\.
 + One or more video tracks with multiple audio languages or codecs 

@@ -13,12 +13,16 @@ The following topics describe the CloudWatch Events that AWS Elemental MediaPack
 ## Input Notification Events<a name="input-state-events"></a>
 
 You get input notification events if one of these actions occurs:
-+ A channel in AWS Elemental MediaPackage exceeds the limit for the number of input streams\. For information about limits, see [Limits in AWS Elemental MediaPackage](limits.md)\.
-+ AWS Elemental MediaPackage switches inputs for one of your endpoints\. 
++ For live content, a channel in AWS Elemental MediaPackage exceeds the limit for the number of input streams\. For information about limits, see [Limits in AWS Elemental MediaPackage](limits.md)\.
++ For live content, AWS Elemental MediaPackage switches inputs for one of your endpoints\. 
 
   One event is sent in a five\-minute period\. If the input switches multiple times in five minutes \(for example, if MediaPackage switches to one input, then back to the other\), you receive only one event\.
 
-  For information about input redundancy and what causes inputs to switch, see [Input Redundancy AWS Elemental MediaPackage Processing Flow](what-is-flow-ir.md)\.
+  For information about input redundancy and what causes inputs to switch, see [Live Input Redundancy AWS Elemental MediaPackage Processing Flow](what-is-flow-ir.md)\.
++ For video on demand \(VOD\) content, an asset in AWS Elemental MediaPackage changes status\. You get notifications for the following events:
+  + `IngestStart`
+  + `IngestError`
+  + `IngestComplete`
 
 **Example Maximum Input Streams Exceeded Event**  
 
@@ -56,6 +60,26 @@ You get input notification events if one of these actions occurs:
    "detail":{
       "event": "InputSwitchEvent",
       "message": "Origin endpoint experienced an Input Switch Event"
+   }
+}
+```
+
+**Example Ingest Status Event**  
+
+```
+{
+   "id": "8f9b8e72-0b31-e883-f19c-aec84742f3ce",
+   "detail-type": "MediaPackage Input Notification",
+   "source": "aws.mediapackage",
+   "account": "aws_account_id",
+   "time": "2019-05-03T17:29:36Z",
+   "region": "us-west-2",
+   "resources":[
+      "arn:aws:mediapackage-vod:us-west-2:aws_account_id:assets/asset_name"
+   ],
+   "detail":{
+      "event": "IngestComplete",
+      "message": "message text"
    }
 }
 ```

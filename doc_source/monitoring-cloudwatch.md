@@ -8,7 +8,7 @@ AWS Elemental MediaPackage displays metrics throughout the console\.
 1. Open the MediaPackage console at [https://console\.aws\.amazon\.com/mediapackage/](https://console.aws.amazon.com/mediapackage/)\.
 
 1. Navigate to the appropriate page to view metrics:
-   + For metrics on all channels and endpoints in the region, go to the **Channels** page\.
+   + For metrics on all channels and endpoints in the AWS Region, go to the **Channels** page\.
    + For metrics on a specific channel and all of its endpoints, go to the channel's details page\.
    + For metrics on a specific endpoint and its channel, go to the endpoint's details page\.
 
@@ -31,3 +31,7 @@ At a command prompt, use the following command:
 ```
 aws cloudwatch list-metrics --namespace "AWS/MediaPackage"
 ```
+
+**Topics**
++ [AWS Elemental MediaPackage Live Content Metrics](metrics.md)
++ [AWS Elemental MediaPackage VOD Content Metrics](metrics-vod.md)
