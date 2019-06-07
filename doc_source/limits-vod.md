@@ -6,7 +6,7 @@ This section describes the limits for video on demand \(VOD\) content in AWS Ele
 
 The following table describes limits in AWS Elemental MediaPackage for VOD content that can be increased\. For information about changing limits, see [AWS Service Limits](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html)\. 
 
-For some customers, your account limit might be below these published limits\. If you believe that you encountered a Resource limit exceeded error wrongfully, [create a Service Limit Increase](https://console.aws.amazon.com/support/v1#/case/create) case and provide details such as how many channels or endpoints you have and what you were trying to do\.
+For some customers, your account limit might be below these published limits\. If you believe that you encountered a Resource limit exceeded error wrongfully, [create a Service Limit Increase](https://console.aws.amazon.com/support/v1#/case/create) case and provide details such as how many resources you have configured and what you were trying to do\.
 
 
 | Resource | Default Limit | 

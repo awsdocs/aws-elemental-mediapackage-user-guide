@@ -2,6 +2,9 @@
 
 To ingest source content, create an asset in AWS Elemental MediaPackage\. When MediaPackage ingests content, it creates a unique playback URL for every packaging configuration that's associated with the asset\.
 
+**Important**  
+To ingest an asset, MediaPackage must have permissions to access the Amazon S3 bucket where the source content is stored\. To create a role that gives MediaPackage the right permissions, see [Allowing AWS Elemental MediaPackage to Access Amazon S3](setting-up-create-trust-rel.md)\.
+
 To create an asset, you can use the AWS Elemental MediaPackage console, the AWS CLI, or the MediaPackage API\. For information about creating a packaging configuration with the AWS CLI or MediaPackage API, see [Assets](https://docs.aws.amazon.com/mediapackage-vod/latest/apireference/assets.html) in the *AWS Elemental MediaPackage VOD API Reference*\.
 
 When you're creating an asset, don't put sensitive identifying information like customer account numbers into free\-form fields, such as the **ID** field\. This applies when you're using the console, REST API, AWS CLI, or AWS SDKs\. Any data that you enter into MediaPackage might get picked up for inclusion in diagnostic logs or Amazon CloudWatch Events\.

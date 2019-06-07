@@ -23,7 +23,26 @@ You can use Amazon CloudWatch Events and Amazon Simple Notification Service \(Am
    }
    ```
 
-   For `detail-type`, enter the detail\-type from the event, as described in [Input Notification Events](cloudwatch-events-example.md#input-state-events) and [Key Provider Notification Events](cloudwatch-events-example.md#key-provider-state-events)\.
+   For `detail-type`, enter the value for the `detail-type` field from the event\. You can use the following values for detail\-type:
+   + **MediaPackage Input Notification**
+   + **MediaPackage Key Provider Notification**
+
+   For information about the event types, see [AWS Elemental MediaPackage Events](cloudwatch-events-example.md)\.  
+**Example**  
+
+   The following example rule creates notifications for both events with both detail\-types\.
+
+   ```
+   {
+     "source": [
+       "aws.mediapackage"
+     ],
+     "detail-type": [
+       "MediaPackage Input Notification",
+       "MediaPackage Key Provider Notification"
+     ]
+   }
+   ```
 
 1. Add a target to the rule that you just created\. Choose **SNS topic**, and then choose the topic that you created in step 1\. 
 

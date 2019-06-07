@@ -2,10 +2,11 @@
 
 The following table describes important changes in each release of the *AWS Elemental MediaPackage User Guide* after May 2018\. For notification about updates to this documentation, you can subscribe to an RSS feed\.
 + **API version:** 1\.0
-+ **Latest documentation update:** May 17, 2019
++ **Latest documentation update:** June 5, 2019
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Added Security chapter\.](security.md) | Added the *Security* chapter to enhance and standardize security topics for MediaPackage\. | June 5, 2019 | 
 | [Added video on demand \(VOD\) topics\.](what-is.md) | Throughout guide, added topics about working with VOD content: *VOD Content Processing*, *Allowing AWS Elemental MediaPackage to Access Amazon Simple Storage Service*, *VOD Content Delivery*, *Delivering VOD Content*, *VOD Content Metrics*, and *VOD Content Limits*\. | May 17, 2019 | 
 | [Added further information about DASH manifest SegmentTemplate format options\.](segtemp-format.md) | Added the *Duration Attribute* topic to discuss how to include duration information in `SegmentTemplate` instead of using `SegmentTimeline`\. | May 10, 2019 | 
 | [Updated time\-shifted manifest length limit\.](limits-live.md#hard-limits) | AWS Elemental MediaPackage can now produce time\-shifted manifests up to 9 hours\. | May 1, 2019 | 

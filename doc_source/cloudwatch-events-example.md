@@ -88,6 +88,8 @@ You get input notification events if one of these actions occurs:
 
 When you're using content encryption on an endpoint, AWS Elemental MediaPackage can't reach the key provider\. For information about DRM and encryption, see [https://docs.aws.amazon.com/speke/latest/documentation/](https://docs.aws.amazon.com/speke/latest/documentation/)\.
 
+**Example**  
+
 ```
 {
    "id": "7bf73129-1428-4cd3-a780-98ds273d1602",

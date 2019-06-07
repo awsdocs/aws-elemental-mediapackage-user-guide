@@ -6,7 +6,7 @@ Specify the format of the manifest that AWS Elemental MediaPackage delivers from
 
 1. \(Optional\) In stream sets with a single video track, to include an additional I\-frame\-only stream along with the other tracks in the manifest, choose **Include IFrame only stream**\. MediaPackage inserts EXT\-I\-FRAMES\-ONLY tags in the manifest, and then compiles and includes an I\-frames only playlist in the stream\. This playlist enables player functionality like fast forward and rewind\.
 
-1. \(Optional\) To tell the service to repeat the key before every segment of the manifest, select **Repeat EXT\-X\-KEY**\. By default, the key is written just once, after the header and before the segments\. If you select **Repeat EXT\-X\-KEY**, the manifest is written as header, key, segment, key, segment, key, and so on, with every segment preceded by the key\. Set this according to the needs of the player\. Selecting this option might result in an increase in client requests to the DRM server\.
+1. \(Optional\) Select **Repeat EXT\-X\-KEY** if you want the service to repeat the key before every segment of the manifest\. By default, the key is written just once, after the header and before the segments\. If you select **Repeat EXT\-X\-KEY**, the manifest is written as header, key, segment, key, segment, key, and so on, with every segment preceded by the key\. Set this according to the needs of the player\. Selecting this option might result in an increase in client requests to the DRM server\.
 
 1. \(Optional\) To include EXT\-X\-PROGRAM\-DATE\-TIME tags in the output manifest, choose **Program date/time interval**, and then enter the interval at which AWS Elemental MediaPackage should insert the tags in the manifest\.
 
