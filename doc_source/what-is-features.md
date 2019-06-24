@@ -15,6 +15,9 @@ AWS Elemental MediaPackage supports input 608/708 captions and passes them throu
 **DRM**  
 AWS Elemental MediaPackage supports content protection through digital rights management \(DRM\)\.
 
+**HLS Rendition Groups**  
+MediaPackage supports rendition groups for incoming and outgoing HLS content\. For information about output redundancy groups, see [Rendition Groups Reference in AWS Elemental MediaPackage](rendition-groups.md)\.
+
 **Input Redundancy**  
 Input redundancy is available with only live workflows in AWS Elemental MediaPackage\.  
 AWS Elemental MediaPackage creates two input URLs on every channel so that you can create input redundancy by sending two identical streams to the same channel\. For information about how input redundancy works, see [Live Input Redundancy AWS Elemental MediaPackage Processing Flow](what-is-flow-ir.md)\.

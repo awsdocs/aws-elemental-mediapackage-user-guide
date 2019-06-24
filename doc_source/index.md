@@ -16,6 +16,9 @@ Amazon's trademarks and trade dress may not be used in
 ## Contents
 + [What Is AWS Elemental MediaPackage?](what-is.md)
    + [Concepts and Terminology](what-is-terms.md)
+   + [Supported Inputs and Outputs](supported-inputs.md)
+      + [Live Supported Codecs and Input Types](supported-inputs-live.md)
+      + [VOD Supported Codecs and Input Types](supported-inputs-vod.md)
    + [How AWS Elemental MediaPackage Works](what-is-flow.md)
       + [Live Content Processing](what-is-flow-live.md)
          + [General AWS Elemental MediaPackage Live Processing Flow](what-is-flow-gen.md)
@@ -141,6 +144,7 @@ Amazon's trademarks and trade dress may not be used in
       + [DASH Manifest Segment Template Format](segtemp-format.md)
          + [media Attribute in SegmentTemplate](segtemp-format-media.md)
          + [duration Attribute in the SegmentTemplate](segtemp-format-duration.md)
+   + [SCTE-35 Message Options in AWS Elemental MediaPackage](scte.md)
 + [Security in AWS Elemental MediaPackage](security.md)
    + [Data Protection in AWS Elemental MediaPackage](data-protection.md)
       + [Implementing DRM with AWS Elemental MediaPackage](data-protection-encrypt.md)

@@ -5,6 +5,8 @@ AWS Elemental MediaPackage uses the following resources for video on demand \(VO
 + *Packaging configurations* tell MediaPackage how to package the output from an asset\. In the configuration, you define encryption, bitrate, and packaging settings\.
 + *Assets* ingest your source content and dynamically apply packaging configurations in response to playback requests\.
 
+  For supported VOD inputs and codecs, see [VOD Supported Codecs and Input Types](supported-inputs-vod.md)\.
+
 The following sections describe how to use these resources to manage VOD content in AWS Elemental MediaPackage\.
 
 **Topics**

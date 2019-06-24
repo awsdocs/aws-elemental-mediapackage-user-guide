@@ -5,7 +5,7 @@ The following fields describe the source content that this asset uses\.
 If you have multiple sources for this asset, choose **Add asset** and complete the fields\. Do this for all source contents\.
 
 **Important**  
-Source content must be in a \.smil or \.m3u8 file format\.
+Source content must be in a \.smil \(MP4\) or \.m3u8 \(HLS/TS\) file format\.
 
 ****Filename****  
 The filename identifies the source content\.   

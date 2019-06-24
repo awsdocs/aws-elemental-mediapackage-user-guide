@@ -38,3 +38,21 @@ If you enable **Number with duration** in **Segment template format**, you can't
    + **Trigger new periods on ads** – MediaPackage creates and inserts in the manifest multiple periods based on SCTE\-35 ad markers from the input content\. These periods separate portions of the content, such as setting boundaries between the main content and ad content\. For more information about how AWS Elemental MediaPackage configures periods in the manifest, see [DASH Manifest Options in AWS Elemental MediaPackageMulti\-period DASH in AWS Elemental MediaPackage](multi-period.md)\.
 **Important**  
 Multiple periods are required if you use AWS Elemental MediaTailor for personalized ad insertion in DASH content\. For more information about this service, see the [AWS Elemental MediaTailor User Guide](https://docs.aws.amazon.com/mediatailor/latest/ug/)\.
+
+**SCTE\-35 Options**  
+The following fields dictate how MediaPackage processes SCTE\-35 messages from the input stream\. For more information, see [SCTE\-35 Message Options in AWS Elemental MediaPackage](scte.md)\.
+
+1. \(Optional\) To add or remove SCTE\-35 message types that MediaPackage treats as ads, choose **Customize ad triggers**\. If you don't make a selection here, MediaPackage inserts ad markers in the output manifest based on these message types:
+   + Splice insert
+   + Provider advertisement
+   + Distributor advertisement
+   + Provider placement opportunity
+   + Distributor placement opportunity
+
+1. \(Optional\) To change what ad insertion action MediaPackage takes based on delivery restriction flags in the segmentation descriptors of SCTE\-35 messages, choose **Ads on delivery restrictions**\. These are the available options:
+   + **None** – MediaPackage doesn't insert any ad markers in the output manifest\.
+   + **Restricted** – MediaPackage inserts ad markers when there *are* delivery restrictions in the SCTE\-35 message types that you indicated in **Customize ad triggers**\.
+   + **Unrestricted** – MediaPackage inserts ad markers when there *aren't* delivery restrictions in the SCTE\-35 message types that you indicated in **Customize ad triggers**\.
+   + **Both** – MediaPackage inserts ad markers whether or not there are delivery restrictions in the SCTE\-35 message types that you indicated in **Customize ad triggers**\.
+
+   If you choose not to insert ad markers, MediaPackage also won't create periods\. The output manifest is contained in a single period\.

@@ -7,3 +7,4 @@ The following sections describe the features that are available in AWS Elemental
 + [Using Encryption in AWS Elemental MediaPackage](using-encryption.md)
 + [Rendition Groups Reference in AWS Elemental MediaPackage](rendition-groups.md)
 + [DASH Manifest Options in AWS Elemental MediaPackage](dash-trtmts.md)
++ [SCTE\-35 Message Options in AWS Elemental MediaPackage](scte.md)

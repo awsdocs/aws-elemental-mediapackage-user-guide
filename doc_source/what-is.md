@@ -7,6 +7,7 @@ AWS Elemental MediaPackage offers a broadcast\-grade viewing experience for view
 **Topics**
 + [Are You a First\-Time User of AWS Elemental MediaPackage?](#first-time-user)
 + [Concepts and Terminology](what-is-terms.md)
++ [Supported Inputs and Outputs](supported-inputs.md)
 + [How AWS Elemental MediaPackage Works](what-is-flow.md)
 + [Features of AWS Elemental MediaPackage](what-is-features.md)
 + [Related Services](#related-services)

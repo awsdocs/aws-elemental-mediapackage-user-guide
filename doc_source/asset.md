@@ -4,6 +4,8 @@ An asset holds all of the information that AWS Elemental MediaPackage requires t
 
 After you ingest an asset, AWS Elemental MediaPackage provides a URL for each playback configuration associated with the asset\. This URL is fixed for the lifetime of the asset, regardless of any failures that might happen over time\. Downstream devices use the URL to send playback requests\.
 
+For supported VOD inputs and codecs, see [VOD Supported Codecs and Input Types](supported-inputs-vod.md)\.
+
 **Topics**
 + [Ingesting an Asset](asset-create.md)
 + [Viewing Asset Details](asset-view.md)
