@@ -18,7 +18,9 @@ A packager is a part of an endpoint\. Each endpoint must have one, and only one,
 + For video on demand \(VOD\), source content resides in an Amazon S3 bucket in your AWS account\. MediaPackage supports HLS and MP4 \(\.smil manifest format\) content\.
 
 **Stream**  
-A *stream* refers to the content input and output of AWS Elemental MediaPackage\. An upstream encoder sends a live stream as an input to MediaPackage to the channel\. When a downstream device requests playback of the content, MediaPackage dynamically packages the stream \(including specifying the packager type, adding encryption, and configuring track outputs\) and delivers it to the requesting device as an output of the endpoint\. An endpoint can produce multiple streams\.
+A *stream* refers to the content input and output of AWS Elemental MediaPackage\.   
+For live workflows, an upstream encoder sends a live stream as an input to MediaPackage to the channel\. When a downstream device requests playback of the content, MediaPackage dynamically packages the stream \(including specifying the packager type, adding encryption, and configuring track outputs\) and delivers it to the requesting device as an output of the endpoint\. An endpoint can produce multiple streams\.  
+For VOD workflows, MediaPackage pulls file\-based content from Amazon S3\. As with live workflows, when a downstream device requests playback of the content, MediaPackage dynamically packages the stream and delivers it to the requesting device as an output of the asset resource\.
 
 **Track**  
 *Tracks* make up the output content stream\. AWS Elemental MediaPackage includes selected video, audio, and subtitles or captions tracks in the output stream\. The stream delivers the tracks to the player \(either directly or through a CDN\), and the player plays back the tracks based on player logic or network conditions \(such as available bandwidth\)\.

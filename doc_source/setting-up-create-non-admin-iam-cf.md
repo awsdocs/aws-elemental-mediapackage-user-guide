@@ -1,6 +1,6 @@
-# Creating a Policy for Amazon CloudFront<a name="setting-up-create-non-admin-iam-cf"></a>
+# Step 1: \(Optional\) Create a Policy for Amazon CloudFront<a name="setting-up-create-non-admin-iam-cf"></a>
 
-If you or your users will create Amazon CloudFront distributions from the AWS Elemental MediaPackage console, you must attach a policy that allows access to CloudFront\.
+If you or your users will create Amazon CloudFront distributions from the AWS Elemental MediaPackage live console, create a policy that allows access to CloudFront\.
 
 For more information about using CloudFront with AWS Elemental MediaPackage, see [Working with Content Delivery Networks \(CDNs\)](cdns.md)\.
 

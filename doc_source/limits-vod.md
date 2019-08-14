@@ -22,6 +22,6 @@ The following table describes limits within AWS Elemental MediaPackage for VOD c
 
 | Resource or Operation | Limit | 
 | --- | --- | 
-| Input Stream Limits | 20 streams per asset, and 10 tracks per stream | 
+| Input Stream Limits | 30 streams per asset, and 10 tracks per stream | 
 | Request Rates per Asset |  200 output requests per second  | 
 | REST API Requests |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/limits-vod.html)  | 

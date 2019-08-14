@@ -20,7 +20,7 @@ These are the video, audio, and subtitles codecs that MediaPackage supports for 
 | Input Type | Media Container | Video Codecs | Audio Codecs | Subtitles Format | 
 | --- | --- | --- | --- | --- | 
 | HLS |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-vod.html)  | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-vod.html) | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-vod.html) | WebVTT | 
-| SMIL | MP4 | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-vod.html) |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-vod.html) | SRT | 
+| SMIL | MP4 \(non\-fragmented\) | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-vod.html) |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-vod.html) | SRT | 
 
 ## Supported Output Codecs<a name="suported-outputs-codecs-vod"></a>
 

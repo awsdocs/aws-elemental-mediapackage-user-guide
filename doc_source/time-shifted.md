@@ -1,14 +1,14 @@
 # Time\-shifted Viewing Reference in AWS Elemental MediaPackage<a name="time-shifted"></a>
 
-Time\-shifted viewing is available with only live workflows in AWS Elemental MediaPackage\.
+Time\-shifted viewing is available with live workflows in AWS Elemental MediaPackage\.
 
-*Time\-shifted viewing* means that viewers can start watching a live stream at a time earlier than "now," allowing them to join from the beginning a show that's already in progress or to watch a show that's already completed\. AWS Elemental MediaPackage allows a content retention window of up to 336 hours \(14 days\) for time\-shifted viewing\. Time\-shifted functionality is controlled by the MediaPackage endpoint and by the start and end parameters provided in the content request URL\. 
+*Time\-shifted viewing* means that viewers can start watching a live stream at a time earlier than "now," allowing them to join from the beginning a show that's already in progress or to watch a show that's already completed\. MediaPackage supports time\-shifted viewing for content that's up to 336 hours \(14 days\) old\. You can enable time\-shifted viewing for some or all of this content by defining the **startover window** on the endpoint\. Content that falls within that window is available for playback when playback requests include valid start and end parameters\. Requests for content outside the window configured on the endpoint result in an HTTP error 404\. 
 
 **To enable time\-shifted viewing**
 
-1. Enable time\-shifted viewing by typing a value for **Startover time** on the AWS Elemental MediaPackage endpoint object\. You can do this through either the MediaPackage console or the REST API\. 
+1. Enable time\-shifted viewing by typing a value for **Startover window** on the AWS Elemental MediaPackage endpoint object\. You can do this through either the MediaPackage console or the REST API\. 
 
-   When requests with start and end parameters are sent to this endpoint, AWS Elemental MediaPackage generates a manifest within the window that is indicated in the request\. If no start and end parameters are used, the service generates a standard manifest\.
+   When requests with start and end parameters that are within the startover window are sent to this endpoint, AWS Elemental MediaPackage generates a manifest for the requested timeframe\. If the start or end parameters are outside of the startover window, the playback request fails\. If no start and end parameters are used, the service generates a standard manifest\.
 **Note**  
 You might notice that the manifest lags behind real time when you initially create a startover window on an endpoint\. This is because AWS Elemental MediaPackage starts filling the manifest from the start of the window, and works up to "now\." So if you have a 24\-hour startover window, MediaPackage fills the manifest starting 24 hours ago and working up to "now\."
 
@@ -23,6 +23,8 @@ In all cases, the maximum manifest length is nine hours\.
 
      If the end time is in the future, the tags in the manifest are consistent with a live manifest\. Otherwise, if the end time is in the past, the tags in the manifest are consistent with a video on demand \(VOD\) manifest\. For information about the manifest differences, see [Live and VOD Manifest Reference](what-is-manifest.md)\.
    + If a start parameter is specified but not an end, the resulting manifest has a fixed start time that corresponds to the specified start parameter, and the end of the manifest grows as the live content progresses\. You can use a start time that’s up to 9 hours in the past\.
+**Note**  
+For HLS output, many playback devices start playback at the current time \("now"\)\. To view the content from the actual start time of the playback window, viewers can seek back on the playback progress bar\.
    + If no parameters are specified, a standard manifest is generated starting "now" with no end time\.
    + If an end parameter is specified but no start, the manifest is generated in the same way as when no parameters are specified\. The manifest starts "now" and has no end time\.
 
