@@ -86,7 +86,7 @@ You get input notification events if one of these actions occurs:
 
 ## Key Provider Notification Events<a name="key-provider-state-events"></a>
 
-When you're using content encryption on an endpoint, AWS Elemental MediaPackage can't reach the key provider\. For information about DRM and encryption, see [https://docs.aws.amazon.com/speke/latest/documentation/](https://docs.aws.amazon.com/speke/latest/documentation/)\.
+You get key provider notification events when you're using content encryption on an endpoint, AWS Elemental MediaPackage can't reach the key provider\. For information about DRM and encryption, see [https://docs.aws.amazon.com/speke/latest/documentation/](https://docs.aws.amazon.com/speke/latest/documentation/)\.
 
 **Example**  
 

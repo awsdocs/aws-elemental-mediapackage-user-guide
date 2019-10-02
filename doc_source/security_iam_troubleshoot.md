@@ -13,13 +13,13 @@ Use the following information to help you diagnose and fix common issues that yo
 
 If the AWS Management Console tells you that you're not authorized to perform an action, then you must contact your administrator for assistance\. Your administrator is the person that provided you with your user name and password\.
 
-The following example error occurs when the `mateojackson` IAM user tries to use the console to view the channels on the account but does not have mediapackage:ListChannels permissions\.
+The following example error occurs when the `mateojackson` IAM user tries to use the console to view the channels on the account but does not have `mediapackage:ListChannels` permissions\.
 
 ```
 User: arn:aws:iam::123456789012:user/mateojackson is not authorized to perform: mediapackage:ListChannels on resource: arn:aws:mediapackage:eu-west-2:123456789012:channels/*
 ```
 
-In this case, Mateo asks his administrator to update his policies to allow him to access the channels resource using the mediapackage:ListChannels action\.
+In this case, Mateo asks his administrator to update his policies to allow him to access the channels resource using the `mediapackage:ListChannels` action\.
 
 ## I Am Not Authorized to Perform iam:PassRole<a name="security_iam_troubleshoot-passrole"></a>
 

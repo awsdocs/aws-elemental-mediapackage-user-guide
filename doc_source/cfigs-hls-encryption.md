@@ -11,7 +11,7 @@ To serve content with copyright protection, choose **Encryption ** and complete 
 
 1. For **URL**, enter the URL of the API Gateway proxy that you set up to talk to your key server\. The API Gateway proxy must reside in the same AWS Region as MediaPackage\.
 
-   The following example shows a URL: 
+   The following example shows a URL\. 
 
    ```
    https://1wm2dx1f33.execute-api.us-west-2.amazonaws.com/SpekeSample/copyProtection
@@ -19,7 +19,7 @@ To serve content with copyright protection, choose **Encryption ** and complete 
 
 1. For **Role ARN**, enter the Amazon Resource Name \(ARN\) of the IAM role that provides you access to send your requests through API Gateway\. Get this from your DRM solution provider\.
 
-   The following example shows a role ARN: 
+   The following example shows a role ARN\. 
 
    ```
    arn:aws:iam::444455556666:role/SpekeAccess

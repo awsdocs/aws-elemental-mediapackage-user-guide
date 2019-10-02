@@ -1,6 +1,6 @@
 # Step 3: Create Endpoints<a name="create-endpoint"></a>
 
-The endpoint is attached to a channel, and represents the output of the content\. You can associate multiple endpoints to a single channel\. Each endpoint gives players and downstream CDNs \(such as Amazon CloudFront\) access to the content for playback\. 
+The endpoint is attached to a channel, and represents the output of the live content\. You can associate multiple endpoints to a single channel\. Each endpoint gives players and downstream CDNs \(such as Amazon CloudFront\) access to the content for playback\. 
 
 AWS Elemental MediaPackage does not require that you supply any customer data\. There are no fields in endpoints where there is an expectation that you will provide customer data\.
 
@@ -14,6 +14,6 @@ AWS Elemental MediaPackage does not require that you supply any customer data\. 
 
 1. Keep the defaults for the remaining fields, and then choose **Save endpoints**\.
 
-   AWS Elemental MediaPackage displays the channel's details page, including the endpoint that you just created\.
+   MediaPackage displays the channel's details page, including the endpoint that you just created\.
 
 1. On the channel's details page, note the value in the **URL** field for the endpoint\. Provide this information to the person in charge of the downstream device \(CDN or player\)\. In the downstream device, this person must enter the request destination as the endpoint's URL\.

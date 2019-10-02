@@ -1,6 +1,8 @@
 # Step 4: Create an Asset<a name="gs-create-asset"></a>
 
-An asset represents the source content in AWS Elemental MediaPackage\. You use the MediaPackage asset to ingest file\-based videos\. Playback requests point to specific packaging configurations on the asset\.
+An asset resource is how MediaPackage ingests, packages, and serves VOD content\. The asset is associated with one or more packaging configurations\. Downstream devices send playback requests to specific packaging configurations on the asset\.
+
+AWS Elemental MediaPackage does not require that you supply any customer data\. There are no fields in assets where there is an expectation that you will provide customer data\.
 
 **To create an asset and ingest source content**
 
@@ -9,7 +11,7 @@ An asset represents the source content in AWS Elemental MediaPackage\. You use t
    + The full path for the file, such as *S3://bucket/path/source\-file\-name*
    + The IAM role that allows AWS Elemental MediaPackage to read from Amazon S3
 
-1. On the AWS Elemental MediaPackage console, go to the **Assets** page and choose **Ingest asset**\.
+1. On the AWS Elemental MediaPackage console, go to the **Assets** page, and then choose **Ingest asset**\.
 
 1. For **S3 bucket name**, select the bucket where your source content is stored\.
 

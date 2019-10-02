@@ -1,6 +1,6 @@
 # SCTE\-35 Message Options in AWS Elemental MediaPackage<a name="scte"></a>
 
-This section describes the options that AWS Elemental MediaPackage offers for configuring how SCTE\-35 messages are handled in live DASH, HLS, and CMAF outputs\. These options don't apply to Microsoft Smooth Streaming or video on demand \(VOD\) outputs\. 
+This section describes the options that AWS Elemental MediaPackage offers for configuring how SCTE\-35 messages are handled in live DASH, HLS, and CMAF outputs\. For live\-to\-VOD assets, MediaPackage passes the SCTE\-35 messages from the live stream through to the harvested asset\. These options don't apply to Microsoft Smooth Streaming or video on demand \(VOD\) outputs\. 
 
 SCTE\-35 messages accompany video in your source content\. These messages signal where MediaPackage should insert ad markers when it packages the content for output\. By default, MediaPackage inserts markers for the following message types in the source content:
 + `splice_insert`

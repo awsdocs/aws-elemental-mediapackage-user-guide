@@ -1,6 +1,6 @@
 # Streams to Include Fields<a name="endpoints-hls-include-streams"></a>
 
-1. \(Optional\) For **Stream order**, choose from the following:
+1. \(Optional\) For **Bitrate order**, choose from the following:
    + **Original** to sort the output streams in the same order that the incoming source uses\.
    + **Ascending** to sort the output streams starting with the lowest bitrate and ending with the highest\.
    + **Descending** to sort the output streams starting with the highest bitrate and ending with the lowest\.

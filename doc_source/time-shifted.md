@@ -4,6 +4,10 @@ Time\-shifted viewing is available with live workflows in AWS Elemental MediaPac
 
 *Time\-shifted viewing* means that viewers can start watching a live stream at a time earlier than "now," allowing them to join from the beginning a show that's already in progress or to watch a show that's already completed\. MediaPackage supports time\-shifted viewing for content that's up to 336 hours \(14 days\) old\. You can enable time\-shifted viewing for some or all of this content by defining the **startover window** on the endpoint\. Content that falls within that window is available for playback when playback requests include valid start and end parameters\. Requests for content outside the window configured on the endpoint result in an HTTP error 404\. 
 
+Alternatively, you can harvest a clip of a live stream and make it available as a video on demand \(VOD\) asset\. For information about harvesting VOD assets, see [Creating Live\-to\-VOD Assets with AWS Elemental MediaPackage](ltov.md)\.
+
+In the following steps, "now" is the current time according to the program date time \(PDT\), when it's present in the source content from the encoder\. If the source content doesn't include PDT information, "now" refers to the MediaPackage ingest time of the most recent segment\.
+
 **To enable time\-shifted viewing**
 
 1. Enable time\-shifted viewing by typing a value for **Startover window** on the AWS Elemental MediaPackage endpoint object\. You can do this through either the MediaPackage console or the REST API\. 
@@ -12,17 +16,17 @@ Time\-shifted viewing is available with live workflows in AWS Elemental MediaPac
 **Note**  
 You might notice that the manifest lags behind real time when you initially create a startover window on an endpoint\. This is because AWS Elemental MediaPackage starts filling the manifest from the start of the window, and works up to "now\." So if you have a 24\-hour startover window, MediaPackage fills the manifest starting 24 hours ago and working up to "now\."
 
-1. Ensure that content requests contain start and end parameters as needed\. AWS Elemental MediaPackage accepts requests for up to nine hours of content\. 
+1. Ensure that content requests contain start and end parameters as needed\. AWS Elemental MediaPackage accepts requests for up to 9 or 18 hours of content, depending on the endpoint type\. For information about time\-shifted manifest length limits by endpoint type, see [Live Hard Limits](limits-live.md#hard-limits)\.
 
    For packager\-specific rules about how you can notate the parameters, see [Rules for Start and End Parameters](#start-and-end-parameters-rules)\.
 
    The start and end parameters determine the time boundaries of the manifest\. Expected behaviors are as follows:
 **Note**  
-In all cases, the maximum manifest length is nine hours\.
+In all cases, the maximum manifest length is 9 or 18 hours, depending on the endpoint type\.
    + If both start and end parameters are used in the URL, the resulting manifest has a fixed start and end time that correspond to the specified start and end parameters\.
 
      If the end time is in the future, the tags in the manifest are consistent with a live manifest\. Otherwise, if the end time is in the past, the tags in the manifest are consistent with a video on demand \(VOD\) manifest\. For information about the manifest differences, see [Live and VOD Manifest Reference](what-is-manifest.md)\.
-   + If a start parameter is specified but not an end, the resulting manifest has a fixed start time that corresponds to the specified start parameter, and the end of the manifest grows as the live content progresses\. You can use a start time that’s up to 9 hours in the past\.
+   + If a start parameter is specified but not an end, the resulting manifest has a fixed start time that corresponds to the specified start parameter, and the end of the manifest grows as the live content progresses\. You can use a start time that’s up to 9 or 18 hours in the past, depending on the endpoint type\.
 **Note**  
 For HLS output, many playback devices start playback at the current time \("now"\)\. To view the content from the actual start time of the playback window, viewers can seek back on the playback progress bar\.
    + If no parameters are specified, a standard manifest is generated starting "now" with no end time\.

@@ -1,10 +1,10 @@
 # Live Supported Codecs and Input Types<a name="supported-inputs-live"></a>
 
-This following sections describe supported input types and codecs for live streaming content\.
+The following sections describe supported input types and codecs for live streaming content\.
 
 ## Supported Input Types<a name="supported-types-live"></a>
 
-These are the input types that MediaPackage supports for live content\.
+These are the input types that AWS Elemental MediaPackage supports for live content\.
 
 
 | MediaPackage Input Type | Use Case | 
@@ -18,7 +18,7 @@ These are the video, audio, and subtitles codecs that MediaPackage supports for 
 
 | Media Container | Video Codecs | Audio Codecs | Subtitles Format | 
 | --- | --- | --- | --- | 
-| [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-live.html)  | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-live.html) |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-live.html)  | WebVTT | 
+|  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-live.html)  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-live.html)  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-live.html)  | WebVTT | 
 
 ## Supported Output Codecs<a name="suported-outputs-codecs-live"></a>
 

@@ -24,7 +24,7 @@ The trust relationship defines what entities can assume the role that you create
          "Sid": "",
          "Effect": "Allow",
          "Principal": {
-           "Service": "mediapackage-vod.amazonaws.com"
+           "Service": "mediapackage.amazonaws.com"
          },
          "Action": "sts:AssumeRole"
        }

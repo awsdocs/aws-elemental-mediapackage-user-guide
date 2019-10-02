@@ -4,13 +4,13 @@
 
 When you create the role, you choose EC2 as the trusted entity that can assume the role because AWS Elemental MediaPackage isn't available for selection\. In [Step 3: Modify the Trust Relationship](setting-up-create-trust-rel-trust.md), you change the trusted entity to MediaPackage\.
 
-**To create the service role for an EC2 \(IAM console\)**
+**To create the service role for an EC2 trusted entity \(IAM console\)**
 
 1. Sign in to the AWS Management Console and open the IAM console at [https://console\.aws\.amazon\.com/iam/](https://console.aws.amazon.com/iam/)\.
 
 1. In the navigation pane of the IAM console, choose **Roles**, and then choose **Create role**\.
 
-1. Choose the **AWS service** role type, and then choose EC2\.
+1. Choose the **AWS service** role type, and then choose EC2 trusted entity\.
 
 1. Choose the EC2 use case\. Then choose **Next: Permissions**\.
 

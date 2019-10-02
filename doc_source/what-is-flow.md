@@ -1,8 +1,8 @@
 # How AWS Elemental MediaPackage Works<a name="what-is-flow"></a>
 
-AWS Elemental MediaPackage uses just\-in\-time format conversion to deliver over\-the\-top \(OTT\) video from a single source to a wide variety of playback devices or content delivery networks \(CDNs\)\.
+MediaPackage uses just\-in\-time format conversion to deliver over\-the\-top \(OTT\) video from a single source to a wide variety of playback devices or content delivery networks \(CDNs\)\.
 
-The following sections describe how AWS Elemental MediaPackage works\.
+The following sections describe how MediaPackage works\.
 
 **Topics**
 + [Live Content Processing](what-is-flow-live.md)

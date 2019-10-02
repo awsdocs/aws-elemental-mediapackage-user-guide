@@ -1,6 +1,6 @@
 # Allowing AWS Elemental MediaPackage to Access Amazon S3<a name="setting-up-create-trust-rel"></a>
 
-To allow MediaPackage to access Amazon S3 and ingest source video on demand \(VOD\) content from a bucket, create an IAM role and policy with the appropriate permissions\. 
+To allow MediaPackage to access Amazon S3 for video on demand \(VOD\) and live\-to\-VOD workflows, create an IAM role and policy with the appropriate permissions\. 
 
 **Topics**
 + [Step 1: Create a Policy](setting-up-create-trust-rel-policy.md)

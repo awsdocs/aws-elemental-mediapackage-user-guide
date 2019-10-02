@@ -1,6 +1,6 @@
 # DASH Manifest Options in AWS Elemental MediaPackage<a name="dash-trtmts"></a>
 
-This section describes the options that AWS Elemental MediaPackage offers for modifying live output DASH manifests\. These options don't apply to video on demand \(VOD\) outputs\.
+This section describes the options that AWS Elemental MediaPackage offers for modifying live output DASH manifests\. These options don't apply to video on demand \(VOD\) outputs or harvested live\-to\-VOD assets\.
 
 **Default DASH manifest**  
 The following is a truncated example of a DASH manifest with no treatments:

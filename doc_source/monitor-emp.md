@@ -10,4 +10,6 @@ Use Amazon CloudWatch to track AWS Elemental MediaPackage activity, such as the 
 
 1. Under **All metrics**, choose the **AWS/MediaPackage** namespace\.
 
-1. Select the metric dimension to view the metrics \(for example, choose `channel` to view metrics per channel\)\. For a list of AWS Elemental MediaPackage metrics, see [AWS Elemental MediaPackage Live Content Metrics](metrics.md)\.
+1. Select the metric dimension to view the metrics \(for example, choose `channel` to view metrics per channel\)\. 
+
+For a list of AWS Elemental MediaPackage metrics, see [AWS Elemental MediaPackage Live Content Metrics](metrics.md)\.
