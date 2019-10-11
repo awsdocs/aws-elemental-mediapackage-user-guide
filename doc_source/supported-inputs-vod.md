@@ -10,7 +10,7 @@ These are the input types that AWS Elemental MediaPackage supports for VOD conte
 | MediaPackage Input Type | Use Case | 
 | --- | --- | 
 | HLS | Pull an HLS stream set from an Amazon Simple Storage Service bucket, with or without a secure connection\.Additional requirements:[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-vod.html) | 
-| SMIL | Pull an MP4 stream set referenced by a \.smil manifest from an Amazon Simple Storage Service bucket, with or without a secure connection\.Additional requirements:[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-vod.html) | 
+| SMIL | Pull an MP4 stream set referenced by a \.smil manifest from an Amazon Simple Storage Service bucket, with or without a secure connection\. For information about the \.smil manifest, see [Creating a SMIL File](supported-inputs-vod-smil.md)\.Additional requirements:[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-vod.html) | 
 
 ## Supported Input Codecs<a name="suported-inputs-codecs-vod"></a>
 

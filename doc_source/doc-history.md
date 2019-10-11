@@ -2,10 +2,11 @@
 
 The following table describes important changes in each release of the *AWS Elemental MediaPackage User Guide* after May 2018\. For notification about updates to this documentation, you can subscribe to an RSS feed\.
 + **API version:** 1\.0
-+ **Latest documentation update:** October 1, 2019
++ **Latest documentation update:** October 10, 2019
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Added SMIL manifest information\.](supported-inputs-vod-smil.md) | Added *Creating a SMIL File* topic to describe the supported \.smil manifest format for VOD ingest\. | October 10, 2019 | 
 | [Added live\-to\-VOD \(video on demand\) topics\.](what-is.md) | Throughout guide, added and updatedtopics about creating live\-to\-VOD assets, including *Creating Live\-to\-VOD Assets* and *Live\-to\-VOD Content Delivery*\. | October 1, 2019 | 
 | [Updated time\-shifted manifest length limit\.](limits-live.md#hard-limits) | AWS Elemental MediaPackage can now produce time\-shifted manifests up to 18 hours for DASH with compact manifest, HLS, and CMAF\. | August 21, 2019 | 
 | [Added supported inputs and outputs info\.](supported-inputs.md) | Added *Supported Inputs and Outputs* topic that describes what input types, containers, and codecs MediaPackage supports\. | June 21, 2019 | 

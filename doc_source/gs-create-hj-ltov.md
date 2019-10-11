@@ -21,5 +21,7 @@ To extract a live\-to\-VOD asset from a live content stream, create a harvest jo
 1. For **S3 bucket name**, select the bucket where you want MediaPackage to store the live\-to\-VOD asset\.
 
 1. For **Manifest key**, enter the path within the Amazon S3 bucket and file name for the master manifest of the live\-to\-VOD asset\. MediaPackage creates a directory based on the path that you enter\.
+**Important**  
+The manifest key must be unique\. When you use the same manifest key for multiple harvest jobs, the newest playlist for the asset overwrites existing playlists\. The only time you should reuse a manifest key is when you are harvesting the same content, such as if there was a problem with a previous harvest of the content\.
 
 1. Choose **Create job**\.

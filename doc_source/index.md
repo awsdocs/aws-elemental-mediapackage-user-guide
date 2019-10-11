@@ -20,6 +20,7 @@ Amazon's trademarks and trade dress may not be used in
       + [Live Supported Codecs and Input Types](supported-inputs-live.md)
       + [Live-to-VOD Supported Codecs and Input Types](supported-inputs-ltov.md)
       + [VOD Supported Codecs and Input Types](supported-inputs-vod.md)
+         + [Creating a SMIL File](supported-inputs-vod-smil.md)
    + [How AWS Elemental MediaPackage Works](what-is-flow.md)
       + [Live Content Processing](what-is-flow-live.md)
          + [General AWS Elemental MediaPackage Live Processing Flow](what-is-flow-gen.md)
