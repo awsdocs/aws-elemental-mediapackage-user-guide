@@ -10,5 +10,5 @@ The endpoint that you're harvesting the live\-to\-VOD asset from must meet these
 **Live\-to\-VOD asset requirements**  
 The live\-to\-VOD asset must meet these requirements:
 + It must start in the past, at the same time or after the live stream started\.
-+ It must be no longer than the time specified in the **Startover window** on the endpoint\. If the endpoint has a window of 30 minutes, the live\-to\-VOD asset can't be longer than 30 minutes\. An endpoint can have a maximum 9 or 18 hour startover window, depending on the endpoint type\. A live\-to\-VOD asset also can't the window limit for the endpoint\. For startover window limits by endpoint, see the *Time\-shifted manifest length limit* in [Live Hard Limits](limits-live.md#hard-limits)\.
++ It must be no longer than the time specified in the **Startover window** on the endpoint\. If the endpoint has a window of 30 minutes, the live\-to\-VOD asset can't be longer than 30 minutes\. An endpoint can have a maximum 9 or 18 hour startover window, depending on the endpoint type\. A live\-to\-VOD asset also can't the window quota for the endpoint\. For startover window quotas by endpoint, see the *Time\-shifted manifest length quota* in [Live Hard Quotas](limits-live.md#hard-limits)\.
 + It must have a start and end time that's within the startover window on the endpoint\.

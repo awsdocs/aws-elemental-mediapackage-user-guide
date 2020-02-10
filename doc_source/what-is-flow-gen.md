@@ -8,7 +8,7 @@ Here is the general processing flow for live content in MediaPackage:
 **Note**  
 To allow support for features like time\-shifted viewing, MediaPackage stores all received content for a limited time\. This stored content is only available for playback if it falls within the **startover window** that's defined on the endpoint\. Stored content is not available for playback if it's outside the startover window, or if you haven't defined a window on the endpoint\. For more information, see [Time\-shifted Viewing Reference in AWS Elemental MediaPackage](time-shifted.md)\.
 
-1. A downstream device requests content from MediaPackage through the endpoint output URL\. A downstream device is either a video player or a content distribution network \(CDN\)\. The output URL is associated with an endpoint for a specific streaming format \(either Apple HLS, DASH\-ISO, CMAF, or Microsoft Smooth Streaming\)\.
+1. A downstream device requests content from MediaPackage through the endpoint output URL\. A downstream device is either a video player or a content delivery network \(CDN\)\. The output URL is associated with an endpoint for a specific streaming format \(either Apple HLS, DASH\-ISO, CMAF, or Microsoft Smooth Streaming\)\.
 
 1. When MediaPackage receives the playback request from the downstream device, it dynamically packages the stream according to the settings that you specified on the endpoint\. Packaging can include adding encryption and configuring audio, video, and subtitles or captions track outputs\.
 

@@ -13,7 +13,7 @@ MediaPackage does not support audio\-only inputs\. The stream configuration from
 MediaPackage supports input 608/708 captions and passes them through to the output stream\.
 
 **DRM**  
-MediaPackage supports content protection through digital rights management \(DRM\)\. For information, see [Using Encryption in AWS Elemental MediaPackage](using-encryption.md)\.
+MediaPackage supports content protection through digital rights management \(DRM\)\. For information, see [Content Encryption in AWS Elemental MediaPackage](using-encryption.md)\.
 
 **HLS Rendition Groups**  
 MediaPackage supports rendition groups for incoming and outgoing HLS content\. For information about output redundancy groups, see [Rendition Groups Reference in AWS Elemental MediaPackage](rendition-groups.md)\.

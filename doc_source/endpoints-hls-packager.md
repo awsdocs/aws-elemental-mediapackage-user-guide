@@ -8,11 +8,13 @@
 
 1. \(Optional\) To group all audio tracks into a single HLS rendition group, select **Use audio rendition group**\. For more information about rendition groups, see [Rendition Groups Reference in AWS Elemental MediaPackage](rendition-groups.md)\.
 
-1. \(Optional\) In stream sets with a single video track, to include an additional I\-frame only stream along with the other tracks in the manifest, select **Include IFrame only stream**\. AWS Elemental MediaPackage inserts EXT\-I\-FRAMES\-ONLY tags in the manifest, and then compiles and includes an I\-frames only playlist in the stream\. This playlist enables player functionality like fast forward and rewind\.
+1. \(Optional\) In stream sets with a single video track, to include an additional I\-frame only stream along with the other tracks in the manifest, select **Include IFrame only stream**\. MediaPackage inserts `EXT-I-FRAMES-ONLY` tags in the manifest, and then compiles and includes an I\-frames only playlist in the stream\. This playlist enables player functionality like fast forward and rewind\.
 
-1. \(Optional\) To include EXT\-X\-PROGRAM\-DATE\-TIME tags in the output manifest, select **Program date/time interval**, and then type the interval for AWS Elemental MediaPackage to insert the tags in the manifest\.
+1. \(Optional\) To include `EXT-X-PROGRAM-DATE-TIME` tags in the output manifest, select **Program date/time interval**, and then type the interval for MediaPackage to insert the tags in the manifest\.
 
-   The EXT\-X\-PROGRAM\-DATE\-TIME tag synchronizes the stream to the wall clock, enabling functionality like viewer seek in the playback timeline and time display on the player\.
+   The `EXT-X-PROGRAM-DATE-TIME` tag holds the time of the segment\. When program date time \(PDT\) information is available in the source content, MediaPackage uses this same information on the output content\. Otherwise, MediaPackage uses Coordinated Universal Time \(UTC\) for the PDT\.
+
+   The PDT information helps downstream players to synchronize the stream to the wall clock, enabling functionality like viewer seek in the playback timeline and time display on the player\.
 
 **SCTE\-35 Options**  
 The following fields dictate how MediaPackage processes SCTE\-35 messages from the input stream\. For more information, see [SCTE\-35 Message Options in AWS Elemental MediaPackage](scte.md)\.

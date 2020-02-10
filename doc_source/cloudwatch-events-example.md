@@ -9,22 +9,22 @@ The following topics describe the CloudWatch Events that AWS Elemental MediaPack
 **Topics**
 + [Input Notification Events](#input-state-events)
 + [Key Provider Notification Events](#key-provider-state-events)
++ [Harvest Job Notification Events](#hj-status-events)
 
 ## Input Notification Events<a name="input-state-events"></a>
 
-You get input notification events if one of these actions occurs:
-+ For live content, a channel in AWS Elemental MediaPackage exceeds the limit for the number of input streams\. For information about limits, see [Limits in AWS Elemental MediaPackage](limits.md)\.
-+ For live content, AWS Elemental MediaPackage switches inputs for one of your endpoints\. 
+You get input notification events for live and video on demand \(VOD\) content\. These events notify you when something happens with MediaPackage ingest\. These are the input notification events you might receive:
++ Maximum input streams exceeded 
++ Input switch
++ VOD ingest status change
++ VOD playback readiness
 
-  One event is sent in a five\-minute period\. If the input switches multiple times in five minutes \(for example, if MediaPackage switches to one input, then back to the other\), you receive only one event\.
+The following sections describe each of these events\.
 
-  For information about input redundancy and what causes inputs to switch, see [Live Input Redundancy AWS Elemental MediaPackage Processing Flow](what-is-flow-ir.md)\.
-+ For video on demand \(VOD\) content, an asset in AWS Elemental MediaPackage changes status\. You get notifications for the following events:
-  + `IngestStart`
-  + `IngestError`
-  + `IngestComplete`
+** Maximum Input Streams Exceeded Event **  
+For live content, a channel in MediaPackage exceeds the quota for the number of input streams\. For information about quotas, see [Quotas in AWS Elemental MediaPackage](limits.md)\.  
 
-**Example Maximum Input Streams Exceeded Event**  
+**Example**  
 
 ```
 {
@@ -44,7 +44,12 @@ You get input notification events if one of these actions occurs:
 }
 ```
 
-**Example Input Switch Event**  
+**Input Switch Event**  
+For live content, MediaPackage switches inputs for one of your endpoints\.   
+One event is sent in a five\-minute period\. If the input switches multiple times in five minutes \(for example, if MediaPackage switches to one input, then back to the other\), you receive only one event\.  
+For information about input redundancy and what causes inputs to switch, see [Live Input Redundancy AWS Elemental MediaPackage Processing Flow](what-is-flow-ir.md)\.  
+
+**Example**  
 
 ```
 {
@@ -64,7 +69,13 @@ You get input notification events if one of these actions occurs:
 }
 ```
 
-**Example Ingest Status Event**  
+**VOD Ingest Status Event**  
+For video on demand \(VOD\) content, an asset in MediaPackage changes ingest status\. You get notifications for the following events:  
++ `IngestStart`
++ `IngestError`
++ `IngestComplete`
+
+**Example**  
 
 ```
 {
@@ -75,7 +86,7 @@ You get input notification events if one of these actions occurs:
    "time": "2019-05-03T17:29:36Z",
    "region": "us-west-2",
    "resources":[
-      "arn:aws:mediapackage-vod:us-west-2:aws_account_id:assets/asset_name"
+      "arn:aws:mediapackage-vod:us-west-2:aws_account_id:assets/asset_id"
    ],
    "detail":{
       "event": "IngestComplete",
@@ -84,9 +95,37 @@ You get input notification events if one of these actions occurs:
 }
 ```
 
+**VOD Playback Event**  
+For VOD content, an asset in MediaPackage is available for playback\. There is a period of time between when asset ingest is complete, and when the asset can be played back\. The event `VodAssetPlayable` means that MediaPackage can now fulfill playback requests for the asset\.  
+
+**Example**  
+
+```
+{
+   "id": "81e896e4-d9e5-ec79-f82a-b4cf3246c567",
+   "detail-type": "MediaPackage Input Notification",
+   "source": "aws.mediapackage",
+   "account": "aws_account_id",
+   "time": "2019-11-03T21:46:00Z",
+   "region": "us-west-2",
+   "resources":[
+      "arn:aws:mediapackage-vod:us-west-2:aws_account_id:assets/asset_id",
+      "arn:aws:mediapackage-vod:us-west-2:aws_account_id:packaging_configuration/packaging_configuration_id"
+   ],
+   "detail":{
+      "event": "VodAssetPlayable",
+      "message": "Asset 'asset_id' is now playable for PackagingConfiguration 'packaging_configuration_id'",
+      "packaging_configuration_id": "packaging_configuration_id",
+      "manifest_urls":[
+         "https://accd64649dc.egress.mediapackage-vod.us-west-2.amazonaws.com/out/v1/b9cc115bf7f1a/b848dfb116920772aa69ba/a3c74b1cae6a451c/index.m3u8"
+      ]
+   }
+}
+```
+
 ## Key Provider Notification Events<a name="key-provider-state-events"></a>
 
-You get key provider notification events when you're using content encryption on an endpoint, AWS Elemental MediaPackage can't reach the key provider\. For information about DRM and encryption, see [https://docs.aws.amazon.com/speke/latest/documentation/](https://docs.aws.amazon.com/speke/latest/documentation/)\.
+You get key provider notification events when you're using content encryption on an endpoint and MediaPackage can't reach the key provider\. For information about DRM and encryption, see [https://docs.aws.amazon.com/speke/latest/documentation/](https://docs.aws.amazon.com/speke/latest/documentation/)\.
 
 **Example**  
 
@@ -104,6 +143,75 @@ You get key provider notification events when you're using content encryption on
    "detail":{
       "event": "KeyProviderError",
       "message": "message-text"
+   }
+}
+```
+
+## Harvest Job Notification Events<a name="hj-status-events"></a>
+
+You get harvest job status events when you export a clip from a live stream to create a live\-to\-VOD asset\. MediaPackage creates notifications when the harvest job succeeds or fails\. For information about harvest jobs and live\-to\-VOD assets, see [Creating Live\-to\-VOD Assets with AWS Elemental MediaPackage](ltov.md)\.
+
+**Example Successful Harvest Job Event**  
+
+```
+{
+   "id": "8f9b8e72-0b31-e883-f19c-aec84742f3ce",
+   "detail-type": "MediaPackage HarvestJob Notification",
+   "source": "aws.mediapackage",
+   "account": "aws_account_id",
+   "time": "2019-07-16T17:29:36Z",
+   "region": "us-east-1",
+   "resources":[
+      "arn:aws:mediapackage:us-east-1:aws_account_id:harvest_jobs/harvest_job_id"
+   ],
+   "detail":{
+      "harvest_job": {
+          "id": "harvest_job_id",
+          "arn": "arn:aws:mediapackage-vod:us-east-1:aws_account_id:harvest_jobs/harvest_job_id",
+          "status": "COMPLETED",
+          "origin_endpoint_id": "endpoint_id",
+          "start_time": "2019-06-26T20:30:00-08:00",
+          "end_time": "2019-06-26T21:00:00-08:00",
+          "s3_destination": {
+              "bucket_name": "s3_bucket_name",
+              "manifest_key": "path/and/manifest_name/index.m3u8",
+              "role_arn": "arn:aws:iam::aws_account_id:role/S3Access_role",
+          },
+          "created_at": "2019-06-26T21:03:12-08:00"
+      }
+   }
+}
+```
+
+**Example Failed Harvest Job Event**  
+
+```
+{
+   "id": "8f9b8e72-0b31-e883-f19c-aec84742f3ce",
+   "detail-type": "MediaPackage HarvestJob Notification",
+   "source": "aws.mediapackage",
+   "account": "aws_account_id",
+   "time": "2019-07-16T17:29:36Z",
+   "region": "us-east-1",
+   "resources":[
+      "arn:aws:mediapackage:us-east-1:aws_account_id:harvest_jobs/harvest_job_id"
+   ],
+   "detail":{
+      "harvest_job": {
+          "id": "harvest_job_id",
+          "arn": "arn:aws:mediapackage-vod:us-east-1:aws_account_id:harvest_jobs/harvest_job_id",
+          "status": "FAILED",
+          "origin_endpoint_id": "endpoint_id",
+          "start_time": "2019-06-26T20:30:00-08:00",
+          "end_time": "2019-06-26T21:00:00-08:00",
+          "s3_destination": {
+              "bucket_name": "s3_bucket_name",
+              "manifest_key": "path/and/manifest_name/index.m3u8",
+              "role_arn": "arn:aws:iam::aws_account_id:role/S3Access_role",
+          },
+          "created_at": "2019-06-26T21:03:12-08:00"
+      },
+      "message": "Message text"
    }
 }
 ```

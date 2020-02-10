@@ -1,6 +1,6 @@
 # Asset Access Fields<a name="asset-create-access"></a>
 
-The following fields describe how AWS Elemental MediaPackage accesses the source content in your Amazon S3 bucket\. MediaPackage must have permissions to access the bucket\. To create an IAM role with the right permissions, see [Allowing AWS Elemental MediaPackage to Access Amazon S3](setting-up-create-trust-rel.md)\.
+The following fields describe how AWS Elemental MediaPackage accesses the source content in your Amazon S3 bucket\. MediaPackage must have permissions to access the bucket\. To create an IAM role with the right permissions, see [Allowing AWS Elemental MediaPackage to Access Other AWS Services](setting-up-create-trust-rel.md)\.
 
 ****Amazon S3 bucket name****  
 The Amazon S3 bucket holds the source content that AWS Elemental MediaPackage ingests and packages for playback\. Do one of the following:  

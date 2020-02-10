@@ -16,11 +16,11 @@ In the following steps, "now" is the current time according to the program date 
 **Note**  
 You might notice that the manifest lags behind real time when you initially create a startover window on an endpoint\. This is because AWS Elemental MediaPackage starts filling the manifest from the start of the window, and works up to "now\." So if you have a 24\-hour startover window, MediaPackage fills the manifest starting 24 hours ago and working up to "now\."
 
-1. Ensure that content requests contain start and end parameters as needed\. AWS Elemental MediaPackage accepts requests for up to 9 or 18 hours of content, depending on the endpoint type\. For information about time\-shifted manifest length limits by endpoint type, see [Live Hard Limits](limits-live.md#hard-limits)\.
+1. Ensure that content requests contain start and end parameters as needed\. AWS Elemental MediaPackage accepts requests for up to 9 or 18 hours of content, depending on the endpoint type\. For information about time\-shifted manifest length quotas by endpoint type, see [Live Hard Quotas](limits-live.md#hard-limits)\.
 
    For packager\-specific rules about how you can notate the parameters, see [Rules for Start and End Parameters](#start-and-end-parameters-rules)\.
 
-   The start and end parameters determine the time boundaries of the manifest\. Expected behaviors are as follows:
+   The start and end parameters determine the time boundaries of the manifest\. These are the expected behaviors based on request start and end parameters:
 **Note**  
 In all cases, the maximum manifest length is 9 or 18 hours, depending on the endpoint type\.
    + If both start and end parameters are used in the URL, the resulting manifest has a fixed start and end time that correspond to the specified start and end parameters\.
@@ -41,11 +41,6 @@ In all cases, the date and time must be notated in one of the following formats:
 + POSIX \(or Epoch\) time, such as 1503091134
 
 The following topics describe the location rules by packager type\.
-
-**Topics**
-+ [DASH Parameter Rules](#parameter-rules-dash)
-+ [HLS and CMAF Parameter Rules](#allowed-parameter-location-hls)
-+ [Microsoft Smooth Parameter Rules](#allowed-parameter-location-mss)
 
 ### DASH Parameter Rules<a name="parameter-rules-dash"></a>
 

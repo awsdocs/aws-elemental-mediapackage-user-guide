@@ -3,7 +3,7 @@
 Protect your content from unauthorized use through encryption\. Digital rights management \(DRM\) systems provide keys to AWS Elemental MediaPackage for content encryption, and licenses to supported players for decryption\.
 
 **Note**  
-To encrypt content, you must have a DRM solution provider and be set up to use encryption\. For information, see [Using Encryption in AWS Elemental MediaPackage](using-encryption.md)\. 
+To encrypt content, you must have a DRM solution provider and be set up to use encryption\. For information, see [Content Encryption in AWS Elemental MediaPackage](using-encryption.md)\. 
 
 1. To serve content without copyright protection, keep **No encryption** selected\.
 
@@ -39,4 +39,4 @@ To encrypt content, you must have a DRM solution provider and be set up to use e
 
       To enter a certificate ARN here, you must have already imported the corresponding certificate into AWS Certificate Manager\. Then enter the certificate ARN from ACM here\. 
 
-      To enter a certificate ARN here, you must have already imported the corresponding certificate into AWS Certificate Manager\. Then enter the certificate ARN from ACM here\. 
+      For information about key encryption, see [Encrypted Content Keys ](drm-content-key-encryption.md)\.

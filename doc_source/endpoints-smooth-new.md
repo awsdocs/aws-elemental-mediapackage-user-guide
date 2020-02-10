@@ -10,7 +10,7 @@ When you're creating an endpoint, do not put sensitive identifying information l
 
 1. \(Optional\) To create a window of the live stream that's available for on\-demand viewing, select **Startover window** and enter the size of the window \(in seconds\)\. Viewers can start\-over or catch\-up on content that falls within the window\. For more information about implementing start\-over and catch\-up TV, see [Time\-shifted Viewing Reference in AWS Elemental MediaPackage](time-shifted.md)\.
 
-1. \(Optional\) To delay when content is available to players, enter the duration \(in seconds\) for the delay in **Time delay**\. The minimum time is five seconds\. The maximum time is 86,400 seconds \(24 hours\)\.
+1. \(Optional\) To delay when content is available to players, enter the duration \(in seconds\) for the delay in **Time delay**\. The minimum time is 5 seconds\. The maximum time is 86,400 seconds \(24 hours\)\.
 
    Use time delay to redefine the live point and make content available at a time that equals "now" minus the delay specified\. With a 60\-second time delay, content that AWS Elemental MediaPackage receives at 12:20 isn't available until 12:21\. Requests for playback at 12:20 will be served with content from 12:19\. Likewise, if you're serving content across time zones, you can set a time delay equal to the time zone difference to make content available at, for example, 8:00 local time\.
 

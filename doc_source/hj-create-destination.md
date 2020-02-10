@@ -2,7 +2,7 @@
 
 The destination information defines how MediaPackage saves the live\-to\-VOD asset after it has been harvested from the live stream\.
 
-1. For **IAM role**, enter the Amazon Resource Name \(ARN\) for the IAM role that provides MediaPackage access to read and write from your Amazon S3 bucket where the live\-to\-VOD asset will be stored\.
+1. For **IAM role**, enter the Amazon Resource Name \(ARN\) for the IAM role that provides MediaPackage access to read and write from your Amazon S3 bucket where the live\-to\-VOD asset will be stored\. This is the role that you created in [Allowing AWS Elemental MediaPackage to Access Other AWS Services](setting-up-create-trust-rel.md)\.
 
 1. For **S3 bucket name**, enter the bucket where you want MediaPackage to store the live\-to\-VOD asset\.
 

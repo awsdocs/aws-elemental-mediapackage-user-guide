@@ -12,7 +12,7 @@ The trust relationship defines what entities can assume the role that you create
 
 1. Choose **Edit trust relationship**\.
 
-1. On the **Edit Trust Relationship** page, in the **Policy Document**, change `ec2.amazonaws.com` to `mediapackage-vod.amazonaws.com`\. 
+1. On the **Edit Trust Relationship** page, in the **Policy Document**, change `ec2.amazonaws.com` to `mediapackage.amazonaws.com`\. 
 
    The policy document should now look like this: 
 

@@ -109,4 +109,4 @@ MediaPackage supports service roles\.
 
 ### Choosing an IAM Role in MediaPackage<a name="security_iam_service-with-iam-roles-choose"></a>
 
-When you create an asset resource in MediaPackage, you must choose a role to allow MediaPackage to access Amazon S3 on your behalf\. If you previously created a service role or service\-linked role, MediaPackage provides you with a list of roles to choose from\. It's important to choose a role that allows access to read from the S3 bucket and retrieve content\. For more information, see [Allowing AWS Elemental MediaPackage to Access Amazon S3](setting-up-create-trust-rel.md)\.
+When you create an asset resource in MediaPackage, you must choose a role to allow MediaPackage to access Amazon S3 on your behalf\. If you previously created a service role or service\-linked role, MediaPackage provides you with a list of roles to choose from\. It's important to choose a role that allows access to read from the S3 bucket and retrieve content\. For more information, see [Allowing AWS Elemental MediaPackage to Access Other AWS Services](setting-up-create-trust-rel.md)\.

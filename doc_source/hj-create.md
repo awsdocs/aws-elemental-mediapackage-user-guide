@@ -3,7 +3,7 @@
 Create a harvest job to extract a live\-to\-VOD asset from an unencrypted, live HLS stream\. 
 
 **Important**  
-To run a harvest job and save the live\-to\-VOD asset, MediaPackage must have permissions to access and write to the Amazon S3 bucket where the asset will be stored\. To create a role that gives MediaPackage the right permissions, see [Allowing AWS Elemental MediaPackage to Access Amazon S3](setting-up-create-trust-rel.md)\.
+To run a harvest job and save the live\-to\-VOD asset, MediaPackage must have permissions to access and write to the Amazon S3 bucket where the asset will be stored\. To create a role that gives MediaPackage the right permissions, see [Allowing AWS Elemental MediaPackage to Access Other AWS Services](setting-up-create-trust-rel.md)\.
 
 You can use the MediaPackage console, the AWS CLI, or the MediaPackage API to create a harvest job\. For information about creating a job through the AWS CLI or MediaPackage API, see the [AWS Elemental MediaPackage API Reference](https://docs.aws.amazon.com/mediapackage/latest/apireference/)\.
 

@@ -4,10 +4,6 @@ You can use a content delivery network \(CDN\) such as [Amazon CloudFront](https
 
 ![\[This illustration shows how content that is stored in AWS Elemental MediaPackage is distributed using a CDN.\]](http://docs.aws.amazon.com/mediapackage/latest/ug/images/cf_flow.png)
 
-The following sections provide procedures for working with distributions from Amazon CloudFront\.
-
 **Topics**
-+ [Creating a Distribution](cdns-create.md)
-+ [Viewing a Distribution](cdns-view.md)
-+ [Editing a Distribution](cdns-edit.md)
-+ [Deleting a Distribution](cdns-delete.md)
++ [Using AWS Elemental MediaPackage with Amazon CloudFront](cdns-cf.md)
++ [Using Content Delivery Network \(CDN\) Authorization](working-cdn-auth.md)

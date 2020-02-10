@@ -21,7 +21,7 @@ Enable the `$duration$` attribute through the **Segment template format** settin
 
    A segment timeline and individual segment descriptions are not included in the segment template\.
 **Important**  
-Except for the final segment, segments must be no more than 50% deviation from the value of the duration\. With a 90000 duration, segments must be between 45000 and 13500 \(1\.5 to 4\.5 seconds with a 30000 timescale\)\.   
+Except for the final segment, segments must be no more than 50% deviation from the value of the duration\. With a 90000 duration, segments must be between 45000 and 135000 \(1\.5 to 4\.5 seconds with a 30000 timescale\)\.   
 **Example**  
 
    The following is an example of an adaptation set that uses the `duration` in the segment template:

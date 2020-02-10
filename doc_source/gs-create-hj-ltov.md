@@ -16,7 +16,7 @@ To extract a live\-to\-VOD asset from a live content stream, create a harvest jo
 **Note**  
 "Now" is the current time according to the program date time \(PDT\), when it's present in the source content from the encoder\.
 
-1. For **IAM role**, enter the IAM role that allows MediaPackage to write to Amazon S3\. For help with the role, see [Allowing AWS Elemental MediaPackage to Access Amazon S3](setting-up-create-trust-rel.md)\.
+1. For **IAM role**, enter the IAM role that allows MediaPackage to write to Amazon S3\. For help with the role, see [Allowing AWS Elemental MediaPackage to Access Other AWS Services](setting-up-create-trust-rel.md)\.
 
 1. For **S3 bucket name**, select the bucket where you want MediaPackage to store the live\-to\-VOD asset\.
 
@@ -25,3 +25,5 @@ To extract a live\-to\-VOD asset from a live content stream, create a harvest jo
 The manifest key must be unique\. When you use the same manifest key for multiple harvest jobs, the newest playlist for the asset overwrites existing playlists\. The only time you should reuse a manifest key is when you are harvesting the same content, such as if there was a problem with a previous harvest of the content\.
 
 1. Choose **Create job**\.
+
+When MediaPackage processes the harvest job, it sends a CloudWatch event when the job fails or succeeds\. The event includes the details of the harvest job\. If the job fails, the event includes information about why\. This information is available only in the CloudWatch event\. For example events, see [Harvest Job Notification Events](cloudwatch-events-example.md#hj-status-events)\.

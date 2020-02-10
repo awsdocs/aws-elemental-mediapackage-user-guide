@@ -15,3 +15,4 @@ For more information about data protection, see the [AWS Shared Responsibility M
 
 **Topics**
 + [Implementing DRM with AWS Elemental MediaPackage](data-protection-encrypt.md)
++ [Implementing CDN Authorization with AWS Elemental MediaPackage](encryption-static-key-set-up.md)

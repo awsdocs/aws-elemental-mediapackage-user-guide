@@ -58,8 +58,8 @@ As with other AWS products, there are no contracts or minimum commitments for us
 
   Content that is cached and served from a content delivery network \(CDN\) does not incur this per GB charge\.
 
-For detailed pricing information, see [MediaPackage Pricing](https://aws.amazon.com//mediapackage/pricing/)\.
+For detailed pricing information, see [MediaPackage Pricing](https://aws.amazon.com/mediapackage/pricing/)\.
 
 ## Regions for MediaPackage<a name="regions-and-endpoints"></a>
 
-To reduce latency in your applications, MediaPackage offers a regional endpoint for your requests\. To view the list of AWS Regions where MediaPackage is available, see [MediaPackage Regions](https://docs.aws.amazon.com//general/latest/gr/rande.html#mediapackage_region)\.
+To reduce latency in your applications, MediaPackage offers a regional endpoint for your requests\. To view the list of AWS Regions where MediaPackage is available, see [MediaPackage Regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#mediapackage_region)\.

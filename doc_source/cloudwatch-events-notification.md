@@ -30,7 +30,7 @@ You can use Amazon CloudWatch Events and Amazon Simple Notification Service \(Am
    For information about the event types, see [AWS Elemental MediaPackage Events](cloudwatch-events-example.md)\.  
 **Example**  
 
-   The following example rule creates notifications for both events with both detail\-types\.
+   The following example rule creates notifications for all events on all detail\-types\.
 
    ```
    {
@@ -39,7 +39,8 @@ You can use Amazon CloudWatch Events and Amazon Simple Notification Service \(Am
      ],
      "detail-type": [
        "MediaPackage Input Notification",
-       "MediaPackage Key Provider Notification"
+       "MediaPackage Key Provider Notification",
+       "MediaPackage HarvestJob Notification"
      ]
    }
    ```
