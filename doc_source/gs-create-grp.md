@@ -1,4 +1,4 @@
-# Step 2: Create a Packaging Group<a name="gs-create-grp"></a>
+# Step 2: Create a packaging group<a name="gs-create-grp"></a>
 
 A packaging group holds one or more packaging configurations\. The packaging configurations enable you to define what kind of VOD outputs you want\. To apply these output definitions, associate a packaging group to multiple assets\.
 

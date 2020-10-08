@@ -1,4 +1,4 @@
-# Creating an HLS Packaging Configuration<a name="pkg-cfig-create-hls"></a>
+# Creating an HLS packaging configuration<a name="pkg-cfig-create-hls"></a>
 
 Create a packaging configuration that formats content for devices that support Apple HLS\.
 
@@ -15,11 +15,11 @@ Create a packaging configuration that formats content for devices that support A
 1. On the **Add or remove packaging configurations** page, in the **Packaging configurations** section, choose **Add** and select **New config**\.
 
 1. Complete the fields as described in the following topics:
-   + [General Settings Fields](cfigs-hls-new.md)
-   + [Manifest Settings Fields](cfigs-hls-manset.md)
-   + [Stream Selection Fields](cfigs-hls-include-streams.md)
-   + [Encryption Fields](cfigs-hls-encryption.md)
+   + [General settings fields](cfigs-hls-new.md)
+   + [Manifest settings fields](cfigs-hls-manset.md)
+   + [Stream selection fields](cfigs-hls-include-streams.md)
+   + [Encryption fields](cfigs-hls-encryption.md)
 
 1. Choose **Save**\.
 
-If you exceed the quotas for your account when you're creating a packaging configuration, you get an error\. If you get an error similar to Too many requests, please try again\. Resource limit exceeded, either you have exceeded the API request quotas, or you have already reached the maximum number of packaging groups allowed on your account\. If this is your first group, or if you think you mistakenly received this error, use the Service Quotas console to [request quota increases](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/mediapackage/quotas)\. For more information about quotas in MediaPackage, see [Quotas in AWS Elemental MediaPackage](limits.md)\.
+If you exceed the quotas for your account when you're creating a packaging configuration, you get an error\. If you get an error similar to Too many requests, please try again\. Resource limit exceeded, either you have exceeded the API request quotas, or you have already reached the maximum number of packaging groups allowed on your account\. If this is your first group, or if you think you mistakenly received this error, use the Service Quotas console to [request quota increases](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/mediapackage/quotas)\. For more information about quotas in MediaPackage, see [Quotas in AWS Elemental MediaPackage](quotas.md)\.

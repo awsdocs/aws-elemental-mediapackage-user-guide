@@ -1,4 +1,4 @@
-# Secrets Manager Access for CDN Authorization<a name="setting-up-create-trust-rel-policy-cdn"></a>
+# Secrets Manager access for CDN authorization<a name="setting-up-create-trust-rel-policy-cdn"></a>
 
 If you use content delivery network \(CDN\) authorization headers to restrict access to your endpoints in MediaPackage, you need a policy that allows you to do these things in Secrets Manager:
 + `GetSecretValue`: MediaPackage can retrieve the encrypted authorization code from a version of the secret\.

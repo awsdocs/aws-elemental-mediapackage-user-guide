@@ -1,6 +1,4 @@
-# Compacted DASH Manifests<a name="compacted"></a>
-
-The ability to compact DASH manifests is available with only live workflows in AWS Elemental MediaPackage\.
+# Compacted DASH manifests<a name="compacted"></a>
 
 The default DASH manifest from AWS Elemental MediaPackage includes duplicate data about each representation \(track\)\. For some players, processing a manifest with all this data is difficult and slow\. To reduce some of the burden, MediaPackage can compact the manifest by moving some attributes from the `Representation` object to the `AdaptationSet` object\. This way, rather than having the attributes defined for each representation in the manifest, they're defined once at a higher level\. The representations then inherit these attributes from the adaptation set\.
 
@@ -51,7 +49,7 @@ In this example, the `SegmentTemplate` objects and all of their elements are col
 
  For information about compacting a DASH manifest, see [How AWS Elemental MediaPackage Compacts Manifests](#how-cpact-works)\.
 
-## How AWS Elemental MediaPackage Compacts Manifests<a name="how-cpact-works"></a>
+## How AWS Elemental MediaPackage compacts manifests<a name="how-cpact-works"></a>
 
 To compact the DASH manifest from the AWS Elemental MediaPackage console, choose **Compact** for **Manifest layout** on the DASH endpoint\. To ensure that tracks are available at the right time, AWS Elemental MediaPackage checks the frame rate and audio sampling rate in the source content to determine if the manifest can be compacted\.
 

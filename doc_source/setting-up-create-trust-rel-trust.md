@@ -1,10 +1,10 @@
-# Step 3: Modify the Trust Relationship<a name="setting-up-create-trust-rel-trust"></a>
+# Step 3: Modify the trust relationship<a name="setting-up-create-trust-rel-trust"></a>
 
-The trust relationship defines what entities can assume the role that you created in [Step 2: Create a Role](setting-up-create-trust-rel-role.md)\. When you created the role and established the trusted relationship, you chose EC2 as the trusted entity\. Modify the role so that the trusted relationship is between your AWS account and AWS Elemental MediaPackage\.
+The trust relationship defines what entities can assume the role that you created in [Step 2: Create a role](setting-up-create-trust-rel-role.md)\. When you created the role and established the trusted relationship, you chose EC2 as the trusted entity\. Modify the role so that the trusted relationship is between your AWS account and AWS Elemental MediaPackage\.
 
 **To change the trust relationship to MediaPackage**
 
-1. Access the role that you created in [Step 2: Create a Role](setting-up-create-trust-rel-role.md)\. 
+1. Access the role that you created in [Step 2: Create a role](setting-up-create-trust-rel-role.md)\. 
 
    If you're not already displaying the role, in the navigation pane of the IAM console, choose **Roles**\. Search for and choose the role that you created\.
 

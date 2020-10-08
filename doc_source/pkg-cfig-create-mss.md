@@ -1,4 +1,4 @@
-# Creating a Microsoft Smooth Packaging Configuration<a name="pkg-cfig-create-mss"></a>
+# Creating a Microsoft Smooth packaging configuration<a name="pkg-cfig-create-mss"></a>
 
 Create a packaging configuration that formats content for devices that support Microsoft Smooth\.
 
@@ -15,11 +15,11 @@ Create a packaging configuration that formats content for devices that support M
 1. On the **Add or remove packaging configurations** page, in the **Packaging configurations** section, choose **Add** and select **New config**\.
 
 1. Complete the fields as described in the following topics:
-   + [General Settings Fields](cfigs-mss-new.md)
-   + [Manifest Settings Fields](cfigs-mss-manset.md)
-   + [Stream Selection Fields](cfigs-mss-include-streams.md)
-   + [Encryption Fields](cfigs-mss-encryption.md)
+   + [General settings fields](cfigs-mss-new.md)
+   + [Manifest settings fields](cfigs-mss-manset.md)
+   + [Stream selection fields](cfigs-mss-include-streams.md)
+   + [Encryption fields](cfigs-mss-encryption.md)
 
 1. Choose **Save**\.
 
-If you exceed the quotas for your account when you're creating a packaging configuration, you get an error\. If you get an error similar to Too many requests, please try again\. Resource limit exceeded, either you have exceeded the API request quota, or you have already reached the maximum number of packaging groups allowed on your account\.If this is your first group, or if you think you mistakenly received this error, use the Service Quotas console to [request quota increases](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/mediapackage/quotas)\. For more information about quotas in MediaPackage, see [Quotas in AWS Elemental MediaPackage](limits.md)\.
+If you exceed the quotas for your account when you're creating a packaging configuration, you get an error\. If you get an error similar to Too many requests, please try again\. Resource limit exceeded, either you have exceeded the API request quota, or you have already reached the maximum number of packaging groups allowed on your account\.If this is your first group, or if you think you mistakenly received this error, use the Service Quotas console to [request quota increases](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/mediapackage/quotas)\. For more information about quotas in MediaPackage, see [Quotas in AWS Elemental MediaPackage](quotas.md)\.

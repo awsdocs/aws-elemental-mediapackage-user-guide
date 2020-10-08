@@ -1,4 +1,4 @@
-# Deleting an Endpoint<a name="endpoints-delete"></a>
+# Deleting an endpoint<a name="endpoints-delete"></a>
 
 Endpoints can serve content until they are deleted\. Delete the endpoint if it should no longer respond to playback requests\. You must delete all endpoints from a channel before you can delete the channel\.
 
@@ -9,7 +9,7 @@ You can use the AWS Elemental MediaPackage console, the AWS CLI, or the MediaPac
 
 **To delete an endpoint \(console\)**
 
-1. Access the channel that the endpoint is associated with, as described in [Viewing Channel Details](channels-view.md)\.
+1. Access the channel that the endpoint is associated with, as described in [Viewing channel details](channels-view.md)\.
 
 1. On the channel details page, choose the endpoint name\.
 

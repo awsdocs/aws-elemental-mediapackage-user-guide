@@ -1,11 +1,11 @@
-# Step 6: Clean Up<a name="gs-cleanup-ltov"></a>
+# Step 6: Clean up<a name="gs-cleanup-ltov"></a>
 
 To avoid incurring extra charges, delete the resources that you're no longer using\.
 
 **Note**  
 Harvest jobs automatically expire off your account and can't be manually deleted\.
 
-## Delete Live Resources<a name="gs-cleanup-ltov-l"></a>
+## Delete live resources<a name="gs-cleanup-ltov-l"></a>
 
 When you're done ingesting, serving, and harvesting from live content, delete the channel and endpoint\. You must delete all endpoints on a channel before you can delete the channel\. 
 
@@ -31,7 +31,7 @@ When you're done ingesting, serving, and harvesting from live content, delete th
 
    AWS Elemental MediaPackage removes the channel and all associated endpoints\.
 
-## Delete VOD Resources<a name="gs-cleanup-ltov-v"></a>
+## Delete VOD resources<a name="gs-cleanup-ltov-v"></a>
 
 When you're done ingesting and serving VOD content, delete the extra resources\. If you want to make a specific output unavailable, delete the packaging configuration from the packaging group\. If you want to make an asset no longer available for playback from any outputs, delete the asset\. 
 

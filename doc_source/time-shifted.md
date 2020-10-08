@@ -1,10 +1,10 @@
-# Time\-shifted Viewing Reference in AWS Elemental MediaPackage<a name="time-shifted"></a>
+# Time\-shifted viewing reference in AWS Elemental MediaPackage<a name="time-shifted"></a>
 
 Time\-shifted viewing is available with live workflows in AWS Elemental MediaPackage\.
 
 *Time\-shifted viewing* means that viewers can start watching a live stream at a time earlier than "now," allowing them to join from the beginning a show that's already in progress or to watch a show that's already completed\. MediaPackage supports time\-shifted viewing for content that's up to 336 hours \(14 days\) old\. You can enable time\-shifted viewing for some or all of this content by defining the **startover window** on the endpoint\. Content that falls within that window is available for playback when playback requests include valid start and end parameters\. Requests for content outside the window configured on the endpoint result in an HTTP error 404\. 
 
-Alternatively, you can harvest a clip of a live stream and make it available as a video on demand \(VOD\) asset\. For information about harvesting VOD assets, see [Creating Live\-to\-VOD Assets with AWS Elemental MediaPackage](ltov.md)\.
+Alternatively, you can harvest a clip of a live stream and make it available as a video on demand \(VOD\) asset\. For information about harvesting VOD assets, see [Creating live\-to\-VOD assets with AWS Elemental MediaPackage](ltov.md)\.
 
 In the following steps, "now" is the current time according to the program date time \(PDT\), when it's present in the source content from the encoder\. If the source content doesn't include PDT information, "now" refers to the MediaPackage ingest time of the most recent segment\.
 
@@ -16,23 +16,21 @@ In the following steps, "now" is the current time according to the program date 
 **Note**  
 You might notice that the manifest lags behind real time when you initially create a startover window on an endpoint\. This is because AWS Elemental MediaPackage starts filling the manifest from the start of the window, and works up to "now\." So if you have a 24\-hour startover window, MediaPackage fills the manifest starting 24 hours ago and working up to "now\."
 
-1. Ensure that content requests contain start and end parameters as needed\. AWS Elemental MediaPackage accepts requests for up to 9 or 18 hours of content, depending on the endpoint type\. For information about time\-shifted manifest length quotas by endpoint type, see [Live Hard Quotas](limits-live.md#hard-limits)\.
+1. Ensure that content requests contain start and end parameters as needed\. AWS Elemental MediaPackage accepts requests for up to 24 hours of content\.
 
-   For packager\-specific rules about how you can notate the parameters, see [Rules for Start and End Parameters](#start-and-end-parameters-rules)\.
+   For packager\-specific rules about how you can notate the parameters, see [Rules for start and end parameters](#start-and-end-parameters-rules)\.
 
    The start and end parameters determine the time boundaries of the manifest\. These are the expected behaviors based on request start and end parameters:
-**Note**  
-In all cases, the maximum manifest length is 9 or 18 hours, depending on the endpoint type\.
    + If both start and end parameters are used in the URL, the resulting manifest has a fixed start and end time that correspond to the specified start and end parameters\.
 
-     If the end time is in the future, the tags in the manifest are consistent with a live manifest\. Otherwise, if the end time is in the past, the tags in the manifest are consistent with a video on demand \(VOD\) manifest\. For information about the manifest differences, see [Live and VOD Manifest Reference](what-is-manifest.md)\.
-   + If a start parameter is specified but not an end, the resulting manifest has a fixed start time that corresponds to the specified start parameter, and the end of the manifest grows as the live content progresses\. You can use a start time that’s up to 9 or 18 hours in the past, depending on the endpoint type\.
+     If the end time is in the future, the tags in the manifest are consistent with a live manifest\. Otherwise, if the end time is in the past, the tags in the manifest are consistent with a video on demand \(VOD\) manifest\. For information about the manifest differences, see [Live and VOD manifest reference](what-is-manifest.md)\.
+   + If a start parameter is specified but not an end, the resulting manifest has a fixed start time that corresponds to the specified start parameter, and the end of the manifest grows as the live content progresses\.
 **Note**  
 For HLS output, many playback devices start playback at the current time \("now"\)\. To view the content from the actual start time of the playback window, viewers can seek back on the playback progress bar\.
    + If no parameters are specified, a standard manifest is generated starting "now" with no end time\.
    + If an end parameter is specified but no start, the manifest is generated in the same way as when no parameters are specified\. The manifest starts "now" and has no end time\.
 
-## Rules for Start and End Parameters<a name="start-and-end-parameters-rules"></a>
+## Rules for start and end parameters<a name="start-and-end-parameters-rules"></a>
 
 Start and end parameters denote the beginning and end of a time\-shifted manifest\. The playback device can append parameters to the end of a manifest request or include the parameters within the request\. 
 
@@ -42,7 +40,7 @@ In all cases, the date and time must be notated in one of the following formats:
 
 The following topics describe the location rules by packager type\.
 
-### DASH Parameter Rules<a name="parameter-rules-dash"></a>
+### DASH parameter rules<a name="parameter-rules-dash"></a>
 
 Start and end parameters in the URL request for DASH content can use standard parameter notation, or can be included as path elements in the URL\. 
 + Query parameter notation – start and end parameters are included at the end of the request URL  
@@ -58,7 +56,7 @@ Start and end parameters in the URL request for DASH content can use standard pa
   https://cf98fa7b2ee4450e.mediapackage.us-east-1.amazonaws.com/out/v1/997cbb27697d4863bb65488133bff26f/start/2017-12-19T13:00:28-08:00/end/2017-12-19T14:00:28-08:00/sports.mpd
   ```
 
-### HLS and CMAF Parameter Rules<a name="allowed-parameter-location-hls"></a>
+### HLS and CMAF parameter rules<a name="allowed-parameter-location-hls"></a>
 
 Start and end parameters in the URL request for HLS content can use standard parameter notation, or can be included as path elements in the URL\. The rules for HLS and CMAF are the same, except that when you're inserting path elements in the CMAF endpoint, the elements have to be after the manifest ID in the URL\.
 + Query parameter notation – start and end parameters are included at the end of the request URL  
@@ -84,7 +82,7 @@ Start and end parameters in the URL request for HLS content can use standard par
   https://cf98fa7b2ee4450e.mediapackage.us-east-1.amazonaws.com/out/v1/064134724fd74667ba294657a674ae72/manifest_id/start/1522807213/end/1522800013/news.m3u8
   ```
 
-### Microsoft Smooth Parameter Rules<a name="allowed-parameter-location-mss"></a>
+### Microsoft smooth parameter rules<a name="allowed-parameter-location-mss"></a>
 
 Start and end parameters in the URL request for Microsoft Smooth Streaming content can be included as path elements in the URL\. 
 + Path elements – start and end parameters are included in the path of the request URL  

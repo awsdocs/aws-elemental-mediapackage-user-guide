@@ -1,4 +1,4 @@
-# HLS Manifest Fields<a name="endpoints-cmaf-manifest"></a>
+# HLS manifest fields<a name="endpoints-cmaf-manifest"></a>
 
 The HLS manifest fields allow you to define values for this manifest\.
 
@@ -8,7 +8,7 @@ The HLS manifest fields allow you to define values for this manifest\.
 
 1. \(Optional\) For **Playlist window duration**, type the total duration \(in seconds\) of the manifest\.
 
-1. \(Optional\) Use the following fields to dictate how MediaPackage processes SCTE\-35 messages from the input stream\. For more information, see [SCTE\-35 Message Options in AWS Elemental MediaPackage](scte.md)\. 
+1. \(Optional\) Use the following fields to dictate how MediaPackage processes SCTE\-35 messages from the input stream\. For more information, see [SCTE\-35 message options in AWS Elemental MediaPackage](scte.md)\. 
 
    1. \(Optional\) In **Ad markers**, choose how ad markers are included in the packaged content\. 
 

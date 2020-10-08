@@ -1,27 +1,30 @@
-# Creating a SMIL File<a name="supported-inputs-vod-smil"></a>
+# Creating a SMIL file<a name="supported-inputs-vod-smil"></a>
 
 When you send an VOD MP4 asset to AWS Elemental MediaPackage, you have to include a Synchronized Multimedia Integration Language \(SMIL\) file as well\. This `.smil` file acts as a wrapper for all of the files that are part of the asset\. 
 
-MediaPackage supports the following attributes in a `.smil` file:
-+ `name`
-+ `src`
-+ `language`
-+ `systemLanguage`
+MediaPackage supports the following tags attributes in a `.smil` file\.
 
-**Example Supported SMIL Structure**  
-The following is an example of a `.smil` manifest that MediaPackage supports\. It references video files `ExampleHigh`, `ExampleMid`, and `ExampleLow` and captions file `ExampleCC`\.  
+**Attributes**
++ `audioName`
++ `src` or `name`
++ `subtitleName`
++ `systemLanguage` or `language`
+
+**Example Supported SMIL structure**  
+The following is an example of a `.smil` manifest\.   
 
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <smil>
-    <head></head>
     <body>
+        <alias value="Example"/>
         <switch>
-            <video name="ExampleHigh.mp4" />
-            <video name="ExampleLow.mp4" />
-            <video name="ExampleMid.mp4" />
-            <textstream src="ExampleCC.srt" systemLanguage="eng"/>
+            <video name="example_360.mp4" systemLanguage="eng" audioName="English,French,Spanish"/>
+            <video name="example_480.mp4" systemLanguage="eng" audioName="English 2"/>
+            <textstream src="example_subs_eng.srt" systemLanguage="eng" subtitleName="English"/>
+            <textstream src="example_subs_fra.srt" systemLanguage="fra" subtitleName="French"/>
+            <textstream src="example_subs_spa.srt" systemLanguage="spa" subtitleName="Spanish"/>
     </switch>
-  </body>
+</body>
 </smil>
 ```

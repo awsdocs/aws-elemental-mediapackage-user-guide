@@ -1,4 +1,4 @@
-# Packaging Settings Field<a name="asset-create-pkg"></a>
+# Packaging settings field<a name="asset-create-pkg"></a>
 
 The following field determines how AWS Elemental MediaPackage packages outputs from this asset\.
 

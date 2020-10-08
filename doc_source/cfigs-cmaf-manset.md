@@ -1,4 +1,4 @@
-# Manifest Settings Fields<a name="cfigs-cmaf-manset"></a>
+# Manifest settings fields<a name="cfigs-cmaf-manset"></a>
 
 Specify the format of the manifest that AWS Elemental MediaPackage delivers from an asset that uses this packaging configuration\.
 

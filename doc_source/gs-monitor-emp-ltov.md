@@ -1,4 +1,4 @@
-# \(Optional\) Step 5: Monitor AWS Elemental MediaPackage Activity<a name="gs-monitor-emp-ltov"></a>
+# \(Optional\) step 5: Monitor AWS Elemental MediaPackage activity<a name="gs-monitor-emp-ltov"></a>
 
 Use Amazon CloudWatch to track AWS Elemental MediaPackage activity, such as the counts of bytes that MediaPackage has received and sent, response times, and request counts\. Metrics are grouped first by the service namespace, and then by the various dimension combinations within each namespace\.
 
@@ -12,4 +12,4 @@ Use Amazon CloudWatch to track AWS Elemental MediaPackage activity, such as the 
 
 1. Select the metric dimension to view the metrics \(for example, choose `channel` to view metrics per channel\)\. 
 
-For a list of AWS Elemental MediaPackage metrics, see [Monitoring AWS Elemental MediaPackage with Amazon CloudWatch Metrics](monitoring-cloudwatch.md)\.
+For a list of AWS Elemental MediaPackage metrics, see [Monitoring AWS Elemental MediaPackage with Amazon CloudWatch metrics](monitoring-cloudwatch.md)\.

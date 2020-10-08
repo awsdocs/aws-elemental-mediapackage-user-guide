@@ -1,4 +1,4 @@
-# Encrypted Content Keys<a name="drm-content-key-encryption"></a>
+# Encrypted content keys<a name="drm-content-key-encryption"></a>
 
 AWS Elemental MediaPackage uses a Content Protection Information Exchange \(CPIX\) document to communicate with SPEKE about content keys that are used to encrypt your content\. For the most secure DRM encryption solution, use encrypted content keys in the CPIX document\. 
 
@@ -15,13 +15,13 @@ To use encrypted content keys, the following requirements must be met:
 
 1. Open the ACM console at [https://console\.aws\.amazon\.com/acm/](https://console.aws.amazon.com/acm/)\.
 
-1. Import the certificate into ACM according to the instructions at [Importing Certificates into AWS Certificate Manager](https://docs.aws.amazon.com/acm/latest/userguide/import-certificate.html)\. Note the resulting certificate ARN because you will need it later\.
+1. Import the certificate into ACM according to the instructions at [Importing certificates into AWS certificate manager](https://docs.aws.amazon.com/acm/latest/userguide/import-certificate.html)\. Note the resulting certificate ARN because you will need it later\.
 
    For use in DRM encryption, your certificate must have a status of **Issued** in ACM\.
 
 **To use a certificate in AWS Elemental MediaPackage**
 
-When you use DRM encryption in your endpoint configuration, provide your certificate ARN in the encryption parameters\. This enables content key encryption\. You can use the same certificate ARN for multiple events\. For information, see the encryption settings information in [Working with Endpoints in AWS Elemental MediaPackage](endpoints.md)\. 
+When you use DRM encryption in your endpoint configuration, provide your certificate ARN in the encryption parameters\. This enables content key encryption\. You can use the same certificate ARN for multiple events\. For information, see the encryption settings information in [Working with endpoints in AWS Elemental MediaPackage](endpoints.md)\. 
 
 **To renew a certificate**
 

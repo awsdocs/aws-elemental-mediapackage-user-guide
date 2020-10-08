@@ -1,4 +1,4 @@
-# Start and End Date and Time<a name="hj-create-time"></a>
+# Start and end date and time<a name="hj-create-time"></a>
 
 The start and end date and time information defines the time range for the harvest job\. Times are based on the program date time \(PDT\) from the encoder\.
 

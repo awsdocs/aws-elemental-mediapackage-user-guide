@@ -1,4 +1,4 @@
-# Rotating Credentials on an Input URL<a name="channels-rotate-creds"></a>
+# Rotating credentials on an input URL<a name="channels-rotate-creds"></a>
 
 Rotate credentials on an input URL to generate a new WebDAV user name and password\.
 

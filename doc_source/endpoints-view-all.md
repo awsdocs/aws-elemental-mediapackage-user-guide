@@ -1,4 +1,4 @@
-# Viewing All Endpoints Associated with a Channel<a name="endpoints-view-all"></a>
+# Viewing all endpoints associated with a channel<a name="endpoints-view-all"></a>
 
 View all endpoints that are associated with a specific channel to ensure that the content is available in all necessary stream formats\.
 
@@ -6,7 +6,7 @@ You can use the AWS Elemental MediaPackage console, the AWS CLI, or the MediaPac
 
 **To view a channel's endpoints \(console\)**
 
-1. Access the channel that the endpoint is associated to, as described in [Viewing Channel Details](channels-view.md)\.
+1. Access the channel that the endpoint is associated to, as described in [Viewing channel details](channels-view.md)\.
 
    AWS Elemental MediaPackage displays all existing endpoints as a table or as individual cards\. 
 

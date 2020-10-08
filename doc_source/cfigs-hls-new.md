@@ -1,4 +1,4 @@
-# General Settings Fields<a name="cfigs-hls-new"></a>
+# General settings fields<a name="cfigs-hls-new"></a>
 
 Provide general settings that apply to the entire packaging configuration\.
 

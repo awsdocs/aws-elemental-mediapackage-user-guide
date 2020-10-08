@@ -1,4 +1,4 @@
-# AWS Elemental MediaPackage Events<a name="cloudwatch-events-example"></a>
+# AWS Elemental MediaPackage events<a name="cloudwatch-events-example"></a>
 
 AWS Elemental MediaPackage integrates with Amazon CloudWatch Events to notify you of certain events that affect your channels and endpoints\. Each event is represented in [JSON \(JavaScript Object Notation\)](http://json.org) and contains the event name, the date and time when the event occurred, the channel or endpoint affected, and more\. You can use CloudWatch Events to collect these events and set up rules that route them to one or more *targets* such as AWS Lambda functions, Amazon SNS topics, Amazon SQS queues, streams in Amazon Kinesis Data Streams, or built\-in targets\.
 
@@ -7,11 +7,11 @@ For more information about using CloudWatch Events with other kinds of events, s
 The following topics describe the CloudWatch Events that AWS Elemental MediaPackage creates\.
 
 **Topics**
-+ [Input Notification Events](#input-state-events)
-+ [Key Provider Notification Events](#key-provider-state-events)
-+ [Harvest Job Notification Events](#hj-status-events)
++ [Input notification events](#input-state-events)
++ [Key provider notification events](#key-provider-state-events)
++ [Harvest job notification events](#hj-status-events)
 
-## Input Notification Events<a name="input-state-events"></a>
+## Input notification events<a name="input-state-events"></a>
 
 You get input notification events for live and video on demand \(VOD\) content\. These events notify you when something happens with MediaPackage ingest\. These are the input notification events you might receive:
 + Maximum input streams exceeded 
@@ -22,7 +22,7 @@ You get input notification events for live and video on demand \(VOD\) content\.
 The following sections describe each of these events\.
 
 ** Maximum Input Streams Exceeded Event **  
-For live content, a channel in MediaPackage exceeds the quota for the number of input streams\. For information about quotas, see [Quotas in AWS Elemental MediaPackage](limits.md)\.  
+For live content, a channel in MediaPackage exceeds the quota for the number of input streams\. For information about quotas, see [Quotas in AWS Elemental MediaPackage](quotas.md)\.  
 
 **Example**  
 
@@ -47,7 +47,7 @@ For live content, a channel in MediaPackage exceeds the quota for the number of 
 **Input Switch Event**  
 For live content, MediaPackage switches inputs for one of your endpoints\.   
 One event is sent in a five\-minute period\. If the input switches multiple times in five minutes \(for example, if MediaPackage switches to one input, then back to the other\), you receive only one event\.  
-For information about input redundancy and what causes inputs to switch, see [Live Input Redundancy AWS Elemental MediaPackage Processing Flow](what-is-flow-ir.md)\.  
+For information about input redundancy and what causes inputs to switch, see [Live input redundancy AWS Elemental MediaPackage processing flow](what-is-flow-ir.md)\.  
 
 **Example**  
 
@@ -123,7 +123,7 @@ For VOD content, an asset in MediaPackage is available for playback\. There is a
 }
 ```
 
-## Key Provider Notification Events<a name="key-provider-state-events"></a>
+## Key provider notification events<a name="key-provider-state-events"></a>
 
 You get key provider notification events when you're using content encryption on an endpoint and MediaPackage can't reach the key provider\. For information about DRM and encryption, see [https://docs.aws.amazon.com/speke/latest/documentation/](https://docs.aws.amazon.com/speke/latest/documentation/)\.
 
@@ -147,11 +147,11 @@ You get key provider notification events when you're using content encryption on
 }
 ```
 
-## Harvest Job Notification Events<a name="hj-status-events"></a>
+## Harvest job notification events<a name="hj-status-events"></a>
 
-You get harvest job status events when you export a clip from a live stream to create a live\-to\-VOD asset\. MediaPackage creates notifications when the harvest job succeeds or fails\. For information about harvest jobs and live\-to\-VOD assets, see [Creating Live\-to\-VOD Assets with AWS Elemental MediaPackage](ltov.md)\.
+You get harvest job status events when you export a clip from a live stream to create a live\-to\-VOD asset\. MediaPackage creates notifications when the harvest job succeeds or fails\. For information about harvest jobs and live\-to\-VOD assets, see [Creating live\-to\-VOD assets with AWS Elemental MediaPackage](ltov.md)\.
 
-**Example Successful Harvest Job Event**  
+**Example Successful harvest job event**  
 
 ```
 {
@@ -183,7 +183,7 @@ You get harvest job status events when you export a clip from a live stream to c
 }
 ```
 
-**Example Failed Harvest Job Event**  
+**Example Failed harvest job event**  
 
 ```
 {

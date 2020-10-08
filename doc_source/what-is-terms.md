@@ -1,4 +1,4 @@
-# Concepts and Terminology<a name="what-is-terms"></a>
+# Concepts and terminology<a name="what-is-terms"></a>
 
 AWS Elemental MediaPackage includes the following components:
 
@@ -25,7 +25,7 @@ For VOD workflows, MediaPackage pulls file\-based content from Amazon S3\. As wi
 **Track**  
 *Tracks* make up the output content stream\. MediaPackage includes selected video, audio, and subtitles or captions tracks in the output stream\. The stream delivers the tracks to the player \(either directly or through a CDN\), and the player plays back the tracks based on player logic or network conditions \(such as available bandwidth\)\.
 
-## Live Components<a name="what-is-terms-live"></a>
+## Live components<a name="what-is-terms-live"></a>
 
 The following components apply to live workflows in MediaPackage:
 
@@ -38,7 +38,7 @@ An *endpoint* is part of a channel and represents the packaging aspect of MediaP
 **Harvest Job**  
 A *harvest job* is a task that you create to extract a video on demand \(VOD\) asset from a live content stream\. A harvest job defines the start and end times of the VOD asset, and where MediaPackage should store the asset\. When the job runs, MediaPackage creates an HLS clip for the times that you indicated\. This clip is stored as a VOD asset in an Amazon S3 bucket of your choosing\. You can use the VOD functionality in MediaPackage to serve the asset to end users\.
 
-## VOD Components<a name="what-is-terms-vod"></a>
+## VOD components<a name="what-is-terms-vod"></a>
 
 The following components apply to video on demand \(VOD\) workflows in MediaPackage:
 

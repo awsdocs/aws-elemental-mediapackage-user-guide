@@ -1,4 +1,4 @@
-# Asset Details Fields<a name="asset-create-details"></a>
+# Asset details fields<a name="asset-create-details"></a>
 
 The following fields describe the source content that this asset uses\.
 

@@ -1,14 +1,14 @@
-# Creating an Admin IAM User<a name="setting-up-create-iam-user"></a>
+# Creating an admin IAM user<a name="setting-up-create-iam-user"></a>
 
   When you first create an AWS account, you begin with a single sign\-in identity that has complete access to all AWS services and resources in the account\. This identity is called the AWS account *root user* and is accessed by signing in with the email address and password that you used to create the account\. We strongly recommend that you do not use the root user for your everyday tasks, even the administrative ones\. Instead, adhere to the [best practice of using the root user only to create your first IAM user](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#create-iam-users)\. Then securely lock away the root user credentials and use them to perform only a few account and service management tasks\. 
 
 In this procedure, you use the AWS account root user to create your first IAM user\. You add this IAM user to an Administrators group, to ensure that you have access to all services and their resources in your account\. The next time that you access your AWS account, you should sign in with the credentials for this IAM user\.
 
-To create users with limited permissions, see [Creating a Non\-Admin IAM User](setting-up-create-non-admin-iam.md)\.
+To create users with limited permissions, see [Creating a non\-admin IAM user](setting-up-create-non-admin-iam.md)\.
 
 **To create an administrator user for yourself and add the user to an administrators group \(console\)**
 
-1. Use your AWS account email address and password to sign in as the *[AWS account root user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html)* to the IAM console at [https://console\.aws\.amazon\.com/iam/](https://console.aws.amazon.com/iam/)\.
+1. Sign in to the [IAM console](https://console.aws.amazon.com/iam/) as the account owner by choosing **Root user** and entering your AWS account email address\. On the next page, enter your password\.
 **Note**  
 We strongly recommend that you adhere to the best practice of using the **Administrator** IAM user below and securely lock away the root user credentials\. Sign in as the root user only to perform a few [account and service management tasks](https://docs.aws.amazon.com/general/latest/gr/aws_tasks-that-require-root.html)\.
 
@@ -44,4 +44,4 @@ You must activate IAM user and role access to Billing before you can use the `Ad
 
 You can use this same process to create more groups and users and to give your users access to your AWS account resources\. To learn about using policies that restrict user permissions to specific AWS resources, see [Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/access.html) and [Example Policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_examples.html)\.
 
-For information about creating users with limited permissions, see [Creating a Non\-Admin IAM User](setting-up-create-non-admin-iam.md)\.
+For information about creating users with limited permissions, see [Creating a non\-admin IAM user](setting-up-create-non-admin-iam.md)\.

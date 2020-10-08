@@ -1,4 +1,4 @@
-# Viewing Asset Details<a name="asset-view"></a>
+# Viewing asset details<a name="asset-view"></a>
 
 You can view all assets that are configured in AWS Elemental MediaPackage or the details of a specific asset, including the packaging configurations that are associated with it\.
 

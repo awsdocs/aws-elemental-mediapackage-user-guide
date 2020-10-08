@@ -1,4 +1,4 @@
-# Step 3: Create Endpoints<a name="create-endpoint"></a>
+# Step 3: Create endpoints<a name="create-endpoint"></a>
 
 The endpoint is attached to a channel, and represents the output of the live content\. You can associate multiple endpoints to a single channel\. Each endpoint gives players and downstream CDNs \(such as Amazon CloudFront\) access to the content for playback\. 
 

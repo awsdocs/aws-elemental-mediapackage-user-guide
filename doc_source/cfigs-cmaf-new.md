@@ -1,4 +1,4 @@
-# General Settings Fields<a name="cfigs-cmaf-new"></a>
+# General settings fields<a name="cfigs-cmaf-new"></a>
 
 Provide general settings that apply to the entire packaging configuration\.
 

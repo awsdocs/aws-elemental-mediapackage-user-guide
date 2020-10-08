@@ -1,10 +1,10 @@
-# Step 2: \(Optional\) Create a Policy for AWS Elemental MediaPackage VOD<a name="setting-up-create-non-admin-iam-vod"></a>
+# Step 2: \(Optional\) create a policy for AWS Elemental MediaPackage VOD<a name="setting-up-create-non-admin-iam-vod"></a>
 
 If you or your users will be using video on demand \(VOD\) functionality in MediaPackage, create a policy that allows access to resources for the `mediapackage-vod` service\.
 
 The following sections describe how to create a policy that allows all actions, and one that allows read\-only rights\. You can customize the policies by adding or removing actions to fit your workflows\.
 
-## Policy for Full VOD Access<a name="non-admin-iam-vod-all"></a>
+## Policy for full VOD access<a name="non-admin-iam-vod-all"></a>
 
 This policy allows the user to perform all actions on all VOD resources\.
 
@@ -41,7 +41,7 @@ You can switch between the **Visual editor** and **JSON** tabs any time\. Howeve
 
 1. On the **Review policy** page, enter a **Name** and an optional **Description** for the policy that you are creating\. Review the policy **Summary** to see the permissions that are granted by your policy\. Then choose **Create policy** to save your work\.
 
-## Policy for Read\-only VOD Access<a name="non-admin-iam-vod-read"></a>
+## Policy for read\-only VOD access<a name="non-admin-iam-vod-read"></a>
 
 This policy allows the user to view all VOD resources\.
 

@@ -1,4 +1,4 @@
-# Editing an Endpoint<a name="endpoints-edit"></a>
+# Editing an endpoint<a name="endpoints-edit"></a>
 
 Edit the packaging preferences on an endpoint to optimize the viewing experience\. You can't change the packager type after you save an endpoint\. To serve content with a different packager, create a different endpoint\.
 
@@ -10,7 +10,7 @@ When you're editing an endpoint, do not put sensitive identifying information li
 
 **To edit an endpoint \(console\)**
 
-1. Access the channel that the endpoint is associated with, as described in [Viewing Channel Details](channels-view.md)\.
+1. Access the channel that the endpoint is associated with, as described in [Viewing channel details](channels-view.md)\.
 
 1. On the channel's details page, do one of the following:
    + Choose **Add and edit endpoints** and on the **Edit** page, choose the endpoint to edit\.
@@ -18,6 +18,6 @@ When you're editing an endpoint, do not put sensitive identifying information li
 
 1. Edit the endpoint options that you want to change\.
 
-   For information about endpoint attributes, see [Creating an Endpoint](endpoints-create.md)\.
+   For information about endpoint attributes, see [Creating an endpoint](endpoints-create.md)\.
 
 1. Choose **Save all**\.

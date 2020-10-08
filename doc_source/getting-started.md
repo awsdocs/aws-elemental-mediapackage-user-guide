@@ -1,8 +1,8 @@
-# Getting Started with AWS Elemental MediaPackage<a name="getting-started"></a>
+# Getting started with AWS Elemental MediaPackage<a name="getting-started"></a>
 
 The following sections describe how to quickly get started receiving and sending content with AWS Elemental MediaPackage\.
 
 **Topics**
-+ [Getting Started with Live Content Delivery in AWS Elemental MediaPackage](getting-started-live.md)
-+ [Getting Started with Live\-to\-VOD Content Delivery in AWS Elemental MediaPackage](getting-started-ltov.md)
-+ [Getting Started with VOD Content Delivery in AWS Elemental MediaPackage](getting-started-vod.md)
++ [Getting started with live content delivery in AWS Elemental MediaPackage](getting-started-live.md)
++ [Getting started with live\-to\-VOD content delivery in AWS Elemental MediaPackage](getting-started-ltov.md)
++ [Getting started with VOD content delivery in AWS Elemental MediaPackage](getting-started-vod.md)

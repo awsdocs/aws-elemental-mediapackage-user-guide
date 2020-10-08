@@ -1,8 +1,8 @@
-# Creating Event Notifications<a name="cloudwatch-events-notification"></a>
+# Creating event notifications<a name="cloudwatch-events-notification"></a>
 
 You can use Amazon CloudWatch Events and Amazon Simple Notification Service \(Amazon SNS\) to notify you of new events\. In CloudWatch Events, the rule describes which events you're notified about\. In Amazon SNS, the topic describes what kind of notification you receive\. This section provides high\-level steps for creating a topic and rule for events from AWS Elemental MediaPackage\. For detailed information about topics and rules, see the following:
-+ [Create a Topic](https://docs.aws.amazon.com/sns/latest/dg/sns-getting-started.html#CreateTopic) and [Subscribe to a Topic](https://docs.aws.amazon.com/sns/latest/dg/sns-getting-started.html#SubscribeTopic) in the *Amazon Simple Notification Service Developer Guide*
-+ [Getting Started with Amazon CloudWatch Events](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/CWE_GettingStarted.html) in the *Amazon CloudWatch Events User Guide*
++ [Create a topic](https://docs.aws.amazon.com/sns/latest/dg/sns-getting-started.html#CreateTopic) and [Subscribe to a topic](https://docs.aws.amazon.com/sns/latest/dg/sns-getting-started.html#SubscribeTopic) in the *Amazon Simple Notification Service Developer Guide*
++ [Getting started with Amazon CloudWatch Events](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/CWE_GettingStarted.html) in the *Amazon CloudWatch Events User Guide*
 
 **To create notifications of CloudWatch events**
 
@@ -27,7 +27,7 @@ You can use Amazon CloudWatch Events and Amazon Simple Notification Service \(Am
    + **MediaPackage Input Notification**
    + **MediaPackage Key Provider Notification**
 
-   For information about the event types, see [AWS Elemental MediaPackage Events](cloudwatch-events-example.md)\.  
+   For information about the event types, see [AWS Elemental MediaPackage events](cloudwatch-events-example.md)\.  
 **Example**  
 
    The following example rule creates notifications for all events on all detail\-types\.

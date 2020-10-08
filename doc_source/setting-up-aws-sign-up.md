@@ -1,4 +1,4 @@
-# Signing Up for AWS<a name="setting-up-aws-sign-up"></a>
+# Signing up for AWS<a name="setting-up-aws-sign-up"></a>
 
 If you do not have an AWS account, complete the following steps to create one\.
 

@@ -1,4 +1,4 @@
-# Packager Settings Fields<a name="endpoints-cmaf-packager"></a>
+# Packager settings fields<a name="endpoints-cmaf-packager"></a>
 
 The Packager settings fields hold general information about the endpoint\.
 

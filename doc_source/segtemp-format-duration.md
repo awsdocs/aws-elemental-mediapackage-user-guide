@@ -5,12 +5,12 @@ In a default DASH manifest, `SegmentTemplate` holds a `SegmentTimeline`\. The ti
 If all the segments in a representation have the same duration, you can help to reduce latency and shorten the manifest by enabling AWS Elemental MediaPackage to remove the `SegmentTimeline` objects\. In their place, MediaPackage adds a `duration` attribute to the `SegmentTemplate` properties\. The playback device calculates when segments are available by using `duration` and `startNumber`\. Because the playback device doesn't have to rely on an updated manifest to know about segments, it doesn't have to constantly request updates to maintain playback\. For information about how the `duration` attribute works, see the following sections\.
 
 **Topics**
-+ [How the `duration` Attribute Works](#how-stemp-dur-works)
-+ [`duration` Attribute with Compacted DASH Manifests](#stemp-dur-combos)
++ [How the `duration` attribute works](#how-stemp-dur-works)
++ [`duration` Attribute with compacted DASH manifests](#stemp-dur-combos)
 
-## How the `duration` Attribute Works<a name="how-stemp-dur-works"></a>
+## How the `duration` attribute works<a name="how-stemp-dur-works"></a>
 
-Enable the `$duration$` attribute through the **Segment template format** setting on the DASH endpoint, as described in [Creating a DASH Endpoint](endpoints-dash.md)\. This is what happens with the manifest: 
+Enable the `$duration$` attribute through the **Segment template format** setting on the DASH endpoint, as described in [Creating a DASH endpoint](endpoints-dash.md)\. This is what happens with the manifest: 
 
 1. When AWS Elemental MediaPackage generates the DASH manifest, it adds the `duration` attribute to the `SegmentTemplate` object, as shown in the following example:  
 **Example**  
@@ -58,7 +58,7 @@ Except for the final segment, segments must be no more than 50% deviation from t
 
    This calculation then becomes \(600 seconds elapsed time\) / \(3 second segment durations\) = 200 elapsed segments\. Adding those segments to the 175032 start segment makes the most recent segment 175232\.
 
-## `duration` Attribute Limitations<a name="stemp-limitations"></a>
+## `duration` Attribute limitations<a name="stemp-limitations"></a>
 
 To ensure proper playback and help prevent issues with conflicting segment durations, AWS Elemental MediaPackage enforces the following limitations for the `duration` attribute:
 + You can enable the feature only when you create the endpoint\. 
@@ -70,12 +70,13 @@ To ensure proper playback and help prevent issues with conflicting segment durat
 + You must produce single period DASH manifests from endpoints that use `duration`\.
 
   You can't use multi\-period DASH with the `duration` attribute\.
++ If you are using a **number with duration** segment template format, segments on the input stream must have a uniform duration\. In order to respect this requirement, you must disable any encoder parameter that generates variable segment length, like SCTE\-35 insertion or scene change detection\.
 
-## `duration` Attribute with Compacted DASH Manifests<a name="stemp-dur-combos"></a>
+## `duration` Attribute with compacted DASH manifests<a name="stemp-dur-combos"></a>
 
 Combining compacted manifests with the `duration` attribute will further reduce the size of the manifest, but not by much\. Compacted manifests have one `SegmentTemplate` and `SegmentTimeline` per adaptation set\. When you use the `duration` attribute, AWS Elemental MediaPackage removes the segment timeline\. With both treatments, the manifest has one `SegmentTemplate` per adaptation set, and no `SegmentTimeline`\. See the following examples\.
 
-For more information about compacted manifests, see [Compacted DASH Manifests](compacted.md)\.
+For more information about compacted manifests, see [Compacted DASH manifests](compacted.md)\.
 
 **Important**  
 If the segments in a representation intentionally have varying sizes of segments, don't use the `duration` attribute\. This treatment works only when the segments are a consistent size\.

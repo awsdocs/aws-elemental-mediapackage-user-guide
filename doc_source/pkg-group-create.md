@@ -1,6 +1,8 @@
-# Creating a Packaging Group<a name="pkg-group-create"></a>
+# Creating a packaging group<a name="pkg-group-create"></a>
 
 Create a packaging group to hold all of the packaging configurations for an asset\. The packaging group, for example, tells AWS Elemental MediaPackage that an asset is available for output to devices that support Apple HLS and DASH\-ISO\.
+
+ When you create a packaging group, you have the option to enable CDN authorization\. For more information about CDN authorization, see [CDN authorization in AWS Elemental MediaPackage](cdn-auth.md)\.
 
 To create a packaging group, you can use the AWS Elemental MediaPackage console, the AWS CLI, or the MediaPackage API\. information about creating a packaging group with the AWS CLI or MediaPackage API, see [Packaging\_groups](https://docs.aws.amazon.com/mediapackage-vod/latest/apireference/packaging_groups.html) in the *AWS Elemental MediaPackage VOD API Reference*\.
 
@@ -22,4 +24,4 @@ When you're creating a packaging group, don't put sensitive identifying informat
 
 MediaPackage displays the new packaging group's details page\.
 
-If you exceed the quotas for your account when you're creating a packaging group, you get an error\. If you get an error similar to Too many requests, please try again\. Resource limit exceeded, either you have exceeded the API request quotas, or you have already reached the maximum number of packaging groups allowed on your account\.If this is your first group, or if you think you mistakenly received this error, use the Service Quotas console to [request quota increases](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/mediapackage/quotas)\. For more information about quotas in MediaPackage, see [Quotas in AWS Elemental MediaPackage](limits.md)\.
+If you exceed the quotas for your account when you're creating a packaging group, you get an error\. If you get an error similar to Too many requests, please try again\. Resource limit exceeded, either you have exceeded the API request quotas, or you have already reached the maximum number of packaging groups allowed on your account\.If this is your first group, or if you think you mistakenly received this error, use the Service Quotas console to [request quota increases](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/mediapackage/quotas)\. For more information about quotas in MediaPackage, see [Quotas in AWS Elemental MediaPackage](quotas.md)\.

@@ -1,4 +1,4 @@
-# Packager Settings Fields<a name="endpoints-smooth-packager"></a>
+# Packager settings fields<a name="endpoints-smooth-packager"></a>
 
 1. For **Type**, choose **Microsoft Smooth**\.
 

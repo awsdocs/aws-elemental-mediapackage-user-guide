@@ -1,4 +1,4 @@
-# AWS Elemental MediaPackage Live Content Metrics<a name="metrics"></a>
+# AWS Elemental MediaPackage live content metrics<a name="metrics"></a>
 
 The `AWS/MediaPackage` namespace includes the following metrics for live content\. AWS Elemental MediaPackage publishes metrics to CloudWatch every minute, if not sooner\.
 
@@ -12,7 +12,7 @@ The `AWS/MediaPackage` namespace includes the following metrics for live content
 |  IngressBytes  | Number of bytes of content that AWS Elemental MediaPackage receives for each input request\. If MediaPackage doesn't receive any requests for input in the specified interval, then no data is given\.Units: BytesValid statistics:[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/metrics.html)Valid dimensions: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/metrics.html) | 
 |  IngressResponseTime  | The time that it takes AWS Elemental MediaPackage to process each input request\. If MediaPackage doesn't receive any requests for input in the specified interval, then no data is given\.Units: MillisecondsValid statistics:[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/metrics.html)Valid dimensions: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/metrics.html) | 
 
-## AWS Elemental MediaPackage Live Dimensions<a name="dimensions"></a>
+## AWS Elemental MediaPackage live dimensions<a name="dimensions"></a>
 
 You can filter the `AWS/MediaPackage` data using the following dimensions\.
 

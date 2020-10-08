@@ -1,9 +1,9 @@
-# Encryption Fields<a name="endpoints-cmaf-encryption"></a>
+# Encryption fields<a name="endpoints-cmaf-encryption"></a>
 
 Protect your content from unauthorized use through encryption\. Digital rights management \(DRM\) systems provide keys to AWS Elemental MediaPackage for content encryption, and licenses to supported players for decryption\.
 
 **Note**  
-To encrypt content, you must have a DRM solution provider, and be set up to use encryption\. For information, see [Content Encryption in AWS Elemental MediaPackage](using-encryption.md)\. 
+To encrypt content, you must have a DRM solution provider, and be set up to use encryption\. For information, see [Content encryption in AWS Elemental MediaPackage](using-encryption.md)\. 
 
 1. To serve content without copyright protection, keep **No encryption** selected\.
 
@@ -39,7 +39,7 @@ To encrypt content, you must have a DRM solution provider, and be set up to use 
 
       To enter a certificate ARN here, you must have already imported the corresponding certificate into AWS Certificate Manager\. Then enter the certificate ARN from ACM here\. 
 
-      For information about content key encryption, see [Encrypted Content Keys ](drm-content-key-encryption.md)\.
+      For information about content key encryption, see [Encrypted content keys ](drm-content-key-encryption.md)\.
 
    1. \(Optional\) For **Key rotation interval**, enter the frequency, in seconds, of key changes for live workflows, in which content is streamed real time\. The service retrieves content keys before the live content begins streaming, and then retrieves them as needed over the lifetime of the workflow\. By default, key rotation is set to 60 seconds, which is equivalent to setting it to `60`\. To disable key rotation, set this interval to `0` \(zero\)\. 
 
@@ -49,4 +49,4 @@ To encrypt content, you must have a DRM solution provider, and be set up to use 
       1800
       ```
 
-      For information about key rotation, see [Key Rotation Expected Behavior](drm-content-key-encryption.md)\.
+      For information about key rotation, see [Key rotation expected behavior](drm-content-key-encryption.md)\.

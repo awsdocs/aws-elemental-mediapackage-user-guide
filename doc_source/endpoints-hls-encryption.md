@@ -1,9 +1,9 @@
-# Encryption Fields<a name="endpoints-hls-encryption"></a>
+# Encryption fields<a name="endpoints-hls-encryption"></a>
 
 Protect your content from unauthorized use through encryption\. Digital rights management \(DRM\) systems provide keys to AWS Elemental MediaPackage for content encryption, and licenses to supported players for decryption\.
 
 **Note**  
-To encrypt content, you must have a DRM provider, and be set up to use encryption\. For information, see [Content Encryption in AWS Elemental MediaPackage](using-encryption.md)\. 
+To encrypt content, you must have a DRM provider, and be set up to use encryption\. For information, see [Content encryption in AWS Elemental MediaPackage](using-encryption.md)\. 
 
 1. To serve content without copyright protection, keep **No encryption** selected\.
 
@@ -39,7 +39,7 @@ To encrypt content, you must have a DRM provider, and be set up to use encryptio
 
       To enter a certificate ARN here, you must have already imported the corresponding certificate into AWS Certificate Manager\. Then enter the certificate ARN from ACM here\. 
 
-      For information about content key encryption, see [Encrypted Content Keys ](drm-content-key-encryption.md)\.
+      For information about content key encryption, see [Encrypted content keys ](drm-content-key-encryption.md)\.
 
    1. For **Encryption method**, choose **Sample\-AES** for Apple HLS FairPlay or choose **AES\-128** for Apple HLS AES\-128\. 
 
@@ -53,6 +53,6 @@ To encrypt content, you must have a DRM provider, and be set up to use encryptio
       1800
       ```
 
-      For information about key rotation, see [Key Rotation Expected Behavior](drm-content-key-encryption.md)\.
+      For information about key rotation, see [Key rotation expected behavior](drm-content-key-encryption.md)\.
 
    1. \(Optional\) Select **Repeat EXT\-X\-KEY** if you want the service to repeat the key before every segment of the manifest\. By default, the key is written just once, after the header and before the segments\. If you select **Repeat EXT\-X\-KEY**, the manifest is written as header, key, segment, key, segment, key, and so on, with every segment preceded by the key\. Set this according to the needs of the player\. Selecting this option might result in an increase in client requests to the DRM server\.

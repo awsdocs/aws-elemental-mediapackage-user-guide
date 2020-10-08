@@ -1,4 +1,4 @@
-# Step 5: Clean Up<a name="clean-up"></a>
+# Step 5: Clean up<a name="clean-up"></a>
 
 To avoid extraneous charges, be sure to delete all unnecessary channels and endpoints\. You must delete all endpoints on a channel before the channel can be deleted\.
 

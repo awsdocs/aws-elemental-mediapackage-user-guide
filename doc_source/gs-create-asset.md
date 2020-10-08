@@ -1,4 +1,4 @@
-# Step 4: Create an Asset<a name="gs-create-asset"></a>
+# Step 4: Create an asset<a name="gs-create-asset"></a>
 
 An asset resource is how MediaPackage ingests, packages, and serves VOD content\. The asset is associated with one or more packaging configurations\. Downstream devices send playback requests to specific packaging configurations on the asset\.
 
@@ -19,6 +19,6 @@ AWS Elemental MediaPackage does not require that you supply any customer data\. 
 
 1. For **Filename**, enter the path within the Amazon S3 bucket and name for the source content\.
 
-1. For **Packaging group**, select the group that you created in [Step 2: Create a Packaging Group](gs-create-grp.md)\.
+1. For **Packaging group**, select the group that you created in [Step 2: Create a packaging group](gs-create-grp.md)\.
 
 1. Choose **Ingest assets**\.

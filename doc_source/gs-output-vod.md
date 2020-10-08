@@ -1,8 +1,8 @@
-# Step 4: \(Optional\) Output VOD Content<a name="gs-output-vod"></a>
+# Step 4: \(Optional\) output VOD content<a name="gs-output-vod"></a>
 
 To use MediaPackage to make the live\-to\-VOD asset available for playback, create a packaging group, packaging configuration, and asset resource\. The asset ingests the live\-to\-VOD asset from the Amazon S3 bucket\. A packaging group holds one or more packaging configurations, which define the output format and settings\. 
 
-## Create a Packaging Group<a name="gs-create-grp-ltov"></a>
+## Create a packaging group<a name="gs-create-grp-ltov"></a>
 
 A packaging group holds one or more packaging configurations\. The packaging configurations enable you to define what kind of VOD outputs you want\. To apply these output definitions, associate a packaging group to multiple assets\.
 
@@ -19,7 +19,7 @@ AWS Elemental MediaPackage does not require that you supply any customer data\. 
 
 1. Choose **Create**\.
 
-## Create a Packaging Configuration<a name="gs-create-cfig-ltov"></a>
+## Create a packaging configuration<a name="gs-create-cfig-ltov"></a>
 
 A packaging configuration specifies how the output manifest is configured, such as stream selection limitations and ordering\.
 
@@ -37,7 +37,7 @@ AWS Elemental MediaPackage does not require that you supply any customer data\. 
 
 1. Keep the defaults for the remaining fields, and then choose **Save**\.
 
-## Create an Asset<a name="gs-create-asset-ltov"></a>
+## Create an asset<a name="gs-create-asset-ltov"></a>
 
 An asset resource is how MediaPackage ingests, packages, and serves VOD content\. The asset is associated with one or more packaging configurations\. Downstream devices send playback requests to specific packaging configurations on the asset\.
 
@@ -58,11 +58,11 @@ AWS Elemental MediaPackage does not require that you supply any customer data\. 
 
 1. For **Filename**, enter the path within the Amazon S3 bucket and name for the source content\.
 
-1. For **Packaging group**, select the group that you created in [Step 2: Create a Packaging Group](gs-create-grp.md)\.
+1. For **Packaging group**, select the group that you created in [Step 2: Create a packaging group](gs-create-grp.md)\.
 
 1. Choose **Ingest assets**\.
 
-## Provide Playback URLs<a name="gs-provide-url-ltov"></a>
+## Provide playback URLs<a name="gs-provide-url-ltov"></a>
 
 After creating the asset resource, AWS Elemental MediaPackage prepares to serve the packaged manifests to viewers\. This happens in the background and might take some time depending on the size and complexity of the source content, but is usually less than a few minutes\. The URLs of the manifests are available immediately on the asset's details page, but content is not yet available for playback\.
 
@@ -72,7 +72,7 @@ On the asset, MediaPackage provides a URL for each packaging configuration\. Thi
 
 **To get playback URLs**
 
-1. On the MediaPackage console, go to the **Assets** page and choose the **ID** of the asset that you created in [Step 4: Create an Asset](gs-create-asset.md)\.
+1. On the MediaPackage console, go to the **Assets** page and choose the **ID** of the asset that you created in [Step 4: Create an asset](gs-create-asset.md)\.
 
 1. On the asset's detail page, get the URL for each packaging configuration\.
 

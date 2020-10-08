@@ -1,8 +1,8 @@
-# Deleting a Packaging Group<a name="pkg-group-delete"></a>
+# Deleting a packaging group<a name="pkg-group-delete"></a>
 
 To stop AWS Elemental MediaPackage from delivering more content from an asset, delete the packaging group\. Before you can delete the packaging group, you must delete the group's packaging configurations and any assets that use the group\.
-+ To delete a packaging configuration, see [Deleting a Packaging Configuration](pkg-cfig-delete.md)\.
-+ To delete an asset, see [Deleting an Asset](asset-delete.md)\.
++ To delete a packaging configuration, see [Deleting a packaging configuration](pkg-cfig-delete.md)\.
++ To delete an asset, see [Deleting an asset](asset-delete.md)\.
 
 To delete a packaging group, you can use the AWS Elemental MediaPackage console, the AWS CLI, or the MediaPackage API\. information about deleting a packaging group with the AWS CLI or MediaPackage API, see [Packaging\_groups id](https://docs.aws.amazon.com/mediapackage-vod/latest/apireference/packaging_groups-id.html) in the *AWS Elemental MediaPackage VOD API Reference*\.
 

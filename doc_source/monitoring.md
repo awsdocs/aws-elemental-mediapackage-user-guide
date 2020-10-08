@@ -6,6 +6,6 @@ Monitoring is an important part of maintaining the reliability, availability, an
 + *AWS CloudTrail* captures API calls and related events made by or on behalf of your AWS account and delivers the log files to an Amazon S3 bucket that you specify\. You can identify which users and accounts called AWS, the source IP address from which the calls were made, and when the calls occurred\. For more information, see the [AWS CloudTrail User Guide](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/)\.
 
 **Topics**
-+ [Monitoring AWS Elemental MediaPackage with Amazon CloudWatch Metrics](monitoring-cloudwatch.md)
-+ [Monitoring AWS Elemental MediaPackage with Amazon CloudWatch Events](monitoring-cloudwatch-events.md)
-+ [Logging AWS Elemental MediaPackage API Calls with AWS CloudTrail](logging-using-cloudtrail.md)
++ [Monitoring AWS Elemental MediaPackage with Amazon CloudWatch metrics](monitoring-cloudwatch.md)
++ [Monitoring AWS Elemental MediaPackage with CloudWatch Events](monitoring-cloudwatch-events.md)
++ [Logging AWS Elemental MediaPackage API calls with AWS CloudTrail](logging-using-cloudtrail.md)

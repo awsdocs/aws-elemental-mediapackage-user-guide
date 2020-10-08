@@ -1,4 +1,4 @@
-# Creating a DASH Packaging Configuration<a name="pkg-cfig-create-dash"></a>
+# Creating a DASH packaging configuration<a name="pkg-cfig-create-dash"></a>
 
 Create a packaging configuration that formats content for devices that support DASH\-ISO\.
 
@@ -15,11 +15,11 @@ Create a packaging configuration that formats content for devices that support D
 1. On the **Add or remove packaging configurations** page, in the **Packaging configurations** section, choose **Add** and **New config**\.
 
 1. Complete the fields as described in the following topics:
-   + [General Settings Fields](cfigs-dash-new.md)
-   + [Manifest Settings Fields](cfigs-dash-manset.md)
-   + [Stream Selection Fields](cfigs-dash-include-streams.md)
-   + [Encryption Fields](cfigs-dash-encryption.md)
+   + [General settings fields](cfigs-dash-new.md)
+   + [Manifest settings fields](cfigs-dash-manset.md)
+   + [Stream selection fields](cfigs-dash-include-streams.md)
+   + [Encryption fields](cfigs-dash-encryption.md)
 
 1. Choose **Save**\.
 
-If you exceed the quotas for your account when you're creating a packaging configuration, you get an error\. If you get an error similar to Too many requests, please try again\. Resource limit exceeded, either you have exceeded the API request quotas, or you have already reached the maximum number of packaging groups allowed on your account\. If this is your first group, or if you think you mistakenly received this error, use the Service Quotas console to [request quota increases](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/mediapackage/quotas)\. For more information about quotas in MediaPackage, see [Quotas in AWS Elemental MediaPackage](limits.md)\.
+If you exceed the quotas for your account when you're creating a packaging configuration, you get an error\. If you get an error similar to Too many requests, please try again\. Resource limit exceeded, either you have exceeded the API request quotas, or you have already reached the maximum number of packaging groups allowed on your account\. If this is your first group, or if you think you mistakenly received this error, use the Service Quotas console to [request quota increases](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/mediapackage/quotas)\. For more information about quotas in MediaPackage, see [Quotas in AWS Elemental MediaPackage](quotas.md)\.

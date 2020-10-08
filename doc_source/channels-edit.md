@@ -1,6 +1,6 @@
-# Editing a Channel<a name="channels-edit"></a>
+# Editing a channel<a name="channels-edit"></a>
 
-Edit a channel's description for easier identification later\. You can edit the description on a channel or enable Amazon CloudFront distribution creation from the AWS Elemental MediaPackage console\. For information about creating a distribution from AWS Elemental MediaPackage, see [Creating a Distribution from AWS Elemental MediaPackage](cdns-cf.md#cdns-create-mp)\.
+Edit a channel's description for easier identification later\. You can edit the description on a channel or enable Amazon CloudFront distribution creation from the AWS Elemental MediaPackage console\. For information about creating a distribution from AWS Elemental MediaPackage, see [Creating a distribution from AWS Elemental MediaPackage](cdns-cf.md#cdns-create-mp)\.
 
 **Note**  
 To make changes to an existing distribution \(even if it was created from AWS Elemental MediaPackage\), go to the Amazon CloudFront console\.

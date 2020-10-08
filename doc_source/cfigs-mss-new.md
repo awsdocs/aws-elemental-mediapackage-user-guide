@@ -1,4 +1,4 @@
-# General Settings Fields<a name="cfigs-mss-new"></a>
+# General settings fields<a name="cfigs-mss-new"></a>
 
 Provide general settings that apply to the entire packaging configuration\.
 

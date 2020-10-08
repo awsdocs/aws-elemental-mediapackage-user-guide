@@ -1,11 +1,11 @@
-# Amazon S3 Access for VOD Workflows<a name="setting-up-create-trust-rel-policy-vod"></a>
+# Amazon S3 access for VOD workflows<a name="setting-up-create-trust-rel-policy-vod"></a>
 
 If you're using MediaPackage to ingest a VOD asset from an Amazon S3 bucket and to package and deliver that asset, you need a policy that allows you to do these things in Amazon S3:
 + `GetObject`: MediaPackage can retrieve the VOD asset from the bucket\.
 + `GetBucketLocation`: MediaPackage can retrieve the Region for the bucket\. The bucket must be in the same region as the MediaPackage VOD resources\.
 + `GetBucketRequestPayment`: MediaPackage can retrieve the payment request information\. MediaPackage uses this information to verify that the bucket doesn't require the requester to pay for the content requests\.
 
-If you also use MediaPackage for live\-to\-VOD asset harvesting, add the `PutObject` action to the policy\. For more information the required policy for live\-to\-VOD workflows, see [Amazon S3 Access for Live\-to\-VOD Workflows](setting-up-create-trust-rel-policy-ltov.md)\.
+If you also use MediaPackage for live\-to\-VOD asset harvesting, add the `PutObject` action to the policy\. For more information the required policy for live\-to\-VOD workflows, see [Amazon S3 access for live\-to\-VOD workflows](setting-up-create-trust-rel-policy-ltov.md)\.
 
 **To use the JSON policy editor to create a policy**
 

@@ -1,4 +1,4 @@
-# Streams to Include Fields<a name="endpoints-smooth-include-streams"></a>
+# Streams to include fields<a name="endpoints-smooth-include-streams"></a>
 
 1. \(Optional\) For **Bitrate order**, choose from the following:
    + **Original** to sort the output streams in the same order that the incoming source uses\.

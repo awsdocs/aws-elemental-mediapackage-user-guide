@@ -1,4 +1,4 @@
-# Step 7: Clean Up<a name="gs-clean-up"></a>
+# Step 7: Clean up<a name="gs-clean-up"></a>
 
 To avoid incurring extra charges, delete your VOD resources\. If you want to make a specific output unavailable, delete the packaging configuration from the packaging group\. If you want to make an asset no longer available for playback from any outputs, delete the asset\.
 

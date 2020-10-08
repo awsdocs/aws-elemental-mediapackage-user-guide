@@ -1,18 +1,29 @@
-# Content Delivery Network \(CDN\) Authorization in AWS Elemental MediaPackage<a name="cdn-auth"></a>
+# CDN authorization in AWS Elemental MediaPackage<a name="cdn-auth"></a>
 
-CDN authorization is available for live workflows\. It is not supported for video on demand \(VOD\)\.
+*Content Delivery Network \(CDN\) authorization* helps you to protect your content from unauthorized use\. When you configure CDN authentication, MediaPackage only fulfills playback requests that are authorized between MediaPackage and your CDN\. This prevents users from bypassing the CDN in order to directly access your content on the origin\.
 
-CDN authorization helps to protect your content from unauthorized use\. When you enable this feature on an endpoint, you must also configure a static header in content requests from your CDN\. The value of this header is a code that you create\. MediaPackage checks all requests to the endpoint to verify that they have the correct header and value\. If either is missing or incorrect, MediaPackage doesn't fulfill the content request and playback fails\. This means that unauthorized devices can't gain access to your content\.
+## How it works<a name="working-with-cdn-auth"></a>
 
-**How it works**  
-To use CDN authorization, perform the appropriate setup as described in [Using Content Delivery Network \(CDN\) Authorization](working-cdn-auth.md)\. When the setup is complete, this is how CDN authorization works in MediaPackage:
+You configure your CDN, such as Amazon CloudFront, to include a *custom HTTP header* in content requests to MediaPackage\.
 
-1. Your CDN includes the `X-MediaPackage-CDNIdentifier` header and configured authorization code in content requests to the endpoint in MediaPackage\.
+Custom HTTP header and example value\.
 
-1. MediaPackage receives the request and uses the IAM role to access AWS Secrets Manager\. This is the **Secrets role ARN** that you identified in the endpoint settings\. 
+```
+X-MediaPackage-CDNIdentifier: 9ceebbe7-9607-4552-8764-876e47032660
+```
 
-1. In Secrets Manager, MediaPackage verifies that the authorization code in the CDN request matches the secret you stored\. This is the **CDN identifier secret** that you identified in the endpoint settings\.
+You store the header value as a *secret* in AWS Secrets Manager\. When your CDN sends a playback request, MediaPackage verifies that the secret's value matches the custom HTTP header value\. MediaPackage is given permission to read the secret via an AWS Identity and Access Management permissions policy and role\.
 
-1. If the authorization code matches between the CDN request and the Secrets Manager secret, MediaPackage authorizes the request and responds with a manifest\.
+Secret key and example value\.
 
-   If the code is wrong or missing in the request, MediaPackage responds with an error\. 
+```
+{“MediaPackageCDNIdentifier”: "9ceebbe7-9607-4552-8764-876e47032660"}
+```
+
+If the values match, MediaPackage serves the content along with an HTTP `200 OK` status code\. If it's not a match, or if the authorization request fails, then MediaPackage doesn't serve the content, and sends an HTTP `403 Unauthorized` status code\.
+
+The following image shows successful CDN authorization using Amazon CloudFront\.
+
+![\[The image shows a successful CDN authentication flow. The bottom left shows a playback device requesting content from AWS CloudFront indicated by an arrow. CloudFront includes the custom HTTP header and value in it's request to MediaPackage, indicated by an arrow. MediaPackage requests the secret info from AWS SecretsManager, indicated by an arrow, which is dependent on permission from AWS IAM. AWS SecretManager responds with the secret value to MediaPackage. MediaPackage verifies that the secret matches the header value, which is indicated by a green checkbox. MediaPackage sends an HTTP 200 OK status code along with video content to CloudFront. CloudFront serves the video content to the playback device.\]](http://docs.aws.amazon.com/mediapackage/latest/ug/images/cdn_auth.png)
+
+For step\-by\-step instructions on how to set up CDN authorization, see [Setting up CDN authorization](cdn-auth-setup.md)\.

@@ -1,4 +1,4 @@
-# Viewing Packaging Configuration Details<a name="pkg-cfig-view"></a>
+# Viewing packaging configuration details<a name="pkg-cfig-view"></a>
 
 To ensure that the content is available in all necessary stream formats, view all packaging configurations that are associated with a specific packaging group or with an asset\. 
 

@@ -1,4 +1,4 @@
-# AWS Elemental MediaPackage VOD Content Metrics<a name="metrics-vod"></a>
+# AWS Elemental MediaPackage VOD content metrics<a name="metrics-vod"></a>
 
 The `AWS/MediaPackage` namespace includes the following metrics for video on demand \(VOD\) content\. AWS Elemental MediaPackage publishes metrics to CloudWatch every minute, if not sooner\.
 
@@ -9,7 +9,7 @@ The `AWS/MediaPackage` namespace includes the following metrics for video on dem
 |  EgressRequestCount  | Number of content requests that AWS Elemental MediaPackage receives\. If MediaPackage doesn't receive any requests for output in the specified interval, then no data is given\.Units: CountValid statistics:[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/metrics-vod.html)Valid dimensions: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/metrics-vod.html) | 
 |  EgressResponseTime  | The time that it takes AWS Elemental MediaPackage to process each output request\. If MediaPackage doesn't receive any requests for output in the specified interval, then no data is given\.Units: MillisecondsValid statistics:[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/metrics-vod.html)Valid dimensions: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/metrics-vod.html) | 
 
-## AWS Elemental MediaPackage VOD Dimensions<a name="dimensions"></a>
+## AWS Elemental MediaPackage VOD dimensions<a name="dimensions"></a>
 
 You can filter the `AWS/MediaPackage` data using the following dimensions\.
 

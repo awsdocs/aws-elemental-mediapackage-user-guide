@@ -1,4 +1,4 @@
-# Step 3: Create a Packaging Configuration<a name="gs-create-cfig"></a>
+# Step 3: Create a packaging configuration<a name="gs-create-cfig"></a>
 
 A packaging configuration specifies how the output manifest is configured, such as stream selection limitations and ordering\.
 

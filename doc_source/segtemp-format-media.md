@@ -4,9 +4,9 @@ The `media` attribute in the `SegmentTemplate` properties defines the URL where 
 
 Some players navigate the segments better when the segments are identified instead by the timestamp for when playback is available\. To support this use case, MediaPackage uses the `$Time$` variable instead of `$Number$` in the URL of the `media` attribute\. When a playback device requests the segment, it replaces the variable with the availability start time of the segment\. This start time is identified in the `t` value of the segment \(`S`\) properties in the `SegmentTimeline` object\. For an example, see [How It Works](#how-stemp-works)\.
 
-## How the `$Time$` Variable Works<a name="how-stemp-works"></a>
+## How the `$Time$` variable works<a name="how-stemp-works"></a>
 
-Enable the `$Time$` variable through the **Segment template format** setting on the DASH endpoint, as described in [Creating a DASH Endpoint](endpoints-dash.md)\. AWS Elemental MediaPackage takes the following actions:
+Enable the `$Time$` variable through the **Segment template format** setting on the DASH endpoint, as described in [Creating a DASH endpoint](endpoints-dash.md)\. AWS Elemental MediaPackage takes the following actions:
 
 1.  When AWS Elemental MediaPackage generates the DASH manifest, it uses the `$Time$` variable in the `media` value of the `SegmentTemplate` object, as shown in the following example:  
 **Example**  

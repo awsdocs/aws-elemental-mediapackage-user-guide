@@ -1,8 +1,8 @@
-# Step 2: Create a Role<a name="setting-up-create-trust-rel-role"></a>
+# Step 2: Create a role<a name="setting-up-create-trust-rel-role"></a>
 
   An [IAM role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html) is an IAM identity that you can create in your account that has specific permissions\. An IAM role is similar to an IAM user in that it is an AWS identity with permissions policies that determine what the identity can and cannot do in AWS\. However, instead of being uniquely associated with one person, a role is intended to be assumable by anyone who needs it\. Also, a role does not have standard long\-term credentials such as a password or access keys associated with it\. Instead, when you assume a role, it provides you with temporary security credentials for your role session\. Create a role that AWS Elemental MediaPackage assumes when ingesting source content from Amazon S3\.
 
-When you create the role, you choose EC2 as the trusted entity that can assume the role because AWS Elemental MediaPackage isn't available for selection\. In [Step 3: Modify the Trust Relationship](setting-up-create-trust-rel-trust.md), you change the trusted entity to MediaPackage\.
+When you create the role, you choose EC2 as the trusted entity that can assume the role because AWS Elemental MediaPackage isn't available for selection\. In [Step 3: Modify the trust relationship](setting-up-create-trust-rel-trust.md), you change the trusted entity to MediaPackage\.
 
 **To create the service role for an EC2 trusted entity \(IAM console\)**
 
@@ -14,7 +14,7 @@ When you create the role, you choose EC2 as the trusted entity that can assume t
 
 1. Choose the EC2 use case\. Then choose **Next: Permissions**\.
 
-1. On the **Attach permissions policies** page, search for and choose the policy that you created in [Step 1: Create a Policy](setting-up-create-trust-rel-policy.md)\. Then choose **Next: Tags** and **Next: Review**\.
+1. On the **Attach permissions policies** page, search for and choose the policy that you created in [Step 1: Create a policy](setting-up-create-trust-rel-policy.md)\. Then choose **Next: Tags** and **Next: Review**\.
 
 1. \(Optional\) Set a [permissions boundary](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html)\. This is an advanced feature that is available for service roles, but not service\-linked roles\. 
 

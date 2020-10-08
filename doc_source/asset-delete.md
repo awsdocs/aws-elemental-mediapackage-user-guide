@@ -1,4 +1,4 @@
-# Deleting an Asset<a name="asset-delete"></a>
+# Deleting an asset<a name="asset-delete"></a>
 
 To remove the packaging group URLs and to stop AWS Elemental MediaPackage from delivering further content, delete an asset\. 
 
