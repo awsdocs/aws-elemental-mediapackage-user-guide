@@ -1,4 +1,4 @@
-# AWS Elemental MediaPackage identity\-based policy examples<a name="security_iam_id-based-policy-examples"></a>
+# AWS Elemental MediaPackage Identity\-based policy examples<a name="security_iam_id-based-policy-examples"></a>
 
 By default, IAM users and roles don't have permission to create or modify MediaPackage resources\. They also can't perform tasks using the AWS Management Console, AWS CLI, or an AWS API\. An IAM administrator must create IAM policies that grant users and roles permission to perform specific API operations on the specified resources they need\. The administrator must then attach those policies to the IAM users or groups that require those permissions\.
 
@@ -6,9 +6,9 @@ To learn how to create an IAM identity\-based policy using these example JSON po
 
 **Topics**
 + [Policy best practices](#security_iam_service-with-iam-policy-best-practices)
-+ [Using the MediaPackage console](#security_iam_id-based-policy-examples-console)
++ [Using the MediaPackage Console](#security_iam_id-based-policy-examples-console)
 + [Allow users to view their own permissions](#security_iam_id-based-policy-examples-view-own-permissions)
-+ [Viewing MediaPackage channels based on tags](#security_iam_id-based-policy-examples-view-channel-tags)
++ [Viewing MediaPackage Channels based on tags](#security_iam_id-based-policy-examples-view-channel-tags)
 
 ## Policy best practices<a name="security_iam_service-with-iam-policy-best-practices"></a>
 
@@ -18,7 +18,7 @@ Identity\-based policies are very powerful\. They determine whether someone can 
 + **Enable MFA for Sensitive Operations** – For extra security, require IAM users to use multi\-factor authentication \(MFA\) to access sensitive resources or API operations\. For more information, see [Using Multi\-Factor Authentication \(MFA\) in AWS](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa.html) in the *IAM User Guide*\.
 + **Use Policy Conditions for Extra Security** – To the extent that it's practical, define the conditions under which your identity\-based policies allow access to a resource\. For example, you can write conditions to specify a range of allowable IP addresses that a request must come from\. You can also write conditions to allow requests only within a specified date or time range, or to require the use of SSL or MFA\. For more information, see [IAM JSON Policy Elements: Condition](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition.html) in the *IAM User Guide*\.
 
-## Using the MediaPackage console<a name="security_iam_id-based-policy-examples-console"></a>
+## Using the MediaPackage Console<a name="security_iam_id-based-policy-examples-console"></a>
 
 To access the AWS Elemental MediaPackage console, you must have a minimum set of permissions\. These permissions must allow you to list and view details about the MediaPackage resources in your AWS account\. If you create an identity\-based policy that is more restrictive than the minimum required permissions, the console won't function as intended for entities \(IAM users or roles\) with that policy\.
 
@@ -69,7 +69,7 @@ This example shows how you might create a policy that allows IAM users to view t
 }
 ```
 
-## Viewing MediaPackage channels based on tags<a name="security_iam_id-based-policy-examples-view-channel-tags"></a>
+## Viewing MediaPackage Channels based on tags<a name="security_iam_id-based-policy-examples-view-channel-tags"></a>
 
 You can use conditions in your identity\-based policy to control access to MediaPackage resources based on tags\. This example shows how you might create a policy that allows viewing a channel\. However, permission is granted only if the channel tag `Owner` has the value of that user's user name\. This policy also grants the permissions necessary to complete this action on the console\.
 

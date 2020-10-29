@@ -1,14 +1,14 @@
-# How AWS Elemental MediaPackage works with IAM<a name="security_iam_service-with-iam"></a>
+# How AWS Elemental MediaPackage Works with IAM<a name="security_iam_service-with-iam"></a>
 
-Before you use IAM to manage access to MediaPackage, you should understand what IAM features are available to use with MediaPackage\. To get a high\-level view of how MediaPackage and other AWS services work with IAM, see [AWS services that work with IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html) in the *IAM User Guide*\.
+Before you use IAM to manage access to MediaPackage, you should understand what IAM features are available to use with MediaPackage\. To get a high\-level view of how MediaPackage and other AWS services work with IAM, see [AWS Services That Work with IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html) in the *IAM User Guide*\.
 
 **Topics**
-+ [MediaPackage identity\-based policies](#security_iam_service-with-iam-id-based-policies)
-+ [MediaPackage resource\-based policies](#security_iam_service-with-iam-resource-based-policies)
++ [MediaPackage Identity\-Based Policies](#security_iam_service-with-iam-id-based-policies)
++ [MediaPackage Resource\-based policies](#security_iam_service-with-iam-resource-based-policies)
 + [Authorization based on MediaPackage tags](#security_iam_service-with-iam-tags)
-+ [MediaPackage IAM roles](#security_iam_service-with-iam-roles)
++ [MediaPackage IAM Roles](#security_iam_service-with-iam-roles)
 
-## MediaPackage identity\-based policies<a name="security_iam_service-with-iam-id-based-policies"></a>
+## MediaPackage Identity\-Based Policies<a name="security_iam_service-with-iam-id-based-policies"></a>
 
 With IAM identity\-based policies, you can specify allowed or denied actions and resources as well as the conditions under which actions are allowed or denied\. MediaPackage supports specific actions, resources, and condition keys\. To learn about all the elements that you use in a JSON policy, see [IAM JSON policy elements reference](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html) in the *IAM User Guide*\.
 
@@ -73,9 +73,9 @@ MediaPackage doesn't provide any service\-specific condition keys, but it does s
 
 ### Examples<a name="security_iam_service-with-iam-id-based-policies-examples"></a>
 
-For examples of MediaPackage identity\-based policies, see [AWS Elemental MediaPackage identity\-based policy examples](security_iam_id-based-policy-examples.md)\.
+For examples of MediaPackage identity\-based policies, see [AWS Elemental MediaPackage Identity\-based policy examples](security_iam_id-based-policy-examples.md)\.
 
-## MediaPackage resource\-based policies<a name="security_iam_service-with-iam-resource-based-policies"></a>
+## MediaPackage Resource\-based policies<a name="security_iam_service-with-iam-resource-based-policies"></a>
 
 MediaPackage doesn't support resource\-based policies\.
 
@@ -83,9 +83,9 @@ MediaPackage doesn't support resource\-based policies\.
 
 You can attach tags to MediaPackage resources or pass tags in a request to MediaPackage\. To control access based on tags, you provide tag information in the [condition element](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition.html) of a policy using the `mediapackage:ResourceTag/key-name`, `aws:RequestTag/key-name`, or `aws:TagKeys` condition keys\. For more information about tagging MediaPackage resources, see [Tagging AWS Elemental MediaPackage resources](tagging.md)\.
 
-To view an example identity\-based policy for limiting access to a resource based on the tags on that resource, see [Viewing MediaPackage channels based on tags](security_iam_id-based-policy-examples.md#security_iam_id-based-policy-examples-view-channel-tags)\.
+To view an example identity\-based policy for limiting access to a resource based on the tags on that resource, see [Viewing MediaPackage Channels based on tags](security_iam_id-based-policy-examples.md#security_iam_id-based-policy-examples-view-channel-tags)\.
 
-## MediaPackage IAM roles<a name="security_iam_service-with-iam-roles"></a>
+## MediaPackage IAM Roles<a name="security_iam_service-with-iam-roles"></a>
 
 An [IAM role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html) is an entity within your AWS account that has specific permissions\.
 

@@ -68,7 +68,7 @@ Start and end parameters in the URL request for HLS content can use standard par
 **Example CMAF**  
 
   ```
-  https://cf98fa7b2ee4450e.mediapackage.us-east-1.amazonaws.com/out/v1/064134724fd74667ba294657a674ae72/manifest_id/news.m3u8?start=2018-04-04T01:14:00-08:00&2018-04-04T02:15:00-08:00
+  https://cf98fa7b2ee4450e.mediapackage.us-east-1.amazonaws.com/out/v1/064134724fd74667ba294657a674ae72/manifest_id/news.m3u8?start=2018-04-04T01:14:00-08:00&end=2018-04-04T02:15:00-08:00
   ```
 + Path elements – start and end parameters are included in the path of the request URL  
 **Example HLS**  

@@ -3,13 +3,13 @@
 Use the following information to help you diagnose and fix common issues that you might encounter when working with MediaPackage and IAM\.
 
 **Topics**
-+ [I Am not authorized to perform an action in MediaPackage](#security_iam_troubleshoot-no-permissions)
++ [I am not authorized to perform an action in MediaPackage](#security_iam_troubleshoot-no-permissions)
 + [I Am not authorized to perform iam:PassRole](#security_iam_troubleshoot-passrole)
 + [I want to view my access keys](#security_iam_troubleshoot-access-keys)
 + [I'm an administrator and want to allow others to access MediaPackage](#security_iam_troubleshoot-admin-delegate)
 + [I want to allow people outside of my AWS account to access my MediaPackage resources](#security_iam_troubleshoot-cross-account-access)
 
-## I Am not authorized to perform an action in MediaPackage<a name="security_iam_troubleshoot-no-permissions"></a>
+## I am not authorized to perform an action in MediaPackage<a name="security_iam_troubleshoot-no-permissions"></a>
 
 If the AWS Management Console tells you that you're not authorized to perform an action, then you must contact your administrator for assistance\. Your administrator is the person that provided you with your user name and password\.
 
@@ -59,7 +59,7 @@ For instruction specific to MediaPackage, see [Creating a non\-admin IAM user](s
 You can create a role that users in other accounts or people outside of your organization can use to access your resources\. You can specify who is trusted to assume the role\. For services that support resource\-based policies or access control lists \(ACLs\), you can use those policies to grant people access to your resources\.
 
 To learn more, consult the following:
-+ To learn whether MediaPackage supports these features, see [How AWS Elemental MediaPackage works with IAM](security_iam_service-with-iam.md)\.
++ To learn whether MediaPackage supports these features, see [How AWS Elemental MediaPackage Works with IAM](security_iam_service-with-iam.md)\.
 + To learn how to provide access to your resources across AWS accounts that you own, see [Providing Access to an IAM User in Another AWS Account That You Own](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios_aws-accounts.html) in the *IAM User Guide*\.
 + To learn how to provide access to your resources to third\-party AWS accounts, see [Providing Access to AWS Accounts Owned by Third Parties](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios_third-party.html) in the *IAM User Guide*\.
 + To learn how to provide access through identity federation, see [Providing Access to Externally Authenticated Users \(Identity Federation\)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios_federated-users.html) in the *IAM User Guide*\.

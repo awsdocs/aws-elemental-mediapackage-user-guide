@@ -8,4 +8,5 @@ Monitoring is an important part of maintaining the reliability, availability, an
 **Topics**
 + [Monitoring AWS Elemental MediaPackage with Amazon CloudWatch metrics](monitoring-cloudwatch.md)
 + [Monitoring AWS Elemental MediaPackage with CloudWatch Events](monitoring-cloudwatch-events.md)
++ [Access logging](access-logging.md)
 + [Logging AWS Elemental MediaPackage API calls with AWS CloudTrail](logging-using-cloudtrail.md)

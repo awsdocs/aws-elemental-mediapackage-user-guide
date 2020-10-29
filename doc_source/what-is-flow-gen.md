@@ -20,4 +20,4 @@ Throughout the content input and output processes, MediaPackage detects and miti
 
 The following illustration shows the overall process\.
 
-![\[MediaPackage workflow\]](http://docs.aws.amazon.com/mediapackage/latest/ug/images/bbl flow1.png)
+![\[MediaPackage workflow\]](http://docs.aws.amazon.com/mediapackage/latest/ug/images/bbl_flow1.png)

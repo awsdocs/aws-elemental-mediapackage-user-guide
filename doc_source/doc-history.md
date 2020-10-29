@@ -5,6 +5,7 @@ The following table describes important changes in each release of the *AWS Elem
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Access logging](access-logging.md) | MediaPackage now supports access logging, which provides detailed records for the requests that are made to a channel\. This feature is available for live workflows\. | October 21, 2020 | 
 | [Support for SCTE\-35 EXT\-x\-DATERANGE tag](scte.md#ext-x-daterange-ad-marker) | Added a new EXT\-X\-DATERANGE section to the SCTE\-35 Ad Marker topic\. | August 7, 2020 | 
 | [Moved the maximum live manifest length from hard quota to soft quota](live-quotas.md#live-hard-quotas) | The maximum live manifest length is a soft quota\. Moved this entry from hard quotas to soft quotas\. | June 24, 2020 | 
 | [Added information about CDN authorization for VOD\.](cdn-auth.md) | Added *CDN Authorization in AWS Elemental MediaPackage* topic to describe how to add authorization to requests from your CDN\. | May 29, 2020 | 

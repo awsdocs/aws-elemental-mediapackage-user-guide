@@ -1,4 +1,4 @@
-# Identity and access management in AWS Elemental MediaPackage<a name="security-iam"></a>
+# Identity and Access Management in AWS Elemental MediaPackage<a name="security-iam"></a>
 
 AWS Identity and Access Management \(IAM\) is an AWS service that helps an administrator securely control access to AWS resources\. IAM administrators control who can be *authenticated* \(signed in\) and *authorized* \(have permissions\) to use MediaPackage resources\. IAM is an AWS service that you can use with no additional charge\.
 
@@ -6,11 +6,12 @@ AWS Identity and Access Management \(IAM\) is an AWS service that helps an admin
 + [Audience](#security_iam_audience)
 + [Authenticating with identities](#security_iam_authentication)
 + [Managing access using policies](#security_iam_access-manage)
-+ [Learn more](#security_iam_learn-more)
-+ [How AWS Elemental MediaPackage works with IAM](security_iam_service-with-iam.md)
-+ [AWS Elemental MediaPackage identity\-based policy examples](security_iam_id-based-policy-examples.md)
++ [How AWS Elemental MediaPackage Works with IAM](security_iam_service-with-iam.md)
++ [AWS Elemental MediaPackage Identity\-based policy examples](security_iam_id-based-policy-examples.md)
 + [IAM policy examples for secrets in AWS Secrets Manager](iam-policy-examples-asm-secrets.md)
 + [Troubleshooting AWS Elemental MediaPackage identity and access](security_iam_troubleshoot.md)
++ [Learn More](#security_iam_learn-more)
++ [Using Service\-Linked Roles for MediaPackage](using-service-linked-roles.md)
 
 ## Audience<a name="security_iam_audience"></a>
 
@@ -18,9 +19,9 @@ How you use AWS Identity and Access Management \(IAM\) differs, depending on the
 
 **Service user** – If you use the MediaPackage service to do your job, then your administrator provides you with the credentials and permissions that you need\. As you use more MediaPackage features to do your work, you might need additional permissions\. Understanding how access is managed can help you request the right permissions from your administrator\. If you cannot access a feature in MediaPackage, see [Troubleshooting AWS Elemental MediaPackage identity and access](security_iam_troubleshoot.md)\.
 
-**Service administrator** – If you're in charge of MediaPackage resources at your company, you probably have full access to MediaPackage\. It's your job to determine which MediaPackage features and resources your employees should access\. You must then submit requests to your IAM administrator to change the permissions of your service users\. Review the information on this page to understand the basic concepts of IAM\. To learn more about how your company can use IAM with MediaPackage, see [How AWS Elemental MediaPackage works with IAM](security_iam_service-with-iam.md)\.
+**Service administrator** – If you're in charge of MediaPackage resources at your company, you probably have full access to MediaPackage\. It's your job to determine which MediaPackage features and resources your employees should access\. You must then submit requests to your IAM administrator to change the permissions of your service users\. Review the information on this page to understand the basic concepts of IAM\. To learn more about how your company can use IAM with MediaPackage, see [How AWS Elemental MediaPackage Works with IAM](security_iam_service-with-iam.md)\.
 
-**IAM administrator** – If you're an IAM administrator, you might want to learn details about how you can write policies to manage access to MediaPackage\. To view example MediaPackage identity\-based policies that you can use in IAM, see [AWS Elemental MediaPackage identity\-based policy examples](security_iam_id-based-policy-examples.md)\.
+**IAM administrator** – If you're an IAM administrator, you might want to learn details about how you can write policies to manage access to MediaPackage\. To view example MediaPackage identity\-based policies that you can use in IAM, see [AWS Elemental MediaPackage Identity\-based policy examples](security_iam_id-based-policy-examples.md)\.
 
 ## Authenticating with identities<a name="security_iam_authentication"></a>
 
@@ -90,9 +91,9 @@ AWS supports additional, less\-common policy types\. These policy types can set 
 
 When multiple types of policies apply to a request, the resulting permissions are more complicated to understand\. To learn how AWS determines whether to allow a request when multiple policy types are involved, see [Policy Evaluation Logic](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_evaluation-logic.html) in the *IAM User Guide*\.
 
-## Learn more<a name="security_iam_learn-more"></a>
+## Learn More<a name="security_iam_learn-more"></a>
 
 For more information about identity and access management for MediaPackage, continue to the following pages:
-+ [How AWS Elemental MediaPackage works with IAM](security_iam_service-with-iam.md)
-+ [AWS Elemental MediaPackage identity\-based policy examples](security_iam_id-based-policy-examples.md)
++ [How AWS Elemental MediaPackage Works with IAM](security_iam_service-with-iam.md)
++ [AWS Elemental MediaPackage Identity\-based policy examples](security_iam_id-based-policy-examples.md)
 + [Troubleshooting AWS Elemental MediaPackage identity and access](security_iam_troubleshoot.md)
