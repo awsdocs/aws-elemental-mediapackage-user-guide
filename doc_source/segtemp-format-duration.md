@@ -70,7 +70,8 @@ To ensure proper playback and help prevent issues with conflicting segment durat
 + You must produce single period DASH manifests from endpoints that use `duration`\.
 
   You can't use multi\-period DASH with the `duration` attribute\.
-+ If you are using a **number with duration** segment template format, segments on the input stream must have a uniform duration\. In order to respect this requirement, you must disable any encoder parameter that generates variable segment length, like SCTE\-35 insertion or scene change detection\.
++ Your ingest stream must use a regular segmentation cadence\.
++ You can't use variable segment length in the ingest stream\. For example, resulting of a SCTE\-35\-related segmentation\.
 
 ## `duration` Attribute with compacted DASH manifests<a name="stemp-dur-combos"></a>
 

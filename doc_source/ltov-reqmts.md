@@ -11,4 +11,4 @@ The endpoint that you're harvesting the live\-to\-VOD asset from must meet these
 The live\-to\-VOD asset must meet these requirements:
 + Its start time must fall on or after the encoder's start time\.
 + Its start and end times must be within the startover window on the endpoint\.
-+ Its duration must not exceed the maximum live\-to\-VOD manifest length\. For information about the maximum live\-to\-VOD manifest length, see [Live Hard Quotas](https://docs.aws.amazon.com/mediapackage/latest/ug/live-quotas.html#live-hard-quotas)\.
++ Its duration must not exceed the maximum live\-to\-VOD manifest length\. For information about the maximum live\-to\-VOD manifest length, see [Live hard quotas](live-quotas.md#live-hard-quotas)\.

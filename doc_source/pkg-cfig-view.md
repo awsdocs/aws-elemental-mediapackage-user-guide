@@ -2,7 +2,7 @@
 
 To ensure that the content is available in all necessary stream formats, view all packaging configurations that are associated with a specific packaging group or with an asset\. 
 
-To view packaging configurations, you can use the AWS Elemental MediaPackage console, the AWS CLI, or the MediaPackage API\. For information about viewing a packaging configuration with the AWS CLI or MediaPackage API, see [Packaging\_configurations id](https://docs.aws.amazon.com/mediapackage-vod/latest/apireference/packaging_configurations-id.html) in the *AWS Elemental MediaPackage VOD API Reference*\.
+To view packaging configurations, you can use the AWS Elemental MediaPackage console, the AWS CLI, or the MediaPackage API\. For information about viewing a packaging configuration with the AWS CLI or MediaPackage API, see [Packaging\_configurations id](mediapackage-vod/latest/apireference/packaging_configurations-id.html) in the *AWS Elemental MediaPackage VOD API Reference*\.
 
 **To view packaging configurations in a packaging group \(console\)**
 

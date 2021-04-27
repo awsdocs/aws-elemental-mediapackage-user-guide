@@ -95,7 +95,7 @@ You must set a `ProgramDateTimeIntervalSeconds` value that is greater than **0**
 ### Enabling daterange via the MediaPackage live API or AWS SDK<a name="enable-daterange-via-live-api-or-sdk"></a>
 
  To learn how to enable daterange ad markers via the live API or AWS SDK, see the following: 
-+ [MediaPackage Live API reference ](https://docs.aws.amazon.com/mediapackage/latest/apireference/origin_endpoints.html#origin_endpoints-prop-hlspackage-admarkers) 
++ [MediaPackage Live API reference ](https://docs.aws.amazon.com/mediapackage/latest/apireference//latest/apireference/origin_endpoints.html#origin_endpoints-prop-hlspackage-admarkers) 
 + [AWS SDK](https://aws.amazon.com/getting-started/tools-sdks/)
 
 ### Example HLS manifest showing SCTE\-35 EXT\-x\-DATERANGE signaling<a name="example"></a>

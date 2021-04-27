@@ -1,7 +1,5 @@
 # Tagging AWS Elemental MediaPackage resources<a name="tagging"></a>
 
-Tagging is available for live and VOD workflows in AWS Elemental MediaPackage\. You can't use tags on harvested live\-to\-VOD assets\.
-
 A *tag* is a metadata label that you assign or that AWS assigns to an AWS resource\. Each tag consists of a *key* and a *value*\. For tags that you assign, you define the key and value\. For example, you might define the key as `stage` and the value for one resource as `test`\.
 
 Tags help you do the following:
@@ -39,4 +37,4 @@ Tags are made up of the `Key` and `Value` properties on a resource\. You can use
 For more information, see the following resources:
 + [AWS Elemental MediaPackage live API reference](https://docs.aws.amazon.com/mediapackage/latest/apireference/resources.html)
 + [AWS Elemental MediaPackage VOD API reference](https://docs.aws.amazon.com/mediapackage-vod/latest/apireference/resources.html)
-+ [AWS CLI MediaPackage reference](https://docs.aws.amazon.com/cli/latest/reference/mediapackage/index.html)
++ [AWS CLI MediaPackage reference](AWS CLI Command Referencelatest/reference/mediapackage/index.html)

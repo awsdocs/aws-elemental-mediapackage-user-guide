@@ -2,7 +2,7 @@
 
 If you or your users will create Amazon CloudFront distributions from the AWS Elemental MediaPackage live console, create a policy that allows access to CloudFront\.
 
-For more information about using CloudFront with AWS Elemental MediaPackage, see [Working with CDNs](cdns.md)\.
+For more information about using CloudFront with AWS Elemental MediaPackage, see [Working with Content Delivery Networks \(CDNs\)](cdns.md)\.
 
 **To use the JSON policy editor to create a policy**
 
@@ -28,6 +28,8 @@ For more information about using CloudFront with AWS Elemental MediaPackage, see
                    "cloudfront:GetDistribution",
                    "cloudfront:CreateDistributionWithTags",
                    "cloudfront:UpdateDistribution",
+                   "cloudfront:CreateDistribution",
+                   "cloudfront:TagResource",
                    "tag:GetResources"
                ],
                "Resource": "*"
@@ -38,6 +40,6 @@ For more information about using CloudFront with AWS Elemental MediaPackage, see
 
 1. Choose **Review policy**\.
 **Note**  
-You can switch between the **Visual editor** and **JSON** tabs any time\. However, if you make changes or choose **Review policy** in the **Visual editor** tab, IAM might restructure your policy to optimize it for the visual editor\. For more information, see [Policy Restructuring](https://docs.aws.amazon.com/IAM/latest/UserGuide/troubleshoot_policies.html#troubleshoot_viseditor-restructure) in the *IAM User Guide*\.
+You can switch between the **Visual editor** and **JSON** tabs any time\. However, if you make changes or choose **Review policy** in the **Visual editor** tab, IAM might restructure your policy to optimize it for the visual editor\. For more information, see [Policy restructuring](https://docs.aws.amazon.com/IAM/latest/UserGuide/troubleshoot_policies.html#troubleshoot_viseditor-restructure) in the *IAM User Guide*\.
 
 1. On the **Review policy** page, enter a **Name** and an optional **Description** for the policy that you are creating\. Review the policy **Summary** to see the permissions that are granted by your policy\. Then choose **Create policy** to save your work\.

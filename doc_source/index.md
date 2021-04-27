@@ -1,7 +1,7 @@
 # AWS Elemental MediaPackage User Guide
 
 -----
-*****Copyright &copy; 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy;  Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -25,7 +25,7 @@ Amazon's trademarks and trade dress may not be used in
       + [Live content processing](what-is-flow-live.md)
          + [General AWS Elemental MediaPackage live processing flow](what-is-flow-gen.md)
          + [Live input redundancy AWS Elemental MediaPackage processing flow](what-is-flow-ir.md)
-      + [VOD content processing](what-is-flow-vod.md)
+      + [VOD Content Processing](what-is-flow-vod.md)
       + [Live and VOD manifest reference](what-is-manifest.md)
    + [Features of AWS Elemental MediaPackage](what-is-features.md)
 + [Setting up AWS Elemental MediaPackage](setting-up.md)
@@ -38,7 +38,6 @@ Amazon's trademarks and trade dress may not be used in
    + [Allowing AWS Elemental MediaPackage to access other AWS services](setting-up-create-trust-rel.md)
       + [Step 1: Create a policy](setting-up-create-trust-rel-policy.md)
          + [Amazon S3 access for VOD workflows](setting-up-create-trust-rel-policy-vod.md)
-         + [Amazon S3 access for live-to-VOD workflows](setting-up-create-trust-rel-policy-ltov.md)
          + [Secrets Manager access for CDN authorization](setting-up-create-trust-rel-policy-cdn.md)
       + [Step 2: Create a role](setting-up-create-trust-rel-role.md)
       + [Step 3: Modify the trust relationship](setting-up-create-trust-rel-trust.md)
@@ -197,11 +196,16 @@ Amazon's trademarks and trade dress may not be used in
    + [Monitoring AWS Elemental MediaPackage with CloudWatch Events](monitoring-cloudwatch-events.md)
       + [AWS Elemental MediaPackage events](cloudwatch-events-example.md)
       + [Creating event notifications](cloudwatch-events-notification.md)
-   + [Access logging](access-logging.md)
    + [Logging AWS Elemental MediaPackage API calls with AWS CloudTrail](logging-using-cloudtrail.md)
+   + [Access logging](access-logging.md)
 + [Tagging AWS Elemental MediaPackage resources](tagging.md)
-+ [Working with CDNs](cdns.md)
-   + [Using Amazon CloudFront with MediaPackage](cdns-cf.md)
++ [Working with Content Delivery Networks (CDNs)](cdns.md)
+   + [Creating a Distribution](cdns-create.md)
+      + [Creating a Distribution from AWS Elemental MediaPackage](cdns-create-mp.md)
+      + [Creating a Distribution from Amazon CloudFront](cdns-create-cf.md)
+   + [Viewing a Distribution](cdns-view.md)
+   + [Editing a Distribution](cdns-edit.md)
+   + [Deleting a Distribution](cdns-delete.md)
 + [Quotas in AWS Elemental MediaPackage](quotas.md)
    + [Live content quotas](live-quotas.md)
    + [VOD content quotas](vod-quotas.md)

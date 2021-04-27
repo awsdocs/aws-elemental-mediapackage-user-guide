@@ -6,7 +6,7 @@ Amazon CloudWatch Events enables you to automate your AWS services and respond a
 + Relaying the event to Amazon Kinesis Data Streams
 + Activating an AWS Step Functions state machine
 
-An example of using CloudWatch Events with AWS Elemental MediaPackage is notifying an Amazon SNS topic if you reach the maximum stream input\.
+An example of using CloudWatch Events with AWS Elemental MediaPackage is notifying an Amazon SNS topic if you reach the maximum stream input\. MediaPackage emits events on a best effort basis\.
 
 For more information about creating rules in CloudWatch Events, see the [Amazon CloudWatch Events User Guide](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/)\.
 

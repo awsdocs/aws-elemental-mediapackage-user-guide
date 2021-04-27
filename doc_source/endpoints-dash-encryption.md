@@ -35,6 +35,12 @@ To encrypt content, you must have a DRM solution provider and be set up to use e
       arn:aws:iam::444455556666:role/SpekeAccess
       ```
 
+   1. **SPEKE version** – \(Optional\) Select the SPEKE version that you'd like to use for encryption\. SPEKE 1\.0 is the legacy version that uses CPIX 2\.0, and supports single key encryption\. SPEKE 2\.0 uses CPIX 2\.3, and supports multiple key encryption\.
+
+       If you select **SPEKE Version 2\.0**, then also choose a **Video encryption preset** and an **Audio encryption preset**\. The video and audio presets determine which content keys MediaPackage uses to encrypt the audio and video tracks in your stream\. 
+**Note**  
+ When using SPEKE Version 2\.0, MediaPackage disables key rotation\. 
+
    1. **Certificate ARN** – \(Optional\) Enter a 2048 RSA certificate ARN to use for content key encryption\. Use this option only if your DRM key provider supports content key encryption\. If you use this and your key provider doesn't support it, the event fails\.
 
       To enter a certificate ARN here, you must have already imported the corresponding certificate into AWS Certificate Manager\. Then enter the certificate ARN from ACM here\. 

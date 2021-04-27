@@ -4,7 +4,7 @@ Create a packaging group to hold all of the packaging configurations for an asse
 
  When you create a packaging group, you have the option to enable CDN authorization\. For more information about CDN authorization, see [CDN authorization in AWS Elemental MediaPackage](cdn-auth.md)\.
 
-To create a packaging group, you can use the AWS Elemental MediaPackage console, the AWS CLI, or the MediaPackage API\. information about creating a packaging group with the AWS CLI or MediaPackage API, see [Packaging\_groups](https://docs.aws.amazon.com/mediapackage-vod/latest/apireference/packaging_groups.html) in the *AWS Elemental MediaPackage VOD API Reference*\.
+To create a packaging group, you can use the AWS Elemental MediaPackage console, the AWS CLI, or the MediaPackage API\. information about creating a packaging group with the AWS CLI or MediaPackage API, see [Packaging\_groups](mediapackage-vod/latest/apireference/packaging_groups.html) in the *AWS Elemental MediaPackage VOD API Reference*\.
 
 When you're creating a packaging group, don't put sensitive identifying information like customer account numbers into free\-form fields, such as the **ID** field\. This applies when you're using the console, REST API, AWS CLI, or AWS SDKs\. Any data that you enter into MediaPackage might get picked up for inclusion in diagnostic logs or Amazon CloudWatch Events\.
 

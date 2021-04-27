@@ -1,5 +1,7 @@
 # Multi\-period DASH in AWS Elemental MediaPackage<a name="multi-period"></a>
 
+Multi\-period DASH manifests are available with only live workflows in AWS Elemental MediaPackage\.
+
 A period is a chunk of content in the DASH manifest, defined by a start time and duration\. By default, the entire manifest is contained in one period but AWS Elemental MediaPackage can partition the DASH manifest into multiple periods to indicate boundaries between ads and the main content\. For example, if you're using MediaPackage with a downstream ad service such as AWS Elemental MediaTailor, choose **Trigger new period on ads** on the MPEG\-DASH endpoint in MediaPackage\. This option tells MediaPackage that the DASH manifest is to be formatted with multiple periods\.
 + For information about AWS Elemental MediaTailor, see the [https://docs.aws.amazon.com/mediatailor/latest/ug/](https://docs.aws.amazon.com/mediatailor/latest/ug/)\.
 + For information about DASH\-ISO endpoints in AWS Elemental MediaPackage, see [Creating a DASH endpoint](endpoints-dash.md)\.

@@ -1,6 +1,6 @@
 # AWS Elemental MediaPackage events<a name="cloudwatch-events-example"></a>
 
-AWS Elemental MediaPackage integrates with Amazon CloudWatch Events to notify you of certain events that affect your channels and endpoints\. Each event is represented in [JSON \(JavaScript Object Notation\)](http://json.org) and contains the event name, the date and time when the event occurred, the channel or endpoint affected, and more\. You can use CloudWatch Events to collect these events and set up rules that route them to one or more *targets* such as AWS Lambda functions, Amazon SNS topics, Amazon SQS queues, streams in Amazon Kinesis Data Streams, or built\-in targets\.
+AWS Elemental MediaPackage integrates with Amazon CloudWatch Events to notify you of certain events that affect your channels and endpoints\. Each event is represented in [JSON \(JavaScript Object Notation\)](http://json.org) and contains the event name, the date and time when the event occurred, the channel or endpoint affected, and more\. MediaPackage emits events on a best effort basis\. You can use CloudWatch Events to collect these events and set up rules that route them to one or more *targets* such as AWS Lambda functions, Amazon SNS topics, Amazon SQS queues, streams in Amazon Kinesis Data Streams, or built\-in targets\.
 
 For more information about using CloudWatch Events with other kinds of events, see the [Amazon CloudWatch Events User Guide](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/)\.
 
@@ -86,7 +86,9 @@ For video on demand \(VOD\) content, an asset in MediaPackage changes ingest sta
    "time": "2019-05-03T17:29:36Z",
    "region": "us-west-2",
    "resources":[
-      "arn:aws:mediapackage-vod:us-west-2:aws_account_id:assets/asset_id"
+
+      "arn:aws:mediapackage-vod:us-west-2:aws_account_id:assets/asset_name"
+
    ],
    "detail":{
       "event": "IngestComplete",
@@ -168,7 +170,7 @@ You get harvest job status events when you export a clip from a live stream to c
       "harvest_job": {
           "id": "harvest_job_id",
           "arn": "arn:aws:mediapackage-vod:us-east-1:aws_account_id:harvest_jobs/harvest_job_id",
-          "status": "COMPLETED",
+          "status": "SUCCEEDED",
           "origin_endpoint_id": "endpoint_id",
           "start_time": "2019-06-26T20:30:00-08:00",
           "end_time": "2019-06-26T21:00:00-08:00",

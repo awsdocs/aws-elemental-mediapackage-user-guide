@@ -41,6 +41,8 @@ To encrypt content, you must have a DRM solution provider, and be set up to use 
 
       For information about content key encryption, see [Encrypted content keys ](drm-content-key-encryption.md)\.
 
+   1. \(Optional\) For **Constant initialization vector** enter a 128\-bit, 16\-byte hex value represented by a 32\-character string, to be used with the key for encrypting content\.
+
    1. \(Optional\) For **Key rotation interval**, enter the frequency, in seconds, of key changes for live workflows, in which content is streamed real time\. The service retrieves content keys before the live content begins streaming, and then retrieves them as needed over the lifetime of the workflow\. By default, key rotation is set to 60 seconds, which is equivalent to setting it to `60`\. To disable key rotation, set this interval to `0` \(zero\)\. 
 
       The following example setting causes the service to rotate keys every thirty minutes\.
