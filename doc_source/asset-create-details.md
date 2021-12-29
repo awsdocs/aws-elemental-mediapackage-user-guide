@@ -8,16 +8,13 @@ If you have multiple sources for this asset, choose **Add asset** and complete t
 Source content must be in a \.smil \(MP4\) or \.m3u8 \(HLS/TS\) file format\.
 
 ****Filename****  
-The filename identifies the source content\.   
-Enter the path to the file within your Amazon S3 bucket, including the name of the source content\.  
-
-**Example**  
-If your content is called` lion_movie.m3u8` and is in a subdirectory called `thursday_night` in a bucket called `movies`, you would enter the following in the **Filename** field:  
+The filename identifies the source content\.  
+Enter the full path to either the \.smil manifest \(MP4\) or the \.m3u8 parent playlist \(HLS\) within your Amazon S3 bucket, including the name of the source content\. You don't need to enter the bucket name because you chose it in **S3 bucket name** field\. For example, if your content is called` lion_movie.m3u8` and is in a subdirectory called `thursday_night` in a bucket called `movies`, you would enter the following in the **Filename** field:  
 
 ```
 thursday_night/lion_movie.m3u8
 ```
-You don't need to enter the bucket name because you chose it in **S3 bucket name** field\.
+For more information about using \.smil manifests with MediaPackage, see [Requirements for \.smil manifests](supported-inputs-vod-smil.md)\.
 
 ****ID****  
 The ID is the primary identifier for the asset, and must be unique for your account in this Region\.  

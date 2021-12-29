@@ -23,7 +23,7 @@ X-MediaPackage-CDNIdentifier: 9ceebbe7-9607-4552-8764-876e47032660
 
 **To create a custom header in Amazon CloudFront**
 
-1. Sign in to the AWS Management Console and open the CloudFront console at [https://console\.aws\.amazon\.com/cloudfront/](https://console.aws.amazon.com/cloudfront/)\.
+1. Sign in to the AWS Management Console and open the CloudFront console at [https://console.aws.amazon.com/cloudfront/v3/home](https://console.aws.amazon.com/cloudfront/v3/home)\.
 
 1. Create or edit a distribution\.
 

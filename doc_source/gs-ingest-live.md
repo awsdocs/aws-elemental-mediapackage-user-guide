@@ -26,7 +26,7 @@ MediaPackage does not require that you supply any customer data\. There are no f
 
 ## Create an endpoint<a name="gs-create-endpoint-ltov"></a>
 
-The endpoint is attached to a channel, and represents the output of the live content\. When you create a harvest job to extract a VOD asset from the live content, you have to indicate what endpoint you're extracting from\. You can harvest assets from clear \(unencrypted\) HLS endpoints only, and the endpoint must have a startover window defined\. If you have only encrypted endpoints, see the [Creating live\-to\-VOD assets with AWS Elemental MediaPackage](ltov.md) feature reference\.
+The endpoint is attached to a channel, and represents the output of the live content\. When you create a harvest job to extract a VOD asset from the live content, you have to indicate what endpoint you're extracting from\. You can harvest assets from clear \(unencrypted\) or encrypted HLS and DASH endpoints, and the endpoint must have a startover window defined\. If you have only encrypted endpoints, see the [Creating live\-to\-VOD assets with AWS Elemental MediaPackage](ltov.md) feature reference\.
 
 AWS Elemental MediaPackage does not require that you supply any customer data\. There are no fields in endpoints where there is an expectation that you will provide customer data\.
 

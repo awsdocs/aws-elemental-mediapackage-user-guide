@@ -1,7 +1,7 @@
 # AWS Elemental MediaPackage User Guide
 
 -----
-*****Copyright &copy;  Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -20,7 +20,7 @@ Amazon's trademarks and trade dress may not be used in
       + [Live supported codecs and input types](supported-inputs-live.md)
       + [Live-to-VOD supported codecs and input types](supported-inputs-ltov.md)
       + [VOD supported codecs and input types](supported-inputs-vod.md)
-         + [Creating a SMIL file](supported-inputs-vod-smil.md)
+         + [Requirements for .smil manifests](supported-inputs-vod-smil.md)
    + [How AWS Elemental MediaPackage works](what-is-flow.md)
       + [Live content processing](what-is-flow-live.md)
          + [General AWS Elemental MediaPackage live processing flow](what-is-flow-gen.md)
@@ -162,9 +162,11 @@ Amazon's trademarks and trade dress may not be used in
    + [CDN authorization in AWS Elemental MediaPackage](cdn-auth.md)
       + [Setting up CDN authorization](cdn-auth-setup.md)
       + [Rotating the CDN header value](cdn-auth-rotate.md)
-   + [Content encryption in AWS Elemental MediaPackage](using-encryption.md)
-      + [Encrypted content keys](drm-content-key-encryption.md)
-      + [Key rotation expected behavior](drm-content-key-rotation.md)
+   + [Content encryption and DRM in AWS Elemental MediaPackage](using-encryption.md)
+      + [Choosing the right SPEKE version](encryption-choosing-speke-version.md)
+      + [Deploying SPEKE](encryption-deploying-speke.md)
+      + [Preparing and managing certificates for use with content keys](drm-content-key-encryption.md)
+      + [Understanding key rotation behavior](drm-content-key-rotation.md)
    + [DASH manifest options in AWS Elemental MediaPackage](dash-trtmts.md)
       + [Multi-period DASH in AWS Elemental MediaPackage](multi-period.md)
       + [Compacted DASH manifests](compacted.md)
@@ -172,9 +174,11 @@ Amazon's trademarks and trade dress may not be used in
          + [media Attribute in SegmentTemplate](segtemp-format-media.md)
          + [duration Attribute in the SegmentTemplate](segtemp-format-duration.md)
    + [Manifest filtering](manifest-filtering.md)
+   + [Metadata passthrough](metadata-passthrough.md)
    + [Rendition groups reference in AWS Elemental MediaPackage](rendition-groups.md)
    + [SCTE-35 message options in AWS Elemental MediaPackage](scte.md)
    + [Time-shifted viewing reference in AWS Elemental MediaPackage](time-shifted.md)
+   + [Working with trick-play in AWS Elemental MediaPackage](trick-play.md)
 + [Security in AWS Elemental MediaPackage](security.md)
    + [Data protection in AWS Elemental MediaPackage](data-protection.md)
       + [Implementing DRM with AWS Elemental MediaPackage](data-protection-encrypt.md)

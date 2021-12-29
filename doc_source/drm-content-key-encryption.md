@@ -1,11 +1,11 @@
-# Encrypted content keys<a name="drm-content-key-encryption"></a>
+# Preparing and managing certificates for use with content keys<a name="drm-content-key-encryption"></a>
 
 AWS Elemental MediaPackage uses a Content Protection Information Exchange \(CPIX\) document to communicate with SPEKE about content keys that are used to encrypt your content\. For the most secure DRM encryption solution, use encrypted content keys in the CPIX document\. 
 
 To use encrypted content keys, the following requirements must be met:
 + The encrypted content must be live\. Video on demand \(VOD\) and live\-to\-VOD workflows don't support encrypted content keys in the CPIX document\.
 + Your DRM key provider must support encrypted content keys\. If you enable this feature for a key provider that doesn't handle content key encryption, playback fails\.
-+ You must import a suitable certificate into AWS Certificate Manager in the same Region that you run MediaPackage\. For information about ACM, see the [AWS Certificate Manager User Guide](https://docs.aws.amazon.com/acm/latest/userguide/)\. 
++ You must import a suitable certificate into AWS Certificate Manager \(ACM\) in the same Region that you run MediaPackage\. For information about ACM, see the [AWS Certificate Manager User Guide](https://docs.aws.amazon.com/acm/latest/userguide/)\. 
 
   The following procedures describe how to prepare and manage the certificate\.
 

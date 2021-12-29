@@ -4,7 +4,7 @@ An asset resource is how MediaPackage ingests, packages, and serves VOD content\
 
 AWS Elemental MediaPackage does not require that you supply any customer data\. There are no fields in assets where there is an expectation that you will provide customer data\.
 
-**To create an asset and ingest source content**
+**To create an asset**
 
 1. From your Amazon S3 buckets, determine what file you're using as source content\. Make note of the following:
    + The name of the Amazon S3 bucket where the file is stored
@@ -17,7 +17,13 @@ AWS Elemental MediaPackage does not require that you supply any customer data\. 
 
 1. For **IAM role**, choose **Use existing role** and select the IAM role that allows AWS Elemental MediaPackage to read from Amazon S3\.
 
-1. For **Filename**, enter the path within the Amazon S3 bucket and name for the source content\.
+1. For **Filename**, enter the full path to either the \.smil manifest \(MP4\) or the \.m3u8 parent playlist \(HLS\) within your Amazon S3 bucket, including the name of the source content\. You don't need to enter the bucket name because you chose it in **S3 bucket name** field\. For example, if your content is called` lion_movie.m3u8` and is in a subdirectory called `thursday_night` in a bucket called `movies`, you would enter the following in the **Filename** field:
+
+   ```
+   thursday_night/lion_movie.m3u8
+   ```
+
+   For more information about using \.smil manifests with MediaPackage, see [Requirements for \.smil manifests](supported-inputs-vod-smil.md)\.
 
 1. For **Packaging group**, select the group that you created in [Step 2: Create a packaging group](gs-create-grp.md)\.
 

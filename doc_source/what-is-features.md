@@ -10,13 +10,14 @@ MediaPackage accepts these codecs from the input source and passes them through 
 MediaPackage does not support audio\-only inputs\. The stream configuration from the encoder must include at least one video track\.
 
 **Captions**  
-MediaPackage supports input 608/708 captions and passes them through to the output stream\.
+Your embedded source captions can be CEA\-608 captions, CEA\-708 captions, or both CEA\-608 and CEA\-708\.  
+ MediaPackage currently doesn't support manifest signaling for closed captions\. The CEA\-608 or CEA\-708 stream will be present in the video\. 
 
 **CDN Authorization**  
 MediaPackage supports content delivery network \(CDN\) authorization\. For information, see [CDN authorization in AWS Elemental MediaPackage](cdn-auth.md)\.
 
 **DRM**  
-MediaPackage supports content protection through digital rights management \(DRM\)\. For information, see [Content encryption in AWS Elemental MediaPackage](using-encryption.md)\.
+MediaPackage supports content protection through digital rights management \(DRM\)\. For information, see [Content encryption and DRM in AWS Elemental MediaPackage](using-encryption.md)\.
 
 **HLS Rendition Groups**  
 MediaPackage supports rendition groups for incoming and outgoing HLS content\. For information about output redundancy groups, see [Rendition groups reference in AWS Elemental MediaPackage](rendition-groups.md)\.

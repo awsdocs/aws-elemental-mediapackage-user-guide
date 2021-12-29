@@ -1,6 +1,6 @@
 # Start and end date and time<a name="hj-create-time"></a>
 
-The start and end date and time information defines the time range for the harvest job\. Times are based on the program date time \(PDT\) from the encoder\.
+The start and end date and time information defines the time range for the harvest job\. The maximum duration of the harvest job is 24 hours\. Times are based on the program date time \(PDT\) from the encoder\.
 
 **Note**  
 The live\-to\-VOD asset timing is accurate up to the segment\. This means that if you indicate a start or end time that falls within a segment, MediaPackage includes the entire segment in the asset\. If you have a 3\-second segment and that start time falls on the third second in the segment, the asset will begin two seconds earlier, at the start of the segment\.

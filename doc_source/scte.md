@@ -84,8 +84,7 @@ Go to **Add/edit endpoints** > **Packager settings** > **Additional configuratio
 To enable daterange ad markers for your endpoint, run the following command in the AWS CLI: 
 
 ```
-  aws --endpoint=https://hrgwu13yka.execute-api.us-west-2.amazonaws.com/prod mediapackage-dev
-  --region us-west-2 create-origin-endpoint --channel-id test_channel --id hlsmuxed
+  aws --endpoint=https://mediapackage.region.amazonaws.com mediapackage --region region create-origin-endpoint --channel-id test_channel --id hlsmuxed
   --hls-package "{\"ProgramDateTimeIntervalSeconds\":60,\"AdMarkers\":\"DATERANGE\"}"
 ```
 
@@ -94,8 +93,8 @@ You must set a `ProgramDateTimeIntervalSeconds` value that is greater than **0**
 
 ### Enabling daterange via the MediaPackage live API or AWS SDK<a name="enable-daterange-via-live-api-or-sdk"></a>
 
- To learn how to enable daterange ad markers via the live API or AWS SDK, see the following: 
-+ [MediaPackage Live API reference ](https://docs.aws.amazon.com/mediapackage/latest/apireference//latest/apireference/origin_endpoints.html#origin_endpoints-prop-hlspackage-admarkers) 
+ To learn how to enable daterange ad markers for HLS endpoints via the live API or AWS SDK, see the following: 
++ [MediaPackage Live API reference ](https://docs.aws.amazon.com/mediapackage/latest/apireference/origin_endpoints.html) 
 + [AWS SDK](https://aws.amazon.com/getting-started/tools-sdks/)
 
 ### Example HLS manifest showing SCTE\-35 EXT\-x\-DATERANGE signaling<a name="example"></a>

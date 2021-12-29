@@ -8,7 +8,7 @@ To extract a live\-to\-VOD asset from a live content stream, create a harvest jo
 
 1. For **ID**, enter a name that describes the harvest job, such as **gamehighlights**\. The ID is the primary identifier for the job\. You can reuse the ID after the harvest job expires from your account\. Supported characters are letters, numbers, underscore \(\_\), and dash \(\-\)\. You can't use spaces in the ID\.
 
-1. For **Origin endpoint**, select the endpoint for the live content stream that you're extracting a VOD asset from\. The endpoint must serve clear \(unencrypted\) HLS content\. If you want to extract from encrypted live content, see [Creating live\-to\-VOD assets with AWS Elemental MediaPackage](ltov.md)\.
+1. For **Origin endpoint**, select the endpoint for the live content stream that you're extracting a VOD asset from\. The endpoint must serve clear \(unencrypted\) or encrypted DASH or HLS content\. If you want to extract from encrypted live content, see [Creating live\-to\-VOD assets with AWS Elemental MediaPackage](ltov.md)\.
 
 1. For **Date and time format**, keep the default\.
 

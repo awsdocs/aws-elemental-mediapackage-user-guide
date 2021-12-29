@@ -8,7 +8,9 @@
 
 1. \(Optional\) To group all audio tracks into a single HLS rendition group, select **Use audio rendition group**\. For more information about rendition groups, see [Rendition groups reference in AWS Elemental MediaPackage](rendition-groups.md)\.
 
-1. \(Optional\) In stream sets with a single video track, to include an additional I\-frame only stream along with the other tracks in the manifest, select **Include IFrame only stream**\. MediaPackage inserts `EXT-I-FRAMES-ONLY` tags in the manifest, and then compiles and includes an I\-frames only playlist in the stream\. This playlist enables player functionality like fast forward and rewind\.
+1. \(Optional\) To passthrough digital video broadcasting \(DVB\) subtitles into the output, select **Include DVB subtitles**\.
+
+1. \(Optional\) To include an additional I\-frame only stream along with the other tracks in the manifest, select **Include IFrame only stream**\. MediaPackage generates an I\-frame only stream from the first rendition in the manifest\. The service inserts EXT\-I\-FRAMES\-ONLY tags in the output manifest, and then generates and includes an I\-frames only playlist in the stream\. This playlist enables player functionality like fast forward and rewind\.
 
 1. \(Optional\) To include `EXT-X-PROGRAM-DATE-TIME` tags in the output manifest, select **Program date/time interval**, and then type the interval for MediaPackage to insert the tags in the manifest\.
 

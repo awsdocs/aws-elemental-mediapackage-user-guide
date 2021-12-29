@@ -1,6 +1,6 @@
 # Creating a harvest job<a name="hj-create"></a>
 
-Create a harvest job to extract a live\-to\-VOD asset from an unencrypted, live HLS stream\. 
+Create a harvest job to extract a live\-to\-VOD asset from an encrypted or clear \(unencrypted\) live HLS or DASH stream\.
 
 **Important**  
 To run a harvest job and save the live\-to\-VOD asset, MediaPackage must have permissions to access and write to the Amazon S3 bucket where the asset will be stored\. To create a role that gives MediaPackage the right permissions, see [Allowing AWS Elemental MediaPackage to access other AWS services](setting-up-create-trust-rel.md)\.

@@ -1,9 +1,9 @@
 # Encryption fields<a name="endpoints-smooth-encryption"></a>
 
-Protect your content from unauthorized use through encryption\. Digital rights management \(DRM\) systems provide keys to AWS Elemental MediaPackage for content encryption, and licenses to supported players for decryption\.
+Protect your content from unauthorized use through content encryption and digital rights management \(DRM\)\. AWS Elemental MediaPackage uses the [AWS Secure Package and Encoder Key Exchange \(SPEKE\) API](https://aws.amazon.com/media/tech/speke-basics-secure-packager-encoder-key-exchange-api/) to facilitate content encryption and decryption by a DRM provider\. Using SPEKE, the DRM provider supplies encryption keys to AWS Elemental MediaPackage through the SPEKE API\. The DRM provider also supplies licenses to supported media players for decryption\. For more information about how SPEKE is used with services and features running in the cloud, see [AWS cloud\-based architecture](https://docs.aws.amazon.com/speke/latest/documentation/what-is-speke.html#services-architecture) in the *Secure Packager and Encoder Key Exchange API Specification guide*\.
 
 **Note**  
-To encrypt content, you must have a DRM solution provider and be set up to use encryption\. For information, see [Content encryption in AWS Elemental MediaPackage](using-encryption.md)\. 
+To encrypt content, you must have a DRM solution provider and be set up to use encryption\. For information, see [Content encryption and DRM in AWS Elemental MediaPackage](using-encryption.md)\. 
 
 1. To serve content without copyright protection, keep **No encryption** selected\.
 
@@ -17,7 +17,7 @@ To encrypt content, you must have a DRM solution provider and be set up to use e
       MovieNight20171126093045
       ```
 
-   1. For **System IDs**, enter unique identifiers for your streaming protocol and DRM system\. Provide up to two IDs for DASH and exactly one for the other streaming protocols\. If you provide more than one system ID, enter them on separate lines, and do not separate them with commas or any other punctuation\. For a list of common system IDs, see [DASH\-IF System IDs](https://dashif.org/identifiers/content_protection/)\. If you do not know your IDs, ask your DRM solution provider\.
+   1. For **System IDs**, enter unique identifiers for your streaming protocol and DRM system\. Provide up to one system ID\. If you do not know your ID, ask your DRM solution provider\.
 
    1. For **URL**, enter the URL of the API Gateway proxy that you set up to talk to your key server\. The API Gateway proxy must reside in the same AWS Region as MediaPackage\.
 
@@ -39,4 +39,4 @@ To encrypt content, you must have a DRM solution provider and be set up to use e
 
       To enter a certificate ARN here, you must have already imported the corresponding certificate into AWS Certificate Manager\. Then enter the certificate ARN from ACM here\. 
 
-      For information about key encryption, see [Encrypted content keys ](drm-content-key-encryption.md)\.
+      For information about key encryption, see [Preparing and managing certificates for use with content keys](drm-content-key-encryption.md)\.

@@ -13,7 +13,7 @@ For some customers, your account quota might be below these published quotas\. I
 | --- | --- | 
 | Maximum Channels | 30 Increasing your channel quota doesn't always mean that you also need to increase your endpoints\. For example, if you need 34 channels and want to serve HLS, HLS encrypted, and DASH content from each channel, you need only 3 endpoints for each channel \(one for each output type\)\. The default endpoint quota is 10 so, although you do need a channel quota increase, you don't need to increase your endpoint quota\. You won't exceed the quota of 10 endpoints *per channel*\.  | 
 | Maximum Endpoints per Channel | 10This is a *per channel* quota\. Each endpoint represents the output package that you use\. If one channel serves HLS, HLS encrypted, DASH, DASH encrypted, Microsoft Smooth, and Microsoft Smooth encrypted content, then that channel has 6 endpoints and falls within the 10 endpoints quota\. If you have 10 channels set up this same way, then you still haven't exceeded the quota because each channel uses only 6 endpoints\. | 
-| Maximum IN\_PROGRESS Harvest Jobs | 3 | 
+| Maximum Concurrent Harvest Jobs | 10 | 
 | Maximum Live Manifest Length | 5 minutes | 
 
 ## Live hard quotas<a name="live-hard-quotas"></a>

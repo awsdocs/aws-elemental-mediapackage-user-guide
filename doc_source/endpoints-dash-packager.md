@@ -28,12 +28,18 @@ If you enable **Number with duration** in **Segment template format**, you can't
 
 1. \(Optional\) In **Segment template format**, choose how AWS Elemental MediaPackage and playback requests refer to each segment\.
    + If you choose **Number with timeline**, MediaPackage uses the `$Number$` variable to refer to the segment in the `media` attribute of the `SegmentTemplate` tag\. The value of the variable is the sequential number of the segment\. `SegmentTimeline` is included in each segment template\.
-   + If you choose **Number with duration**, MediaPackage uses the `$Number$` variable and replaces the `SegmentTimeline` objects with a `duration` attribute in the segment template\.
+   + If you choose **Number with duration**, MediaPackage uses the `$Number$` variable and replaces the `SegmentTimeline` objects with a `duration` attribute in the segment template\. 
 **Note**  
 This option isn't supported in combination with multi\-period DASH\.
    + If you choose **Time with timeline**, MediaPackage uses the `$Time$` variable to refer to the segment\. The value of the variable is the timestamp of when on the manifest timeline the segment starts\. `SegmentTimeline` is included in each segment template\.
 
    For more information about the formatting options of the `SegmentTemplate` tag, see [DASH manifest segment template format](segtemp-format.md)\.
+
+1. \(Optional\) In **UTC timing**, select the method that the player uses to synchronize to coordinated universal time \(UTC\) wall clock time\. This enables the player and MediaPackage to run on the same UTC wall clock time\. This is a requirement, otherwise playback timing or synchronization issues can occur\.
+
+   The options are `HTTP-HEAD`, `HTTP-ISO`, and `NONE`\. This value will be set as the `@schemeIdURI` attribute for the `UTCTiming` element in the outbound Media Presentation Description\. For information about `UTCTiming`, see [DASH](https://www.iso.org/standard/79884.html), UTC Timing Descriptor, 5\.8\.4\.11\.
+
+1. \(Optional\) In **UTC timing URI**, specify a URI to use for UTC synchronization\. This is the URI used to fetch the timing data according to the scheme defined by **UTC timing**\. This value is only valid if **UTC timing** is not `NONE`\. This value will be set as the `@value` attribute for the `UTCTiming` element\. For information about `@value`, see [DASH](https://www.iso.org/standard/79884.html), DASH UTC Timing Schemes, 5\.8\.5\.7\.
 
 1. For **Period triggers**, choose how AWS Elemental MediaPackage creates media presentation description \(MPD\) periods in the DASH output manifest\. Choose from the following:
    + **None** – MediaPackage doesn't create additional periods\. It formats the manifest as a single period and doesn't include SCTE\-35 markers in the segments\.

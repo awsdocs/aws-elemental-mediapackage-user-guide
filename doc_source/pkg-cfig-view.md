@@ -2,7 +2,7 @@
 
 To ensure that the content is available in all necessary stream formats, view all packaging configurations that are associated with a specific packaging group or with an asset\. 
 
-To view packaging configurations, you can use the AWS Elemental MediaPackage console, the AWS CLI, or the MediaPackage API\. For information about viewing a packaging configuration with the AWS CLI or MediaPackage API, see [Packaging\_configurations id](mediapackage-vod/latest/apireference/packaging_configurations-id.html) in the *AWS Elemental MediaPackage VOD API Reference*\.
+To view packaging configurations, you can use the AWS Elemental MediaPackage console, the AWS CLI, or the MediaPackage API\. For information about viewing a packaging configuration with the AWS CLI or MediaPackage API, see [Packaging\_configurations id](https://docs.aws.amazon.com/mediapackage-vod/latest/apireference/packaging_configurations-id.html) in the *AWS Elemental MediaPackage VOD API Reference*\.
 
 **To view packaging configurations in a packaging group \(console\)**
 
@@ -26,4 +26,11 @@ AWS Elemental MediaPackage displays summary information, such as the assets asso
 
 1. On the **Assets** page, choose the asset that you want to audit\. 
 
-   The **Playback details** section displays all of the configurations that are associated with this asset\.
+   The **Playback details** section displays all of the configurations that are associated with this asset\. On this page, you can view the playback status of the asset in the **Status** column\. The available statuses are as follows:
++ **Not processed **\- The asset hasn't been processed yet\.
++ **Processing** \- MediaPackage is processing the asset\. The asset isn't available for playback yet\.
++ **Processed** \- The asset has been processed, and is available for playback\.
++ **Failed** \- Processing failed\.
+
+**Note**  
+Status information isn't available for most assets ingested before September 30th, 2021\.

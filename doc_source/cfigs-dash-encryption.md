@@ -1,9 +1,9 @@
 # Encryption fields<a name="cfigs-dash-encryption"></a>
 
-Protect your content from unauthorized use through encryption\. Digital rights management \(DRM\) systems provide keys to AWS Elemental MediaPackage for content encryption, and licenses to supported players for decryption\.
+Protect your content from unauthorized use through content encryption and digital rights management \(DRM\)\. AWS Elemental MediaPackage uses the [AWS Secure Package and Encoder Key Exchange \(SPEKE\) API](https://aws.amazon.com/media/tech/speke-basics-secure-packager-encoder-key-exchange-api/) to facilitate content encryption and decryption by a DRM provider\. Using SPEKE, the DRM provider supplies encryption keys to AWS Elemental MediaPackage through the SPEKE API\. The DRM provider also supplies licenses to supported media players for decryption\. For more information about how SPEKE is used with services and features running in the cloud, see [AWS cloud\-based architecture](https://docs.aws.amazon.com/speke/latest/documentation/what-is-speke.html#services-architecture) in the *Secure Packager and Encoder Key Exchange API Specification guide*\.
 
 **Note**  
-To encrypt content, you must have a DRM solution provider, and be set up to use encryption\. For information, see [Content encryption in AWS Elemental MediaPackage](using-encryption.md)\. 
+To encrypt content, you must have a DRM solution provider, and be set up to use encryption\. For information, see [Content encryption and DRM in AWS Elemental MediaPackage](using-encryption.md)\. 
 
 To serve content with copyright protection, choose **Encryption ** and complete the additional fields as follows:
 
@@ -23,4 +23,4 @@ To serve content with copyright protection, choose **Encryption ** and complete 
    arn:aws:iam::444455556666:role/SpekeAccess
    ```
 
-1. For **System IDs**, enter unique identifiers for your streaming protocol and DRM system\. Provide up to two IDs for DASH and exactly one for other streaming protocols\. If you provide more than one system ID, enter one per line and choose **Add**\. For a list of common system IDs, see [DASH\-IF System IDs](https://dashif.org/identifiers/content_protection/)\. If you do not know your IDs, ask your DRM solution provider\.
+1. For **System IDs**, enter unique identifiers for your streaming protocol and DRM system\. Provide up to three IDs for CMAF, two IDs for DASH, and exactly one for the other streaming protocols\. If you provide more than one system ID, enter one per line and choose **Add**\. For a list of common system IDs, see [DASH\-IF System IDs](https://dashif.org/identifiers/content_protection/)\. If you do not know your IDs, ask your DRM solution provider\.
