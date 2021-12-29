@@ -6,5 +6,5 @@ The following sections describe how MediaPackage works\.
 
 **Topics**
 + [Live content processing](what-is-flow-live.md)
-+ [VOD content processing](what-is-flow-vod.md)
++ [VOD Content Processing](what-is-flow-vod.md)
 + [Live and VOD manifest reference](what-is-manifest.md)

@@ -26,4 +26,11 @@ AWS Elemental MediaPackage displays summary information, such as the assets asso
 
 1. On the **Assets** page, choose the asset that you want to audit\. 
 
-   The **Playback details** section displays all of the configurations that are associated with this asset\.
+   The **Playback details** section displays all of the configurations that are associated with this asset\. On this page, you can view the playback status of the asset in the **Status** column\. The available statuses are as follows:
++ **Not processed **\- The asset hasn't been processed yet\.
++ **Processing** \- MediaPackage is processing the asset\. The asset isn't available for playback yet\.
++ **Processed** \- The asset has been processed, and is available for playback\.
++ **Failed** \- Processing failed\.
+
+**Note**  
+Status information isn't available for most assets ingested before September 30th, 2021\.

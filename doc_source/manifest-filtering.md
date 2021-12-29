@@ -46,11 +46,13 @@ MediaPackage supports the following query parameters\.
 
 | Category | Name | Description | Example | 
 | --- | --- | --- | --- | 
+| Audio | audio\_bitrate |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/manifest-filtering.html)  | stream\.mpd?aws\.manifestfilter=audio\_bitrate:0\-2147483647 | 
 | Audio | audio\_channels |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/manifest-filtering.html)  | stream\.mpd?aws\.manifestfilter=audio\_channels:1\-8 | 
 | Audio | audio\_codec |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/manifest-filtering.html)  | stream\.mpd?aws\.manifestfilter=audio\_codec:AACL,AC\-3 | 
 | Audio | audio\_language |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/manifest-filtering.html)  | stream\.mpd?aws\.manifestfilter=audio\_language:fr,en\-US,de | 
 | Audio | audio\_sample\_rate |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/manifest-filtering.html)  | stream\.mpd?aws\.manifestfilter=audio\_sample\_rate:0\-44100 | 
 | Subtitle | subtitle\_language |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/manifest-filtering.html)  | stream\.mpd?aws\.manifestfilter=subtitle\_language:en\-US, hi | 
+| Video | trickplay\_height |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/manifest-filtering.html)  | stream\.mpd?aws\.manifestfilter=trickplay\_height:200\-1200 | 
 | Video | video\_bitrate |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/manifest-filtering.html)  | stream\.mpd?aws\.manifestfilter=video\_bitrate:0\-2147483647 | 
 | Video | video\_codec |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/manifest-filtering.html)  | stream\.mpd?aws\.manifestfilter=video\_codec:h264 | 
 | Video | video\_dynamic\_range |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/manifest-filtering.html)  | stream\.mpd?aws\.manifestfilter=video\_dynamic\_range:hdr10 | 

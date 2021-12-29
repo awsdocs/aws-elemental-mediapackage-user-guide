@@ -38,7 +38,7 @@ An *endpoint* is part of a channel and represents the packaging aspect of MediaP
 **Harvest Job**  
 A *harvest job* is a task that you create to extract a video on demand \(VOD\) asset from a live content stream\. A harvest job defines the start and end times of the VOD asset, and where MediaPackage should store the asset\. When the job runs, MediaPackage creates an HLS clip for the times that you indicated\. This clip is stored as a VOD asset in an Amazon S3 bucket of your choosing\. You can use the VOD functionality in MediaPackage to serve the asset to end users\.
 
-## VOD components<a name="what-is-terms-vod"></a>
+## VOD Components<a name="what-is-terms-vod"></a>
 
 The following components apply to video on demand \(VOD\) workflows in MediaPackage:
 

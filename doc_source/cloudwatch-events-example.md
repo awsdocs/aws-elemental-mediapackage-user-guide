@@ -1,6 +1,6 @@
 # AWS Elemental MediaPackage events<a name="cloudwatch-events-example"></a>
 
-AWS Elemental MediaPackage integrates with Amazon CloudWatch Events to notify you of certain events that affect your channels and endpoints\. Each event is represented in [JSON \(JavaScript Object Notation\)](http://json.org) and contains the event name, the date and time when the event occurred, the channel or endpoint affected, and more\. You can use CloudWatch Events to collect these events and set up rules that route them to one or more *targets* such as AWS Lambda functions, Amazon SNS topics, Amazon SQS queues, streams in Amazon Kinesis Data Streams, or built\-in targets\.
+AWS Elemental MediaPackage integrates with Amazon CloudWatch Events to notify you of certain events that affect your channels and endpoints\. Each event is represented in [JSON \(JavaScript Object Notation\)](http://json.org) and contains the event name, the date and time when the event occurred, the channel or endpoint affected, and more\. MediaPackage emits events on a best effort basis\. You can use CloudWatch Events to collect these events and set up rules that route them to one or more *targets* such as AWS Lambda functions, Amazon SNS topics, Amazon SQS queues, streams in Amazon Kinesis Data Streams, or built\-in targets\.
 
 For more information about using CloudWatch Events with other kinds of events, see the [Amazon CloudWatch Events User Guide](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/)\.
 
@@ -86,7 +86,9 @@ For video on demand \(VOD\) content, an asset in MediaPackage changes ingest sta
    "time": "2019-05-03T17:29:36Z",
    "region": "us-west-2",
    "resources":[
-      "arn:aws:mediapackage-vod:us-west-2:aws_account_id:assets/asset_id"
+
+      "arn:aws:mediapackage-vod:us-west-2:aws_account_id:assets/asset_name"
+
    ],
    "detail":{
       "event": "IngestComplete",
@@ -97,6 +99,7 @@ For video on demand \(VOD\) content, an asset in MediaPackage changes ingest sta
 
 **VOD Playback Event**  
 For VOD content, an asset in MediaPackage is available for playback\. There is a period of time between when asset ingest is complete, and when the asset can be played back\. The event `VodAssetPlayable` means that MediaPackage can now fulfill playback requests for the asset\.  
+ You get individual `VodAssetPlayable` events for each packaging configuration in your packaging group\. For example, if your packaging group contains one DASH and one HLS packaging configuration, you receive two `VodAssetPlayable` events—one for your DASH packaging configuration, and one for your HLS packaging configuration\.   
 
 **Example**  
 
@@ -117,9 +120,30 @@ For VOD content, an asset in MediaPackage is available for playback\. There is a
       "message": "Asset 'asset_id' is now playable for PackagingConfiguration 'packaging_configuration_id'",
       "packaging_configuration_id": "packaging_configuration_id",
       "manifest_urls":[
-         "https://accd64649dc.egress.mediapackage-vod.us-west-2.amazonaws.com/out/v1/b9cc115bf7f1a/b848dfb116920772aa69ba/a3c74b1cae6a451c/index.m3u8"
+         "https://555555555555.egress.mediapackage-vod.us-west-2.amazonaws.com/out/v1/b9cc115bf7f1a/b848dfb116920772aa69ba/a3c74b1cae6a451c/index.m3u8"
       ]
    }
+}
+
+{
+    "id": "91e896e4-d9e5-ab80-f82a-b4cf3246c568",
+    "detail-type": "MediaPackage Input Notification",
+    "source": "aws.mediapackage",
+    "account": "aws_account_id",
+    "time": "2019-11-03T21:47:00Z",
+    "region": "us-west-2",
+    "resources":[
+      "arn:aws:mediapackage-vod:us-west-2:aws_account_id:assets/asset_id",
+      "arn:aws:mediapackage-vod:us-west-2:aws_account_id:packaging_configuration/packaging_configuration_id"
+    ],
+    "detail":{
+      "event": "VodAssetPlayable",
+      "message": "Asset 'asset_id' is now playable for PackagingConfiguration 'packaging_configuration_id'",
+      "packaging_configuration_id": "packaging_configuration_id",
+      "manifest_urls":[
+          "https://111122223333.egress.mediapackage-vod.us-west-2.amazonaws.com/out/v1/1234567890abc/021345abcdef6789012345/abcdef0123456789/index.mpd"
+      ]
+    }
 }
 ```
 
@@ -168,7 +192,7 @@ You get harvest job status events when you export a clip from a live stream to c
       "harvest_job": {
           "id": "harvest_job_id",
           "arn": "arn:aws:mediapackage-vod:us-east-1:aws_account_id:harvest_jobs/harvest_job_id",
-          "status": "COMPLETED",
+          "status": "SUCCEEDED",
           "origin_endpoint_id": "endpoint_id",
           "start_time": "2019-06-26T20:30:00-08:00",
           "end_time": "2019-06-26T21:00:00-08:00",

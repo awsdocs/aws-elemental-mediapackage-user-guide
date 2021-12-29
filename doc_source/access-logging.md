@@ -1,6 +1,6 @@
 # Access logging<a name="access-logging"></a>
 
-MediaPackage provides access logs that capture detailed information about requests sent to your MediaPackage channel\. MediaPackage generates *ingress access logs* for requests sent to the channel's input URLs, and *egress access logs* for requests sent to your channel's endpoints\. Each log contains information such as the time the request was received, the client's IP address, latencies, request paths, and server responses\. You can use these access logs to analyze service performance and troubleshoot issues\. They can also help you learn about your customer base and understand your MediaPackage bill\.
+MediaPackage provides access logs that capture detailed information about requests sent to your MediaPackage channel or packaging group\. MediaPackage generates *ingress access logs* for requests sent to the channel's input endpoints, and *egress access logs* for requests sent to your channel's endpoints or packaging group's assets\. Each log contains information such as the time the request was received, the client's IP address, latencies, request paths, and server responses\. You can use these access logs to analyze service performance and troubleshoot issues\. They can also help you learn about your customer base and understand your MediaPackage bill\.
 
  Access logging is an optional feature of MediaPackage that is disabled by default\. After you enable access logging, MediaPackage captures the logs and saves them to the CloudWatch log group that you specify when you create or manage access logging\. Typical CloudWatch Logs charges apply\. 
 
@@ -19,7 +19,7 @@ When you enable access logging, MediaPackage creates an IAM service\-linked role
 
 You can enable access logs using the AWS Management Console or the AWS CLI\.
 
-**To enable access logs using the console**
+**To enable access logs for an existing channel using the console**
 
 1. Open the MediaPackage console at [https://console\.aws\.amazon\.com/mediapackage/](https://console.aws.amazon.com/mediapackage/)\.
 
@@ -29,28 +29,55 @@ You can enable access logs using the AWS Management Console or the AWS CLI\.
 
    1. Choose **Enable ingress access logs** or **Enable egress access logs**, or both\.
 
-   1. Specify a CloudWatch **Log group name**\.
+   1. You can specify a custom CloudWatch **Log group name**\. If left blank, the default group is used\.
 
-**To enable access logs using the AWS CLI**  
-Use the [configure\-logs](https://docs.aws.amazon.com/cli/latest/reference/mediapackage/configure-logs.html) command with the `--ingest-access-logs` parameter, `--egress-access-logs` parameter, or both, to enable access logging\. You can include a CloudWatch log group name for the `--ingest-access-logs` and `--egress-access-logs` parameters\. If you don't specify a log group name, then the MediaPackage default log group is used\. For ingress logs, the default log group is `/aws/MediaPackage/IngressAccessLogs`, and for egress logs the default log group is `/aws/MediaPackage/EgressAccessLogs`\.
+**To enable access logs for an existing packaging group using the console**
+
+1. Open the MediaPackage console at [https://console\.aws\.amazon\.com/mediapackage/](https://console.aws.amazon.com/mediapackage/)\.
+
+1. Select **Packaging groups** from the navigation section\.
+
+1. Choose your packaging group\.
+
+   1. Select **Edit** in the navigation bar\.
+
+   1. In the **Access logging** section, select **Enable egress access logs**\.
+
+   1. You can specify a custom CloudWatch **Log group name**\. If left blank, the default group is used\.
+
+1. Choose **Save changes**\.
+
+**To enable access logs for a channel using the AWS CLI**  
+Use the [configure\-logs](https://docs.aws.amazon.com/cli/latest/reference/mediapackage/configure-logs.html) command with the `--ingress-access-logs` parameter, `--egress-access-logs` parameter, or both, to enable access logging\. You can include a CloudWatch log group name for the `--ingress-access-logs` and `--egress-access-logs` parameters\. If you don't specify a log group name, then the MediaPackage default log group is used\. For ingress logs, the default log group is `/aws/MediaPackage/IngressAccessLogs`, and for egress logs the default log group is `/aws/MediaPackage/EgressAccessLogs`\.
 
 Use the following command to enable both ingress and access logs using the default log groups:
 
 ```
-aws mediapackage configure-logs --id channel-name --ingest-access-logs {} --egress-access-logs {}
+aws mediapackage configure-logs --id channel-name --ingress-access-logs {} --egress-access-logs {}
+```
+
+This command has no return value\.
+
+**To enable access logs for a packaging group using the AWS CLI**  
+Use the [configure\-logs](https://docs.aws.amazon.com/cli/latest/reference/mediapackage-vod/configure-logs.html) command with the `--egress-access-logs` parameter to enable access logging\. You can include a CloudWatch log group name for the `--egress-access-logs` parameter\. If you don't specify a log group name, then the MediaPackage default log group is used\. For ingress logs, the default log group is `/aws/MediaPackage/IngressAccessLogs`, and for egress logs the default log group is `/aws/MediaPackage/EgressAccessLogs`\.
+
+Use the following command to enable egress access logs using the default log groups:
+
+```
+aws mediapackage configure-logs --id package-name --egress-access-logs {}
 ```
 
 This command has no return value\.
 
 ## Disable access logging<a name="disable-access-logging"></a>
 
-You can disable access logs for your MediaPackage channel at any time\.
+You can disable access logs for your MediaPackage channel or packaging group at any time\.
 
 **To disable access logging using the console**
 
 1. Open the MediaPackage console at [https://console\.aws\.amazon\.com/mediapackage/](https://console.aws.amazon.com/mediapackage/)\.
 
-   Select your channel\.
+   Select your channel or package group\.
 
 1. Choose **Edit**\.
 
@@ -58,8 +85,8 @@ You can disable access logs for your MediaPackage channel at any time\.
 
 1. Choose **Save changes**\.
 
-**To disable access logging using the AWS CLI**  
-Use the [configure\-logs](https://docs.aws.amazon.com/cli/latest/reference/mediapackage/configure-logs.html) command to disable access logging\. If one or more of the access log parameters aren't declared with the `configure-logs` command, then the corresponding access logs are disabled\. For example, in the following command egress access logs are enabled, and ingress access logs are disabled:
+**To disable access logging for a channel using the AWS CLI**  
+Use the `configure-logs` command to disable access logging\. If one or more of the access log parameters aren't declared with the `configure-logs` command, then the corresponding access logs are disabled\. For example, in the following command egress access logs are enabled for a channel, and ingress access logs are disabled:
 
 ```
 aws mediapackage configure-logs --id channel-name --egress-access-logs {}
@@ -67,9 +94,18 @@ aws mediapackage configure-logs --id channel-name --egress-access-logs {}
 
 This command has no return value\.
 
+**To disable access logging for a packaging group using the AWS CLI**  
+Use the `configure-logs` command to disable access logging\. If one or more of the access log parameters aren't declared with the `configure-logs` command, then the corresponding access logs are disabled\. For example, in the following command `configure-logs` doesn't include `--egress-access-logs` so egress logs are disabled:
+
+```
+aws mediapackage configure-logs --id package-group-name
+```
+
+This command has no return value\.
+
 ## Access log format<a name="access-log-format"></a>
 
-The access log files consist of a sequence of JSON\-formatted log records, where each log record represents one request\. The order of the fields within the log can vary\. The following is an example egress access log:
+The access log files consist of a sequence of JSON\-formatted log records, where each log record represents one request\. The order of the fields within the log can vary\. The following is an example channel egress access log:
 
 ```
 {
@@ -174,4 +210,20 @@ fields @timestamp, @message
 fields @timestamp, @message
 | filter channelId like 'my-channel'
 | stats count() by endpointId
+```
+
+**Example View status codes per asset\.**  
+
+```
+fields @timestamp, @message
+| filter assetArnlike 'my-asset-id'
+| stats count() by statusCode
+```
+
+**Example Get the P99 response times for a packaging configuration over time**  
+
+```
+fields @timestamp, @message
+| filter packagingConfigArn like 'my-dash-config'
+| stats pct(processingTime, 99) by bin(5m)
 ```

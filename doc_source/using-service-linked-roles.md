@@ -1,6 +1,6 @@
 # Using Service\-Linked Roles for MediaPackage<a name="using-service-linked-roles"></a>
 
-AWS Elemental MediaPackage uses AWS Identity and Access Management \(IAM\)[ service\-linked roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html#iam-term-service-linked-role)\. A service\-linked role is a unique type of IAM role that is linked directly to MediaPackage\. Service\-linked roles are predefined by MediaPackage and include all the permissions that the service requires to call other AWS services on your behalf\. 
+AWS Elemental MediaPackage uses AWS Identity and Access Management \(IAM\)[ service\-linked roles](IAM/latest/UserGuide/id_roles_terms-and-concepts.html#iam-term-service-linked-role)\. A service\-linked role is a unique type of IAM role that is linked directly to MediaPackage\. Service\-linked roles are predefined by MediaPackage and include all the permissions that the service requires to call other AWS services on your behalf\. 
 
 A service\-linked role makes setting up MediaPackage easier because you don’t have to manually add the necessary permissions\. MediaPackage defines the permissions of its service\-linked roles, and unless defined otherwise, only MediaPackage can assume its roles\. The defined permissions include the trust policy and the permissions policy, and that permissions policy cannot be attached to any other IAM entity\.
 
@@ -49,4 +49,4 @@ Use the IAM console, the AWS CLI, or the AWS API to delete the AWSServiceRoleFor
 
 ## Supported Regions for MediaPackage Service\-Linked Roles<a name="slr-regions"></a>
 
-MediaPackage supports using service\-linked roles in all of the regions where the service is available\. For more information, see [AWS Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html)\.
+MediaPackage supports using service\-linked roles in all of the regions where the service is available\. For more information, see [AWS Regions and Endpoints](general/latest/gr/rande.html)\.

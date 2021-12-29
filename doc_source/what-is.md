@@ -37,7 +37,7 @@ You can access MediaPackage through the console, AWS Command Line Interface \(AW
 + Console access: 
 
   ```
-  https://<region>.console.aws.amazon.com/mediapackage/home
+  https://console.aws.amazon.com/mediapackage/
   ```
 + AWS CLI endpoint: 
 

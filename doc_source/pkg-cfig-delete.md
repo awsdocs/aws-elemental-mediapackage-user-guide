@@ -2,7 +2,7 @@
 
 To remove a playback endpoint from an asset, delete the packaging configuration\.
 
-To delete a packaging configuration, you can use the AWS Elemental MediaPackage console, the AWS CLI, or the MediaPackage API\. For information about deleting a packaging configuration with the AWS CLI or MediaPackage API, see [Packaging\_configurations id](https://docs.aws.amazon.com/mediapackage-vod/latest/apireference/packaging_configurations-id.html) in the *AWS Elemental MediaPackage VOD API Reference*\.
+To delete a packaging configuration, you can use the AWS Elemental MediaPackage console, the AWS CLI, or the MediaPackage API\. For information about deleting a packaging configuration with the AWS CLI or MediaPackage API, see [Packaging\_configurations id](mediapackage-vod/latest/apireference/packaging_configurations-id.html) in the *AWS Elemental MediaPackage VOD API Reference*\.
 
 **To delete a packaging configuration \(console\)**
 
