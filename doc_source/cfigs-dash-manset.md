@@ -10,7 +10,7 @@ Specify the format of the manifest that AWS Elemental MediaPackage delivers from
 
    Choose from the following:
    + **None** – the output doesn't use a DASH profile
-   + **Hbbtv 1\.5** – the output is HbbTV\-compliant
+   + **Hbbtv 1\.5** – the output is compliant with HbbTV v1\.5\. For information about HbbTV v1\.5, see the [HbbTV specification website](https://www.hbbtv.org/resource-library/specifications/)\.
 
 1. \(Optional\) In **Manifest layout**, choose if you want AWS Elemental MediaPackage to serve a full or compact manifest in response to playback requests\.
    + If you choose **Full**, MediaPackage presents the `SegmentTemplate` and `SegmentTimeline` tags for every `Representation` in the manifest\.
@@ -32,5 +32,7 @@ This option isn't supported in combination with multi\-period DASH\.
    + **Trigger new periods on ads** – MediaPackage creates and inserts in the manifest multiple periods based on SCTE\-35 ad markers from the input content\. These periods separate portions of the content, such as setting boundaries between the main content and ad content\. For more information about how AWS Elemental MediaPackage configures periods in the manifest, see [DASH manifest options in AWS Elemental MediaPackageMulti\-period DASH in AWS Elemental MediaPackage](multi-period.md)\.
 **Important**  
 Multiple periods are required if you use AWS Elemental MediaTailor for personalized ad insertion in DASH content\. For more information about this service, see the [AWS Elemental MediaTailor User Guide](https://docs.aws.amazon.com/mediatailor/latest/ug/)\.
+
+1. For **Scte markers source**, specify the location of SCTE\-35 markers to use from your input HLS content\. Select **SEGMENTS** to use SCTE\-35 markers from input HLS media segments\. Select **MANIFEST** to use SCTE\-35 markers, formatted using SCTE\-35 Enhanced syntax \(\#EXT\-OATCLS\-SCTE35 tags\), from input HLS child manifests\. SCTE\-35 Elemental and SCTE\-35 Daterange syntaxes are not supported\.
 
 1. \(Optional\) For **Include encoder configuration in segments**, AWS Elemental MediaPackage places your encoder's Sequence Parameter Set \(SPS\), Picture Parameter Set \(PPS\), and Video Parameter Set \(VPS\) metadata in every video segment instead of in the init fragment\. This lets you use different SPS/PPS/VPS settings for your assets during content playback\.

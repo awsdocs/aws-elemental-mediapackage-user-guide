@@ -97,8 +97,6 @@ MediaPackage doesn't support resource\-based policies\.
 
 You can attach tags to MediaPackage resources or pass tags in a request to MediaPackage\. To control access based on tags, you provide tag information in the [condition element](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition.html) of a policy using the `mediapackage:ResourceTag/key-name`, `aws:RequestTag/key-name`, or `aws:TagKeys` condition keys\. For more information about tagging MediaPackage resources, see [Tagging AWS Elemental MediaPackage resources](tagging.md)\.
 
-To view an example identity\-based policy for limiting access to a resource based on the tags on that resource, see [Viewing MediaPackage Channels based on tags](security_iam_id-based-policy-examples.md#security_iam_id-based-policy-examples-view-channel-tags)\.
-
 ## MediaPackage IAM Roles<a name="security_iam_service-with-iam-roles"></a>
 
 An [IAM role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html) is an entity within your AWS account that has specific permissions\.

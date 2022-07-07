@@ -23,9 +23,11 @@ The following table describes quotas in AWS Elemental MediaPackage for live cont
 
 | Resource or operation | Quota | 
 | --- | --- | 
-| Input Stream Quotas | 30 streams per channel, and 10 tracks per stream | 
+| Ingest streams per Channel | 20 streams per channel, | 
 | Maximum Content Age for Time\-shifted Viewing | 336 hours \(14 days\) | 
-| Maximum Time\-shifted Manifest Length |   24 hours for all supported output formats: Apple HTTP Live Streaming \(HLS\), DASH\-ISO, Common Media Application Format \(CMAF\), and Microsoft Smooth Streaming \(MSS\)\.  | 
-| Maximum Live\-to\-VOD Manifest Length |   24 hours for all supported output formats: Apple HTTP Live Streaming \(HLS\), DASH\-ISO, Common Media Application Format \(CMAF\), and Microsoft Smooth Streaming \(MSS\)\.  | 
-| Request Rates per Channel |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/live-quotas.html)  | 
+| Maximum Time\-shifted Manifest Length |  24 hours for all supported output formats  | 
+| Maximum Live\-to\-VOD Manifest Length |  24 hours for all supported output formats  | 
+| Request Rates per Channel | Input: 50 requests per second  | 
+| Request Rates per Endpoint |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/live-quotas.html)  The per Endpoint origination request rate quotas are indicative only and based on typical traffic patterns when using a properly configured CDN\. The request rate quotas are applicable for live events, linear channels, and time\-shifted viewing\. The request rate quotas may be lower under certain conditions like misconfigured CDNs or players generating abnormal levels of origin requests with unique HTTP headers values, or unique query strings values appended to the playback URLs\.  | 
 | REST API Requests |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/live-quotas.html)  | 
+| Tracks per Ingest Stream | 10The maximum number of tracks \(audio, video, subtitle, etc\.\) per stream that you can ingest\. | 

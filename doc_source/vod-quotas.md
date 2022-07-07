@@ -22,6 +22,7 @@ The following table describes quotas within AWS Elemental MediaPackage for VOD c
 
 | Resource or operation | Quota | 
 | --- | --- | 
-| Input Stream Quotas | 30 streams per asset, and 10 tracks per stream | 
-| Request Rates per Asset |  200 output requests per second  | 
+| Ingest streams per Asset | 20 | 
+| Request Rates per Asset |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/vod-quotas.html) The per Asset origination request rate quotas are indicative only and based on typical traffic patterns when using a properly configured CDN\. The request rate quotas may be lower under certain conditions like misconfigured CDNs or players generating abnormal levels of origin requests with unique HTTP headers values, or unique query strings values appended to the playback URLs\.  | 
 | REST API Requests |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/vod-quotas.html)  | 
+| Tracks per Ingest Stream | 10The maximum number of tracks \(audio, video, subtitle, etc\.\) per stream that you can ingest\. | 

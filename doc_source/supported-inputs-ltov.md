@@ -9,22 +9,23 @@ These are the input types that AWS Elemental MediaPackage supports for live\-to\
 
 | MediaPackage input type | Use case | 
 | --- | --- | 
-| HLS | Extract a portion of a live HLS endpoint in MediaPackage and save it as a live\-to\-VOD asset\.Additional requirements:[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-ltov.html) | 
+| HLS | Extract a portion of a live HLS or DASH endpoint in MediaPackage and save it as a live\-to\-VOD asset\.Additional requirements:[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-ltov.html) | 
 
 ## Supported input codecs<a name="supported-inputs-codecs-ltov"></a>
 
 These are the video, audio, and subtitles codecs that MediaPackage supports for live\-to\-VOD assets\.
 
 
-| Media container | Video codecs | Audio codecs | Subtitles format | 
+| Media container | Video codecs | Audio codecs | Subtitles/captions format | 
 | --- | --- | --- | --- | 
-|  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-ltov.html)  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-ltov.html)  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-ltov.html)  | WebVTT | 
+|  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-ltov.html)  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-ltov.html)  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-ltov.html)  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-ltov.html)  | 
 
 ## Supported output codecs<a name="supported-outputs-codecs-ltov"></a>
 
 These are the video, audio, and subtitles codecs that MediaPackage supports when saving a live\-to\-VOD asset to an Amazon S3 bucket\.
 
 
-| Endpoint type | Manifest format | Media container | Video codecs | Audio codecs | Subtitles format | 
+| Endpoint type | Manifest format | Media container | Video codecs | Audio codecs | Subtitles/captions format | 
 | --- | --- | --- | --- | --- | --- | 
-| Apple HLS | HLS |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-ltov.html)  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-ltov.html)  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-ltov.html)  | WebVTT | 
+| Apple HLS | HLS |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-ltov.html)  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-ltov.html)  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-ltov.html)  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-ltov.html)  | 
+| DASH\-ISO | MPEG\-DASH | MP4 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-ltov.html)  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-ltov.html)  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-ltov.html)  | 

@@ -5,6 +5,7 @@ The following table describes important changes in each release of the *AWS Elem
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Manifest update time](monitoring-manifest-last-updated.md) | MediaPackage playback responses now include custom headers that specify when MediaPackage last updated the manifest\. | January 3, 2022 | 
 | [Add information about image\-based trick\-play for HLS live](trick-play.md) | MediaPackage now supports image\-based trick\-play for HLS live\. | November 24, 2021 | 
 | [Added support for `includeAudio` parameter](supported-inputs-vod-smil.md) | MediaPackage now supports `includeAudio` in \.smil manifests | November 1, 2021 | 
 | [New DVB subtitle option](endpoints-hls-packager.md) | MediaPackage can now passthrough DVB subtitles into packaging configuration outputs\. | October 20, 2021 | 

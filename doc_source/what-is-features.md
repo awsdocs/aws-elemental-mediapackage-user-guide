@@ -10,8 +10,8 @@ MediaPackage accepts these codecs from the input source and passes them through 
 MediaPackage does not support audio\-only inputs\. The stream configuration from the encoder must include at least one video track\.
 
 **Captions**  
-Your embedded source captions can be CEA\-608 captions, CEA\-708 captions, or both CEA\-608 and CEA\-708\.  
- MediaPackage currently doesn't support manifest signaling for closed captions\. The CEA\-608 or CEA\-708 stream will be present in the video\. 
+Your embedded source captions can be CEA\-608 captions, CEA\-708 captions, or both CEA\-608 and CEA\-708\. MediaPackage will pass through these captions in the media segments on HLS, CMAF and DASH endpoints, and generate the appropriate manifest signaling\.  
+Your input HLS playlist must include captions signaling tags\. If not present, MediaPackage will not be able to generate the corresponding output manifest signaling\.
 
 **CDN Authorization**  
 MediaPackage supports content delivery network \(CDN\) authorization\. For information, see [CDN authorization in AWS Elemental MediaPackage](cdn-auth.md)\.
@@ -20,7 +20,7 @@ MediaPackage supports content delivery network \(CDN\) authorization\. For infor
 MediaPackage supports content protection through digital rights management \(DRM\)\. For information, see [Content encryption and DRM in AWS Elemental MediaPackage](using-encryption.md)\.
 
 **HLS Rendition Groups**  
-MediaPackage supports rendition groups for incoming and outgoing HLS content\. For information about output redundancy groups, see [Rendition groups reference in AWS Elemental MediaPackage](rendition-groups.md)\.
+MediaPackage supports rendition groups for incoming and outgoing HLS content\. For information about output rendition groups, see [Rendition groups reference in AWS Elemental MediaPackage](rendition-groups.md)\.
 
 **Live to VOD**  
 Use the harvest job resource to extract a live\-to\-VOD \(video on demand\) asset from a live content stream\. MediaPackage creates the asset and stores it in an Amazon S3 bucket\. You can use the VOD functionality in MediaPackage to deliver the asset to end users\.
@@ -34,6 +34,7 @@ MediaPackage supports input WebVTT text\-based subtitles\. MediaPackage translat
 + For HLS and CMAF: WebVTT is passed through
 + For DASH: subtitles are translated to EBU\-TT
 + For Microsoft Smooth Streaming: subtitles are translated to DFXP
+ MediaPackage supports accessibility signaling in HLS, CMAF and DASH manifests only for VOD assets created from an HLS source\. The \#EXT\-X\-MEDIA line in the HLS source playlist must include a `public.accessibility.describes-music-and-sound` and/or `public.accessibility.transcribes-spoken-dialog` CHARACTERISTICS attribute\.
 
 **Time\-shift Viewing**  
 Time\-shift viewing is available with only live workflows in MediaPackage\.  

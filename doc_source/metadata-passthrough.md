@@ -39,7 +39,7 @@ KLV is a data encoding standard for including synchronized metadata in streams\.
 
 **Supported MediaPackage endpoint types**
 
-MediaPackage supports ID3 metadata passthrough for the following endpoint types:
+MediaPackage supports KLV metadata passthrough for the following endpoint types:
 + Live DASH endpoints
 
 **Metadata carriage**

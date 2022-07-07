@@ -30,6 +30,9 @@ For HLS output, many playback devices start playback at the current time \("now"
    + If no parameters are specified, a standard manifest is generated starting "now" with no end time\.
    + If an end parameter is specified but no start, the manifest is generated in the same way as when no parameters are specified\. The manifest starts "now" and has no end time\.
 
+**Important**  
+ When using time\-shifted viewing, we recommend using consistent playback windows across player sessions, rather than generating a unique start or end time for each viewer\. This yields better caching at the CDN, and will avoid running into potential throttling related to those requests, on the MediaPackage level\. 
+
 ## Rules for start and end parameters<a name="start-and-end-parameters-rules"></a>
 
 Start and end parameters denote the beginning and end of a time\-shifted manifest\. The playback device can append parameters to the end of a manifest request or include the parameters within the request\. 

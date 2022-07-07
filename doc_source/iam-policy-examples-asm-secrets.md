@@ -50,7 +50,7 @@ The following IAM policy allows read access to all secrets that you create in a 
                     "secretsmanager:ListSecretVersionIds"
                   ],
                   "Resource": [
-                    "arn:aws:secretsmanager:us-west-2:111122223333:secret:*",
+                    "arn:aws:secretsmanager:us-west-2:111122223333:secret:*"
                   ]
                 }
               ]

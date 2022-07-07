@@ -12,7 +12,9 @@ If you enable **Number with duration** in **Segment template format**, you can't
 
    Choose from the following:
    + **None** – the output doesn't use a DASH profile
-   + **Hbbtv 1\.5** – the output is HbbTV\-compliant
+   + **Hbbtv 1\.5** – the output is compliant with HbbTV v1\.5\. For information about HbbTV v1\.5, see the [HbbTV specification website](https://www.hbbtv.org/resource-library/specifications/)\.
+   + **Hybridcast** – the output is compliant with Hybridcast\. For more information about Hybridcast, see the [IPTV Forum Japan Hybridcast specification](https://www.iptvforum.jp/en/hybridcast/specification.html)\. If you enable the Hybridcast profile on your packaging configuration, you can't use DASH [**Period triggers**](#period-triggers)\.
+   + **DVB\-DASH 2014** – the output is compliant with DVB\-DASH 2014\. For more information about DVB\-DASH 2014, see the [DVB\-DASH specification](https://www.etsi.org/deliver/etsi_ts/103200_103299/103285/01.01.01_60/ts_103285v010101p.pdf)\.
 
 1. \(Optional\) In **Manifest layout**, choose if you want AWS Elemental MediaPackage to serve a full or compact manifest in response to playback requests\.
    + If you choose **Full**, MediaPackage presents the `SegmentTemplate` and `SegmentTimeline` tags for every `Representation` in the manifest\.
@@ -37,11 +39,11 @@ This option isn't supported in combination with multi\-period DASH\.
 
 1. \(Optional\) In **UTC timing**, select the method that the player uses to synchronize to coordinated universal time \(UTC\) wall clock time\. This enables the player and MediaPackage to run on the same UTC wall clock time\. This is a requirement, otherwise playback timing or synchronization issues can occur\.
 
-   The options are `HTTP-HEAD`, `HTTP-ISO`, and `NONE`\. This value will be set as the `@schemeIdURI` attribute for the `UTCTiming` element in the outbound Media Presentation Description\. For information about `UTCTiming`, see [DASH](https://www.iso.org/standard/79884.html), UTC Timing Descriptor, 5\.8\.4\.11\.
+   The options are `HTTP-HEAD`, `HTTP-ISO`, `HTTP-XSDATE`, and `NONE`\. This value will be set as the `@schemeIdURI` attribute for the `UTCTiming` element in the outbound Media Presentation Description\. For information about `UTCTiming`, see [DASH](https://www.iso.org/standard/79884.html), UTC Timing Descriptor, 5\.8\.4\.11\.
 
 1. \(Optional\) In **UTC timing URI**, specify a URI to use for UTC synchronization\. This is the URI used to fetch the timing data according to the scheme defined by **UTC timing**\. This value is only valid if **UTC timing** is not `NONE`\. This value will be set as the `@value` attribute for the `UTCTiming` element\. For information about `@value`, see [DASH](https://www.iso.org/standard/79884.html), DASH UTC Timing Schemes, 5\.8\.5\.7\.
 
-1. For **Period triggers**, choose how AWS Elemental MediaPackage creates media presentation description \(MPD\) periods in the DASH output manifest\. Choose from the following:
+1. For  **Period triggers**, choose how AWS Elemental MediaPackage creates media presentation description \(MPD\) periods in the DASH output manifest\. Choose from the following:
    + **None** – MediaPackage doesn't create additional periods\. It formats the manifest as a single period and doesn't include SCTE\-35 markers in the segments\.
    + **Trigger new periods on ads** – MediaPackage creates and inserts in the manifest multiple periods based on SCTE\-35 ad markers from the input content\. These periods separate portions of the content, such as setting boundaries between the main content and ad content\. For more information about how AWS Elemental MediaPackage configures periods in the manifest, see [DASH manifest options in AWS Elemental MediaPackageMulti\-period DASH in AWS Elemental MediaPackage](multi-period.md)\.
 **Important**  

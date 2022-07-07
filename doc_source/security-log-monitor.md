@@ -1,6 +1,6 @@
 # Logging and monitoring in AWS Elemental MediaPackage<a name="security-log-monitor"></a>
 
-This section provides an overview of the options for logging and monitoring in AWS Elemental MediaPackage for security purposes\. For more information about logging and monitoring in MediaPackage see [Monitoring AWS Elemental MediaPackage](monitoring.md)\.
+This section provides an overview of the options for logging and monitoring in AWS Elemental MediaPackage for security purposes\. For more information about logging and monitoring in MediaPackage see [Logging and monitoring in AWS Elemental MediaPackage](monitoring.md)\.
 
 Monitoring is an important part of maintaining the reliability, availability, and performance of AWS Elemental MediaPackage and your AWS solutions\. You should collect monitoring data from all parts of your AWS solution so that you can more easily debug a multi\-point failure if one occurs\. AWS provides several tools for monitoring your MediaPackage resources and responding to potential incidents\.
 

@@ -8,7 +8,6 @@ To learn how to create an IAM identity\-based policy using these example JSON po
 + [Policy best practices](#security_iam_service-with-iam-policy-best-practices)
 + [Using the MediaPackage Console](#security_iam_id-based-policy-examples-console)
 + [Allow users to view their own permissions](#security_iam_id-based-policy-examples-view-own-permissions)
-+ [Viewing MediaPackage Channels based on tags](#security_iam_id-based-policy-examples-view-channel-tags)
 
 ## Policy best practices<a name="security_iam_service-with-iam-policy-best-practices"></a>
 
@@ -68,39 +67,3 @@ This example shows how you might create a policy that allows IAM users to view t
     ]
 }
 ```
-
-## Viewing MediaPackage Channels based on tags<a name="security_iam_id-based-policy-examples-view-channel-tags"></a>
-
-You can use conditions in your identity\-based policy to control access to MediaPackage resources based on tags\. This example shows how you might create a policy that allows viewing a channel\. However, permission is granted only if the channel tag `Owner` has the value of that user's user name\. This policy also grants the permissions necessary to complete this action on the console\.
-
-```
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "VisualEditor0",
-            "Effect": "Allow",
-            "Action": "mediapackage:DescribeChannel",
-            "Resource": "arn:aws:mediapackage:*:*:channels/*",
-            "Condition": {
-                "StringEquals": {
-                    "aws:ResourceTag/Owner": "${aws:username}"
-                }
-            }
-        },
-        {
-            "Sid": "VisualEditor1",
-            "Effect": "Allow",
-            "Action": "mediapackage:ListChannels",
-            "Resource": "*",
-            "Condition": {
-                "StringEquals": {
-                    "aws:ResourceTag/Owner": "${aws:username}"
-                }
-            }
-        }
-    ]
-}
-```
-
-You can attach this policy to the IAM users in your account\. If a user named `richard-roe` attempts to view a MediaPackage channel, the channel must be tagged `Owner=richard-roe` or `owner=richard-roe`\. Otherwise he is denied access\. The condition tag key `Owner` matches both `Owner` and `owner` because condition key names are not case\-sensitive\. For more information, see [IAM JSON policy elements: Condition](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition.html) in the *IAM User Guide*\.
