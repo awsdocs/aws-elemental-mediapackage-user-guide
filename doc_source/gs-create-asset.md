@@ -13,11 +13,11 @@ AWS Elemental MediaPackage does not require that you supply any customer data\. 
 
 1. On the AWS Elemental MediaPackage console, go to the **Assets** page, and then choose **Ingest asset**\.
 
-1. For **S3 bucket name**, select the bucket where your source content is stored\.
+1. For **Amazon S3 bucket name**, select the bucket where your source content is stored\.
 
 1. For **IAM role**, choose **Use existing role** and select the IAM role that allows AWS Elemental MediaPackage to read from Amazon S3\.
 
-1. For **Filename**, enter the full path to either the \.smil manifest \(MP4\) or the \.m3u8 parent playlist \(HLS\) within your Amazon S3 bucket, including the name of the source content\. You don't need to enter the bucket name because you chose it in **S3 bucket name** field\. For example, if your content is called` lion_movie.m3u8` and is in a subdirectory called `thursday_night` in a bucket called `movies`, you would enter the following in the **Filename** field:
+1. For **Filename**, enter the full path to either the \.smil manifest \(MP4\) or the \.m3u8 parent playlist \(HLS\) within your Amazon S3 bucket, including the name of the source content\. You don't need to enter the bucket name because you chose it in **Amazon S3 bucket name** field\. For example, if your content is called` lion_movie.m3u8` and is in a subdirectory called `thursday_night` in a bucket called `movies`, you would enter the following in the **Filename** field:
 
    ```
    thursday_night/lion_movie.m3u8

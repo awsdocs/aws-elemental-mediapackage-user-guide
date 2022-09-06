@@ -4,17 +4,18 @@
 *****Copyright &copy; Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
-Amazon's trademarks and trade dress may not be used in 
-     connection with any product or service that is not Amazon's, 
-     in any manner that is likely to cause confusion among customers, 
-     or in any manner that disparages or discredits Amazon. All other 
-     trademarks not owned by Amazon are the property of their respective
-     owners, who may or may not be affiliated with, connected to, or 
-     sponsored by Amazon.
+Amazon's trademarks and trade dress may not be used in
+connection with any product or service that is not Amazon's,
+in any manner that is likely to cause confusion among customers,
+or in any manner that disparages or discredits Amazon. All other
+trademarks not owned by Amazon are the property of their respective
+owners, who may or may not be affiliated with, connected to, or
+sponsored by Amazon.
 
 -----
 ## Contents
 + [What is AWS Elemental MediaPackage?](what-is.md)
+   + [Are you a first-time user of MediaPackage?](first-time-user.md)
    + [Concepts and terminology](what-is-terms.md)
    + [Supported inputs and outputs](supported-inputs.md)
       + [Live supported codecs and input types](supported-inputs-live.md)
@@ -27,7 +28,12 @@ Amazon's trademarks and trade dress may not be used in
          + [Live input redundancy AWS Elemental MediaPackage processing flow](what-is-flow-ir.md)
       + [VOD Content Processing](what-is-flow-vod.md)
       + [Live and VOD manifest reference](what-is-manifest.md)
+         + [Manifest properties](manifest-properties.md)
    + [Features of AWS Elemental MediaPackage](what-is-features.md)
+   + [Related services](related-services.md)
+   + [Accessing MediaPackage](accessing-emp.md)
+   + [Pricing for MediaPackage](pricing-for-emp.md)
+   + [Regions for MediaPackage](regions-and-endpoints.md)
 + [Setting up AWS Elemental MediaPackage](setting-up.md)
    + [Signing up for AWS](setting-up-aws-sign-up.md)
    + [Creating an admin IAM user](setting-up-create-iam-user.md)
@@ -55,7 +61,7 @@ Amazon's trademarks and trade dress may not be used in
       + [Step 1: Access AWS Elemental MediaPackage](gs-access-emp-ltov.md)
       + [Step 2: Ingest live content](gs-ingest-live.md)
       + [Step 3: Extract a VOD asset](gs-create-hj-ltov.md)
-      + [Step 4: (Optional) output VOD content](gs-output-vod.md)
+      + [(Optional) step 4: output VOD content](gs-output-vod.md)
       + [(Optional) step 5: Monitor AWS Elemental MediaPackage activity](gs-monitor-emp-ltov.md)
       + [Step 6: Clean up](gs-cleanup-ltov.md)
    + [Getting started with VOD content delivery in AWS Elemental MediaPackage](getting-started-vod.md)
@@ -83,25 +89,25 @@ Amazon's trademarks and trade dress may not be used in
             + [Encryption fields](endpoints-hls-encryption.md)
             + [Access control fields](endpoints-hls-access-control.md)
             + [Streams to include fields](endpoints-hls-include-streams.md)
-         + [Creating a Microsoft smooth streaming endpoint](endpoints-smooth.md)
-            + [New endpoint fields](endpoints-smooth-new.md)
-            + [Packager settings fields](endpoints-smooth-packager.md)
-            + [Encryption fields](endpoints-smooth-encryption.md)
-            + [Access control fields](endpoints-smooth-access-control.md)
-            + [Streams to include fields](endpoints-smooth-include-streams.md)
-         + [Creating a common media application format (CMAF) endpoint](endpoints-cmaf.md)
-            + [New endpoint fields](endpoints-cmaf-new.md)
-            + [Packager settings fields](endpoints-cmaf-packager.md)
-            + [HLS manifest fields](endpoints-cmaf-manifest.md)
-            + [Encryption fields](endpoints-cmaf-encryption.md)
-            + [Access control fields](endpoints-cmaf-access-control.md)
-            + [Streams to include fields](endpoints-cmaf-include-streams.md)
          + [Creating a DASH endpoint](endpoints-dash.md)
             + [New endpoint fields](endpoints-dash-new.md)
             + [Packager settings fields](endpoints-dash-packager.md)
             + [Encryption fields](endpoints-dash-encryption.md)
             + [Access control fields](endpoints-dash-access-control.md)
             + [Streams to include fields](endpoints-dash-include-streams.md)
+         + [Creating a Microsoft smooth streaming endpoint](endpoints-smooth.md)
+            + [New endpoint fields](endpoints-smooth-new.md)
+            + [Packager settings fields](endpoints-smooth-packager.md)
+            + [Encryption fields](endpoints-smooth-encryption.md)
+            + [Access control fields](endpoints-smooth-access-control.md)
+            + [Streams to include fields](endpoints-smooth-include-streams.md)
+         + [Creating a CMAF endpoint](endpoints-cmaf.md)
+            + [New endpoint fields](endpoints-cmaf-new.md)
+            + [Packager settings fields](endpoints-cmaf-packager.md)
+            + [HLS manifest fields](endpoints-cmaf-manifest.md)
+            + [Encryption fields](endpoints-cmaf-encryption.md)
+            + [Access control fields](endpoints-cmaf-access-control.md)
+            + [Streams to include fields](endpoints-cmaf-include-streams.md)
       + [Viewing all endpoints associated with a channel](endpoints-view-all.md)
       + [Viewing a single endpoint](endpoints-view-one.md)
       + [Editing an endpoint](endpoints-edit.md)
@@ -131,7 +137,7 @@ Amazon's trademarks and trade dress may not be used in
             + [Manifest settings fields](cfigs-mss-manset.md)
             + [Stream selection fields](cfigs-mss-include-streams.md)
             + [Encryption fields](cfigs-mss-encryption.md)
-         + [Creating a Common Media Application Format (CMAF) packaging configuration](pkg-cfig-create-cmaf.md)
+         + [Creating a CMAF packaging configuration](pkg-cfig-create-cmaf.md)
             + [General settings fields](cfigs-cmaf-new.md)
             + [Manifest settings fields](cfigs-cmaf-manset.md)
             + [Stream selection fields](cfigs-cmaf-include-streams.md)
@@ -163,10 +169,11 @@ Amazon's trademarks and trade dress may not be used in
       + [Setting up CDN authorization](cdn-auth-setup.md)
       + [Rotating the CDN header value](cdn-auth-rotate.md)
    + [Content encryption and DRM in AWS Elemental MediaPackage](using-encryption.md)
-      + [Choosing the right SPEKE version](encryption-choosing-speke-version.md)
+      + [Choosing the right SPEKE Version](encryption-choosing-speke-version.md)
       + [Deploying SPEKE](encryption-deploying-speke.md)
       + [Preparing and managing certificates for use with content keys](drm-content-key-encryption.md)
       + [Understanding key rotation behavior](drm-content-key-rotation.md)
+      + [SPEKE Version 2.0 presets](drm-content-speke-v2-presets.md)
    + [DASH manifest options in AWS Elemental MediaPackage](dash-trtmts.md)
       + [Multi-period DASH in AWS Elemental MediaPackage](multi-period.md)
       + [Compacted DASH manifests](compacted.md)

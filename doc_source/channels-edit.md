@@ -19,8 +19,8 @@ When you're editing a channel, do not put sensitive identifying information like
 
 1. On the **Channels** page, choose the name of the channel that you want to edit\.
 
-1. On the channel's details page, choose **Edit channel**\.
+1. On the channel's details page, choose **Edit**\.
 
 1. Make the changes that you want\.
 
-1. Choose **Save changes**\.
+1. Choose **Update**\.

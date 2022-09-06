@@ -13,7 +13,7 @@ MediaPackage supports the following trick\-play types:
 | --- | --- | --- | 
 |  Apple HLS  |  √  |  √  | 
 |  CMAF Apple HLS  |  √  |  √  | 
-|  DASH  |    |  √  | 
+|  DASH  |  √  |  √  | 
 
 **Supported trick\-play types for VOD workflows**
 

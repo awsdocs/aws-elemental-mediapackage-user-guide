@@ -10,7 +10,7 @@ MediaPackage does not require that you supply any customer data\. There are no f
 
 **To create a channel**
 
-1. On the MediaPackage **Channels** page, choose **Create channel**\.
+1. On the MediaPackage **Channels** page, choose **Create**\.
 
 1. For **ID**, enter a name that describes the channel, such as **channelHLS1**\. The ID is the primary identifier for the channel, and must be unique for your account in the AWS Region\. Supported characters are letters, numbers, underscore \(\_\), and dash \(\-\)\. You can't use spaces in the ID\.
 
@@ -32,13 +32,13 @@ AWS Elemental MediaPackage does not require that you supply any customer data\. 
 
 **To create an endpoint**
 
-1. On the **Channels page**, choose the channel that the endpoint will be associated with\.
+1. On the **Channels** page, choose the channel that the endpoint will be associated with\.
 
-1. On the details page for the channel, choose either **Add and edit endpoint** or **Add endpoints** if there are no existing endpoints\.
+1. On the details page for the channel, under **Origin endpoints** choose either the endpoint ID and choose **Manage endpoints** or, if there are no existing endpoints, choose **Manage endpoints**\.
 
 1. For **ID**, enter a name that describes the endpoint, such as **HLSendpoint1**\. The ID is the primary identifier for the endpoint, and must be unique for your account in the AWS Region\. Supported characters are letters, numbers, underscore \(\_\), and dash \(\-\)\. You can't use spaces in the ID\.
 
-1. Keep the defaults for the remaining fields, and then choose **Save endpoints**\.
+1. Keep the defaults for the remaining fields, and then choose **Save**\.
 
    MediaPackage displays the channel's details page, including the endpoint that you just created\.
 

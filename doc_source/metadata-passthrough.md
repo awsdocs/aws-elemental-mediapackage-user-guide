@@ -44,7 +44,7 @@ MediaPackage supports KLV metadata passthrough for the following endpoint types:
 
 **Metadata carriage**
 
-Metadata is carried in the Event Message box version 1, as described in the *[MISB ST 1910\.1](https://gwg.nga.mil/misb/docs/standards/ST1910.1.pdf) specification*\. For synchronous KLV tracks, Event Message boxes include a `scheme_id_uri` field set to `urn:misb:KLV:bin:1910.1` and a `value` field set to `KLVx:01FC`\. For asynchronous KLV tracks, the value field is set to `KLVx:01BD` \. In both cases, `x` is the index of the track in the stream\.
+Metadata is carried in the Event Message box version 1, as described in the *[MISB ST 1910\.1](https://nsgreg.nga.mil/doc/view?i=5097) specification*\. For synchronous KLV tracks, Event Message boxes include a `scheme_id_uri` field set to `urn:misb:KLV:bin:1910.1` and a `value` field set to `KLVx:01FC`\. For asynchronous KLV tracks, the value field is set to `KLVx:01BD`\. In both cases, `x` is the index of the track in the stream\.
 
 **Metadata signaling**
 

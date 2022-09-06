@@ -16,6 +16,6 @@ The following sections are a guided tutorial for becoming familiar with these th
 + [Step 1: Access AWS Elemental MediaPackage](gs-access-emp-ltov.md)
 + [Step 2: Ingest live content](gs-ingest-live.md)
 + [Step 3: Extract a VOD asset](gs-create-hj-ltov.md)
-+ [Step 4: \(Optional\) output VOD content](gs-output-vod.md)
++ [\(Optional\) step 4: output VOD content](gs-output-vod.md)
 + [\(Optional\) step 5: Monitor AWS Elemental MediaPackage activity](gs-monitor-emp-ltov.md)
 + [Step 6: Clean up](gs-cleanup-ltov.md)

@@ -14,7 +14,7 @@ When you're creating a packaging group, don't put sensitive identifying informat
 
 1. In the navigation pane, under **Video on demand**, choose **Packaging groups**\.
 
-1. On the **Packaging groups** page, choose **Create**\.
+1. On the **Packaging groups** page, choose **Create group**\.
 
 1. In the **Creating packaging group** dialog box, do the following:
 

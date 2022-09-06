@@ -6,7 +6,7 @@ MediaPackage does not require that you supply any customer data\. There are no f
 
 **To create a channel**
 
-1. On the MediaPackage **Channels** page, choose **Create channel**\.
+1. On the MediaPackage **Channels** page, choose **Create**\.
 
 1. For **ID**, enter a name that describes the channel, such as **channelHLS1**\. The ID is the primary identifier for the channel, and must be unique for your account in the AWS Region\. Supported characters are letters, numbers, underscore \(\_\), and dash \(\-\)\. You can't use spaces in the ID\.
 

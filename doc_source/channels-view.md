@@ -18,6 +18,6 @@ You can use the AWS Elemental MediaPackage console, the AWS CLI, or the MediaPac
 
    AWS Elemental MediaPackage displays important information such as the values for **Input URL** and the WebDAV **Username** and **Password** for each input URL\. Provide this information for the upstream encoder stream destination settings\. If you're using input redundancy, provide the information for both input URLs\. If you're sending only one stream to the channel, you can provide the information for either input URL\. For information about how input redundancy works, see [Live input redundancy AWS Elemental MediaPackage processing flow](what-is-flow-ir.md)\.
 **Note**  
-All channels have two input URLs\. For channels that existed before input redundancy, AWS Elemental MediaPackage created two new input URLs\. You can use either the old or new URLs for inputs to the channel\.
+All channels have two input URLs\. For channels that existed before input redundancy, AWS Elemental MediaPackage created two new input URLs\. You can use either the old or new URLs for inputs to the channel\. The parent manifest should be named **channel\.m3u8**\.
 
    If you created an Amazon CloudFront distribution from the AWS Elemental MediaPackage console, you will also see the high\-level distribution information \(such as status and ID\) from the channel\. When you add an endpoint in MediaPackage, an origin is also added to the distribution, and you will see the CloudFront CDN URL from the channel's details page as well\.

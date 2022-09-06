@@ -1,21 +1,21 @@
-# Choosing the right SPEKE version<a name="encryption-choosing-speke-version"></a>
+# Choosing the right SPEKE Version<a name="encryption-choosing-speke-version"></a>
 
-[SPEKE v1](https://docs.aws.amazon.com/speke/latest/documentation/the-speke-api.html) supports the use of a single encryption key for all audio and video tracks, and uses [CPIX v2\.0](https://dashif.org/docs/DASH-IF-CPIX-v2-0.pdf)\. [SPEKE v2](https://docs.aws.amazon.com/speke/latest/documentation/the-speke-api-v2.html) supports the use of multiple, distinct encryption keys for audio and video tracks, and uses [CPIX v2\.3](https://dashif.org/docs/CPIX2.3/Cpix.html)\.
+[SPEKE Version 1](https://docs.aws.amazon.com/speke/latest/documentation/the-speke-api.html) supports the use of a single encryption key for all audio and video tracks, and uses [CPIX Version 2\.0](https://dashif.org/docs/DASH-IF-CPIX-v2-0.pdf)\. For audio and video tracks, [SPEKE Version 2\.0](https://docs.aws.amazon.com/speke/latest/documentation/the-speke-api-v2.html) supports the use of multiple, distinct encryption keys and uses [CPIX Version 2\.3](https://dashif.org/docs/CPIX2.3/Cpix.html)\. For more information about SPEKE Version 2\.0 encryption configurations, see [SPEKE Version 2\.0 presets](drm-content-speke-v2-presets.md)\.
 
-If multi\-key encryption or CPIX v2\.3 are mandatory requirements for your content delivery, then SPEKE v2 is likely the right choice for you\. However, SPEKE v2 support rollout is progressive across endpoint types in MediaPackage\. This means that some live options like key rotation aren't available yet\.Take these constraints in consideration when crafting your SPEKE integration strategy\. Reach out to your AWS account team to learn more about the SPEKE v2 roadmap for MediaPackage\.
+If multiple key encryption, or Content Protection Information Exchange \(CPIX\) Version 2\.3, are mandatory requirements for your content delivery, then SPEKE Version 2\.0 is a good choice\. However, SPEKE Version 2\.0 support is progressive across endpoint types in MediaPackage\. This means that some live options, like key rotation, aren't available yet\. Take these constraints in consideration when crafting your SPEKE integration strategy\. To learn more about the SPEKE Version 2\.0 roadmap for MediaPackage, contact your AWS account team\.
 
 **Supported protocols and DRM platforms**
 
-The following tables list the different protocols and DRM platforms that SPEKE v1 and SPEKE v2 support:
+The following tables list the different protocols and digital rights management \(DRM\) platforms that SPEKE Version 1\.0 and SPEKE Version 2\.0 support\.
 
 
 |  |  |  |  |  | 
 | --- |--- |--- |--- |--- |
-| SPEKE v1 – Support matrix for protocol and DRM system | Microsoft PlayReady | Google Widevine | Apple FairPlay | AES\-128 | 
+| SPEKE Version 1\.0 – Support matrix for protocol and DRM system | Microsoft PlayReady | Google Widevine | Apple FairPlay | AES\-128 | 
 | Live | 
-| Apple HLS |   |   |  √   with key rotation  |  √   with key rotation  | 
-| CMAF Apple HLS |   |  √   with key rotation  |  √   with key rotation  |   | 
-| DASH |  √   with key rotation  |  √   with key rotation  |   |   | 
+| Apple HLS |   |   |  √  Has key rotation  |  √   Has key rotation  | 
+| CMAF Apple HLS |   |  √   Has key rotation  |  √   Has key rotation  |   | 
+| DASH |  √   Has key rotation  |  √   Has key rotation  |   |   | 
 | Microsoft Smooth | √ |   |   |   | 
 | VOD | 
 | Apple HLS |   |   | √ | √ | 
@@ -24,9 +24,9 @@ The following tables list the different protocols and DRM platforms that SPEKE v
 | Microsoft Smooth | √ |   |   |   | 
 
 
-|  |  |  |  | 
-| --- |--- |--- |--- |
-| SPEKE v2 – Support matrix for protocol and DRM system | Microsoft PlayReady | Google Widevine | Apple FairPlay | 
+|  |  |  |  |  | 
+| --- |--- |--- |--- |--- |
+| SPEKE Version 2\.0 – Support matrix for protocol and DRM system | Microsoft PlayReady | Google Widevine | Apple FairPlay | Irdeto Content Protection | 
 | Live | 
-| CMAF Apple HLS | √ | √ | √ | 
-| DASH | √  | √  |   | 
+| CMAF Apple HLS | √ | √ | √ |   | 
+| DASH | √ | √ |   | √ | 

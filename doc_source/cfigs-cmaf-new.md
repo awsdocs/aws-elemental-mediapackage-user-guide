@@ -6,4 +6,4 @@ Provide general settings that apply to the entire packaging configuration\.
 
 1. For **Package type**, choose **Common Media Application Format \(CMAF\)**\.
 
-1. \(Optional\) For **Segment duration**, enter the duration \(in seconds\) of each segment\. If the value that you enter is different from the input segment size, AWS Elemental MediaPackage rounds segments to the nearest multiple of the input segment duration\.
+1. \(Optional\) For **Segment duration**, enter the duration \(in seconds\) of each segment\. Enter a value equal to, or a multiple of, the input segment duration\. If the value that you enter is different from the input segment duration, AWS Elemental MediaPackage rounds segments to the nearest multiple of the input segment duration\.

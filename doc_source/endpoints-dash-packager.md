@@ -1,12 +1,12 @@
 # Packager settings fields<a name="endpoints-dash-packager"></a>
 
-1. For **Type**, choose **DASH\-ISO**\.
+1. For **Packaging type**, choose **DASH\-ISO**\.
 
-1. \(Optional\) For **Segment duration**, type the duration \(in seconds\) of each segment\. If the value that you type here is different from the input segment size, AWS Elemental MediaPackage rounds segments to the nearest multiple of the input segment duration\.
+1. \(Optional\) For **Segment duration**, enter the duration \(in seconds\) of each segment\. Enter a value equal to, or a multiple of, the input segment duration\. If the value that you enter is different from the input segment duration, AWS Elemental MediaPackage rounds segments to the nearest multiple of the input segment duration\.
 **Important**  
 If you enable **Number with duration** in **Segment template format**, you can't change the segment duration after you've created the endpoint\.
 
-1. \(Optional\) For **Manifest window duration**, type the total duration \(in seconds\) of the manifest\.
+1. \(Optional\) For **Manifest window duration**, enter the total duration \(in seconds\) of the manifest\.
 
 1. \(Optional\) In **Profile**, specify a DASH profile, like HbbTV\.
 
@@ -22,9 +22,9 @@ If you enable **Number with duration** in **Segment template format**, you can't
 
    For more information about the manifest layout options, see [Compacted DASH manifests](compacted.md)\.
 
-1. \(Optional\) For **Min update period**, type the minimum amount of time \(in seconds\) that the player should wait before requesting manifest updates\. A lower value means that manifests are updated more frequently, but a lower value also contributes to request and response network traffic\.
+1. \(Optional\) For **Min update period**, enter the minimum amount of time \(in seconds\) that the player should wait before requesting manifest updates\. A lower value means that manifests are updated more frequently, but a lower value also contributes to request and response network traffic\.
 
-1. \(Optional\) For **Min buffer time**, type the minimum amount of time \(in seconds\) that a player must keep in the buffer\. If network conditions interrupt playback, the player will have additional buffered content before playback fails, allowing for recovery time before the viewer's experience is affected\.
+1. \(Optional\) For **Min buffer time**, enter the minimum amount of time \(in seconds\) that a player must keep in the buffer\. If network conditions interrupt playback, the player will have additional buffered content before playback fails, allowing for recovery time before the viewer's experience is affected\.
 
 1. \(Optional\) For **Suggested presentation delay**, enter the amount of time \(in seconds\) that the player should be from the end of the manifest\. This sets the content start point back x seconds from the end of the manifest \(the point where content is live\)\. For example, with a 35\-second presentation delay, requests at 5:30 receive content from 5:29:25\. When used with time delay, AWS Elemental MediaPackage adds the suggested presentation delay to the time delay duration\.
 
@@ -42,6 +42,8 @@ This option isn't supported in combination with multi\-period DASH\.
    The options are `HTTP-HEAD`, `HTTP-ISO`, `HTTP-XSDATE`, and `NONE`\. This value will be set as the `@schemeIdURI` attribute for the `UTCTiming` element in the outbound Media Presentation Description\. For information about `UTCTiming`, see [DASH](https://www.iso.org/standard/79884.html), UTC Timing Descriptor, 5\.8\.4\.11\.
 
 1. \(Optional\) In **UTC timing URI**, specify a URI to use for UTC synchronization\. This is the URI used to fetch the timing data according to the scheme defined by **UTC timing**\. This value is only valid if **UTC timing** is not `NONE`\. This value will be set as the `@value` attribute for the `UTCTiming` element\. For information about `@value`, see [DASH](https://www.iso.org/standard/79884.html), DASH UTC Timing Schemes, 5\.8\.5\.7\.
+
+1. \(Optional\) To include an additional I\-frame only stream along with the other tracks in the manifest, select **Include IFrame only stream**\. MediaPackage generates an I\-frame only stream from the first rendition in the manifest\. The service inserts an `>EssentialProperty schemeIdUri="http://dashif.org/guidelines/trickmode" value="X"/>` descriptor, where *X* is the ID of the original Adaptation set, and then generates and includes an I\-frame only rendition in the stream\. If you use encryption, MediaPackage encrypts the I\-frame only rendition with the same content key as the original video rendition\. This rendition enables player functionality like fast forward and rewind\.
 
 1. For  **Period triggers**, choose how AWS Elemental MediaPackage creates media presentation description \(MPD\) periods in the DASH output manifest\. Choose from the following:
    + **None** – MediaPackage doesn't create additional periods\. It formats the manifest as a single period and doesn't include SCTE\-35 markers in the segments\.

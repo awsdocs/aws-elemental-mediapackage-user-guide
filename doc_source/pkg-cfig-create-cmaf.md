@@ -1,4 +1,4 @@
-# Creating a Common Media Application Format \(CMAF\) packaging configuration<a name="pkg-cfig-create-cmaf"></a>
+# Creating a CMAF packaging configuration<a name="pkg-cfig-create-cmaf"></a>
 
 Create a packaging configuration that formats content for devices that support Apple HLS fragmented MP4 \(fMP4\)\.
 
@@ -10,9 +10,9 @@ Create a packaging configuration that formats content for devices that support A
 
 1. On the **Packaging groups** page, choose the group that will contain the configuration that you're creating\.
 
-1. On the details page for the packaging group, in the **Packaging configurations** section, choose **Add or remove configs**\.
+1. On the details page for the packaging group, under **Packaging configurations**, choose **Manage configurations**\.
 
-1. On the **Add or remove packaging configurations** page, in the **Packaging configurations** section, choose **Add** and select **New config**\.
+1. On the **Manage packaging configurations** page, under **Packaging configurations**, choose **Add** and select **New config**\.
 
 1. Complete the fields as described in the following topics:
    + [General settings fields](cfigs-cmaf-new.md)

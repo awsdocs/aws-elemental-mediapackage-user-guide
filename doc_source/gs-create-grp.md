@@ -9,7 +9,7 @@ AWS Elemental MediaPackage does not require that you supply any customer data\. 
 
 **To create a packaging group**
 
-1. On the AWS Elemental MediaPackage **Packaging groups** page, choose **Create**\.
+1. On the AWS Elemental MediaPackage **Packaging groups** page, choose **Create group**\.
 
 1. For **ID**, enter a name that describes the group, such as **gamehighlights** \. The ID is the primary identifier for the group, and must be unique for your account in this AWS Region\. Supported characters are letters, numbers, underscore \(\_\), and dash \(\-\)\. You can't use spaces in the ID\.
 

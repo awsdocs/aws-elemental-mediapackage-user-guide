@@ -4,9 +4,9 @@ Specify the format of the manifest that AWS Elemental MediaPackage delivers from
 
 1. \(Optional\) For **Manifest name**, enter a short string that will be appended to the endpoint URL\. The manifest name creates a unique path to this endpoint\. If you don't enter a value, MediaPackage uses the default manifest name, *index*\.
 
-1. \(Optional\) To include an additional I\-frame only stream along with the other tracks in the manifest, select **Include IFrame only stream**\. MediaPackage generates an I\-frame only stream from the first rendition in the manifest\. The service inserts `EXT-I-FRAMES-ONLY` tags in the output manifest, and then generates and includes an I\-frames only playlist in the stream\. This playlist enables player functionality like fast forward and rewind\.
+1. \(Optional\) To include an additional I\-frame only stream along with the other tracks in the manifest, select **Include IFrame\-only streams**\. MediaPackage generates an I\-frame only stream from the first rendition in the manifest\. The service inserts `EXT-I-FRAMES-ONLY` tags in the output manifest, and then generates and includes an I\-frames only playlist in the stream\. This playlist enables player functionality like fast forward and rewind\.
 
-1. \(Optional\) To group all audio tracks into a single HLS rendition group, choose **Use audio rendition group**\. For more information about rendition groups, see [Rendition groups reference in AWS Elemental MediaPackage](rendition-groups.md)\.
+1. \(Optional\) To group all audio tracks into a single HLS rendition group, choose **Use audio rendition groups**\. For more information about rendition groups, see [Rendition groups reference in AWS Elemental MediaPackage](rendition-groups.md)\.
 
 1. \(Optional\) Select **Repeat EXT\-X\-KEY** if you want the service to repeat the key before every segment of the manifest\. By default, the key is written just once, after the header and before the segments\. If you select **Repeat EXT\-X\-KEY**, the manifest is written as header, key, segment, key, segment, key, and so on, with every segment preceded by the key\. Set this according to the needs of the player\. Selecting this option might result in an increase in client requests to the DRM server\.
 
@@ -20,5 +20,5 @@ Specify the format of the manifest that AWS Elemental MediaPackage delivers from
 
    Choose from the following:
    + **None** – Omit all SCTE\-35 ad markers from the output\.
-   + **SCTE\-35 enhanced** – Generate ad markers and blackout tags based on the SCTE\-35 input messages from the input source\.
+   + **SCTE\-35 Enhanced** – Generate ad markers and blackout tags based on the SCTE\-35 input messages from the input source\.
    + **Passthrough** – Copy the SCTE\-35 ad markers directly from the input HLS input manifest to the output manifest\.

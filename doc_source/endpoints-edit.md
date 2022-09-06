@@ -12,12 +12,10 @@ When you're editing an endpoint, do not put sensitive identifying information li
 
 1. Access the channel that the endpoint is associated with, as described in [Viewing channel details](channels-view.md)\.
 
-1. On the channel's details page, do one of the following:
-   + Choose **Add and edit endpoints** and on the **Edit** page, choose the endpoint to edit\.
-   + Choose the name of the endpoint to edit, and then choose **Edit endpoint**\.
+1. On the details page for the channel, under **Origin endpoints** choose the endpoint ID and choose **Manage endpoints**\. 
 
 1. Edit the endpoint options that you want to change\.
 
    For information about endpoint attributes, see [Creating an endpoint](endpoints-create.md)\.
 
-1. Choose **Save all**\.
+1. Choose **Save**\.

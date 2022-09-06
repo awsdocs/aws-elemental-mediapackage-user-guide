@@ -11,13 +11,13 @@ When you're done ingesting, serving, and harvesting from live content, delete th
 
 **To delete an endpoint**
 
-1. On the **Channels page**, choose the channel that the endpoint is associated with\.
+1. On the **Channels** page, choose the channel that the endpoint is associated with\.
 
 1. On the channel details page, choose the name of the endpoint that you want to delete\.
 
-1. On the endpoint details page, choose **Delete endpoint**\.
+1. On the **Origin endpoint details** page, choose **Delete**\.
 
-1. On the **Delete Endpoints** page, choose **Save all**\.
+1. On the **Origin endpoint delete** page, choose **Delete**\.
 
 **To delete a channel**
 
@@ -25,7 +25,7 @@ When you're done ingesting, serving, and harvesting from live content, delete th
    + Choose the channel name
    + Select the check box next to the channel name
 
-1. Choose **Delete selected** or **Delete channel**\.
+1. Choose **Delete**\.
 
 1. In the confirmation dialog box, choose **Delete**\.
 

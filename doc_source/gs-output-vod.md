@@ -1,4 +1,4 @@
-# Step 4: \(Optional\) output VOD content<a name="gs-output-vod"></a>
+# \(Optional\) step 4: output VOD content<a name="gs-output-vod"></a>
 
 To use MediaPackage to make the live\-to\-VOD asset available for playback, create a packaging group, packaging configuration, and asset resource\. The asset ingests the live\-to\-VOD asset from the Amazon S3 bucket\. A packaging group holds one or more packaging configurations, which define the output format and settings\. 
 
@@ -13,7 +13,7 @@ AWS Elemental MediaPackage does not require that you supply any customer data\. 
 
 **To create a packaging group**
 
-1. On the AWS Elemental MediaPackage **Packaging groups** page, choose **Create**\.
+1. On the AWS Elemental MediaPackage **Packaging groups** page, choose **Create group**\.
 
 1. For **ID**, enter a name that describes the group, such as **gamehighlights** \. The ID is the primary identifier for the group, and must be unique for your account in this AWS Region\. Supported characters are letters, numbers, underscore \(\_\), and dash \(\-\)\. You can't use spaces in the ID\.
 
@@ -29,9 +29,9 @@ AWS Elemental MediaPackage does not require that you supply any customer data\. 
 
 1. On the **Packaging groups** page, choose the group that you just created\.
 
-1. On the details page for the packaging group, choose either **Add or remove configuration** or **Add configuration** if there are no existing packaging configurations\.
+1. On the details page for the packaging group, under **Packaging configurations** choose **Manage configurations**\.
 
-1. On the **Add packaging configurations** page, choose **Add**, and then choose **New configuration**\.
+1. On the **Manage packaging configurations** page, choose **Add**, and then choose **New configuration**\.
 
 1. For **ID**, enter a name that describes the configuration, such as **hls\_highlights**\. The ID is the primary identifier for the configuration, and must be unique for your account in this AWS Region\. Supported characters are letters, numbers, underscore \(\_\), and dash \(\-\)\. You can't use spaces in the ID\.
 
@@ -52,7 +52,7 @@ AWS Elemental MediaPackage does not require that you supply any customer data\. 
 
 1. On the AWS Elemental MediaPackage console, go to the **Assets** page, and then choose **Ingest asset**\.
 
-1. For **S3 bucket name**, select the bucket where your source content is stored\.
+1. For **Amazon S3 bucket name**, select the bucket where your source content is stored\.
 
 1. For **IAM role**, choose **Use existing role** and select the IAM role that allows AWS Elemental MediaPackage to read from Amazon S3\.
 
@@ -62,7 +62,7 @@ AWS Elemental MediaPackage does not require that you supply any customer data\. 
    thursday_night/lion_movie.m3u8
    ```
 
-   You don't need to enter the bucket name because you chose it in **S3 bucket name** field\.
+   You don't need to enter the bucket name because you chose it in **Amazon S3 bucket name** field\.
 
 1. For **Packaging group**, select the group that you created in [Step 2: Create a packaging group](gs-create-grp.md)\.
 

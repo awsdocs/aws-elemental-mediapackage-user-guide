@@ -11,7 +11,7 @@ MediaPackage supports the following attributes in a \.smil manifest\.
 **Attributes**
 + `audioName` \- The name of the audio track, such as `English 2`\.
 + `includeAudio` \- A boolean value that sets whether or not to include the audio tracks\. If you don't specify an `includeAudio` value, all tracks default to `true` \.
-+ `src` or `name` \- Either the name or the source of the text stream or video file\.
++ `src` or `name` \- Either the name or the source of the text stream or video file relative to the manifest location\.
 + `subtitleName` \- The subtitle name, such as `English`\.
 + `systemLanguage` or `language` \- The system language, such as `eng`\.
 

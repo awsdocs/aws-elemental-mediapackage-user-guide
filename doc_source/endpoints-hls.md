@@ -2,11 +2,15 @@
 
 Create an endpoint that formats content for devices that support Apple HLS\.
 
-**To create an apple HLS endpoint \(console\)**
+**To create an Apple HLS endpoint \(console\)**
 
 1. Access the channel that the endpoint will be associated with, as described in [Viewing channel details](channels-view.md)\.
 
-1. On the details page for the channel, choose either **Add and edit endpoint** or **Add endpoints** if there are no existing endpoints\.
+1. On the details page for the channel, under **Origin endpoints**, choose the endpoint using one of the following methods\. If there are no existing endpoints, proceed to the next step\.
+   + Choose the endpoint name
+   + Select the check box next to the endpoint name
+
+1. Choose **Manage endpoints**\.
 
 1. Complete the fields as described in the following topics:
    + [New endpoint fields](endpoints-hls-new.md)
@@ -15,7 +19,7 @@ Create an endpoint that formats content for devices that support Apple HLS\.
    + [Access control fields](endpoints-hls-access-control.md)
    + [Streams to include fields](endpoints-hls-include-streams.md)
 
-1. Choose **Save endpoints**\.
+1. Choose **Save**\.
 
    If you enabled Amazon CloudFront distribution creation from the AWS Elemental MediaPackage console and this is your first endpoint on the channel, MediaPackage adds an origin to the distribution\. You can view the CloudFront CDN URL and endpoint information in the endpoints section of the channel's details page\.
 

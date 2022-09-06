@@ -2,11 +2,11 @@
 
 The HLS manifest fields allow you to define values for this manifest\.
 
-1. For **ID**, type a name that describes this manifest\. The ID is the primary identifier for the manifest, and must be unique for this endpoint\.
+1. For **ID**, enter a name that describes this manifest\. The ID is the primary identifier for the manifest, and must be unique for this endpoint\.
 
-1. For **Manifest name**, type a string that will be appended to the end of the endpoint URL\. The manifest name helps to create a unique path to this manifest on this endpoint\. The HLS manifest name overrides the manifest name that you provided in the New Endpoint** Manifest name** field \(if applicable\)\.
+1. For **Manifest name**, enter a string that will be appended to the end of the endpoint URL\. The manifest name helps to create a unique path to this manifest on this endpoint\. The HLS manifest name overrides the manifest name that you provided in the New Endpoint** Manifest name** field \(if applicable\)\.
 
-1. \(Optional\) For **Playlist window duration**, type the total duration \(in seconds\) of the manifest\.
+1. \(Optional\) For **Playlist window duration**, enter the total duration \(in seconds\) of the manifest\.
 
 1. \(Optional\) Use the following fields to dictate how MediaPackage processes SCTE\-35 messages from the input stream\. For more information, see [SCTE\-35 message options in AWS Elemental MediaPackage](scte.md)\. 
 
@@ -30,7 +30,7 @@ The HLS manifest fields allow you to define values for this manifest\.
       + **Unrestricted** – MediaPackage inserts ad markers when there *aren't* delivery restrictions in the SCTE\-35 message types that you indicated in **Customize ad triggers**\.
       + **Both** – MediaPackage inserts ad markers whether or not there are delivery restrictions in the SCTE\-35 message types that you indicated in **Customize ad triggers**\.
 
-1. \(Optional\) To include `EXT-X-PROGRAM-DATE-TIME` tags in the output manifest, select **Program date/time interval**, and then type the interval for MediaPackage to insert the tags in the manifest\.
+1. \(Optional\) To include `EXT-X-PROGRAM-DATE-TIME` tags in the output manifest, select **Program date/time interval**, and then enter the interval for MediaPackage to insert the tags in the manifest\.
 
    The `EXT-X-PROGRAM-DATE-TIME` tag holds the time of the segment\. When program date time \(PDT\) information is available in the source content, MediaPackage uses this same information on the output content\. Otherwise, MediaPackage uses Coordinated Universal Time \(UTC\) for the PDT\.
 

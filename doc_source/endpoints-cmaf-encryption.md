@@ -1,9 +1,11 @@
 # Encryption fields<a name="endpoints-cmaf-encryption"></a>
 
-Protect your content from unauthorized use through content encryption and digital rights management \(DRM\)\. AWS Elemental MediaPackage uses the [AWS Secure Package and Encoder Key Exchange \(SPEKE\) API](https://aws.amazon.com/media/tech/speke-basics-secure-packager-encoder-key-exchange-api/) to facilitate content encryption and decryption by a DRM provider\. Using SPEKE, the DRM provider supplies encryption keys to AWS Elemental MediaPackage through the SPEKE API\. The DRM provider also supplies licenses to supported media players for decryption\. For more information about how SPEKE is used with services and features running in the cloud, see [AWS cloud\-based architecture](https://docs.aws.amazon.com/speke/latest/documentation/what-is-speke.html#services-architecture) in the *Secure Packager and Encoder Key Exchange API Specification guide*\.
+Protect your content from unauthorized use through content encryption and digital rights management \(DRM\)\. AWS Elemental MediaPackage uses the [AWS Secure Packager and Encoder Key Exchange \(SPEKE\) API](https://aws.amazon.com/media/tech/speke-basics-secure-packager-encoder-key-exchange-api/) to facilitate content encryption and decryption by a DRM provider\. Using SPEKE, the DRM provider supplies encryption keys to AWS Elemental MediaPackage through the SPEKE API\. The DRM provider also supplies licenses to supported media players for decryption\. For more information about how SPEKE is used with services and features running in the cloud, see [AWS cloud\-based architecture](https://docs.aws.amazon.com/speke/latest/documentation/what-is-speke.html#services-architecture) in the *Secure Packager and Encoder Key Exchange API Specification guide*\.
 
 **Important**  
 To encrypt content you must have a DRM provider and use a version of AWS SPEKE\. For more information about how to use encryption for MediaPackage, see [Content encryption and DRM in AWS Elemental MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/ug/using-encryption.html)\. 
+
+Define the encryption values\.
 
 1. To serve content without copyright protection, keep **No encryption** selected\.
 
@@ -35,17 +37,19 @@ To encrypt content you must have a DRM provider and use a version of AWS SPEKE\.
       arn:aws:iam::444455556666:role/SpekeAccess
       ```
 
-   1. **SPEKE version** – \(Optional\) Select the SPEKE version that you'd like to use for encryption\. SPEKE 1\.0 is the legacy version that uses CPIX 2\.0, and supports single key encryption\. SPEKE 2\.0 uses CPIX 2\.3, and supports multiple key encryption\. For more information about using SPEKE with AWS Elemental MediaPackage, see [Content encryption and DRM in AWS Elemental MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/ug/using-encryption.html)\. 
+   1. **SPEKE version** – \(Optional\) Select the SPEKE version that you'd like to use for encryption\. SPEKE Version 1\.0 is the legacy version that uses CPIX Version 2\.0, and supports single key encryption\. SPEKE Version 2\.0 uses CPIX Version 2\.3, and supports multiple key encryption\. For more information about using SPEKE with AWS Elemental MediaPackage, see [Content encryption and DRM in AWS Elemental MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/ug/using-encryption.html)\. 
 
-       If you select **SPEKE Version 2\.0**, then also choose a **Video encryption preset** and an **Audio encryption preset**\. The video and audio presets determine which content keys MediaPackage uses to encrypt the audio and video tracks in your stream\. 
-**Note**  
- When using SPEKE Version 2\.0, MediaPackage disables key rotation\. 
+      If you select **SPEKE Version 2\.0**, then also choose a **Video encryption preset** and an **Audio encryption preset**\. The video and audio presets determine which content keys MediaPackage uses to encrypt the audio and video tracks in your stream\. For more information about these presets, see [SPEKE Version 2\.0 presets](drm-content-speke-v2-presets.md)\.
+
+       When using SPEKE Version 2\.0, MediaPackage disables key rotation\.
 
    1. **Certificate ARN** – \(Optional\) Enter a 2048 RSA certificate ARN to use for content key encryption\. Use this option only if your DRM key provider supports content key encryption\. If you use this and your key provider doesn't support it, the event fails\.
 
       To enter a certificate ARN here, you must have already imported the corresponding certificate into AWS Certificate Manager\. Then enter the certificate ARN from ACM here\. 
 
       For information about content key encryption, see [Preparing and managing certificates for use with content keys](drm-content-key-encryption.md)\.
+
+   1. For **Encryption Method**, choose Sample\-AES for CMAF Apple HLS FairPlay or choose AES\-CTR for Microsoft PlayReady and Google Widevine\.
 
    1. \(Optional\) For **Constant initialization vector** enter a 128\-bit, 16\-byte hex value represented by a 32\-character string, to be used with the key for encrypting content\.
 

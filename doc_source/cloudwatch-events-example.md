@@ -64,7 +64,12 @@ For information about input redundancy and what causes inputs to switch, see [Li
    ],
    "detail":{
       "event": "InputSwitchEvent",
-      "message": "Origin endpoint experienced an Input Switch Event"
+      "message": "Origin endpoint experienced an Input Switch Event",
+      "EventDetails": {
+        "Channel": "channel name",
+        "PreviousIngestEndpoint": "endpoint uuid before input switch",
+        "CurrentIngestEndpoint": "endpoint uuid after input switch",
+      }
    }
 }
 ```

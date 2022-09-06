@@ -23,7 +23,7 @@ The following table describes quotas in AWS Elemental MediaPackage for live cont
 
 | Resource or operation | Quota | 
 | --- | --- | 
-| Ingest streams per Channel | 20 streams per channel, | 
+| Ingest streams per Channel | 20 streams per channel | 
 | Maximum Content Age for Time\-shifted Viewing | 336 hours \(14 days\) | 
 | Maximum Time\-shifted Manifest Length |  24 hours for all supported output formats  | 
 | Maximum Live\-to\-VOD Manifest Length |  24 hours for all supported output formats  | 
