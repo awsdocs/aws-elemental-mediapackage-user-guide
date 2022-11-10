@@ -2,7 +2,7 @@
 
   An [IAM role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html) is an IAM identity that you can create in your account that has specific permissions\. An IAM role is similar to an IAM user in that it is an AWS identity with permissions policies that determine what the identity can and cannot do in AWS\. However, instead of being uniquely associated with one person, a role is intended to be assumable by anyone who needs it\. Also, a role does not have standard long\-term credentials such as a password or access keys associated with it\. Instead, when you assume a role, it provides you with temporary security credentials for your role session\. Create a role that AWS Elemental MediaPackage assumes when ingesting source content from Amazon S3\.
 
-When you create the role, you choose EC2 as the trusted entity that can assume the role because AWS Elemental MediaPackage isn't available for selection\. In [Step 3: Modify the trust relationship](setting-up-create-trust-rel-trust.md), you change the trusted entity to MediaPackage\.
+When you create the role, you choose Amazon Elastic Compute Cloud \(Amazon EC2\) as the trusted entity that can assume the role because MediaPackage isn't available for selection\. In [Step 3: Modify the trust relationship](setting-up-create-trust-rel-trust.md), you change the trusted entity to MediaPackage\.
 
 **To create the service role for EC2 trusted entity \(IAM console\)**
 

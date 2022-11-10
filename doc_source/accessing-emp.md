@@ -14,5 +14,5 @@ You can access MediaPackage through the console, AWS Command Line Interface \(AW
 + MediaPackage REST API endpoint: 
 
   ```
-  https://mediapackage.<region>.amazonaws.com 
+  https://mediapackage.region.amazonaws.com 
   ```

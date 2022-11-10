@@ -1,6 +1,6 @@
 # Previewing an endpoint<a name="endpoints-preview"></a>
 
-Preview an endpoint's playback to ensure that AWS Elemental MediaPackage is receiving the content stream and can package it\. The preview is helpful for avoiding playback failures after the endpoint is published, as well as for troubleshooting later if there are any playback issues\.
+Preview an endpoint's playback to ensure that AWS Elemental MediaPackage is receiving the content stream and can package it\. The preview is helpful for avoiding playback failures after the endpoint is published and for troubleshooting later if there are any playback issues\.
 
 You can use the AWS Elemental MediaPackage console to preview playback from the endpoint\.
 

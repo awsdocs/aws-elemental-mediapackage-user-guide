@@ -1,20 +1,20 @@
 # Step 2: Create a channel<a name="create-channel"></a>
 
-The channel is the first component in AWS Elemental MediaPackage\. It represents the input to MediaPackage for incoming live content from an encoder such as AWS Elemental MediaLive\. 
+The channel is the first component in MediaPackage\. It represents the input to MediaPackage for incoming live content from an encoder such as AWS Elemental MediaLive\. 
 
 MediaPackage does not require that you supply any customer data\. There are no fields in channels where there is an expectation that you will provide customer data\.
 
 **To create a channel**
 
-1. On the MediaPackage **Channels** page, choose **Create**\.
+1. On the MediaPackage **Channels** page, choose **Create channel**\.
 
-1. For **ID**, enter a name that describes the channel, such as **channelHLS1**\. The ID is the primary identifier for the channel, and must be unique for your account in the AWS Region\. Supported characters are letters, numbers, underscore \(\_\), and dash \(\-\)\. You can't use spaces in the ID\.
+1. For **ID**, enter a name that describes the channel, such as **channelHLS1**\. The ID is the primary identifier for the channel, and must be unique for your account in the AWS Region\. Supported characters are letters, numbers, underscores \(\_\), and dashes \(\-\)\. You can't use spaces in the ID\.
 
-1. Keep the defaults for the remaining fields, and then choose **Create channel**\.
+1. Keep the defaults for the remaining fields, and then choose **Create**\.
 
    MediaPackage displays the new channel's details page\.
 
-1. On the channel's details page, note the values for **Input URL**, **Username**, and **Password**\. If you're using input redundancy, you need this information for both input URLs\. If you're sending only one stream to the channel, you can note the information for either input URL\. 
+1. On the details page for the channel, note the values for **URL**, **Username**, and **Password**\. If you're using input redundancy, you need this information for both input URLs\. If you're sending only one stream to the channel, you can note the information for either input URL\. 
 
    MediaPackage securely generates the WebDAV user names and passwords when it creates the channel\. If you need to change these credentials, see [Rotating credentials on an input URL](channels-rotate-creds.md)\.
 

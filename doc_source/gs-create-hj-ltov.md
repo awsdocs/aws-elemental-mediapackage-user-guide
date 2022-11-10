@@ -4,26 +4,26 @@ To extract a live\-to\-VOD asset from a live content stream, create a harvest jo
 
 **To create a harvest job**
 
-1. On the MediaPackage **Harvest jobs** page, choose **Create job**\.
+1. On the **Harvest jobs** page, choose **Create harvest job**\.
 
-1. For **ID**, enter a name that describes the harvest job, such as **gamehighlights**\. The ID is the primary identifier for the job\. You can reuse the ID after the harvest job expires from your account\. Supported characters are letters, numbers, underscore \(\_\), and dash \(\-\)\. You can't use spaces in the ID\.
+1. For **ID**, enter a name that describes the harvest job, such as **gamehighlights**\. The ID is the primary identifier for the job\. You can reuse the ID after the harvest job expires from your account\. Supported characters are letters, numbers, underscores \(\_\), and dashes \(\-\)\. You can't use spaces in the ID\.
 
 1. For **Origin endpoint**, select the endpoint for the live content stream that you're extracting a VOD asset from\. The endpoint must serve clear \(unencrypted\) or encrypted DASH or HLS content\. If you want to extract from encrypted live content, see [Creating live\-to\-VOD assets with AWS Elemental MediaPackage](ltov.md)\.
 
 1. For **Date and time format**, keep the default\.
 
-1. For **Start date and time** and **End date and time**, enter the start and end dates and times for the extracted VOD asset\. The start time must be after the live stream has started and before the current time \("now"\)\. The end time must be in the past\.
+1. For **When the live\-to\-VOD asset begins** and **When the live\-to\-VOD asset ends**, enter the start and end dates and times for the extracted VOD asset\. The start time must be after the live stream has started and before the current time \("now"\)\. The end time must be in the past\.
 **Note**  
 "Now" is the current time according to the program date time \(PDT\), when it's present in the source content from the encoder\.
 
-1. For **IAM role**, enter the IAM role that allows MediaPackage to write to Amazon S3\. For help with the role, see [Allowing AWS Elemental MediaPackage to access other AWS services](setting-up-create-trust-rel.md)\.
+1. For **IAM role ARN**, enter the IAM role that allows MediaPackage to write your live\-to\-VOD asset to your Amazon S3 bucket\. For help with the role, see [Allowing AWS Elemental MediaPackage to access other AWS services](setting-up-create-trust-rel.md)\.
 
-1. For **Amazon S3 bucket name**, select the bucket where you want MediaPackage to store the live\-to\-VOD asset\.
+1. For **Amazon S3 bucket name**, select the Amazon S3 bucket where you want MediaPackage to store the live\-to\-VOD asset\.
 
-1. For **Manifest key**, enter the path within the Amazon S3 bucket and file name for the master manifest of the live\-to\-VOD asset\. MediaPackage creates a directory based on the path that you enter\.
+1. For **Manifest key**, enter the path in the Amazon S3 bucket and identifier for the parent manifest for the live\-to\-VOD asset\. MediaPackage creates a directory based on the path that you enter\.
 **Important**  
 The manifest key must be unique\. When you use the same manifest key for multiple harvest jobs, the newest playlist for the asset overwrites existing playlists\. The only time you should reuse a manifest key is when you are harvesting the same content, such as if there was a problem with a previous harvest of the content\.
 
-1. Choose **Create job**\.
+1. Choose **Create**\.
 
 When MediaPackage processes the harvest job, it sends a CloudWatch event when the job fails or succeeds\. The event includes the details of the harvest job\. If the job fails, the event includes information about why\. This information is available only in the CloudWatch event\. For example events, see [Harvest job notification events](cloudwatch-events-example.md#hj-status-events)\.

@@ -1,4 +1,4 @@
-# Getting started with live\-to\-VOD content delivery in AWS Elemental MediaPackage<a name="getting-started-ltov"></a>
+# Getting started with live\-to\-VOD content delivery in MediaPackage<a name="getting-started-ltov"></a>
 
 This Getting Started tutorial shows you how to use the AWS Elemental MediaPackage console to create a live\-to\-VOD \(video on demand\) asset and make it available for playback\.
 
@@ -13,9 +13,9 @@ The following sections are a guided tutorial for becoming familiar with these th
 
 **Topics**
 + [Prerequisites](gs-prereq-ltov.md)
-+ [Step 1: Access AWS Elemental MediaPackage](gs-access-emp-ltov.md)
++ [Step 1: Access MediaPackage](gs-access-emp-ltov.md)
 + [Step 2: Ingest live content](gs-ingest-live.md)
 + [Step 3: Extract a VOD asset](gs-create-hj-ltov.md)
-+ [\(Optional\) step 4: output VOD content](gs-output-vod.md)
-+ [\(Optional\) step 5: Monitor AWS Elemental MediaPackage activity](gs-monitor-emp-ltov.md)
++ [\(Optional\) Step 4: Output VOD content](gs-output-vod.md)
++ [\(Optional\) Step 5: Monitor MediaPackage activity](gs-monitor-emp-ltov.md)
 + [Step 6: Clean up](gs-cleanup-ltov.md)

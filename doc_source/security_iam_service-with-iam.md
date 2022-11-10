@@ -10,7 +10,7 @@ Before you use IAM to manage access to MediaPackage, you should understand what 
 
 ## MediaPackage Identity\-Based Policies<a name="security_iam_service-with-iam-id-based-policies"></a>
 
-With IAM identity\-based policies, you can specify allowed or denied actions and resources as well as the conditions under which actions are allowed or denied\. MediaPackage supports specific actions, resources, and condition keys\. To learn about all the elements that you use in a JSON policy, see [IAM JSON policy elements reference](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html) in the *IAM User Guide*\.
+With IAM identity\-based policies, you can specify allowed or denied actions and resources and the conditions under which actions are allowed or denied\. MediaPackage supports specific actions, resources, and condition keys\. To learn about all the elements that you use in a JSON policy, see [IAM JSON policy elements reference](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html) in the *IAM User Guide*\.
 
 ### Actions<a name="security_iam_service-with-iam-id-based-policies-actions"></a>
 
@@ -121,4 +121,4 @@ MediaPackage supports service roles\.
 
 ### Choosing an IAM role in MediaPackage<a name="security_iam_service-with-iam-roles-choose"></a>
 
-When you create an asset resource in MediaPackage, you must choose a role to allow MediaPackage to access Amazon S3 on your behalf\. If you previously created a service role or service\-linked role, MediaPackage provides you with a list of roles to choose from\. It's important to choose a role that allows access to read from the S3 bucket and retrieve content\. For more information, see [Allowing AWS Elemental MediaPackage to access other AWS services](setting-up-create-trust-rel.md)\.
+When you create an asset resource in MediaPackage, you must choose a role to allow MediaPackage to access Amazon S3 on your behalf\. If you previously created a service role or service\-linked role, MediaPackage provides you with a list of roles to choose from\. It's important to choose a role that allows access to read from the Amazon S3 bucket and retrieve content\. For more information, see [Allowing AWS Elemental MediaPackage to access other AWS services](setting-up-create-trust-rel.md)\.

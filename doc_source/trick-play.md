@@ -9,7 +9,7 @@ MediaPackage supports the following trick\-play types:
 **Supported trick\-play types for live workflows**
 
 
-| Steaming protocol | I\-frame only | Image\-based | 
+| Streaming protocol | I\-frame only | Image\-based | 
 | --- | --- | --- | 
 |  Apple HLS  |  √  |  √  | 
 |  CMAF Apple HLS  |  √  |  √  | 
@@ -22,7 +22,7 @@ MediaPackage supports the following trick\-play types:
 | --- | --- | --- | 
 |  Apple HLS  |  √  |    | 
 |  CMAF Apple HLS  |  √  |    | 
-|  DASH  |    |  √  | 
+|  DASH  |  √  |  √  | 
 
 **Topics**
 + [Using I\-frame playlists to enable trick\-play](#using-i-frame-playlists)
@@ -30,7 +30,7 @@ MediaPackage supports the following trick\-play types:
 
 ## Using I\-frame playlists to enable trick\-play<a name="using-i-frame-playlists"></a>
 
-For HLS and CMAF, MediaPackage supports live and on\-demand trick\-play by creating an I\-frame playlist from an existing VOD asset or live stream\. The I\-frame playlist contains the I\-frame only video segments that your player uses for the image thumbnails\. For information about I\-frame playlists, see the HTTP Live Streaming 2nd Edition specification: [https://datatracker.ietf.org/doc/html/rfc8216#section-4.3.3.6](https://datatracker.ietf.org/doc/html/rfc8216#section-4.3.3.6)\.
+MediaPackage supports live and on\-demand trick\-play by creating an I\-frame playlist from an existing VOD asset or live stream\. The I\-frame playlist contains the I\-frame only video segments that your player uses for the image thumbnails\. For information about I\-frame playlists, see the HTTP Live Streaming 2nd Edition specification: [https://datatracker.ietf.org/doc/html/rfc8216#section-4.3.3.6](https://datatracker.ietf.org/doc/html/rfc8216#section-4.3.3.6)\.
 
 **To use an I\-frame playlist to enable trick\-play**
 + To use I\-frame playlists to enable trick\-play, in the MediaPackage console choose **Include I\-frame only stream** when creating or editing an endpoint or packaging configuration\. MediaPackage generates an I\-frame only stream from the first rendition in the manifest\. The service inserts `EXT-I-FRAMES-ONLY` tags in the output manifest, and then generates and includes an I\-frames only playlist in the stream\. This playlist enables player functionality like fast forward and rewind\.
@@ -75,6 +75,6 @@ In addition to the general requirements listed before this section, keep in mind
 ### Configuring your upstream encoder to generate image media playlists<a name="configuring-upstream-encoder"></a>
 
 Your HLS source must conform to the [Image Media Playlist specification, version 0\.4](https://github.com/image-media-playlist/spec/blob/master/image_media_playlist_v0_4.pdf)\. You can use the following AWS Media Services to create an HLS stream that complies with the specification\. For more information, see the following documentation:
-+ [Trick\-play track via the Image Media Playlist specification](https://docs.aws.amazon.com/elemental-live/latest/ug/trick-play-roku.html) in the *Elemental Live* User Guide\.
++ [Trick\-play track via the Image Media Playlist specification](https://docs.aws.amazon.com/elemental-live/latest/ug/trick-play-roku.html) in the *Elemental Live User Guide*\.
 + [Trick\-play track via the Image Media Playlist specification](https://docs.aws.amazon.com/medialive/latest/ug/trick-play-roku.html) in the *AWS Elemental MediaLive User Guide*\.
 + [HlsImageBasedTrickPlay](https://docs.aws.amazon.com/mediaconvert/latest/apireference/jobs.html#jobs-prop-hlsgroupsettings-imagebasedtrickplay) in the *AWS Elemental MediaConvert API Reference*\.

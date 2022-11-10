@@ -22,7 +22,7 @@ For more information about best practices in IAM, see [Security best practices i
 
 ## Using the MediaPackage Console<a name="security_iam_id-based-policy-examples-console"></a>
 
-To access the AWS Elemental MediaPackage console, you must have a minimum set of permissions\. These permissions must allow you to list and view details about the MediaPackage resources in your AWS account\. If you create an identity\-based policy that is more restrictive than the minimum required permissions, the console won't function as intended for entities \(IAM users or roles\) with that policy\.
+To access the AWS Elemental MediaPackage console, you must have a minimum set of permissions\. These permissions must allow you to list and view details about the MediaPackage resources in your AWS account\. If you create an identity\-based policy that's more restrictive than the minimum required permissions, the console won't function as intended for entities \(IAM users or roles\) with that policy\.
 
 To ensure that those entities can still use the MediaPackage console, also attach the following AWS managed policy to the entities\. For more information, see [Adding permissions to a user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_change-permissions.html#users_change_permissions-add-console) in the *IAM User Guide*:
 

@@ -1,6 +1,6 @@
 # Deleting an endpoint<a name="endpoints-delete"></a>
 
-Endpoints can serve content until they are deleted\. Delete the endpoint if it should no longer respond to playback requests\. You must delete all endpoints from a channel before you can delete the channel\.
+Endpoints can serve content until they're deleted\. Delete the endpoint if it should no longer respond to playback requests\. You must delete all endpoints from a channel before you can delete the channel\.
 
 **Warning**  
 If you delete an endpoint, the playback URL stops working\.

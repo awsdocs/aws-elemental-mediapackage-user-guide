@@ -1,9 +1,9 @@
 # Secrets Manager access for CDN authorization<a name="setting-up-create-trust-rel-policy-cdn"></a>
 
 If you use content delivery network \(CDN\) authorization headers to restrict access to your endpoints in MediaPackage, you need a policy that allows you to do these things in Secrets Manager:
-+ `GetSecretValue`: MediaPackage can retrieve the encrypted authorization code from a version of the secret\.
-+ `DescribeSecret`: MediaPackage can retrieve the details of the secret, excluding encrypted fields\.
-+ `ListSecrets`: MediaPackage can retrieve a list of secrets in the AWS account\.
++ `GetSecretValue` \- MediaPackage can retrieve the encrypted authorization code from a version of the secret\.
++ `DescribeSecret` \- MediaPackage can retrieve the details of the secret, excluding encrypted fields\.
++ `ListSecrets` \- MediaPackage can retrieve a list of secrets in the AWS account\.
 + `ListSecretVersionIds`: MediaPackage can retrieve all of the versions that are attached to the specified secret\.
 
 **Note**  
@@ -21,7 +21,7 @@ You don't need a separate policy for each secret that you store in Secrets Manag
 
 1. Choose the **JSON** tab\.
 
-1. Enter the following JSON policy document, replacing *secret\-name* and *role\-name* with your own information :
+1. Enter the following JSON policy document, replacing *region*, *account\-id*, *secret\-name*, and *role\-name* with your own information:
 
    ```
    {

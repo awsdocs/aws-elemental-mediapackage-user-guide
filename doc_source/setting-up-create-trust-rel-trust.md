@@ -1,6 +1,6 @@
 # Step 3: Modify the trust relationship<a name="setting-up-create-trust-rel-trust"></a>
 
-The trust relationship defines what entities can assume the role that you created in [Step 2: Create a role](setting-up-create-trust-rel-role.md)\. When you created the role and established the trusted relationship, you chose EC2 as the trusted entity\. Modify the role so that the trusted relationship is between your AWS account and AWS Elemental MediaPackage\.
+The trust relationship defines what entities can assume the role that you created in [Step 2: Create a role](setting-up-create-trust-rel-role.md)\. When you created the role and established the trusted relationship, you chose Amazon EC2 as the trusted entity\. Modify the role so that the trusted relationship is between your AWS account and AWS Elemental MediaPackage\.
 
 **To change the trust relationship to MediaPackage**
 
@@ -36,6 +36,6 @@ The trust relationship defines what entities can assume the role that you create
 
 1. On the **Summary** page, make a note of the value in **Role ARN**\. You use this ARN when you ingest source content for video on demand \(VOD\) workflows\. The ARN looks like this:
 
-   `arn:aws:iam::111122223333:role/RoleName`
+   `arn:aws:iam::111122223333:role/role-name`
 
-   In the example, `111122223333` is your AWS account number\. 
+   In the example, *111122223333* is your AWS account number\. 

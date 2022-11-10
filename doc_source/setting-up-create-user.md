@@ -18,12 +18,12 @@ Create IAM users for the individuals who require access to AWS Elemental MediaPa
    + For access to live functionality:
      + Use **AWSElementalMediaPackageFullAccess** to allow the user to perform all actions on all live resources in MediaPackage\.
      + Use **AWSElementalMediaPackageReadOnly** to provide the user read\-only rights for all live resources in MediaPackage\.
-   + For access to video on demand \(VOD\) functionality, use the policy that you created in [Step 2: \(Optional\) create a policy for AWS Elemental MediaPackage VOD](setting-up-create-non-admin-iam-vod.md)\.
+   + For access to video on demand \(VOD\) functionality, use the policy that you created in [\(Optional\) Step 2: Create a policy for AWS Elemental MediaPackage VOD](setting-up-create-non-admin-iam-vod.md)\.
 
 1. Add policies to allow the MediaPackage console to make calls to Amazon CloudWatch on the user's behalf\. Without these policies, the user is able to use the service's API only \(not the console\)\. Choose one of these options:
    + Use **ReadOnlyAccess** to allow MediaPackage to communicate with CloudWatch, and also provide the user read\-only access to all AWS services on your account\.
    + Use **CloudWatchReadOnlyAccess**, **CloudWatchEventsReadOnlyAccess**, and **CloudWatchLogsReadOnlyAccess** to allow MediaPackage to communicate with CloudWatch, and limit the user's read\-only access to CloudWatch\.
 
-1. \(Optional\) If this user will create Amazon CloudFront distributions from the MediaPackage console, attach the policy that you created in [Step 1: \(Optional\) create a policy for Amazon CloudFront](setting-up-create-non-admin-iam-cf.md)\.
+1. \(Optional\) If this user will create Amazon CloudFront distributions from the MediaPackage console, attach the policy that you created in [\(Optional\) Step 1: Create a policy for Amazon CloudFront](setting-up-create-non-admin-iam-cf.md)\.
 
-1. Choose **Next: Review** to see the list of policies to be added to the new user\. When you are ready to proceed, choose **Create user**\.
+1. Choose **Next: Review** to see the list of policies to be added to the new user\. When you're ready to proceed, choose **Create user**\.

@@ -1,6 +1,6 @@
 # SCTE\-35 message options in AWS Elemental MediaPackage<a name="scte"></a>
 
-This section describes the options that AWS Elemental MediaPackage offers for configuring how SCTE\-35 messages are handled in live DASH, HLS, and CMAF outputs\. For live\-to\-VOD assets, MediaPackage passes the SCTE\-35 messages from the live stream through to the harvested asset\. These options don't apply to Microsoft Smooth Streaming or video on demand \(VOD\) outputs\. 
+This section describes the options that AWS Elemental MediaPackage \(MediaPackage\) offers for configuring how SCTE\-35 messages are handled in live HLS, DASH, and CMAF outputs\. For live\-to\-VOD assets, MediaPackage passes the SCTE\-35 messages from the live stream through to the harvested asset\. These options don't apply to Microsoft Smooth Streaming or video on demand \(VOD\) outputs\. 
 
 SCTE\-35 messages accompany video in your source content\. These messages signal where MediaPackage should insert ad markers when it packages the content for output\. By default, MediaPackage inserts markers for the following message types in the source content:
 + `splice_insert`
@@ -22,7 +22,7 @@ The following sections describe how you can modify MediaPackage SCTE\-35 message
 
 You can modify how MediaPackage interacts with SCTE\-35 messages from your source content\. Configure the following settings on your endpoints\. For more information, see the following:
 + For the MediaPackage console, see [Creating an endpoint](endpoints-create.md)\.
-+ For the MediaPackage REST API, see [Origin\_endpoints](https://docs.aws.amazon.com/mediapackage/latest/apireference/origin_endpoints.html) in the *AWS Elemental MediaPackage API Reference*\.
++ For the MediaPackage REST API, see [Origin\_endpoints](https://docs.aws.amazon.com/mediapackage/latest/apireference/origin_endpoints.html) in the *AWS Elemental MediaPackage Live API Reference*\.
 
 **Important**  
 To modify how MediaPackage handles SCTE\-35 messages, you should be familiar with the SCTE\-35 standard\. You can download a PDF of the most recent standards here: [Download SCTE ISBE standards](https://www.scte.org/SCTE/Standards/Download/SCTE/Standards/Download_SCTE_Standards.aspx?hkey=63914a25-0f85-4d74-8181-c1b642039ad7)\. You should also be familiar with how SCTE\-35 is implemented in your source content\. 
@@ -35,7 +35,7 @@ This setting is available on HLS and CMAF endpoints\.
 + **Passthrough** – MediaPackage copies all SCTE\-35 messages from the source content and inserts them in the output manifest\.
 
 ****Customize ad triggers****  
-This setting is available on HLS, CMAF, and DASH endpoints\.  
+This setting is available on HLS, DASH, and CMAF endpoints\.  
 **Customize ad triggers** identifies which SCTE\-35 message types MediaPackage treats as ads in the output manifest\.   
 If you don't change this setting, MediaPackage treats these message types as ads:  
 + Splice insert
@@ -45,7 +45,7 @@ If you don't change this setting, MediaPackage treats these message types as ads
 + Distributor placement opportunity
 
 ****Ads on delivery restrictions****  
-This setting is available on HLS, CMAF, and DASH endpoints\.  
+This setting is available on HLS, DASH, and CMAF endpoints\.  
 **Ads on delivery restrictions** sets conditions for what SCTE\-35 messages become ads, based on the delivery restriction flags in the `segmentation_descriptor` of the messages\. MediaPackage inserts an ad marker that corresponds to the positioning of the messages of the right type that meet the delivery restriction conditions\.   
 If you don't change this setting, MediaPackage converts messages that are classified as *restricted* \(they have delivery restriction flags\) to ad markers in the output manifest\.  
 Splice insert SCTE\-35 messages don't have `segmentation_descriptor`\. If you choose splice insert in **Customize ad triggers**, all splice inserts become ad markers in the output manifest\.
@@ -65,9 +65,9 @@ When there are SCTE\-35 messages in the source content, MediaPackage takes the f
 
   1. For messages of the right type that meet the delivery restriction conditions, inserts ad markers in the output manifest, as described earlier in this chapter
 
-  1. For **Daterange**, MediaPackage inserts EXT\-X\-DATERANGE tags to signal ads and program transition events in HLS and CMAF output manifests\.
+  1. For **Daterange**, MediaPackage inserts `EXT-X-DATERANGE` tags to signal ads and program transition events in HLS and CMAF output manifests\.
 
-## EXT\-x\-DATERANGE ad markers<a name="ext-x-daterange-ad-marker"></a>
+## EXT\-X\-DATERANGE ad markers<a name="ext-x-daterange-ad-marker"></a>
 
 Daterange ad markers are used to signal ads and program transitions in live HLS and CMAF manifests\. When you enable daterange ad markers on your endpoint, MediaPackage inserts `EXT-X-DATERANGE` tags into the manifest where there are SCTE\-35 `time_signal` or `splice_insert` tags present\. `EXT-X-DATERANGE` is used in concert with `EXT-X-PROGRAM-DATE-TIME` tags\. 
 
@@ -77,11 +77,11 @@ Daterange ad markers are used to signal ads and program transitions in live HLS 
 
 To enable daterange ad markers for your endpoint, do the following in the MediaPackage console: 
 
-Go to **Add/edit endpoints** > **Packager settings** > **Additional configuration** > **Ad marker ** and select **Daterange**\. If you select this option, you *must* also set a **Program date/time interval \(sec\)** value that is greater than **0**\. The program date/time interval is set in the same **Additional configuration** pane as the ad marker settings\. 
+Go to **Add/edit endpoints** > **Packager settings** > **Additional configuration** > **Ad marker ** and select **Daterange**\. If you select this option, you *must* also set a **Program date/time interval \(sec\)** value that's greater than **0**\. The program date/time interval is set in the same **Additional configuration** pane as the ad marker settings\. 
 
 ### Enabling daterange via the AWS CLI<a name="enable-daterange-via-cli"></a>
 
-To enable daterange ad markers for your endpoint, run the following command in the AWS CLI: 
+To enable daterange ad markers for your endpoint, run the following command in the AWS CLI replacing *region* with your own information:
 
 ```
   aws --endpoint=https://mediapackage.region.amazonaws.com mediapackage --region region create-origin-endpoint --channel-id test_channel --id hlsmuxed
@@ -89,17 +89,17 @@ To enable daterange ad markers for your endpoint, run the following command in t
 ```
 
 **Important**  
-You must set a `ProgramDateTimeIntervalSeconds` value that is greater than **0**\.
+You must set a `ProgramDateTimeIntervalSeconds` value that's greater than **0**\.
 
-### Enabling daterange via the MediaPackage live API or AWS SDK<a name="enable-daterange-via-live-api-or-sdk"></a>
+### Enabling daterange via the MediaPackage API or AWS SDK<a name="enable-daterange-via-live-api-or-sdk"></a>
 
  To learn how to enable daterange ad markers for HLS endpoints via the live API or AWS SDK, see the following: 
 + [MediaPackage Live API reference ](https://docs.aws.amazon.com/mediapackage/latest/apireference/origin_endpoints.html) 
 + [AWS SDK](https://aws.amazon.com/getting-started/tools-sdks/)
 
-### Example HLS manifest showing SCTE\-35 EXT\-x\-DATERANGE signaling<a name="example"></a>
+### Example HLS manifest showing SCTE\-35 EXT\-X\-DATERANGE signaling<a name="example"></a>
 
-This example HLS manifest generated by MediaPackage uses EXT\-X\-DATERANGE and EXT\-X\-PROGRAM\-DATE\-TIME tags to signal events in the live stream\.
+This example HLS manifest generated by MediaPackage uses `EXT-X-DATERANGE` and `EXT-X-PROGRAM-DATE-TIME` tags to signal events in the live stream\.
 
 **Note**  
 The `DURATION`, `PLANNED-DURATION`, and `END-DATE` attributes of the `EXT-X-DATERANGE` tag are optional\. If these attributes aren't present in the SCTE\-35 input, or aren't set when you create your endpoint via the MediaPackage REST API, then they are omitted from the generated manifests\.

@@ -14,7 +14,7 @@ In the following steps, "now" is the current time according to the program date 
 
    When requests with start and end parameters that are within the startover window are sent to this endpoint, AWS Elemental MediaPackage generates a manifest for the requested timeframe\. If the start or end parameters are outside of the startover window, the playback request fails\. If no start and end parameters are used, the service generates a standard manifest\.
 **Note**  
-You might notice that the manifest lags behind real time when you initially create a startover window on an endpoint\. This is because AWS Elemental MediaPackage starts filling the manifest from the start of the window, and works up to "now\." So if you have a 24\-hour startover window, MediaPackage fills the manifest starting 24 hours ago and working up to "now\."
+You might notice that the manifest lags behind real time when you initially create a startover window on an endpoint\. This is because AWS Elemental MediaPackage starts filling the manifest from the start of the window, and works up to "now\." So, if you have a 24\-hour startover window, MediaPackage fills the manifest starting 24 hours ago and working up to "now\."
 
 1. Ensure that content requests contain start and end parameters as needed\. AWS Elemental MediaPackage accepts requests for up to 24 hours of content\.
 

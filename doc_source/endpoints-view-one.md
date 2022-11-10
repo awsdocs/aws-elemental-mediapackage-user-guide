@@ -1,6 +1,6 @@
 # Viewing a single endpoint<a name="endpoints-view-one"></a>
 
-View the details about a specific endpoint to obtain its playback URL and to view the packaging settings that it is currently using\.
+View the details about a specific endpoint to obtain its playback URL and to view the packaging settings that it's currently using\.
 
 You can use the AWS Elemental MediaPackage console, the AWS CLI, or the MediaPackage API to view the details of an endpoint\. For information about viewing endpoint details through the AWS CLI or MediaPackage API, see the [AWS Elemental MediaPackage API Reference](https://docs.aws.amazon.com/mediapackage/latest/apireference/)\.
 

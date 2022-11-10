@@ -4,7 +4,7 @@ The following sections describe supported input types and codecs for live stream
 
 ## Supported input types<a name="supported-types-live"></a>
 
-These are the input types that AWS Elemental MediaPackage supports for live content\.
+These are the input types that MediaPackage supports for live content\.
 
 
 | MediaPackage input type | Use case | 
@@ -28,6 +28,6 @@ These are the video, audio, and subtitles codecs that MediaPackage supports when
 | Endpoint type | Manifest format | Media container | Video codecs | Audio codecs | Subtitles/captions format | 
 | --- | --- | --- | --- | --- | --- | 
 | Apple HLS | HLS |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-live.html)  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-live.html)  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-live.html)  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-live.html)  | 
-| Microsoft Smooth | MSS | MP4 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-live.html)  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-live.html)  | DFXP | 
 | DASH\-ISO | MPEG\-DASH | MP4 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-live.html)  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-live.html)  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-live.html)  | 
+| Microsoft Smooth | MSS | MP4 |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-live.html)  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-live.html)  | DFXP | 
 | CMAF | HLS | CMAF |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-live.html)  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-live.html)  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-live.html)  | 

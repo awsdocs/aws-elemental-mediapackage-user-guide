@@ -16,7 +16,7 @@ To view packaging configurations, you can use the AWS Elemental MediaPackage con
 
 1. To view the details of a specific packaging configuration, choose the **Id** of that configuration\.
 
-AWS Elemental MediaPackage displays summary information, such as the assets associated with this packaging configuration\.
+MediaPackage displays summary information, such as the assets associated with this packaging configuration\.
 
 **To view all packaging configurations associated with an asset \(console\)**
 

@@ -1,9 +1,9 @@
 # Encryption fields<a name="endpoints-cmaf-encryption"></a>
 
-Protect your content from unauthorized use through content encryption and digital rights management \(DRM\)\. AWS Elemental MediaPackage uses the [AWS Secure Packager and Encoder Key Exchange \(SPEKE\) API](https://aws.amazon.com/media/tech/speke-basics-secure-packager-encoder-key-exchange-api/) to facilitate content encryption and decryption by a DRM provider\. Using SPEKE, the DRM provider supplies encryption keys to AWS Elemental MediaPackage through the SPEKE API\. The DRM provider also supplies licenses to supported media players for decryption\. For more information about how SPEKE is used with services and features running in the cloud, see [AWS cloud\-based architecture](https://docs.aws.amazon.com/speke/latest/documentation/what-is-speke.html#services-architecture) in the *Secure Packager and Encoder Key Exchange API Specification guide*\.
+Protect your content from unauthorized use through content encryption and digital rights management \(DRM\)\. AWS Elemental MediaPackage uses the [AWS Secure Packager and Encoder Key Exchange \(SPEKE\) API](https://aws.amazon.com/media/tech/speke-basics-secure-packager-encoder-key-exchange-api/) to facilitate content encryption and decryption by a DRM provider\. Using SPEKE, the DRM provider supplies encryption keys to MediaPackage through the SPEKE API\. The DRM provider also supplies licenses to supported media players for decryption\. For more information about how SPEKE is used with services and features running in the cloud, see [AWS cloud\-based architecture](https://docs.aws.amazon.com/speke/latest/documentation/what-is-speke.html#services-architecture) in the *Secure Packager and Encoder Key Exchange API Specification guide*\.
 
 **Important**  
-To encrypt content you must have a DRM provider and use a version of AWS SPEKE\. For more information about how to use encryption for MediaPackage, see [Content encryption and DRM in AWS Elemental MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/ug/using-encryption.html)\. 
+To encrypt content, you must have a DRM provider and use a version of AWS SPEKE\. For more information about how to use encryption for MediaPackage, see [Content encryption and DRM in AWS Elemental MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/ug/using-encryption.html)\. 
 
 Define the encryption values\.
 
@@ -49,7 +49,7 @@ Define the encryption values\.
 
       For information about content key encryption, see [Preparing and managing certificates for use with content keys](drm-content-key-encryption.md)\.
 
-   1. For **Encryption Method**, choose Sample\-AES for CMAF Apple HLS FairPlay or choose AES\-CTR for Microsoft PlayReady and Google Widevine\.
+   1. For **Encryption Method**, choose **Sample\-AES** for CMAF Apple HLS FairPlay or choose **AES\-CTR** for Microsoft PlayReady and Google Widevine\.
 
    1. \(Optional\) For **Constant initialization vector** enter a 128\-bit, 16\-byte hex value represented by a 32\-character string, to be used with the key for encrypting content\.
 

@@ -1,6 +1,6 @@
 # Using Service\-Linked Roles for MediaPackage<a name="using-service-linked-roles"></a>
 
-AWS Elemental MediaPackage uses AWS Identity and Access Management \(IAM\)[ service\-linked roles](IAM/latest/UserGuide/id_roles_terms-and-concepts.html#iam-term-service-linked-role)\. A service\-linked role is a unique type of IAM role that is linked directly to MediaPackage\. Service\-linked roles are predefined by MediaPackage and include all the permissions that the service requires to call other AWS services on your behalf\. 
+AWS Elemental MediaPackage uses AWS Identity and Access Management \(IAM\)[ service\-linked roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html#iam-term-service-linked-role)\. A service\-linked role is a unique type of IAM role that's linked directly to MediaPackage\. Service\-linked roles are predefined by MediaPackage and include all the permissions that the service requires to call other AWS services on your behalf\. 
 
 A service\-linked role makes setting up MediaPackage easier because you don’t have to manually add the necessary permissions\. MediaPackage defines the permissions of its service\-linked roles, and unless defined otherwise, only MediaPackage can assume its roles\. The defined permissions include the trust policy and the permissions policy, and that permissions policy cannot be attached to any other IAM entity\.
 
@@ -10,7 +10,7 @@ For information about other services that support service\-linked roles, see [AW
 
 ## Service\-Linked Role Permissions for MediaPackage<a name="slr-permissions"></a>
 
-MediaPackage uses the service\-linked role named **AWSServiceRoleForMediaPackage** – MediaPackage uses this service\-linked role to invoke CloudWatch to create and manage log groups, log streams, and log events\.\.
+MediaPackage uses the service\-linked role named **AWSServiceRoleForMediaPackage** – MediaPackage uses this service\-linked role to invoke CloudWatch to create and manage log groups, log streams, and log events\.
 
 The AWSServiceRoleForMediaPackage service\-linked role trusts the following services to assume the role:
 + `mediapackage.amazonaws.com`
@@ -35,7 +35,7 @@ MediaPackage does not allow you to edit the AWSServiceRoleForMediaPackage servic
 
 ## Deleting a Service\-Linked Role for MediaPackage<a name="delete-slr"></a>
 
-If you no longer need to use a feature or service that requires a service\-linked role, we recommend that you delete that role\. That way you don’t have an unused entity that is not actively monitored or maintained\. However, you must clean up the resources for your service\-linked role before you can manually delete it\.
+If you no longer need to use a feature or service that requires a service\-linked role, we recommend that you delete that role\. That way you don’t have an unused entity that's not actively monitored or maintained\. However, you must clean up the resources for your service\-linked role before you can manually delete it\.
 
 **Note**  
 If the MediaPackage service is using the role when you try to delete the resources, then the deletion might fail\. If that happens, wait for a few minutes and try the operation again\.

@@ -1,6 +1,6 @@
 # Working with endpoints in AWS Elemental MediaPackage<a name="endpoints"></a>
 
-An endpoint defines a single delivery point of a channel\. The endpoint holds all the information that is needed for AWS Elemental MediaPackage to integrate with a player or content delivery network \(CDN\) such as Amazon CloudFront\. Configure the endpoint to output content in one of the available stream formats:
+An endpoint defines a single delivery point of a channel\. The endpoint holds all the information that's needed for AWS Elemental MediaPackage to integrate with a player or content delivery network \(CDN\) such as Amazon CloudFront\. Configure the endpoint to output content in one of the available stream formats:
 + Apple HLS – Packages content to Apple HTTP Live Streaming \(HLS\)
 + Microsoft Smooth – Packages content for Microsoft Smooth Streaming players
 + Common Media Application Format \(CMAF\) – Packages content to devices that support Apple HLS fragmented MP4 \(fMP4\)

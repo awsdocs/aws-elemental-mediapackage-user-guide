@@ -40,7 +40,7 @@ Except for the final segment, segments must be no more than 50% deviation from t
    </AdaptationSet>
    ```
 
-1. The playback device requests segments using the URL that is defined in the `media` attribute\. In the URL, it replaces the `$Number$` variable with the number of the segment, starting with the value of the `startNumber` in the `SegmentTemplate` for the first segment\.
+1. The playback device requests segments using the URL that's defined in the `media` attribute\. In the URL, it replaces the `$Number$` variable with the number of the segment, starting with the value of the `startNumber` in the `SegmentTemplate` for the first segment\.
 
 1. If your playback device needs to determine the most recent segment, it uses this formula:
 

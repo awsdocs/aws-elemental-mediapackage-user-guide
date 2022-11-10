@@ -30,3 +30,6 @@ The following tables list the different protocols and digital rights management 
 | Live | 
 | CMAF Apple HLS | √ | √ | √ |   | 
 | DASH | √ | √ |   | √ | 
+| VOD | 
+| CMAF Apple HLS | √ | √ | √ |   | 
+| DASH | √ | √ |   | √ | 

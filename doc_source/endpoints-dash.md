@@ -6,9 +6,7 @@ Create an endpoint that formats content for devices that support MPEG\-DASH\.
 
 1. Access the channel that the endpoint will be associated with, as described in [Viewing channel details](channels-view.md)\.
 
-1. On the details page for the channel, under **Origin endpoints**, choose the endpoint using one of the following methods\. If there are no existing endpoints, proceed to the next step\.
-   + Choose the endpoint name
-   + Select the check box next to the endpoint name
+1. On the details page for the channel, under **Origin endpoints**, choose **Manage endpoints**\.
 
 1. Choose **Manage endpoints**\.
 
@@ -23,6 +21,6 @@ Create an endpoint that formats content for devices that support MPEG\-DASH\.
 
    If you enabled Amazon CloudFront distribution creation from the AWS Elemental MediaPackage console and this is your first endpoint on the channel, MediaPackage adds an origin to the distribution\. You can view the CloudFront CDN URL and endpoint information in the endpoints section of the channel's details page\.
 
-   The endpoint is active and can deliver content as soon as requests are sent to its URL endpoints\. AWS Elemental MediaPackage scales resources up and down to allow the right amount of capacity for your traffic\.
+   The endpoint is active and can deliver content as soon as requests are sent to its URL endpoints\. MediaPackage scales resources up and down to allow the right amount of capacity for your traffic\.
 
-   When you're creating an endpoint, you will receive an error if you exceed the quotas on the account\. An error similar to Too many requests, please try again\. Resource limit exceeded means that either you have exceeded the API request quotas, or you have already reached the maximum number of endpoints allowed on this channel\. If you think you received this error wrongfully, use the Service Quotas console to [request quota increases](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/mediapackage/quotas)\. For more information about quotas in AWS Elemental MediaPackage, see [Quotas in AWS Elemental MediaPackage](quotas.md)\.
+   When you're creating an endpoint, you will receive an error if you exceed the quotas on the account\. An error similar to Too many requests, please try again\. Resource limit exceeded means that either you've exceeded the API request quotas, or you've already reached the maximum number of endpoints allowed on this channel\. If you think you received this error wrongfully, use the Service Quotas console to [request quota increases](https://console.aws.amazon.com/servicequotas/home?region=us-east-1#!/services/mediapackage/quotas)\. For more information about quotas in AWS Elemental MediaPackage, see [Quotas in AWS Elemental MediaPackage](quotas.md)\.

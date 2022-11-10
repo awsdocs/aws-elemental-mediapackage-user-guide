@@ -1,6 +1,6 @@
 # `media` Attribute in `SegmentTemplate`<a name="segtemp-format-media"></a>
 
-The `media` attribute in the `SegmentTemplate` properties defines the URL where playback devices send segment requests\. By default, this URL uses a `$Number$` variable to identify the specific segment that is requested\. When a playback device requests the segment, it replaces the variable with the number identifier of the segment\. For the first segment in the representation, replace this identifier with the value of the `startNumber` from the `SegmentTemplate` properties\. Each additional segment increments by one\.
+The `media` attribute in the `SegmentTemplate` properties defines the URL where playback devices send segment requests\. By default, this URL uses a `$Number$` variable to identify the specific segment that's requested\. When a playback device requests the segment, it replaces the variable with the number identifier of the segment\. For the first segment in the representation, replace this identifier with the value of the `startNumber` from the `SegmentTemplate` properties\. Each additional segment increments by one\.
 
 Some players navigate the segments better when the segments are identified instead by the timestamp for when playback is available\. To support this use case, MediaPackage uses the `$Time$` variable instead of `$Number$` in the URL of the `media` attribute\. When a playback device requests the segment, it replaces the variable with the availability start time of the segment\. This start time is identified in the `t` value of the segment \(`S`\) properties in the `SegmentTimeline` object\. For an example, see [How It Works](#how-stemp-works)\.
 
@@ -15,7 +15,7 @@ Enable the `$Time$` variable through the **Segment template format** setting on 
    <SegmentTemplate timescale="30" media="index_video_1_0_$Time$.mp4?m=1122792372" initialization="index_video_1_0_init.mp4?m=1122792372" startNumber="2937928">
    ```
 
-1. When a playback device requests segments, it uses the URL defined in the `media` attribute and replaces the variable with the availability start time of the segment that is requested\.
+1. When a playback device requests segments, it uses the URL defined in the `media` attribute and replaces the variable with the availability start time of the segment that's requested\.
 **Important**  
 The value that replaces the variable must be an exact `t` value of a segment\. If the request uses an arbitrary timestamp, AWS Elemental MediaPackage doesn't seek the closest segment\.  
 **Example**  

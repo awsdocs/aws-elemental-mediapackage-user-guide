@@ -1,6 +1,6 @@
 # Preparing and managing certificates for use with content keys<a name="drm-content-key-encryption"></a>
 
-AWS Elemental MediaPackage uses a Content Protection Information Exchange \(CPIX\) document to communicate with SPEKE about content keys that are used to encrypt your content\. For the most secure digital rights management \(DRM\) encryption solution, use encrypted content keys in the CPIX document\. 
+AWS Elemental MediaPackage uses a Content Protection Information Exchange \(CPIX\) document to communicate with SPEKE about content keys that are used to encrypt your content\. For the most secure digital rights management \(DRM\) encryption solution, use encrypted content keys in the CPIX document\.
 
 To use encrypted content keys, the following requirements must be met:
 + The encrypted content must be live\. Video on demand \(VOD\) and live\-to\-VOD workflows don't support encrypted content keys in the CPIX document\.
@@ -25,11 +25,11 @@ When you use DRM encryption in your endpoint configuration, provide your certifi
 
 **To renew a certificate**
 
-To renew a certificate that you are using in AWS Elemental MediaPackage, reimport it in AWS Certificate Manager\. The certificate renews without any disruption of its use in MediaPackage\. 
+To renew a certificate that you are using in AWS Elemental MediaPackage, reimport it in ACM\. The certificate renews without any disruption of its use in MediaPackage\. 
 
 **To delete a certificate**
 
-To delete a certificate from AWS Certificate Manager, it must not be associated with any other service\. Delete the certificate ARN from endpoint configurations where you have used it, then delete it from ACM\. 
+To delete a certificate from ACM, it must not be associated with any other service\. Delete the certificate ARN from endpoint configurations where you have used it, then delete it from ACM\. 
 
 **Note**  
 If you delete a certificate ARN from an active endpoint, the endpoint keeps running, but stops using content key encryption\. 

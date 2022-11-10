@@ -5,10 +5,16 @@ The following table describes important changes in each release of the *AWS Elem
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated I\-frame only trick\-play support](trick-play.md) | MediaPackage now supports I\-frame only trick\-play for DASH VOD\. | November 7, 2022 | 
+| [New DASH manifest setting](cfigs-dash-manset.md) | Added the **Include IFrame\-only streams** manifest settings option\. | November 7, 2022 | 
+| [Updated `trickplay_height` and `video_height` query parameters](manifest-filtering.md) | Updated `trickplay_height` and `video_height` query parameters when using I\-frame only and image\-based trick\-play\. | October 27, 2022 | 
+| [SPEKE Version 2\.0 is now available for both VOD and live](using-encryption.md) | MediaPackage now supports SPEKE Version 2\.0 with VOD CMAF and DASH workflows\. | October 10, 2022 | 
+| [New SPEKE option for DASH](cfigs-dash-encryption.md) | MediaPackage now supports DASH SPEKE Version 2\.0 for VOD\. | October 10, 2022 | 
+| [New SPEKE option for CMAF](cfigs-cmaf-encryption.md) | MediaPackage now supports CMAF SPEKE Version 2\.0 for VOD\. | October 10, 2022 | 
 | [New CMAF encryption option](endpoints-cmaf-encryption.md) | MediaPackage now supports AES\-CTR encryption to encrypted CMAF endpoints\. | September 2, 2022 | 
 | [Updated information regarding SPEKE Version 2\.0 presets](encryption-choosing-speke-version.md) | Updated the CPIX Version to 2\.3\. Updated the SPEKE Version 2\.0 table that describes the support matrix for protocol and DRM system\. | July 19, 2022 | 
 | [New documentation of SPEKE Version 2\.0 presets](drm-content-speke-v2-presets.md) | MediaPackage supports SPEKE Version 2\.0 presets for unencrypted tracks and encrypted tracks, a single encryption key for all audio and video tracks, and multiple encryption keys for audio and video tracks\. | July 19, 2022 | 
-| [New **Include IFrame only stream** option](endpoints-dash-packager.md) | MediaPackage now supports the **Include IFrame only stream** to include an additional I\-frame only stream\. along with the other tracks in the manifest\. | July 19, 2022 | 
+| [New **Include IFrame only stream** option](endpoints-dash-packager.md) | MediaPackage now supports the **Include IFrame only stream** to include an additional I\-frame only stream along with the other tracks in the manifest\. | July 19, 2022 | 
 | [Manifest update time](monitoring-manifest-last-updated.md) | MediaPackage playback responses now include custom headers that specify when MediaPackage last updated the manifest\. | January 3, 2022 | 
 | [Add information about image\-based trick\-play for HLS live](trick-play.md) | MediaPackage now supports image\-based trick\-play for HLS live\. | November 24, 2021 | 
 | [Added support for `includeAudio` parameter](supported-inputs-vod-smil.md) | MediaPackage now supports `includeAudio` in \.smil manifests | November 1, 2021 | 
@@ -16,7 +22,7 @@ The following table describes important changes in each release of the *AWS Elem
 | [New DVB subtitle option](cfigs-hls-manset.md) | MediaPackage can now passthrough DVB subtitles into the HLS outputs\. | October 20, 2021 | 
 | [New trick\-play topic](trick-play.md) | MediaPackage now supports trick\-play for DASH\. | October 15, 2021 | 
 | [Asset playback status](pkg-cfig-view.md) | You can now view playable status information about an asset\. This lets you tell whether or not an asset is ready for playback, or if processing has failed\. | October 7, 2021 | 
-| [MediaPackage now supports SPEKE Version 2\.0](using-encryption.md) | Added information about SPEKE Version 2\.0\. | September 7, 2021 | 
+| [MediaPackage now supports SPEKE Version 2\.0 with live workflows](using-encryption.md) | Added information about SPEKE Version 2\.0 with live CMAF and DASH workflows\. | September 7, 2021 | 
 | [New guidance for integrating with SPEKE Version 2\.0](encryption-choosing-speke-version.md) | MediaPackage now supports SPEKE Version 2\.0\. | September 6, 2021 | 
 | [New metadata passthrough topic](metadata-passthrough.md) | MediaPackage now supports ID3 and KLV metadata passthrough\. When ID3 or KLV metadata is present in a channel's input stream, MediaPackage automatically passes through the metadata to the output stream\. | June 30, 2021 | 
 | [New CMAF encryption options](cfigs-cmaf-encryption.md) | MediaPackage now offers constant IV and multiple system IDs for CMAF packaging configurations\. | June 30, 2021 | 
@@ -76,9 +82,9 @@ The following table describes important changes in each release of the *AWS Elem
 | --- | --- | --- | 
 | Initial document creation | New document\. | November 27, 2017 | 
 | Corrected links and added whitelisting | Corrected links to the AWS Elemental MediaPackage console and AWS Elemental MediaPackage API Reference\.In Working with Endpoints, added reference to access control fields\. | December 1, 2017 | 
-| Added IAM policy information specific to AWS Elemental MediaPackage | In [Setting up AWS Elemental MediaPackage](setting-up.md), added instructions for creating non\-admin roles with limited permissions\. | December 13, 2017 | 
+| Added IAM policy information specific to AWS Elemental MediaPackage | In [Setting up MediaPackage](setting-up.md), added instructions for creating non\-admin roles with limited permissions\. | December 13, 2017 | 
 | Added hard limit information | In [Quotas in AWS Elemental MediaPackage](quotas.md), added information about limits that can't be changed \(hard limits\)\. | December 20, 2017 | 
-| Updated IAM policy information | In [Setting up AWS Elemental MediaPackage](setting-up.md), added information about policies specific to AWS Elemental MediaPackage\. | January 5, 2018 | 
+| Updated IAM policy information | In [Setting up MediaPackage](setting-up.md), added information about policies specific to AWS Elemental MediaPackage\. | January 5, 2018 | 
 | Added CMAF endpoint information | Added [Creating a CMAF endpoint](endpoints-cmaf.md) section for new output type\. | April 6, 2018 | 
 | Updated feature functionality | In [Features of AWS Elemental MediaPackage](what-is-features.md), added feature support for HDR\-10\. | April 30, 2018 | 
 | Added CDN information | Added topic [Working with Content Delivery Networks \(CDNs\)](cdns.md) to discuss how AWS Elemental MediaPackage works with CDNs such as Amazon CloudFront\. | May 31, 2018 | 

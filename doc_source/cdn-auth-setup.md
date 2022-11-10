@@ -10,7 +10,7 @@ Complete the following steps to set up CDN authorization\.
 
 ## Step 1: Configure a CDN custom origin HTTP header<a name="cdn-aut-setup-cdn"></a>
 
-In your CDN, configure a custom origin HTTP header that contains the header **X\-MediaPackage\-CDNIdentifier** and a value\. For the value, we recommend that you use the [UUID version 4](https://www.ietf.org/rfc/rfc4122.txt) format, which produces a 36 character string\. If you aren't using the UUID version 4 format, the value must be 8\-128 characters long\.
+In your CDN, configure a custom origin HTTP header that contains the header **X\-MediaPackage\-CDNIdentifier** and a value\. For the value, we recommend that you use the [UUID version 4](https://www.ietf.org/rfc/rfc4122.txt) format, which produces a 36\-character string\. If you aren't using the UUID version 4 format, the value must be 8\-128 characters long\.
 
 **Important**  
 The value you choose should be a static value\. There isn't native integration between your CDN and AWS Secrets Manager, so the value should be static both in your CDN and in AWS Secrets Manager\. If you change this value after you configure your CDN and your secret, you have to manually rotate the value\. For more information, see [Rotating the CDN header value](cdn-auth-rotate.md)\.
@@ -29,7 +29,7 @@ X-MediaPackage-CDNIdentifier: 9ceebbe7-9607-4552-8764-876e47032660
 
 1. In **Origin Settings**, complete the fields\. You will use this same value for your secret in Secrets Manager\.
    + For **Header Name**, enter **X\-MediaPackage\-CDNIdentifier**\.
-   + For **Value**, enter a value\. We recommend that you use UUID version 4 format, which produces a 36 character string\. If you aren't using the UUID version 4 format, the value must be 8\-128 characters long\. 
+   + For **Value**, enter a value\. We recommend that you use UUID version 4 format, which produces a 36\-character string\. If you aren't using the UUID version 4 format, the value must be 8\-128 characters long\. 
 
 1. Complete the rest of the fields and save the distribution\.
 
@@ -37,7 +37,7 @@ For more information about custom headers in CloudFront, see [Forwarding custome
 
 ## Step 2: Store the value as a secret in AWS Secrets Manager<a name="cdn-aut-setup-secret"></a>
 
-Store the same value that you use in your custom origin HTTP header as a *secret* in AWS Secrets Manager\. The secret must use the same AWS account and Region settings as your AWS Elemental MediaPackage resources\. AWS Elemental MediaPackage doesn't support sharing secrets across accounts or Regions\. However, you can use the same secret across multiple endpoints in the same Region and on the same account\.
+Store the same value that you use in your custom origin HTTP header as a *secret* in AWS Secrets Manager\. The secret must use the same AWS account and Region settings as your AWS Elemental MediaPackage resources\. MediaPackage doesn't support sharing secrets across accounts or Regions\. However, you can use the same secret across multiple endpoints in the same Region and on the same account\.
 
 **To store a secret in Secrets Manager**
 
@@ -75,7 +75,7 @@ Create an IAM policy and role to give MediaPackage read access to Secrets Manage
 
 ## Step 4: Enable CDN authorization in MediaPackage<a name="cdn-aut-setup-endpoint"></a>
 
-You can enable CDN authorization for your endpoints or video on demand \(VOD\) packaging groups via the console, AWS CLI, or MediaPackage API\. You use the Amazon Resource Numbers \(ARN\) for the IAM policy and role that you create in Step 3: Create an IAM policy and role for MediaPackage access to Secrets Manager above\.
+You can enable CDN authorization for your endpoints or video on demand \(VOD\) packaging groups via the console, AWS CLI, or MediaPackage API\. You use the Amazon Resource Numbers \(ARN\) for the IAM policy and role that you create in Step 3: Create an IAM policy and role for MediaPackage access to Secrets Manager\.
 
 **Tip**  
 Use the same secret across multiple endpoints in the same Region and on the same account\. Reduce costs by creating a new secret only when necessary for your workflow\.
@@ -89,7 +89,7 @@ Use the same secret across multiple endpoints in the same Region and on the same
 1. Create or edit an endpoint\.
 
 1. In **Access control settings**, select **Use authorization**\. Complete the fields:
-   + In **Secrets role ARN**, enter the Amazon Resource Name \(ARN\) for the IAM role that you created in [Step 3: Create an IAM policy and role for MediaPackage access to Secrets Manager](#cdn-aut-setup-iam)\.
+   + In **Secrets role ARN**, enter the ARN for the IAM role that you created in [Step 3: Create an IAM policy and role for MediaPackage access to Secrets Manager](#cdn-aut-setup-iam)\.
    + In **CDN identifier secret**, enter the ARN for the secret that holds your authorization code in Secrets Manager\.
 
 1. Complete the remaining fields as needed and save the endpoint\.
@@ -103,7 +103,7 @@ Use the same secret across multiple endpoints in the same Region and on the same
 1. Create or edit a packaging group\.
 
 1. In **Access control settings**, select **Use authorization**\. Complete the fields:
-   + In **Secrets role ARN**, enter the Amazon Resource Name \(ARN\) for the IAM role that you created in [Step 3: Create an IAM policy and role for MediaPackage access to Secrets Manager](#cdn-aut-setup-iam)\.
+   + In **Secrets role ARN**, enter the ARN for the IAM role that you created in [Step 3: Create an IAM policy and role for MediaPackage access to Secrets Manager](#cdn-aut-setup-iam)\.
    + In **CDN identifier secret**, enter the ARN for the secret that holds your authorization code in Secrets Manager\.
 
 1. Complete the remaining fields as needed and save the packaging group\.

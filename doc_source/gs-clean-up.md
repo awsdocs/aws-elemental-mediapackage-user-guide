@@ -4,7 +4,7 @@ To avoid incurring extra charges, delete your VOD resources\. If you want to mak
 
 **To delete an asset**
 
-1. On the AWS Elemental MediaPackage console, go to the **Assets** page, and then choose the **ID** of the asset\.
+1. On the MediaPackage console, go to the **Assets** page, and then choose the **ID** of the asset\.
 
 1. On the asset's details page, choose **Delete**\.
 
@@ -12,7 +12,7 @@ To avoid incurring extra charges, delete your VOD resources\. If you want to mak
 
 **To delete a packaging configuration**
 
-1. On the AWS Elemental MediaPackage console, go to the **Packaging groups** page\.
+1. On the MediaPackage console, go to the **Packaging groups** page\.
 
 1. Choose the **ID** of the group that has the configuration that you want to delete\.
 

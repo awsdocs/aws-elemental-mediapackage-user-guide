@@ -8,7 +8,7 @@ You can use the AWS Elemental MediaPackage console or the MediaPackage API to ro
 
 1. Open the MediaPackage console at [https://console\.aws\.amazon\.com/mediapackage/](https://console.aws.amazon.com/mediapackage/)\.
 
-1. If the **Channels** page doesn't appear, on the AWS Elemental MediaPackage home page, choose **Skip and go to console**\.
+1. If the **Channels** page doesn't appear, on the MediaPackage home page, choose **Skip and go to console**\.
 
 1. On the **Channels** page, choose the name of the channel that holds the input URL that you're rotating the credentials for\.
 
@@ -16,4 +16,4 @@ You can use the AWS Elemental MediaPackage console or the MediaPackage API to ro
 
 1. To confirm that you want to generate a new user name and password, choose **Rotate**\.
 
-   AWS Elemental MediaPackage displays the new credentials\.
+   MediaPackage displays the new credentials\.

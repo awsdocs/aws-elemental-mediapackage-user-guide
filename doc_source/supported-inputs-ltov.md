@@ -4,7 +4,7 @@ The following sections describe supported input types and codecs for live\-to\-V
 
 ## Supported input types<a name="supported-types-ltov"></a>
 
-These are the input types that AWS Elemental MediaPackage supports for live\-to\-VOD assets\.
+These are the input types that MediaPackage supports for live\-to\-VOD assets\.
 
 
 | MediaPackage input type | Use case | 

@@ -9,7 +9,7 @@ When you use a manifest filter, the resulting manifest includes only the audio a
 Manifest filtering can be used on all endpoint types supported by MediaPackage:
 + Apple HLS
 + DASH\-ISO
-+ Microsoft Smooth
++ Microsoft Smooth Streaming
 + CMAF
 
 To use manifest filtering, append `aws.manifestfilter` query parameters to your playback request to MediaPackage\. MediaPackage evaluates the query, and serves a client manifest based on those query parameters\. Manifest queries are *not *case\-sensitive and can be up to 1024 characters long\. If the query is malformed, or if it there aren't streams that match the query parameters, MediaPackage returns an incomplete or empty manifest\. For query syntax, see the following section\.
@@ -22,7 +22,7 @@ The base query parameter is `aws.manifestfilter`, which is followed by optional 
 
 An Apple HLS filter query might look like this:
 
-`https://example-mediapackage-endpoint.mediapackage.us-west-2.amazonaws.com/out/v1/examplemediapackge/index.m3u8?aws.manifestfilter=audio_sample_rate:0-44100;video_bitrate:0-2147483647;video_codec:h265;audio_language:fr,en-US,de`
+`https://example-mediapackage-endpoint.mediapackage.us-west-2.amazonaws.com/out/v1/examplemediapackage/index.m3u8?aws.manifestfilter=audio_sample_rate:0-44100;video_bitrate:0-2147483647;video_codec:h265;audio_language:fr,en-US,de`
 
 The query syntax is listed in the following table\.
 
@@ -84,7 +84,7 @@ To only include video within a certain frame rate range, use `video_framerate`\.
 If you are using HLS or CMAF manifests, these special conditions apply\.
 + For HLS manifests, we strongly recommend that you use audio rendition groups to avoid removing the video streams that are multiplexed with the audio streams that are filtered out\. For more information about rendition groups, see [Rendition groups reference in AWS Elemental MediaPackage](rendition-groups.md)\.
 + In HLS and CMAF manifests, the audio sample rate is not signaled, so it's not easy to visually check the original or filtered manifests for this setting\. To verify the audio sample rate, check the audio sample rate at the encoder level and output level\.
-+ In HLS and CMAF manifests, the `BANDWIDTH` attribute for a variant associates the bandwidth of the audio track with the video track, whether it is multiplexed with the video track, or if it is an audio rendition track referenced by the video track\. Therefore you can't visually inspect the original and filtered manifests to confirm the `video_bitrate` filter has worked\. To verify the filter, check the video bitrate at the encoder level and output level\.
++ In HLS and CMAF manifests, the `BANDWIDTH` attribute for a variant associates the bandwidth of the audio track with the video track, whether it is multiplexed with the video track, or if it is an audio rendition track referenced by the video track\. Therefore, you can't visually inspect the original and filtered manifests to confirm the `video_bitrate` filter has worked\. To verify the filter, check the video bitrate at the encoder level and output level\.
 + For HLS and CMAF manifests, request parameters appended to bitrate playlists or segments result in an HTTP 400 error\.
 
 ## Error conditions<a name="error-conditions-and-handling"></a>
