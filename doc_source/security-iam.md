@@ -1,4 +1,8 @@
-# Identity and Access Management in AWS Elemental MediaPackage<a name="security-iam"></a>
+# Identity and Access Management for AWS Elemental MediaPackage<a name="security-iam"></a>
+
+
+
+
 
 AWS Identity and Access Management \(IAM\) is an AWS service that helps an administrator securely control access to AWS resources\. IAM administrators control who can be *authenticated* \(signed in\) and *authorized* \(have permissions\) to use MediaPackage resources\. IAM is an AWS service that you can use with no additional charge\.
 
@@ -6,10 +10,10 @@ AWS Identity and Access Management \(IAM\) is an AWS service that helps an admin
 + [Audience](#security_iam_audience)
 + [Authenticating with identities](#security_iam_authentication)
 + [Managing access using policies](#security_iam_access-manage)
-+ [How AWS Elemental MediaPackage Works with IAM](security_iam_service-with-iam.md)
-+ [AWS Elemental MediaPackage Identity\-based policy examples](security_iam_id-based-policy-examples.md)
++ [How AWS Elemental MediaPackage works with IAM](security_iam_service-with-iam.md)
++ [Identity\-based policy examples for MediaPackage](security_iam_id-based-policy-examples.md)
 + [IAM policy examples for secrets in AWS Secrets Manager](iam-policy-examples-asm-secrets.md)
-+ [Troubleshooting AWS Elemental MediaPackage identity and access](security_iam_troubleshoot.md)
++ [Troubleshooting MediaPackage identity and access](security_iam_troubleshoot.md)
 + [Learn More](#security_iam_learn-more)
 + [Using Service\-Linked Roles for MediaPackage](using-service-linked-roles.md)
 
@@ -17,11 +21,11 @@ AWS Identity and Access Management \(IAM\) is an AWS service that helps an admin
 
 How you use AWS Identity and Access Management \(IAM\) differs, depending on the work that you do in MediaPackage\.
 
-**Service user** – If you use the MediaPackage service to do your job, then your administrator provides you with the credentials and permissions that you need\. As you use more MediaPackage features to do your work, you might need additional permissions\. Understanding how access is managed can help you request the right permissions from your administrator\. If you cannot access a feature in MediaPackage, see [Troubleshooting AWS Elemental MediaPackage identity and access](security_iam_troubleshoot.md)\.
+**Service user** – If you use the MediaPackage service to do your job, then your administrator provides you with the credentials and permissions that you need\. As you use more MediaPackage features to do your work, you might need additional permissions\. Understanding how access is managed can help you request the right permissions from your administrator\. If you cannot access a feature in MediaPackage, see [Troubleshooting MediaPackage identity and access](security_iam_troubleshoot.md)\.
 
-**Service administrator** – If you're in charge of MediaPackage resources at your company, you probably have full access to MediaPackage\. It's your job to determine which MediaPackage features and resources your service users should access\. You must then submit requests to your IAM administrator to change the permissions of your service users\. Review the information on this page to understand the basic concepts of IAM\. To learn more about how your company can use IAM with MediaPackage, see [How AWS Elemental MediaPackage Works with IAM](security_iam_service-with-iam.md)\.
+**Service administrator** – If you're in charge of MediaPackage resources at your company, you probably have full access to MediaPackage\. It's your job to determine which MediaPackage features and resources your service users should access\. You must then submit requests to your IAM administrator to change the permissions of your service users\. Review the information on this page to understand the basic concepts of IAM\. To learn more about how your company can use IAM with MediaPackage, see [How AWS Elemental MediaPackage works with IAM](security_iam_service-with-iam.md)\.
 
-**IAM administrator** – If you're an IAM administrator, you might want to learn details about how you can write policies to manage access to MediaPackage\. To view example MediaPackage identity\-based policies that you can use in IAM, see [AWS Elemental MediaPackage Identity\-based policy examples](security_iam_id-based-policy-examples.md)\.
+**IAM administrator** – If you're an IAM administrator, you might want to learn details about how you can write policies to manage access to MediaPackage\. To view example MediaPackage identity\-based policies that you can use in IAM, see [Identity\-based policy examples for MediaPackage](security_iam_id-based-policy-examples.md)\.
 
 ## Authenticating with identities<a name="security_iam_authentication"></a>
 
@@ -37,7 +41,15 @@ Regardless of the authentication method that you use, you might be required to p
 
 ### AWS account root user<a name="security_iam_authentication-rootuser"></a>
 
-  When you create an AWS account, you begin with one sign\-in identity that has complete access to all AWS services and resources in the account\. This identity is called the AWS account *root user* and is accessed by signing in with the email address and password that you used to create the account\. We strongly recommend that you do not use the root user for your everyday tasks\. Safeguard your root user credentials and use them to perform the tasks that only the root user can perform\. For the complete list of tasks that require you to sign in as the root user, see [Tasks that require root user credentials](https://docs.aws.amazon.com/general/latest/gr/root-vs-iam.html#aws_tasks-that-require-root) in the *AWS General Reference*\. 
+  When you create an AWS account, you begin with one sign\-in identity that has complete access to all AWS services and resources in the account\. This identity is called the AWS account *root user* and is accessed by signing in with the email address and password that you used to create the account\. We strongly recommend that you don't use the root user for your everyday tasks\. Safeguard your root user credentials and use them to perform the tasks that only the root user can perform\. For the complete list of tasks that require you to sign in as the root user, see [Tasks that require root user credentials](https://docs.aws.amazon.com/accounts/latest/reference/root-user-tasks.html) in the *AWS Account Management Reference Guide*\. 
+
+### Federated identity<a name="security_iam_authentication-federated"></a>
+
+As a best practice, require human users, including users that require administrator access, to use federation with an identity provider to access AWS services by using temporary credentials\.
+
+A *federated identity* is a user from your enterprise user directory, a web identity provider, the AWS Directory Service, the Identity Center directory, or any user that accesses AWS services by using credentials provided through an identity source\. When federated identities access AWS accounts, they assume roles, and the roles provide temporary credentials\.
+
+For centralized access management, we recommend that you use AWS IAM Identity Center \(successor to AWS Single Sign\-On\)\. You can create users and groups in IAM Identity Center, or you can connect and synchronize to a set of users and groups in your own identity source for use across all your AWS accounts and applications\. For information about IAM Identity Center, see [What is IAM Identity Center?](https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html) in the *AWS IAM Identity Center \(successor to AWS Single Sign\-On\) User Guide*\.
 
 ### IAM users and groups<a name="security_iam_authentication-iamuser"></a>
 
@@ -56,9 +68,9 @@ IAM roles with temporary credentials are useful in the following situations:
 + **Temporary IAM user permissions** – An IAM user or role can assume an IAM role to temporarily take on different permissions for a specific task\.
 + **Cross\-account access** – You can use an IAM role to allow someone \(a trusted principal\) in a different account to access resources in your account\. Roles are the primary way to grant cross\-account access\. However, with some AWS services, you can attach a policy directly to a resource \(instead of using a role as a proxy\)\. To learn the difference between roles and resource\-based policies for cross\-account access, see [How IAM roles differ from resource\-based policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_compare-resource-policies.html) in the *IAM User Guide*\.
 + **Cross\-service access** –  Some AWS services use features in other AWS services\. For example, when you make a call in a service, it's common for that service to run applications in Amazon EC2 or store objects in Amazon S3\. A service might do this using the calling principal's permissions, using a service role, or using a service\-linked role\. 
-  + **Principal permissions** –  When you use an IAM user or role to perform actions in AWS, you are considered a principal\. Policies grant permissions to a principal\. When you use some services, you might perform an action that then triggers another action in a different service\. In this case, you must have permissions to perform both actions\. To see whether an action requires additional dependent actions in a policy, see in the *Service Authorization Reference*\. 
+  + **Principal permissions** –  When you use an IAM user or role to perform actions in AWS, you are considered a principal\. Policies grant permissions to a principal\. When you use some services, you might perform an action that then triggers another action in a different service\. In this case, you must have permissions to perform both actions\. To see whether an action requires additional dependent actions in a policy, see [Actions, resources, and condition keys for AWS Elemental MediaPackage](https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalmediapackage.html) in the *Service Authorization Reference*\. 
   + **Service role** –  A service role is an [IAM role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html) that a service assumes to perform actions on your behalf\. An IAM administrator can create, modify, and delete a service role from within IAM\. For more information, see [Creating a role to delegate permissions to an AWS service](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-service.html) in the *IAM User Guide*\. 
-  + **Service\-linked role** –  A service\-linked role is a type of service role that is linked to an AWS service\. The service can assume the role to perform an action on your behalf\. Service\-linked roles appear in your IAM account and are owned by the service\. An IAM administrator can view, but not edit the permissions for service\-linked roles\. 
+  + **Service\-linked role** –  A service\-linked role is a type of service role that is linked to an AWS service\. The service can assume the role to perform an action on your behalf\. Service\-linked roles appear in your AWS account and are owned by the service\. An IAM administrator can view, but not edit the permissions for service\-linked roles\. 
 + **Applications running on Amazon EC2** –  You can use an IAM role to manage temporary credentials for applications that are running on an EC2 instance and making AWS CLI or AWS API requests\. This is preferable to storing access keys within the EC2 instance\. To assign an AWS role to an EC2 instance and make it available to all of its applications, you create an instance profile that is attached to the instance\. An instance profile contains the role and enables programs that are running on the EC2 instance to get temporary credentials\. For more information, see [Using an IAM role to grant permissions to applications running on Amazon EC2 instances](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html) in the *IAM User Guide*\. 
 
 To learn whether to use IAM roles or IAM users, see [When to create an IAM role \(instead of a user\)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id.html#id_which-to-choose_role) in the *IAM User Guide*\.
@@ -69,7 +81,7 @@ You control access in AWS by creating policies and attaching them to AWS identit
 
 Administrators can use AWS JSON policies to specify who has access to what\. That is, which **principal** can perform **actions** on what **resources**, and under what **conditions**\.
 
-Every IAM entity \(user or role\) starts with no permissions\. By default, users can do nothing, not even change their own password\. To give a user permission to do something, an administrator must attach a permissions policy to a user\. Or the administrator can add the user to a group that has the intended permissions\. When an administrator gives permissions to a group, all users in that group are granted those permissions\.
+By default, users and roles have no permissions\. To grant users permission to perform actions on the resources that they need, an IAM administrator can create IAM policies\. The administrator can then add the IAM policies to roles, and users can assume the roles\.
 
 IAM policies define permissions for an action regardless of the method that you use to perform the operation\. For example, suppose that you have a policy that allows the `iam:GetRole` action\. A user with that policy can get role information from the AWS Management Console, the AWS CLI, or the AWS API\.
 
@@ -94,7 +106,7 @@ Amazon S3, AWS WAF, and Amazon VPC are examples of services that support ACLs\. 
 ### Other policy types<a name="security_iam_access-manage-other-policies"></a>
 
 AWS supports additional, less\-common policy types\. These policy types can set the maximum permissions granted to you by the more common policy types\. 
-+ **Permissions boundaries** – A permissions boundary is an advanced feature in which you set the maximum permissions that an identity\-based policy can grant to an IAM entity \(IAM user or role\)\. You can set a permissions boundary for an entity\. The resulting permissions are the intersection of entity's identity\-based policies and its permissions boundaries\. Resource\-based policies that specify the user or role in the `Principal` field are not limited by the permissions boundary\. An explicit deny in any of these policies overrides the allow\. For more information about permissions boundaries, see [Permissions boundaries for IAM entities](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html) in the *IAM User Guide*\.
++ **Permissions boundaries** – A permissions boundary is an advanced feature in which you set the maximum permissions that an identity\-based policy can grant to an IAM entity \(IAM user or role\)\. You can set a permissions boundary for an entity\. The resulting permissions are the intersection of an entity's identity\-based policies and its permissions boundaries\. Resource\-based policies that specify the user or role in the `Principal` field are not limited by the permissions boundary\. An explicit deny in any of these policies overrides the allow\. For more information about permissions boundaries, see [Permissions boundaries for IAM entities](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html) in the *IAM User Guide*\.
 + **Service control policies \(SCPs\)** – SCPs are JSON policies that specify the maximum permissions for an organization or organizational unit \(OU\) in AWS Organizations\. AWS Organizations is a service for grouping and centrally managing multiple AWS accounts that your business owns\. If you enable all features in an organization, then you can apply service control policies \(SCPs\) to any or all of your accounts\. The SCP limits permissions for entities in member accounts, including each AWS account root user\. For more information about Organizations and SCPs, see [How SCPs work](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_about-scps.html) in the *AWS Organizations User Guide*\.
 + **Session policies** – Session policies are advanced policies that you pass as a parameter when you programmatically create a temporary session for a role or federated user\. The resulting session's permissions are the intersection of the user or role's identity\-based policies and the session policies\. Permissions can also come from a resource\-based policy\. An explicit deny in any of these policies overrides the allow\. For more information, see [Session policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html#policies_session) in the *IAM User Guide*\. 
 
@@ -102,9 +114,15 @@ AWS supports additional, less\-common policy types\. These policy types can set 
 
 When multiple types of policies apply to a request, the resulting permissions are more complicated to understand\. To learn how AWS determines whether to allow a request when multiple policy types are involved, see [Policy evaluation logic](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_evaluation-logic.html) in the *IAM User Guide*\.
 
+
+
+
+
+
+
 ## Learn More<a name="security_iam_learn-more"></a>
 
 For more information about identity and access management for MediaPackage, continue to the following pages:
-+ [How AWS Elemental MediaPackage Works with IAM](security_iam_service-with-iam.md)
-+ [AWS Elemental MediaPackage Identity\-based policy examples](security_iam_id-based-policy-examples.md)
-+ [Troubleshooting AWS Elemental MediaPackage identity and access](security_iam_troubleshoot.md)
++ [How AWS Elemental MediaPackage works with IAM](security_iam_service-with-iam.md)
++ [Identity\-based policy examples for MediaPackage](security_iam_id-based-policy-examples.md)
++ [Troubleshooting MediaPackage identity and access](security_iam_troubleshoot.md)

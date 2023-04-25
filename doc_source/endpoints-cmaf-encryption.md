@@ -1,4 +1,4 @@
-# Encryption fields<a name="endpoints-cmaf-encryption"></a>
+# Package encryption fields<a name="endpoints-cmaf-encryption"></a>
 
 Protect your content from unauthorized use through content encryption and digital rights management \(DRM\)\. AWS Elemental MediaPackage uses the [AWS Secure Packager and Encoder Key Exchange \(SPEKE\) API](https://aws.amazon.com/media/tech/speke-basics-secure-packager-encoder-key-exchange-api/) to facilitate content encryption and decryption by a DRM provider\. Using SPEKE, the DRM provider supplies encryption keys to MediaPackage through the SPEKE API\. The DRM provider also supplies licenses to supported media players for decryption\. For more information about how SPEKE is used with services and features running in the cloud, see [AWS cloud\-based architecture](https://docs.aws.amazon.com/speke/latest/documentation/what-is-speke.html#services-architecture) in the *Secure Packager and Encoder Key Exchange API Specification guide*\.
 
@@ -37,7 +37,7 @@ Define the encryption values\.
       arn:aws:iam::444455556666:role/SpekeAccess
       ```
 
-   1. **SPEKE version** – \(Optional\) Select the SPEKE version that you'd like to use for encryption\. SPEKE Version 1\.0 is the legacy version that uses CPIX Version 2\.0, and supports single key encryption\. SPEKE Version 2\.0 uses CPIX Version 2\.3, and supports multiple key encryption\. For more information about using SPEKE with AWS Elemental MediaPackage, see [Content encryption and DRM in AWS Elemental MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/ug/using-encryption.html)\. 
+   1. \(Optional\) For **SPEKE version**, select the SPEKE version that you'd like to use for encryption\. SPEKE Version 1\.0 is the legacy version that uses CPIX Version 2\.0, and supports single key encryption\. SPEKE Version 2\.0 uses CPIX Version 2\.3, and supports multiple key encryption\. For more information about using SPEKE with MediaPackage, see [Content encryption and DRM in MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/ug/using-encryption.html)\. 
 
       If you select **SPEKE Version 2\.0**, then also choose a **Video encryption preset** and an **Audio encryption preset**\. The video and audio presets determine which content keys MediaPackage uses to encrypt the audio and video tracks in your stream\. For more information about these presets, see [SPEKE Version 2\.0 presets](drm-content-speke-v2-presets.md)\.
 

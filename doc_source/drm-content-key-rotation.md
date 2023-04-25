@@ -1,6 +1,6 @@
 # Understanding key rotation behavior<a name="drm-content-key-rotation"></a>
 
-When you enable key rotation on live content from HLS, CMAF, and DASH endpoints, AWS Elemental MediaPackage retrieves content keys before the live content begins\. As the content progresses, MediaPackage retrieves new keys at the interval that you set on the endpoint, as described in [Encryption fields](endpoints-hls-encryption.md)\.
+When you enable key rotation on live content from HLS, CMAF, and DASH endpoints, AWS Elemental MediaPackage retrieves content keys before the live content begins\. As the content progresses, MediaPackage retrieves new keys at the interval that you set on the endpoint, as described in [Package encryption fields](endpoints-hls-encryption.md)\.
 
 If MediaPackage is unable to retrieve the content key, it takes the following actions:
 + If MediaPackage successfully retrieved a content key for this endpoint before, it uses the last key that it fetched\. This ensures that endpoints that worked previously continue to work\. 

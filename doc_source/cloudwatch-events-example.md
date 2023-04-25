@@ -4,7 +4,7 @@ AWS Elemental MediaPackage integrates with Amazon CloudWatch Events to notify yo
 
 For more information about using CloudWatch Events with other kinds of events, see the [Amazon CloudWatch Events User Guide](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/)\.
 
-The following topics describe the CloudWatch Events that AWS Elemental MediaPackage creates\.
+The following topics describe the CloudWatch Events that MediaPackage creates\.
 
 **Topics**
 + [Input notification events](#input-state-events)

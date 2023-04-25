@@ -1,4 +1,4 @@
-# Access control fields<a name="endpoints-hls-access-control"></a>
+# Access control settings fields<a name="endpoints-hls-access-control"></a>
 
 Define the access control values\.
 
@@ -14,6 +14,6 @@ Only IPv4 addresses are allowed\.
 
    1. For **Secrets role ARN**, enter the ARN for the IAM role that grants MediaPackage access to AWS Secrets Manager\. The Secrets role ARN must be in this format: `arn:aws:iam::accountID:role/name`
 
-   1. For **CDN identifier secret ARN**, enter the ARN for the authorization code secret in Secrets Manager that your CDN uses for authorization to access your endpoint\. The CDN identifier secret ARN must be in this format: arn:aws:secretsmanager:*region*:*accountID*:secret*guid*\.
+   1. For **CDN identifier secret ARN**, enter the ARN for the authorization code secret in Secrets Manager that your CDN uses for authorization to access your endpoint\. The CDN identifier secret ARN must be in this format: `arn:aws:secretsmanager:region:accountID:secretguid`\.
 
    For information about how this authorization works, see [CDN authorization in AWS Elemental MediaPackage](cdn-auth.md)\.

@@ -10,6 +10,8 @@ When you're creating a channel, don't put sensitive identifying information like
 
 1. Open the MediaPackage console at [https://console\.aws\.amazon\.com/mediapackage/](https://console.aws.amazon.com/mediapackage/)\.
 
+1. In the navigation pane, under **Live**, choose **Channels**\.
+
 1. On the **Channels** page, choose **Create channel**\.
 
 1. For **ID**, type a name that describes the channel\. The ID is the primary identifier for the channel, and must be unique for your account in the region\.

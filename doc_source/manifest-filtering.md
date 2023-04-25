@@ -1,6 +1,6 @@
 # Manifest filtering<a name="manifest-filtering"></a>
 
-With manifest filtering, MediaPackage dynamically produces client manifests based on parameters that you specify in a query appended to your playback request\. This enables you to do things such as restrict viewer access to premium 4K HEVC content, or target specific device types and audio sample rate ranges, all from a single endpoint\. Previously, you would have to configure multiple endpoints to accomplish this behavior\. MediaPackage now provides a cost\-effective way to dynamically produce different client manifests on the same endpoint\.
+With manifest filtering, AWS Elemental MediaPackage dynamically produces client manifests based on parameters that you specify in a query appended to your playback request\. This enables you to do things such as restrict viewer access to premium 4K HEVC content, or target specific device types and audio sample rate ranges, all from a single endpoint\. Previously, you would have to configure multiple endpoints to accomplish this behavior\. MediaPackage now provides a cost\-effective way to dynamically produce different client manifests on the same endpoint\.
 
 ## Working with manifest filters<a name="working-with-manifest-filters"></a>
 

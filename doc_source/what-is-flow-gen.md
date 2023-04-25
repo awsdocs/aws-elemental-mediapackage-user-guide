@@ -1,6 +1,6 @@
 # General MediaPackage live processing flow<a name="what-is-flow-gen"></a>
 
-Here's the general processing flow for live content in MediaPackage:
+The following outlines the general flow of live content in MediaPackage:
 
 1. An upstream encoder \(such as AWS Elemental MediaLive\) sends an HLS live stream with digest authentication over WebDAV to the MediaPackage channel input URL, and includes the channel's access credentials \(as supplied in MediaPackage\)\. If you're using input redundancy, the encoder sends two identical HLS live streams to MediaPackage, one to each input URL on the channel\. MediaPackage uses the stream from one input URL as the source content\. If MediaPackage stops receiving content on the active input URL, it automatically switches to the other input URL for source content\. Additionally, AWS scales resources up and down to handle the incoming traffic\.
 

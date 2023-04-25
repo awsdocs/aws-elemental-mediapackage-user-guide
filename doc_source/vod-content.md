@@ -7,7 +7,7 @@ AWS Elemental MediaPackage uses the following resources for video on demand \(VO
 
   For supported VOD inputs and codecs, see [VOD supported codecs and input types](supported-inputs-vod.md)\.
 
-The following sections describe how to use these resources to manage VOD content in AWS Elemental MediaPackage\.
+The following sections describe how to use these resources to manage VOD content in MediaPackage\.
 
 **Topics**
 + [Working with packaging groups in AWS Elemental MediaPackage](pkg-group.md)

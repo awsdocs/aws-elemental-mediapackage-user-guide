@@ -10,8 +10,8 @@ This documentation helps you understand how to apply the shared responsibility m
 
 **Topics**
 + [Data protection in AWS Elemental MediaPackage](data-protection.md)
-+ [Identity and Access Management in AWS Elemental MediaPackage](security-iam.md)
++ [Identity and Access Management for AWS Elemental MediaPackage](security-iam.md)
 + [Logging and monitoring in AWS Elemental MediaPackage](security-log-monitor.md)
-+ [Compliance validation for AWS Elemental MediaPackage](compliance.md)
++ [Compliance validation for AWS Elemental MediaPackage](compliance-validation.md)
 + [Resilience in AWS Elemental MediaPackage](disaster-recovery-resiliency.md)
 + [Infrastructure security in AWS Elemental MediaPackage](infrastructure-security.md)

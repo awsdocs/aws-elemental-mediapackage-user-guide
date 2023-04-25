@@ -41,7 +41,7 @@ MediaPackage does not require that you supply any customer data\. There are no f
 
 An asset resource is how AWS Elemental MediaPackage ingests, packages, and serves VOD content\. The asset is associated with one or more packaging configurations\. Downstream devices send playback requests to specific packaging configurations on the asset\.
 
-MediaPackage does not require that you supply any customer data\. There are no fields in assets where there is an expectation that you will provide customer data\.
+MediaPackage doesn't require customer data from you, so assets don't include those fields\.
 
 **To create an asset and ingest source content**
 
@@ -64,7 +64,7 @@ MediaPackage does not require that you supply any customer data\. There are no f
 
    You don't need to enter the bucket name because you chose it in **Amazon S3 bucket name** field\.
 
-1. For **Packaging group**, choose the group that you created in [Step 2: Create a packaging group](gs-create-grp.md)\.
+1. For **Packaging group**, choose the group that you created in [Create a packaging group](#gs-create-grp-ltov)\.
 
 1. Choose **Ingest assets**\.
 

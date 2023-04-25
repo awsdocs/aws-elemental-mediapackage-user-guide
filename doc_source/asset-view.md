@@ -2,7 +2,7 @@
 
 You can view all assets that are configured in AWS Elemental MediaPackage or the details of a specific asset, including the packaging configurations that are associated with it\.
 
-To view asset details, you can use the AWS Elemental MediaPackage console, the AWS CLI, or the MediaPackage API\. For information about creating a packaging configuration with the AWS CLI or MediaPackage API, see [Assets id](https://docs.aws.amazon.com/mediapackage-vod/latest/apireference/assets-id.html) in the *AWS Elemental MediaPackage VOD API Reference*\.
+To view asset details, you can use the MediaPackage console, the AWS CLI, or the MediaPackage API\. For information about creating a packaging configuration with the AWS CLI or MediaPackage API, see [Assets id](https://docs.aws.amazon.com/mediapackage-vod/latest/apireference/assets-id.html) in the *AWS Elemental MediaPackage VOD API Reference*\.
 
 **To view assets \(console\)**
 
@@ -14,4 +14,4 @@ To view asset details, you can use the AWS Elemental MediaPackage console, the A
 
 1. To view more information about a specific asset, choose the name of the asset\.
 
-   AWS Elemental MediaPackage displays summary information, such as the packaging configurations associated with this packaging asset and their playback URLs\.
+   MediaPackage displays summary information, such as the packaging configurations associated with this packaging asset and their playback URLs\.

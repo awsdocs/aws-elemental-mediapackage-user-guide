@@ -8,7 +8,7 @@ MediaPackage does not require that you supply any customer data\. There are no f
 
 1. On the **Channels** page, choose the channel that the endpoint will be associated with\.
 
-1. On the details page for the channel, under **Origin endpoints** select either the endpoint ID and choose **Manage endpoints** or, if there are no existing endpoints, choose **Manage endpoints**\.
+1. On the details page for the channel, under **Origin endpoints**, choose **Manage endpoints**\.
 
 1. For **ID**, enter a name that describes the endpoint, such as **HLSendpoint1**\. The ID is the primary identifier for the endpoint, and must be unique for your account in the AWS Region\. Supported characters are letters, numbers, underscores \(\_\), and dashes \(\-\)\. You can't use spaces in the ID\.
 

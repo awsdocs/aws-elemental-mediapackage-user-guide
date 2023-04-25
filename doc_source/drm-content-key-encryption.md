@@ -9,7 +9,7 @@ To use encrypted content keys, the following requirements must be met:
 
   The following procedures describe how to prepare and manage the certificate\.
 
-**To prepare a certificate for DRM content key encryption\.**
+**To prepare a certificate for DRM content key encryption**
 
 1. Obtain a 2048 RSA, SHA\-512\-signed certificate\. 
 

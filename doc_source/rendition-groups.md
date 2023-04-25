@@ -7,7 +7,7 @@ Audio and subtitles tracks are required to be in their own rendition groups for 
 The following sections further describe when you can use rendition groups\.
 
 **Note**  
-DASH and Microsoft Smooth do not use rendition groups\. This is because all audio, video, and subtitle or caption tracks are presented to the player, and the player determines which are used during playback\.
+DASH and Microsoft Smooth Streaming do not use rendition groups\. This is because all audio, video, and subtitle or caption tracks are presented to the player, and the player determines which are used during playback\.
 
 ## When to use rendition groups<a name="when-use-rend-group"></a>
 
@@ -36,4 +36,4 @@ Rendition groups can't or shouldn't be used in the following use cases:
   Keep the audio and video muxed in the stream, and do not use a rendition group\.
 + DASH or Microsoft Smooth Streaming outputs\. These protocols do not support rendition groups\. Instead, the output stream includes all tracks, and the player determines which to play based on rules from the player side or from the manifest \(such as language or bitrate selection\)\. 
 
-  To limit the tracks available to a player, use the stream selection options from the MediaPackage console or the REST API\.
+  To limit the tracks available to a player, use the stream selection options from the MediaPackage console or the MediaPackage API\.

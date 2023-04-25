@@ -12,7 +12,7 @@ You can use the MediaPackage console, the AWS CLI, or the MediaPackage API to vi
 
    All existing channels are displayed on the console\.
 
-1. \(Optional\) To adjust your viewing preferences \(such as page size and properties that are displayed\), choose **Preferences**\. 
+1. \(Optional\) Choose **Preferences** to adjust your viewing preferences \(such as page size and properties that are displayed\)\. 
 
 1. To view more information about a specific channel, choose the name of the channel that you want to view\.
 

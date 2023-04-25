@@ -14,4 +14,4 @@ To view packaging group details, you can use the AWS Elemental MediaPackage cons
 
 1. To view more information about a specific packaging group, choose the name of the group\.
 
-   AWS Elemental MediaPackage displays summary information, such as the assets associated with this packaging group\.
+   MediaPackage displays summary information, such as the assets associated with this packaging group\.

@@ -2,7 +2,7 @@
 
 In a default DASH manifest, `SegmentTemplate` holds a `SegmentTimeline`\. The timeline describes all the segments in `Representation`, including their duration and their start time\. With live events, AWS Elemental MediaPackage adds segments to the timeline as it receives them from your encoder\. To be aware of newly available segments, the playback device must regularly request an updated manifest from MediaPackage\.
 
-If all the segments in a representation have the same duration, you can help to reduce latency and shorten the manifest by enabling AWS Elemental MediaPackage to remove the `SegmentTimeline` objects\. In their place, MediaPackage adds a `duration` attribute to the `SegmentTemplate` properties\. The playback device calculates when segments are available by using `duration` and `startNumber`\. Because the playback device doesn't have to rely on an updated manifest to know about segments, it doesn't have to constantly request updates to maintain playback\. For information about how the `duration` attribute works, see the following sections\.
+If all the segments in a representation have the same duration, you can help to reduce latency and shorten the manifest by enabling MediaPackage to remove the `SegmentTimeline` objects\. In their place, MediaPackage adds a `duration` attribute to the `SegmentTemplate` properties\. The playback device calculates when segments are available by using `duration` and `startNumber`\. Because the playback device doesn't have to rely on an updated manifest to know about segments, it doesn't have to constantly request updates to maintain playback\. For information about how the `duration` attribute works, see the following sections\.
 
 **Topics**
 + [How the `duration` attribute works](#how-stemp-dur-works)
@@ -48,11 +48,11 @@ Except for the final segment, segments must be no more than 50% deviation from t
 **Example**  
 
    A playback device is calculating the most recent segment with the following values:
-   + Wall clock from the playback device: 2018\-11\-16T19:18:30Z
-   + `availabilityStartTime` attribute from the `MPD` object of the manifest: 2018\-11\-16T19:08:30Z
-   + `duration` attribute from the `SegmentTemplate` object of the manifest: 90000
-   + `timescale` attribute from the `SegmentTemplate`: 30000
-   + `startNumber` attribute from the `SegmentTemplate`: 175032
+   + Wall clock time from the playback device: 2018\-11\-16T19:18:30Z
+   + `availabilityStartTime` \- Attribute from the `MPD` object of the manifest: 2018\-11\-16T19:08:30Z
+   + `duration` \- Attribute from the `SegmentTemplate` object of the manifest: 90000
+   + `timescale` \- Attribute from the `SegmentTemplate`: 30000
+   + `startNumber` \- Attribute from the `SegmentTemplate`: 175032
 
    The calculation it uses is \(\(2018\-11\-16T19:18:30Z \- 2018\-11\-16T19:08:30Z\) / \(90000/30000\)\) \+ 175032
 
@@ -83,7 +83,7 @@ For more information about compacted manifests, see [Compacted DASH manifests](c
 If the segments in a representation intentionally have varying sizes of segments, don't use the `duration` attribute\. This treatment works only when the segments are a consistent size\.
 
 **Example**    
-Compacted manifest  
+The following is an example of a compacted manifest:  
 
 ```
 <AdaptationSet mimeType="video/mp4" segmentAlignment="true" subsegmentAlignment="true" startWithSAP="1" subsegmentStartsWithSAP="1" bitstreamSwitching="true">
@@ -97,7 +97,7 @@ Compacted manifest
    <Representation id="3" width="1280" height="720" frameRate="30/1" bandwidth="2499968" codecs="avc1.640029"/>
 </AdaptationSet>
 ```  
-Compacted manifest with `duration` attribute  
+The following is an example of a compacted manifest with the `duration` attribute:  
 
 ```
 <AdaptationSet mimeType="video/mp4" segmentAlignment="true" subsegmentAlignment="true" startWithSAP="1" subsegmentStartsWithSAP="1" bitstreamSwitching="true">

@@ -25,7 +25,7 @@ Here is how ID3 is carried as metadata in the following specifications:
 
 **Metadata signaling**
 
-DASH manifests include a *<InbandEventStream schemeIdUri="https://aomedia\.org/emsg/ID3" value="0"/>* element in AdaptationSets that include tracks with ID3 metadata\. 
+DASH manifests include a `<InbandEventStream schemeIdUri="https://aomedia.org/emsg/ID3" value="0"/>` element in AdaptationSets that include tracks with ID3 metadata\. 
 
 HLS manifests don't have specific metadata signaling\.
 
@@ -48,7 +48,7 @@ Metadata is carried in the Event Message box version 1, as described in the *[MI
 
 **Metadata signaling**
 
-DASH manifests include a *<InbandEventStream schemeIdUri="urn:misb:KLV:bin:1910\.1" value="KLVx:01FC"/>* or *<InbandEventStream schemeIdUri="urn:misb:KLV:bin:1910\.1" value="KLVx:01BD"/>* element in AdaptationSets that include tracks with KLV metadata, depending on the synchronicity nature of the carried track\.
+DASH manifests include a `<InbandEventStream schemeIdUri="urn:misb:KLV:bin:1910.1" value="KLVx:01FC"/>` or `<InbandEventStream schemeIdUri="urn:misb:KLV:bin:1910.1" value="KLVx:01BD"/>` element in AdaptationSets that include tracks with KLV metadata, depending on the synchronicity nature of the carried track\.
 
 **MediaLive** **configuration**
 

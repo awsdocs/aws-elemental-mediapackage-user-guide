@@ -10,4 +10,4 @@ You can use the MediaPackage console, the AWS CLI, or the MediaPackage API to vi
 
 1. In the navigation pane, under **Live**, choose **Harvest jobs**\. 
 
-1. On the **Harvest jobs** page, choose the **ID** of a harvest job to view its details\.
+1. On the **Harvest jobs** page, choose the harvest job to view its details\.

@@ -8,7 +8,7 @@ Some players navigate the segments better when the segments are identified inste
 
 Enable the `$Time$` variable through the **Segment template format** setting on the DASH endpoint, as described in [Creating a DASH endpoint](endpoints-dash.md)\. AWS Elemental MediaPackage takes the following actions:
 
-1.  When AWS Elemental MediaPackage generates the DASH manifest, it uses the `$Time$` variable in the `media` value of the `SegmentTemplate` object, as shown in the following example:  
+1.  When MediaPackage generates the DASH manifest, it uses the `$Time$` variable in the `media` value of the `SegmentTemplate` object, as shown in the following example:  
 **Example**  
 
    ```
@@ -17,7 +17,7 @@ Enable the `$Time$` variable through the **Segment template format** setting on 
 
 1. When a playback device requests segments, it uses the URL defined in the `media` attribute and replaces the variable with the availability start time of the segment that's requested\.
 **Important**  
-The value that replaces the variable must be an exact `t` value of a segment\. If the request uses an arbitrary timestamp, AWS Elemental MediaPackage doesn't seek the closest segment\.  
+The value that replaces the variable must be an exact `t` value of a segment\. If the request uses an arbitrary timestamp, MediaPackage doesn't seek the closest segment\.  
 **Example**  
 
    The following is an example of a segment template from a representation\. It uses the `$Time$` variable:

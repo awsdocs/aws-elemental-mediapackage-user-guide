@@ -11,8 +11,8 @@ You can use the AWS Elemental MediaPackage console, the AWS CLI, or the MediaPac
 
 1. Access the channel that the endpoint is associated with, as described in [Viewing channel details](channels-view.md)\.
 
-1. On the details page for the channel, under **Origin endpoints** choose the endpoint ID\.
+1. On the details page for the channel, under **Origin endpoints**, select the origin endpoint that you want to delete\.
 
-1. On the **Origin endpoint details** page, choose **Delete**\.
+1. Select **Delete**\.
 
-1. On the **Origin endpoint delete** page, choose **Delete**\.
+1. In the **Delete endpoints** confirmation dialog box, choose **Delete**\.

@@ -43,15 +43,13 @@ Store the same value that you use in your custom origin HTTP header as a *secret
 
 1. Sign in to the AWS Secrets Manager console at [https://console\.aws\.amazon\.com/secretsmanager/](https://console.aws.amazon.com/secretsmanager/)\.
 
-1. Choose **Store a new secret**\. For **Select secret type**, choose **Other type of secrets**\.
+1. Choose **Store a new secret**\. For **Secret type**, choose **Other type of secrets**\.
 
-1. For **Specify the key/value pairs to be stored in this secret**, choose **Secret key/pair**\.
-
-1. Enter the key and value information\.
+1. For **Key/value pairs**, enter the key and value information\.
    + In the box on the left, enter **MediaPackageCDNIdentifier**\.
    + In the box on the right, enter the value that you configured for your custom origin HTTP header\. For example, `9ceebbe7-9607-4552-8764-876e47032660`\.
 
-1. For **Select the encryption key**, you can keep the default value as **DefaultEncryptionKey**\.
+1. For **Encryption key**, you can keep the default value as **DefaultEncryptionKey**\.
 
 1. Choose **Next**\.
 
@@ -75,7 +73,7 @@ Create an IAM policy and role to give MediaPackage read access to Secrets Manage
 
 ## Step 4: Enable CDN authorization in MediaPackage<a name="cdn-aut-setup-endpoint"></a>
 
-You can enable CDN authorization for your endpoints or video on demand \(VOD\) packaging groups via the console, AWS CLI, or MediaPackage API\. You use the Amazon Resource Numbers \(ARN\) for the IAM policy and role that you create in Step 3: Create an IAM policy and role for MediaPackage access to Secrets Manager\.
+You can enable CDN authorization for your endpoints or video on demand \(VOD\) packaging groups via the MediaPackage console, AWS CLI, or MediaPackage API\. You use the ARN for the IAM policy and role that you create in Step 3: Create an IAM policy and role for MediaPackage access to Secrets Manager\.
 
 **Tip**  
 Use the same secret across multiple endpoints in the same Region and on the same account\. Reduce costs by creating a new secret only when necessary for your workflow\.
@@ -88,9 +86,9 @@ Use the same secret across multiple endpoints in the same Region and on the same
 
 1. Create or edit an endpoint\.
 
-1. In **Access control settings**, select **Use authorization**\. Complete the fields:
+1. In **Access control settings**, select **Use CDN authorization**\. Complete the fields:
    + In **Secrets role ARN**, enter the ARN for the IAM role that you created in [Step 3: Create an IAM policy and role for MediaPackage access to Secrets Manager](#cdn-aut-setup-iam)\.
-   + In **CDN identifier secret**, enter the ARN for the secret that holds your authorization code in Secrets Manager\.
+   + In **CDN identifier secret ARN**, enter the ARN for the secret in Secrets Manager that your CDN uses for authorization to access your endpoint\.
 
 1. Complete the remaining fields as needed and save the endpoint\.
 
@@ -102,9 +100,9 @@ Use the same secret across multiple endpoints in the same Region and on the same
 
 1. Create or edit a packaging group\.
 
-1. In **Access control settings**, select **Use authorization**\. Complete the fields:
+1. In **Configure access control**, select **Enable authorization**\. Complete the fields:
    + In **Secrets role ARN**, enter the ARN for the IAM role that you created in [Step 3: Create an IAM policy and role for MediaPackage access to Secrets Manager](#cdn-aut-setup-iam)\.
-   + In **CDN identifier secret**, enter the ARN for the secret that holds your authorization code in Secrets Manager\.
+   + In **CDN identifier secret ARN**, enter the ARN for the secret in Secrets Manager that your CDN uses for authorization to access your endpoint\.
 
 1. Complete the remaining fields as needed and save the packaging group\.
 

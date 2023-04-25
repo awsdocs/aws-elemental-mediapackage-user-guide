@@ -6,10 +6,10 @@ When you create an endpoint, MediaPackage assigns it a public URL that's fixed f
 
 You can use the MediaPackage console, the AWS CLI, or the MediaPackage API to create an endpoint\. For information about creating an endpoint through the AWS CLI or MediaPackage API, see the [AWS Elemental MediaPackage API Reference](https://docs.aws.amazon.com/mediapackage/latest/apireference/)\.
 
-MediaPackage doesn't require that you supply any customer data\. There are no fields in endpoints where there's an expectation that you'll provide customer data\.
+MediaPackage doesn't require customer data from you, so endpoints don't include those fields\.
 
 **Topics**
 + [Creating an HLS endpoint](endpoints-hls.md)
 + [Creating a DASH endpoint](endpoints-dash.md)
-+ [Creating a Microsoft smooth streaming endpoint](endpoints-smooth.md)
++ [Creating a Microsoft Smooth Streaming endpoint](endpoints-smooth.md)
 + [Creating a CMAF endpoint](endpoints-cmaf.md)

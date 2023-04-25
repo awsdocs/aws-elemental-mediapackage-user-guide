@@ -33,7 +33,7 @@ MediaPackage supports the following trick\-play types:
 MediaPackage supports live and on\-demand trick\-play by creating an I\-frame playlist from an existing VOD asset or live stream\. The I\-frame playlist contains the I\-frame only video segments that your player uses for the image thumbnails\. For information about I\-frame playlists, see the HTTP Live Streaming 2nd Edition specification: [https://datatracker.ietf.org/doc/html/rfc8216#section-4.3.3.6](https://datatracker.ietf.org/doc/html/rfc8216#section-4.3.3.6)\.
 
 **To use an I\-frame playlist to enable trick\-play**
-+ To use I\-frame playlists to enable trick\-play, in the MediaPackage console choose **Include I\-frame only stream** when creating or editing an endpoint or packaging configuration\. MediaPackage generates an I\-frame only stream from the first rendition in the manifest\. The service inserts `EXT-I-FRAMES-ONLY` tags in the output manifest, and then generates and includes an I\-frames only playlist in the stream\. This playlist enables player functionality like fast forward and rewind\.
++ In the MediaPackage console, choose **Include I\-frame only stream** when creating or editing an endpoint or packaging configuration\. MediaPackage generates an I\-frame only stream from the first rendition in the manifest\. The service inserts `EXT-I-FRAMES-ONLY` tags in the output manifest, and then generates and includes an I\-frames only playlist in the stream\. This playlist enables player functionality like fast forward and rewind\.
 
 ## Using image media playlists to enable trick\-play<a name="using-image-media-playlists"></a>
 
@@ -44,12 +44,12 @@ For information about how to configure your upstream encoder to generate an imag
 ### Input source requirements<a name="image-based-requirements"></a>
 
 Your HLS source content must meet the following requirements:
-+ The HLS parent playlist that references the image playlist must include the `#EXT-X-IMAGE-STREAM-INF` tag\.
++ The HLS parent playlist that references the image playlist must include the `EXT-X-IMAGE-STREAM-INF` tag\.
 + The image playlist must include the following tags:
-  + An `#EXT-X-IMAGES-ONLY` tag above the segment list\.
-  + If using tiled thumbnails, `#EXT-X-TILES` tags above each image segment that specifies the tiling information\. Tiled thumbnails are only available for VOD workflows\.
+  + An `EXT-X-IMAGES-ONLY` tag above the segment list\.
+  + If using tiled thumbnails, `EXT-X-TILES` tags above each image segment that specifies the tiling information\. Tiled thumbnails are only available for VOD workflows\.
 **Note**  
-We recommend that you use decimal durations in the `#EXT-INF` and `#EXT-X-TILES` tags to help MediaPackage give players the most accurate image durations\.
+We recommend that you use decimal durations in the `EXT-INF` and `EXT-X-TILES` tags to help MediaPackage give players the most accurate image durations\.
 + You must use image segments that are valid JPEG image files less than 20 MB\. For tiled thumbnails, the image segments can be tiled, with multiple thumbnails in a grid in the JPEG, or a single tile can occupy the entire JPEG\.
   + For live, each JPEG must contain only one image segment\. The encoder must produce image segments and video segments at the same cadence\.
 
@@ -59,7 +59,7 @@ You can use AWS Media Services to generate an HLS source in your upstream encode
 
 Keep in mind the following limitations when using image\-based trick\-play for MediaPackage:
 + MediaPackage doesn't combine image segments for packaging configurations\. For example, if the service ingests a VOD asset with an image asset with a 2 second segment duration, and you specify a segment output duration of 6 seconds, we combine the video and audio segments to be 6 seconds long, but image segments will remain 2 seconds\.
-+ Depending on your HLS player requirements, the use of `#EXT-X-PROGRAM-DATE-TIME` tags might be necessary to display the trick\-play image\. This applies to live and VOD workflows\.
++ Depending on your HLS player requirements, the use of `EXT-X-PROGRAM-DATE-TIME` tags might be necessary to display the trick\-play image\. This applies to live and VOD workflows\.
 
 ### Considerations when using image\-based trick\-play for DASH<a name="trickplay-dash-considerations"></a>
 

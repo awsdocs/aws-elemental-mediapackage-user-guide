@@ -34,7 +34,7 @@ MediaPackage supports input WebVTT text\-based subtitles\. MediaPackage translat
 + For HLS and CMAF: WebVTT is passed through
 + For DASH: subtitles are translated to EBU\-TT
 + For Microsoft Smooth Streaming: subtitles are translated to DFXP
- MediaPackage supports accessibility signaling in HLS, CMAF, and DASH manifests only for VOD assets created from an HLS source\. The \#EXT\-X\-MEDIA line in the HLS source playlist must include a `public.accessibility.describes-music-and-sound` and/or `public.accessibility.transcribes-spoken-dialog` CHARACTERISTICS attribute\.
+ MediaPackage supports accessibility signaling in HLS, CMAF, and DASH manifests only for VOD assets created from an HLS source\. The EXT\-X\-MEDIA line in the HLS source playlist must include a `public.accessibility.describes-music-and-sound` and/or `public.accessibility.transcribes-spoken-dialog` CHARACTERISTICS attribute\.
 
 **Time\-shift Viewing**  
 Time\-shift viewing is available with only live workflows in MediaPackage\.  
@@ -46,4 +46,4 @@ MediaPackage requires at least one video track to be present in the stream confi
 
 **Whitelisting**  
 Whitelisting is available with only live workflows in MediaPackage\.  
-MediaPackage supports restricting network access to the endpoint\. To take advantage of this feature, you must enter the allowed IP addresses on the endpoint\. For more information about adding whitelisting information, see [Access control fields](endpoints-hls-access-control.md)\.
+MediaPackage supports restricting network access to the endpoint\. To take advantage of this feature, you must enter the allowed IP addresses on the endpoint\. For more information about adding whitelisting information, see [Access control settings fields](endpoints-hls-access-control.md)\.

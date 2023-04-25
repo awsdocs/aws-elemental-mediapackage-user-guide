@@ -8,6 +8,6 @@ You can use the AWS Elemental MediaPackage console, the AWS CLI, or the MediaPac
 
 1. Access the channel that the endpoint is associated to, as described in [Viewing channel details](channels-view.md)\.
 
-   AWS Elemental MediaPackage displays all existing endpoints as a table or as individual cards\. 
+   MediaPackage displays all existing endpoints as a table or as individual cards\. 
 
-1. \(Optional\) To adjust your viewing preferences \(such as page size and properties that are displayed\), choose **Preferences**\. 
+1. \(Optional\) Choose **Preferences** to adjust your viewing preferences \(such as page size and properties that are displayed\)\.

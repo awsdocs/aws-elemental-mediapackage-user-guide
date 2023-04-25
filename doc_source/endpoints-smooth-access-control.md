@@ -1,21 +1,17 @@
-# Access control fields<a name="endpoints-smooth-access-control"></a>
+# Access control settings fields<a name="endpoints-smooth-access-control"></a>
 
 Define the access control values\.
 
-1. To enable this endpoint to serve content to requesting devices, select **Allow origination**\. It is uncommon to disallow origination on an endpoint\.
+1. Select **Allow origination** to enable this endpoint to serve content to requesting devices\. It is uncommon to disallow origination on an endpoint\.
 
    Typically, the only reason that you won't allow an endpoint to serve content is if it's only being used to harvest VOD content from the live stream\. For more information, see [Creating live\-to\-VOD assets with AWS Elemental MediaPackage](ltov.md)\.
 
-1. To serve content to all requesting IP address, choose **Allow all incoming clients**\. To limit the IP addresses that this endpoint serves, use these fields:
+1. Choose **Allow all incoming clients** to serve content to all requesting IP addresses and ranges or choose **Restrict by IP address** to limit the IP addresses that this endpoint serves\. If you restrict by IP address, for **IP allowlist**, enter the IP addresses and ranges that this endpoint serves content to\. One CIDR block per line\.
 
-   1. Select **Restrict by IP address**\.
+1. Select **Use CDN authorization** to require that content requests to this endpoint include a valid authorization code\.
 
-   1. In **IP allowlist**, enter the IP addresses and ranges that this endpoint serves content to\. One CIDR block per line\.
+1. \(Optional\) For **Secrets role ARN**, enter the ARN for the IAM role that grants MediaPackage access to AWS Secrets Manager\. The secrets role ARN must be in this format: `arn:aws:iam::accountID:role/name`\.
 
-1. To require that content requests to this endpoint include a valid authorization code, select **Use CDN authorization**\. Complete the remaining fields:
+1. \(Optional\) For **CDN identifier secret ARN**, enter the ARN for the authorization code secret in Secrets Manager that your CDN uses for authorization to access your endpoint\. The CDN identifier must be in this format: `arn:aws:secretsmanager:region:accountID:secretguid`\.
 
-   1. In **Secrets role ARN**, enter the ARN for the IAM role that grants MediaPackage access to AWS Secrets Manager\.
-
-   1. In **CDN identifier secret ARN**, enter the ARN for the authorization code secret in Secrets Manager\.
-
-   For information about how this authorization works, see [CDN authorization in AWS Elemental MediaPackage](cdn-auth.md)\.
+For information about how this authorization works, see [CDN authorization in AWS Elemental MediaPackage](cdn-auth.md)\.

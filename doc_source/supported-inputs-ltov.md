@@ -9,7 +9,7 @@ These are the input types that MediaPackage supports for live\-to\-VOD assets\.
 
 | MediaPackage input type | Use case | 
 | --- | --- | 
-| HLS | Extract a portion of a live HLS or DASH endpoint in MediaPackage and save it as a live\-to\-VOD asset\.Additional requirements:[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-ltov.html) | 
+| HLS | Extract a portion of a live HLS or DASH endpoint in MediaPackage and save it as a live\-to\-VOD asset\. Additional requirements:[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/mediapackage/latest/ug/supported-inputs-ltov.html) | 
 
 ## Supported input codecs<a name="supported-inputs-codecs-ltov"></a>
 
@@ -22,7 +22,7 @@ These are the video, audio, and subtitles codecs that MediaPackage supports for 
 
 ## Supported output codecs<a name="supported-outputs-codecs-ltov"></a>
 
-These are the video, audio, and subtitles codecs that MediaPackage supports when saving a live\-to\-VOD asset to an Amazon S3 bucket\.
+These are the video, audio, and subtitles codecs that MediaPackage supports when saving a live\-to\-VOD asset to an Amazon S3 bucket\. The endpoint must serve either clear \(unencrypted\) or encrypted DASH or HLS content\.
 
 
 | Endpoint type | Manifest format | Media container | Video codecs | Audio codecs | Subtitles/captions format | 

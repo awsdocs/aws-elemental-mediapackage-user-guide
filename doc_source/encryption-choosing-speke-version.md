@@ -8,28 +8,31 @@ If multiple key encryption, or Content Protection Information Exchange \(CPIX\) 
 
 The following tables list the different protocols and digital rights management \(DRM\) platforms that SPEKE Version 1\.0 and SPEKE Version 2\.0 support\.
 
+**Note**  
+Irdeto Content Protection is not supported in combination with SPEKE Version 1\.0\.
+
 
 |  |  |  |  |  | 
 | --- |--- |--- |--- |--- |
 | SPEKE Version 1\.0 – Support matrix for protocol and DRM system | Microsoft PlayReady | Google Widevine | Apple FairPlay | AES\-128 | 
 | Live | 
-| Apple HLS |   |   |  √  Has key rotation  |  √   Has key rotation  | 
-| CMAF Apple HLS |   |  √   Has key rotation  |  √   Has key rotation  |   | 
-| DASH |  √   Has key rotation  |  √   Has key rotation  |   |   | 
-| Microsoft Smooth | √ |   |   |   | 
+| Apple HLS | Not supported | Not supported |  √ Has key rotation  |  √  Has key rotation  | 
+| CMAF Apple HLS | Not supported |  √ Has key rotation Supports only cbcs encryption  |  √ Has key rotation Supports only cbcs encryption  | Not supported | 
+| DASH |  √  Has key rotation  |  √ Has key rotation  | Not supported | Not supported | 
+| Microsoft Smooth | √ | Not supported | Not supported | Not supported | 
 | VOD | 
-| Apple HLS |   |   | √ | √ | 
-| CMAF Apple HLS |   | √ | √ |   | 
-| DASH | √ | √ |   |   | 
-| Microsoft Smooth | √ |   |   |   | 
+| Apple HLS | Not supported | Not supported | √ | √ | 
+| CMAF Apple HLS | Not supported |  √ Supports only cbcs encryption  |  √ Supports only cbcs encryption  | Not supported | 
+| DASH | √ | √ | Not supported | Not supported | 
+| Microsoft Smooth | √ | Not supported | Not supported | Not supported | 
 
 
 |  |  |  |  |  | 
 | --- |--- |--- |--- |--- |
 | SPEKE Version 2\.0 – Support matrix for protocol and DRM system | Microsoft PlayReady | Google Widevine | Apple FairPlay | Irdeto Content Protection | 
 | Live | 
-| CMAF Apple HLS | √ | √ | √ |   | 
-| DASH | √ | √ |   | √ | 
+| CMAF Apple HLS |  √ Supports cbcs and cenc encryption  |  √ Supports cbcs and cenc encryption  |  √ Supports cbcs and cenc encryption  | Not supported | 
+| DASH | √ | √ | Not supported | √ | 
 | VOD | 
-| CMAF Apple HLS | √ | √ | √ |   | 
-| DASH | √ | √ |   | √ | 
+| CMAF Apple HLS |  √ Supports only cbcs encryption  |  √ Supports only cbcs encryption  |  √ Supports only cbcs encryption  | Not supported | 
+| DASH | √ | √ | Not supported | √ | 

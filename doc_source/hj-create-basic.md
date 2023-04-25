@@ -2,7 +2,7 @@
 
 The basic details of a harvest job define its identifier and the source for the live\-to\-VOD asset\.
 
-1. For **ID**, enter a name that describes the harvest job\. The ID is the primary identifier for the harvest job\. You can reuse the ID when the harvest job expires from your account\. Supported characters are letters, numbers, underscore \(\_\), and dash \(\-\)\.
+1. For **ID**, enter a name that describes the harvest job\. The ID is the primary identifier for the harvest job\. You can reuse the ID when the harvest job expires from your account\. Supported characters are letters, numbers, underscores \(\_\), and dashes \(\-\)\.
 
 1. For **Origin endpoint**, select the endpoint that serves the live stream that you're harvesting the live\-to\-VOD asset from\.
 

@@ -2,18 +2,18 @@
 
 The ability to insert multiple periods in DASH manifests for both VOD and live is available in AWS Elemental MediaPackage\.
 
-A period is a chunk of content in the DASH manifest, defined by a start time and duration\. By default, the entire manifest is contained in one period but AWS Elemental MediaPackage can partition the DASH manifest into multiple periods to indicate boundaries between ads and the main content\. For example, if you're using MediaPackage with a downstream ad service such as AWS Elemental MediaTailor, choose **Trigger new period on ads** on the MPEG\-DASH endpoint in MediaPackage\. This option tells MediaPackage that the DASH manifest is to be formatted with multiple periods\.
+A period is a chunk of content in the DASH manifest, defined by a start time and duration\. By default, the entire manifest is contained in one period but MediaPackage can partition the DASH manifest into multiple periods to indicate boundaries between ads and the main content\. For example, if you're using MediaPackage with a downstream ad service such as AWS Elemental MediaTailor, choose **Trigger new period on ads** on the MPEG\-DASH endpoint in MediaPackage\. This option tells MediaPackage that the DASH manifest is to be formatted with multiple periods\.
 + For information about AWS Elemental MediaTailor, see the [https://docs.aws.amazon.com/mediatailor/latest/ug/](https://docs.aws.amazon.com/mediatailor/latest/ug/)\.
-+ For information about DASH\-ISO endpoints in AWS Elemental MediaPackage, see [Creating a DASH endpoint](endpoints-dash.md)\.
-+ For more information about how multi\-period DASH works in AWS Elemental MediaPackage, see the following *How it Works* section\.
++ For information about DASH\-ISO endpoints in MediaPackage, see [Creating a DASH endpoint](endpoints-dash.md)\.
++ For more information about how multi\-period DASH works in MediaPackage, see the following *How it Works* section\.
 
 ## How multi\-period DASH works<a name="how-mp-works"></a>
 
-To use the multi\-period DASH feature, the input to AWS Elemental MediaPackage must have SCTE\-35 ad marker messages\. These messages inform MediaPackage of where to create period boundaries\. This is how MediaPackage processes those messages:
+To use the multi\-period DASH feature, the input to MediaPackage must have SCTE\-35 ad marker messages\. These messages inform MediaPackage of where to create period boundaries\. This is how MediaPackage processes those messages:
 
-1. AWS Elemental MediaPackage detects the SCTE\-35 messages from the input source\. 
+1. MediaPackage detects the SCTE\-35 messages from the input source\. 
 
-1. Using the attributes of the SCTE\-35 messages, AWS Elemental MediaPackage calculates where the boundaries are between the end of the main content and the ads\. This calculation is \(scte35 `ptsAdjustment` \+ scte35 `ptsTime`\) / \(EventStream `timescale`\)\.  
+1. Using the attributes of the SCTE\-35 messages, MediaPackage calculates where the boundaries are between the end of the main content and the ads\. This calculation is \(scte35 `ptsAdjustment` \+ scte35 `ptsTime`\) / \(EventStream `timescale`\)\.  
 **Example**  
 
    In the following example, the period starts at 44\.075 seconds because \(183003 \+ 3783780\) / 90000 = 44\.075:
@@ -34,7 +34,7 @@ To use the multi\-period DASH feature, the input to AWS Elemental MediaPackage m
    </Period>
    ```
 
-1. AWS Elemental MediaPackage inserts the `EventStream`, `Event`, and `scte35` tags with additional information into the manifest and surrounds the ad period with a `Period` tag, as shown in the preceding example\. MediaPackage groups all adaptation sets before the first ad period into a period, and any subsequent adaptation sets after the ad are grouped into a period, until the next SCTE\-35 marker\. Here is a complete manifest example with multiple periods\. It uses `SpliceInsert` SCTE\-35 ad markers:  
+1. MediaPackage inserts the `EventStream`, `Event`, and `scte35` tags with additional information into the manifest and surrounds the ad period with a `Period` tag, as shown in the preceding example\. MediaPackage groups all adaptation sets before the first ad period into a period, and any subsequent adaptation sets after the ad are grouped into a period, until the next SCTE\-35 marker\. Here is a complete manifest example with multiple periods\. It uses `SpliceInsert` SCTE\-35 ad markers:  
 **Example**  
 
    ```
@@ -118,6 +118,6 @@ To use the multi\-period DASH feature, the input to AWS Elemental MediaPackage m
    </EventStream>
    ```
 
-   AWS Elemental MediaPackage also embeds `scte35:SpliceInsert` messages as metadata in the individual video segments\. 
+   MediaPackage also embeds `scte35:SpliceInsert` messages as metadata in the individual video segments\. 
 
-If you're using a downstream ad service, that service looks for the SCTE\-35 markers in the manifest that AWS Elemental MediaPackage provides and inserts ads based on those markers\.
+If you're using a downstream ad service, that service looks for the SCTE\-35 markers in the manifest that MediaPackage provides and inserts ads based on those markers\.

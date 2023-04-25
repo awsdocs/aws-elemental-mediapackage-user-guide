@@ -10,13 +10,13 @@ In the following steps, "now" is the current time according to the program date 
 
 **To enable time\-shifted viewing**
 
-1. Enable time\-shifted viewing by typing a value for **Startover window** on the AWS Elemental MediaPackage endpoint object\. You can do this through either the MediaPackage console or the REST API\. 
+1. Enable time\-shifted viewing by typing a value for **Startover window** on the MediaPackage endpoint object\. You can do this through either the MediaPackage console or the MediaPackage API\. 
 
-   When requests with start and end parameters that are within the startover window are sent to this endpoint, AWS Elemental MediaPackage generates a manifest for the requested timeframe\. If the start or end parameters are outside of the startover window, the playback request fails\. If no start and end parameters are used, the service generates a standard manifest\.
+   When requests with start and end parameters that are within the startover window are sent to this endpoint, MediaPackage generates a manifest for the requested timeframe\. If the start or end parameters are outside of the startover window, the playback request fails\. If no start and end parameters are used, the service generates a standard manifest\.
 **Note**  
-You might notice that the manifest lags behind real time when you initially create a startover window on an endpoint\. This is because AWS Elemental MediaPackage starts filling the manifest from the start of the window, and works up to "now\." So, if you have a 24\-hour startover window, MediaPackage fills the manifest starting 24 hours ago and working up to "now\."
+You might notice that the manifest lags behind real time when you initially create a startover window on an endpoint\. This is because MediaPackage starts filling the manifest from the start of the window, and works up to "now\." So, if you have a 24\-hour startover window, MediaPackage fills the manifest starting 24 hours ago and working up to "now\."
 
-1. Ensure that content requests contain start and end parameters as needed\. AWS Elemental MediaPackage accepts requests for up to 24 hours of content\.
+1. Ensure that content requests contain start and end parameters as needed\. MediaPackage accepts requests for up to 24 hours of content\.
 
    For packager\-specific rules about how you can notate the parameters, see [Rules for start and end parameters](#start-and-end-parameters-rules)\.
 
@@ -85,7 +85,7 @@ Start and end parameters in the URL request for HLS content can use standard par
   https://cf98fa7b2ee4450e.mediapackage.us-east-1.amazonaws.com/out/v1/064134724fd74667ba294657a674ae72/manifest_id/start/1522807213/end/1522800013/news.m3u8
   ```
 
-### Microsoft smooth parameter rules<a name="allowed-parameter-location-mss"></a>
+### Microsoft Smooth Streaming parameter rules<a name="allowed-parameter-location-mss"></a>
 
 Start and end parameters in the URL request for Microsoft Smooth Streaming content can be included as path elements in the URL\. 
 + Path elements – start and end parameters are included in the path of the request URL  

@@ -5,6 +5,13 @@ The following table describes important changes in each release of the *AWS Elem
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Removed cenc encryption option from CMAF for VOD](encryption-choosing-speke-version.md) | CMAF for VOD workflows using SPEKE Version 2\.0 supports only cbcs encryption\. Removed cenc encryption from the table\. | April 24, 2023 | 
+| [Added `trickplay_type` value](manifest-filtering.md) | Updated `trickplay_type` to include `none`, which filters out all trickplay tracks\. | April 24, 2023 | 
+| [Added missing quotation marks](supported-inputs-vod-smil.md) | Added missing closing quotation mark to example\. | April 24, 2023 | 
+| [Clarified SPEKE support](encryption-choosing-speke-version.md) | Updated SPEKE tables to clarify protocol and DRM system support\. | February 20, 2023 | 
+| [Updated the IAM guidance](security-iam.md) | Updated guide to align with the IAM best practices\. For more information, see [Security best practices in IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html)\. | February 8, 2023 | 
+| [Removed two fields](endpoints-hls-include-streams.md) | Removed two stream selection fields to align with their removal from the console\. | January 5, 2023 | 
+| [Corrected typo](cdn-auth.md) | Changed instance of "authentication" to "authorization"\. | December 19, 2022 | 
 | [Updated I\-frame only trick\-play support](trick-play.md) | MediaPackage now supports I\-frame only trick\-play for DASH VOD\. | November 7, 2022 | 
 | [New DASH manifest setting](cfigs-dash-manset.md) | Added the **Include IFrame\-only streams** manifest settings option\. | November 7, 2022 | 
 | [Updated `trickplay_height` and `video_height` query parameters](manifest-filtering.md) | Updated `trickplay_height` and `video_height` query parameters when using I\-frame only and image\-based trick\-play\. | October 27, 2022 | 
@@ -87,7 +94,7 @@ The following table describes important changes in each release of the *AWS Elem
 | Updated IAM policy information | In [Setting up MediaPackage](setting-up.md), added information about policies specific to AWS Elemental MediaPackage\. | January 5, 2018 | 
 | Added CMAF endpoint information | Added [Creating a CMAF endpoint](endpoints-cmaf.md) section for new output type\. | April 6, 2018 | 
 | Updated feature functionality | In [Features of AWS Elemental MediaPackage](what-is-features.md), added feature support for HDR\-10\. | April 30, 2018 | 
-| Added CDN information | Added topic [Working with Content Delivery Networks \(CDNs\)](cdns.md) to discuss how AWS Elemental MediaPackage works with CDNs such as Amazon CloudFront\. | May 31, 2018 | 
+| Added CDN information | Added topic [Working with CDNs](cdns.md) to discuss how AWS Elemental MediaPackage works with CDNs such as Amazon CloudFront\. | May 31, 2018 | 
 
 **Note**  
 The AWS Media Services are not designed or intended for use with applications or in situations requiring fail‐safe performance, such as life safety operations, navigation or communication systems, air traffic control, or life support machines in which the unavailability, interruption or failure of the services could lead to death, personal injury, property damage or environmental damage\.

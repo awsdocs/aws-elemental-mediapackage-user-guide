@@ -2,7 +2,7 @@
 
 An asset resource is how MediaPackage ingests, packages, and serves VOD content\. The asset is associated with one or more packaging configurations\. Downstream devices send playback requests to specific packaging configurations on the asset\.
 
-MediaPackage does not require that you supply any customer data\. There are no fields in assets where there is an expectation that you will provide customer data\.
+MediaPackage doesn't require customer data from you, so assets don't include those fields\.
 
 **To create an asset**
 

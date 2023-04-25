@@ -9,7 +9,7 @@ MediaPackage performs *just\-in\-time packaging* \(JITP\)\. When a playback devi
 MediaPackage is considered an *origination service* because it's the point of distribution for media content delivery\.
 
 **Packager**  
-A *packager* prepares output streams for access by different types of players\. The packager type specifies the streaming format that MediaPackage delivers from the endpoint \(either Apple HLS, DASH\-ISO, Microsoft Smooth Streaming \[MSS\], or Common Media Application Format \[CMAF\]\)\. Additional packager settings include buffer and update durations and manifest tag handling instructions\.   
+A *packager* prepares output streams for access by different types of players\. The packager type specifies the streaming format that MediaPackage delivers from the endpoint \(either Apple HLS, DASH\-ISO, Microsoft Smooth Streaming, or Common Media Application Format \[CMAF\]\)\. Additional packager settings include buffer and update durations and manifest tag handling instructions\.   
 A packager is a part of an endpoint\. Each endpoint must have one, and only one, packager\. To use different packager types for the same content, create multiple endpoints on the channel\.
 
 **Source Content**  

@@ -2,9 +2,9 @@
 
 An endpoint defines a single delivery point of a channel\. The endpoint holds all the information that's needed for AWS Elemental MediaPackage to integrate with a player or content delivery network \(CDN\) such as Amazon CloudFront\. Configure the endpoint to output content in one of the available stream formats:
 + Apple HLS – Packages content to Apple HTTP Live Streaming \(HLS\)
-+ Microsoft Smooth – Packages content for Microsoft Smooth Streaming players
-+ Common Media Application Format \(CMAF\) – Packages content to devices that support Apple HLS fragmented MP4 \(fMP4\)
++ Microsoft Smooth Streaming – Packages content for Microsoft Smooth Streaming players
 + DASH\-ISO – Packages content for the DASH\-ISO ABR streaming protocol
++ CMAF – Packages content to devices that support Apple HLS fragmented MP4 \(fMP4\)
 
 Additionally, the endpoint holds information about digital rights management \(DRM\) and encryption integration, stream bitrate presentation order, and more\.
 
